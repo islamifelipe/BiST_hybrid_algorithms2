@@ -1,0 +1,9 @@
+Agoritmos garantidos para a dissertacao (podem ser retirados, caso se conclua sua pouca eficiência e eficacia apos analise experimental):
+
+(1) SR + Tabu (tentar adicionar Aspiration - Ver como o Rocha (2006) fez)
+(2) SR + SA
+(3) GRASP + PR
+(4) SR + PR (ver anotacoes, no codigo, importantes para o relatorio)
+(5) TAPAS (memetico mais PR)
+	
+

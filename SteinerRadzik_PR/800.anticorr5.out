@@ -1,0 +1,11592 @@
+276561 arestas removidas
+0 obrigatorias
+Fim da primeira fase. Quantidade de solucoes suportadas : 127
+8.05
+maxSolPorTriangulo = 79
+contador = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 1
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1
+contador = 2
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 4
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 5
+		 viz.size() = 2
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 4
+		 viz.size() = 2
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		 viz.size() = 1
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 4
+		 viz.size() = 1
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		 viz.size() = 0
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 1
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 6
+contador = 3
+		 viz.size() = 12
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 12
+		 viz.size() = 16
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 17
+		 viz.size() = 14
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 16
+		 viz.size() = 12
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 15
+		cont = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		 viz.size() = 1
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 16
+		 viz.size() = 1
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 17
+		 viz.size() = 1
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 17
+		 viz.size() = 1
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 17
+		 viz.size() = 1
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 17
+		 viz.size() = 1
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 17
+		 viz.size() = 1
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 17
+		 viz.size() = 1
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 18
+		 viz.size() = 1
+		 solucoes.size() antes = 18
+		 solucoes.size() antes = 19
+		cont = 10
+		 noSuportadasPQ.size() = 19
+noSuportadas.size() = 25
+contador = 4
+		 viz.size() = 25
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 25
+		 viz.size() = 29
+		 solucoes.size() antes = 25
+		 solucoes.size() antes = 30
+		 viz.size() = 27
+		 solucoes.size() antes = 30
+		 solucoes.size() antes = 29
+		cont = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 29
+		 solucoes.size() antes = 29
+		 viz.size() = 1
+		 solucoes.size() antes = 29
+		 solucoes.size() antes = 29
+		 viz.size() = 1
+		 solucoes.size() antes = 29
+		 solucoes.size() antes = 29
+		 viz.size() = 1
+		 solucoes.size() antes = 29
+		 solucoes.size() antes = 29
+		 viz.size() = 1
+		 solucoes.size() antes = 29
+		 solucoes.size() antes = 30
+		 viz.size() = 1
+		 solucoes.size() antes = 30
+		 solucoes.size() antes = 30
+		 viz.size() = 1
+		 solucoes.size() antes = 30
+		 solucoes.size() antes = 31
+		 viz.size() = 1
+		 solucoes.size() antes = 31
+		 solucoes.size() antes = 31
+		 viz.size() = 1
+		 solucoes.size() antes = 31
+		 solucoes.size() antes = 31
+		 viz.size() = 1
+		 solucoes.size() antes = 31
+		 solucoes.size() antes = 32
+		cont = 10
+		 noSuportadasPQ.size() = 32
+noSuportadas.size() = 57
+contador = 5
+		 viz.size() = 80
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 80
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 80
+noSuportadas.size() = 137
+contador = 6
+		 viz.size() = 11
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 11
+		 viz.size() = 8
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 10
+		 viz.size() = 6
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 10
+		 viz.size() = 4
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 10
+		 viz.size() = 4
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 12
+		 viz.size() = 3
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 13
+		cont = 5
+		 viz.size() = 2
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 13
+		 viz.size() = 0
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 13
+		cont = 1
+		 noSuportadasPQ.size() = 13
+noSuportadas.size() = 150
+contador = 7
+		 viz.size() = 68
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 68
+		 viz.size() = 69
+		 solucoes.size() antes = 68
+		 solucoes.size() antes = 72
+		cont = 1
+		 viz.size() = 2
+		 solucoes.size() antes = 72
+		 solucoes.size() antes = 74
+		 viz.size() = 3
+		 solucoes.size() antes = 74
+		 solucoes.size() antes = 77
+		 viz.size() = 4
+		 solucoes.size() antes = 77
+		 solucoes.size() antes = 80
+		cont = 3
+		 noSuportadasPQ.size() = 80
+noSuportadas.size() = 230
+contador = 8
+		 viz.size() = 27
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 27
+		 viz.size() = 24
+		 solucoes.size() antes = 27
+		 solucoes.size() antes = 28
+		cont = 1
+		 viz.size() = 4
+		 solucoes.size() antes = 28
+		 solucoes.size() antes = 29
+		 viz.size() = 2
+		 solucoes.size() antes = 29
+		 solucoes.size() antes = 29
+		 viz.size() = 4
+		 solucoes.size() antes = 29
+		 solucoes.size() antes = 28
+		 viz.size() = 4
+		 solucoes.size() antes = 28
+		 solucoes.size() antes = 30
+		 viz.size() = 1
+		 solucoes.size() antes = 30
+		 solucoes.size() antes = 30
+		 viz.size() = 4
+		 solucoes.size() antes = 30
+		 solucoes.size() antes = 30
+		cont = 5
+		 noSuportadasPQ.size() = 30
+noSuportadas.size() = 260
+contador = 9
+		 viz.size() = 82
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 82
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 82
+noSuportadas.size() = 342
+contador = 10
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 346
+contador = 11
+		 viz.size() = 77
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 77
+		cont = 0
+		 viz.size() = 5
+		 solucoes.size() antes = 77
+		 solucoes.size() antes = 82
+		cont = 1
+		 noSuportadasPQ.size() = 82
+noSuportadas.size() = 428
+contador = 12
+		 viz.size() = 78
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 78
+		cont = 0
+		 viz.size() = 6
+		 solucoes.size() antes = 78
+		 solucoes.size() antes = 84
+		cont = 1
+		 noSuportadasPQ.size() = 84
+noSuportadas.size() = 512
+contador = 13
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 601
+contador = 14
+		 viz.size() = 53
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 53
+		cont = 0
+		 viz.size() = 7
+		 solucoes.size() antes = 53
+		 solucoes.size() antes = 54
+		 viz.size() = 5
+		 solucoes.size() antes = 54
+		 solucoes.size() antes = 55
+		 viz.size() = 7
+		 solucoes.size() antes = 55
+		 solucoes.size() antes = 55
+		 viz.size() = 6
+		 solucoes.size() antes = 55
+		 solucoes.size() antes = 56
+		cont = 3
+		 noSuportadasPQ.size() = 56
+noSuportadas.size() = 657
+contador = 15
+		 viz.size() = 31
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 31
+		cont = 0
+		 viz.size() = 7
+		 solucoes.size() antes = 31
+		 solucoes.size() antes = 32
+		cont = 0
+		 noSuportadasPQ.size() = 32
+noSuportadas.size() = 689
+contador = 16
+		 viz.size() = 21
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 21
+		 viz.size() = 14
+		 solucoes.size() antes = 21
+		 solucoes.size() antes = 22
+		cont = 1
+		 viz.size() = 6
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 22
+		cont = 0
+		 noSuportadasPQ.size() = 22
+noSuportadas.size() = 711
+contador = 17
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 800
+contador = 18
+		 viz.size() = 51
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 51
+		 viz.size() = 29
+		 solucoes.size() antes = 51
+		 solucoes.size() antes = 54
+		cont = 1
+		 viz.size() = 13
+		 solucoes.size() antes = 54
+		 solucoes.size() antes = 56
+		 viz.size() = 0
+		 solucoes.size() antes = 56
+		 solucoes.size() antes = 56
+		cont = 1
+		 noSuportadasPQ.size() = 56
+noSuportadas.size() = 856
+contador = 19
+		 viz.size() = 88
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 88
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 88
+noSuportadas.size() = 944
+contador = 20
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 1033
+contador = 21
+		 viz.size() = 88
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 88
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 88
+noSuportadas.size() = 1121
+contador = 22
+		 viz.size() = 88
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 88
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 88
+noSuportadas.size() = 1209
+contador = 23
+		 viz.size() = 88
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 88
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 88
+noSuportadas.size() = 1297
+contador = 24
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 1386
+contador = 25
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 1475
+contador = 26
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 1564
+contador = 27
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 1653
+contador = 28
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 1742
+contador = 29
+		 viz.size() = 83
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 83
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 83
+noSuportadas.size() = 1825
+contador = 30
+		 viz.size() = 88
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 88
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 88
+noSuportadas.size() = 1913
+contador = 31
+		 viz.size() = 86
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 86
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 86
+noSuportadas.size() = 1999
+contador = 32
+		 viz.size() = 51
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 51
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 51
+		 solucoes.size() antes = 51
+		cont = 0
+		 noSuportadasPQ.size() = 51
+noSuportadas.size() = 2050
+contador = 33
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 2139
+contador = 34
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 2228
+contador = 35
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 2317
+contador = 36
+		 viz.size() = 70
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 70
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 70
+		 solucoes.size() antes = 70
+		cont = 0
+		 noSuportadasPQ.size() = 70
+noSuportadas.size() = 2387
+contador = 37
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 2476
+contador = 38
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 2565
+contador = 39
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 2654
+contador = 40
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 2743
+contador = 41
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 2832
+contador = 42
+		 viz.size() = 88
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 88
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 88
+noSuportadas.size() = 2920
+contador = 43
+		 viz.size() = 88
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 88
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 88
+noSuportadas.size() = 3008
+contador = 44
+		 viz.size() = 88
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 88
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 88
+noSuportadas.size() = 3096
+contador = 45
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 3185
+contador = 46
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 3274
+contador = 47
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 3363
+contador = 48
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 3452
+contador = 49
+		 viz.size() = 88
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 88
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 88
+noSuportadas.size() = 3540
+contador = 50
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 3629
+contador = 51
+		 viz.size() = 87
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 87
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 87
+noSuportadas.size() = 3716
+contador = 52
+		 viz.size() = 89
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 89
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 89
+noSuportadas.size() = 3805
+contador = 53
+		 viz.size() = 87
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 87
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 87
+noSuportadas.size() = 3892
+contador = 54
+		 viz.size() = 87
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 87
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 87
+noSuportadas.size() = 3979
+contador = 55
+		 viz.size() = 87
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 87
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 87
+noSuportadas.size() = 4066
+contador = 56
+		 viz.size() = 87
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 87
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 87
+noSuportadas.size() = 4153
+contador = 57
+		 viz.size() = 87
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 87
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 87
+noSuportadas.size() = 4240
+contador = 58
+		 viz.size() = 87
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 87
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 87
+noSuportadas.size() = 4327
+contador = 59
+		 viz.size() = 87
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 87
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 87
+noSuportadas.size() = 4414
+contador = 60
+		 viz.size() = 87
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 87
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 87
+noSuportadas.size() = 4501
+contador = 61
+		 viz.size() = 87
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 87
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 87
+noSuportadas.size() = 4588
+contador = 62
+		 viz.size() = 85
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 85
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 85
+noSuportadas.size() = 4673
+contador = 63
+		 viz.size() = 85
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 85
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 85
+noSuportadas.size() = 4758
+contador = 64
+		 viz.size() = 85
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 85
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 85
+noSuportadas.size() = 4843
+contador = 65
+		 viz.size() = 85
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 85
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 85
+noSuportadas.size() = 4928
+contador = 66
+		 viz.size() = 85
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 85
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 85
+noSuportadas.size() = 5013
+contador = 67
+		 viz.size() = 84
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 84
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 84
+noSuportadas.size() = 5097
+contador = 68
+		 viz.size() = 85
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 85
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 85
+noSuportadas.size() = 5182
+contador = 69
+		 viz.size() = 84
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 84
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 84
+noSuportadas.size() = 5266
+contador = 70
+		 viz.size() = 84
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 84
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 84
+noSuportadas.size() = 5350
+contador = 71
+		 viz.size() = 84
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 84
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 84
+noSuportadas.size() = 5434
+contador = 72
+		 viz.size() = 83
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 83
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 83
+noSuportadas.size() = 5517
+contador = 73
+		 viz.size() = 82
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 82
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 82
+noSuportadas.size() = 5599
+contador = 74
+		 viz.size() = 75
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 75
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 75
+		 solucoes.size() antes = 76
+		cont = 0
+		 noSuportadasPQ.size() = 76
+noSuportadas.size() = 5675
+contador = 75
+		 viz.size() = 84
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 84
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 84
+noSuportadas.size() = 5759
+contador = 76
+		 viz.size() = 83
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 83
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 83
+noSuportadas.size() = 5842
+contador = 77
+		 viz.size() = 84
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 84
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 84
+noSuportadas.size() = 5926
+contador = 78
+		 viz.size() = 81
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 81
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 81
+noSuportadas.size() = 6007
+contador = 79
+		 viz.size() = 81
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 81
+		cont = 0
+		cont = 0
+		 noSuportadasPQ.size() = 81
+noSuportadas.size() = 6088
+contador = 80
+		 viz.size() = 83
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 83
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 83
+noSuportadas.size() = 6171
+contador = 81
+		 viz.size() = 76
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 76
+		 viz.size() = 62
+		 solucoes.size() antes = 76
+		 solucoes.size() antes = 137
+		cont = 2
+		cont = 0
+		 noSuportadasPQ.size() = 137
+noSuportadas.size() = 6308
+contador = 82
+		 viz.size() = 77
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 77
+		 viz.size() = 70
+		 solucoes.size() antes = 77
+		 solucoes.size() antes = 143
+		cont = 2
+		cont = 0
+		 noSuportadasPQ.size() = 143
+noSuportadas.size() = 6451
+contador = 83
+		 viz.size() = 65
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 65
+		 viz.size() = 53
+		 solucoes.size() antes = 65
+		 solucoes.size() antes = 118
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 118
+noSuportadas.size() = 6569
+contador = 84
+		 viz.size() = 79
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 79
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 79
+noSuportadas.size() = 6648
+contador = 85
+		 viz.size() = 77
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 77
+		 viz.size() = 52
+		 solucoes.size() antes = 77
+		 solucoes.size() antes = 128
+		cont = 1
+		cont = 0
+		 noSuportadasPQ.size() = 128
+noSuportadas.size() = 6776
+contador = 86
+		 viz.size() = 64
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 64
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 64
+		 solucoes.size() antes = 64
+		cont = 0
+		 noSuportadasPQ.size() = 64
+noSuportadas.size() = 6840
+contador = 87
+		 viz.size() = 74
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 74
+		cont = 1
+		 viz.size() = 72
+		 solucoes.size() antes = 74
+		 solucoes.size() antes = 144
+		cont = 0
+		 noSuportadasPQ.size() = 144
+noSuportadas.size() = 6984
+contador = 88
+		 viz.size() = 55
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 55
+		 viz.size() = 25
+		 solucoes.size() antes = 55
+		 solucoes.size() antes = 79
+		cont = 2
+		cont = 0
+		 noSuportadasPQ.size() = 79
+noSuportadas.size() = 7063
+contador = 89
+		 viz.size() = 55
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 55
+		cont = 0
+		 viz.size() = 7
+		 solucoes.size() antes = 55
+		 solucoes.size() antes = 62
+		cont = 0
+		 noSuportadasPQ.size() = 62
+noSuportadas.size() = 7125
+contador = 90
+		 viz.size() = 54
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 54
+		cont = 0
+		 viz.size() = 89
+		 solucoes.size() antes = 54
+		 solucoes.size() antes = 143
+		cont = 0
+		 noSuportadasPQ.size() = 143
+noSuportadas.size() = 7268
+contador = 91
+		 viz.size() = 50
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 50
+		 viz.size() = 51
+		 solucoes.size() antes = 50
+		 solucoes.size() antes = 99
+		cont = 2
+		cont = 0
+		 noSuportadasPQ.size() = 99
+noSuportadas.size() = 7367
+contador = 92
+		 viz.size() = 46
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 46
+		 viz.size() = 38
+		 solucoes.size() antes = 46
+		 solucoes.size() antes = 84
+		cont = 2
+		cont = 0
+		 noSuportadasPQ.size() = 84
+noSuportadas.size() = 7451
+contador = 93
+		 viz.size() = 44
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 44
+		 viz.size() = 30
+		 solucoes.size() antes = 44
+		 solucoes.size() antes = 74
+		 viz.size() = 35
+		 solucoes.size() antes = 74
+		 solucoes.size() antes = 108
+		cont = 3
+		cont = 0
+		 noSuportadasPQ.size() = 108
+noSuportadas.size() = 7559
+contador = 94
+		 viz.size() = 45
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 45
+		 viz.size() = 24
+		 solucoes.size() antes = 45
+		 solucoes.size() antes = 69
+		 viz.size() = 22
+		 solucoes.size() antes = 69
+		 solucoes.size() antes = 90
+		cont = 3
+		cont = 0
+		 noSuportadasPQ.size() = 90
+noSuportadas.size() = 7649
+contador = 95
+		 viz.size() = 45
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 45
+		 viz.size() = 38
+		 solucoes.size() antes = 45
+		 solucoes.size() antes = 83
+		cont = 2
+		cont = 0
+		 noSuportadasPQ.size() = 83
+noSuportadas.size() = 7732
+contador = 96
+		 viz.size() = 45
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 45
+		cont = 0
+		 viz.size() = 88
+		 solucoes.size() antes = 45
+		 solucoes.size() antes = 133
+		cont = 1
+		 noSuportadasPQ.size() = 133
+noSuportadas.size() = 7865
+contador = 97
+		 viz.size() = 34
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 34
+		cont = 1
+		 viz.size() = 41
+		 solucoes.size() antes = 34
+		 solucoes.size() antes = 73
+		cont = 0
+		 noSuportadasPQ.size() = 73
+noSuportadas.size() = 7938
+contador = 98
+		 viz.size() = 35
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 35
+		 viz.size() = 25
+		 solucoes.size() antes = 35
+		 solucoes.size() antes = 60
+		 viz.size() = 23
+		 solucoes.size() antes = 60
+		 solucoes.size() antes = 80
+		cont = 3
+		cont = 0
+		 noSuportadasPQ.size() = 80
+noSuportadas.size() = 8018
+contador = 99
+		 viz.size() = 37
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 37
+		 viz.size() = 28
+		 solucoes.size() antes = 37
+		 solucoes.size() antes = 65
+		cont = 1
+		 viz.size() = 89
+		 solucoes.size() antes = 65
+		 solucoes.size() antes = 154
+		cont = 1
+		 noSuportadasPQ.size() = 154
+noSuportadas.size() = 8172
+contador = 100
+		 viz.size() = 31
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 31
+		cont = 0
+		 viz.size() = 40
+		 solucoes.size() antes = 31
+		 solucoes.size() antes = 71
+		cont = 0
+		 noSuportadasPQ.size() = 71
+noSuportadas.size() = 8243
+contador = 101
+		 viz.size() = 28
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 28
+		 viz.size() = 30
+		 solucoes.size() antes = 28
+		 solucoes.size() antes = 58
+		 viz.size() = 20
+		 solucoes.size() antes = 58
+		 solucoes.size() antes = 78
+		 viz.size() = 21
+		 solucoes.size() antes = 78
+		 solucoes.size() antes = 99
+		cont = 4
+		cont = 0
+		 noSuportadasPQ.size() = 99
+noSuportadas.size() = 8342
+contador = 102
+		 viz.size() = 28
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 28
+		cont = 0
+		 viz.size() = 52
+		 solucoes.size() antes = 28
+		 solucoes.size() antes = 80
+		cont = 1
+		 noSuportadasPQ.size() = 80
+noSuportadas.size() = 8422
+contador = 103
+		 viz.size() = 23
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 23
+		 viz.size() = 21
+		 solucoes.size() antes = 23
+		 solucoes.size() antes = 43
+		cont = 1
+		 viz.size() = 88
+		 solucoes.size() antes = 43
+		 solucoes.size() antes = 131
+		cont = 0
+		 noSuportadasPQ.size() = 131
+noSuportadas.size() = 8553
+contador = 104
+		 viz.size() = 27
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 27
+		 viz.size() = 14
+		 solucoes.size() antes = 27
+		 solucoes.size() antes = 40
+		 viz.size() = 14
+		 solucoes.size() antes = 40
+		 solucoes.size() antes = 53
+		 viz.size() = 11
+		 solucoes.size() antes = 53
+		 solucoes.size() antes = 63
+		 viz.size() = 18
+		 solucoes.size() antes = 63
+		 solucoes.size() antes = 79
+		cont = 4
+		cont = 0
+		 noSuportadasPQ.size() = 79
+noSuportadas.size() = 8632
+contador = 105
+		 viz.size() = 24
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 24
+		 viz.size() = 21
+		 solucoes.size() antes = 24
+		 solucoes.size() antes = 44
+		 viz.size() = 21
+		 solucoes.size() antes = 44
+		 solucoes.size() antes = 64
+		 viz.size() = 18
+		 solucoes.size() antes = 64
+		 solucoes.size() antes = 82
+		cont = 4
+		cont = 0
+		 noSuportadasPQ.size() = 82
+noSuportadas.size() = 8714
+contador = 106
+		 viz.size() = 23
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 23
+		cont = 0
+		 viz.size() = 29
+		 solucoes.size() antes = 23
+		 solucoes.size() antes = 49
+		cont = 1
+		 noSuportadasPQ.size() = 49
+noSuportadas.size() = 8763
+contador = 107
+		 viz.size() = 24
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 24
+		 viz.size() = 17
+		 solucoes.size() antes = 24
+		 solucoes.size() antes = 38
+		 viz.size() = 19
+		 solucoes.size() antes = 38
+		 solucoes.size() antes = 57
+		 viz.size() = 20
+		 solucoes.size() antes = 57
+		 solucoes.size() antes = 75
+		cont = 3
+		 viz.size() = 88
+		 solucoes.size() antes = 75
+		 solucoes.size() antes = 163
+		cont = 1
+		 noSuportadasPQ.size() = 163
+noSuportadas.size() = 8926
+contador = 108
+		 viz.size() = 19
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 19
+		cont = 1
+		 viz.size() = 14
+		 solucoes.size() antes = 19
+		 solucoes.size() antes = 33
+		cont = 0
+		 noSuportadasPQ.size() = 33
+noSuportadas.size() = 8959
+contador = 109
+		 viz.size() = 20
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 20
+		cont = 0
+		 viz.size() = 89
+		 solucoes.size() antes = 20
+		 solucoes.size() antes = 109
+		cont = 0
+		 noSuportadasPQ.size() = 109
+noSuportadas.size() = 9068
+contador = 110
+		 viz.size() = 14
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 14
+		cont = 0
+		 viz.size() = 17
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 31
+		cont = 1
+		 noSuportadasPQ.size() = 31
+noSuportadas.size() = 9099
+contador = 111
+		 viz.size() = 13
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 13
+		 viz.size() = 10
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 23
+		 viz.size() = 14
+		 solucoes.size() antes = 23
+		 solucoes.size() antes = 37
+		cont = 2
+		 viz.size() = 85
+		 solucoes.size() antes = 37
+		 solucoes.size() antes = 122
+		cont = 0
+		 noSuportadasPQ.size() = 122
+noSuportadas.size() = 9221
+contador = 112
+		 viz.size() = 11
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 11
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 13
+		cont = 0
+		 noSuportadasPQ.size() = 13
+noSuportadas.size() = 9234
+contador = 113
+		 viz.size() = 12
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 12
+		cont = 0
+		 viz.size() = 55
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 67
+		cont = 0
+		 noSuportadasPQ.size() = 67
+noSuportadas.size() = 9301
+contador = 114
+		 viz.size() = 11
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 11
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 12
+		cont = 0
+		 noSuportadasPQ.size() = 12
+noSuportadas.size() = 9313
+contador = 115
+		 viz.size() = 10
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 10
+		 viz.size() = 8
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 18
+		 viz.size() = 6
+		 solucoes.size() antes = 18
+		 solucoes.size() antes = 24
+		 viz.size() = 8
+		 solucoes.size() antes = 24
+		 solucoes.size() antes = 32
+		 viz.size() = 10
+		 solucoes.size() antes = 32
+		 solucoes.size() antes = 42
+		 viz.size() = 5
+		 solucoes.size() antes = 42
+		 solucoes.size() antes = 47
+		 viz.size() = 7
+		 solucoes.size() antes = 47
+		 solucoes.size() antes = 54
+		 viz.size() = 2
+		 solucoes.size() antes = 54
+		 solucoes.size() antes = 56
+		cont = 7
+		 viz.size() = 81
+		 solucoes.size() antes = 56
+		 solucoes.size() antes = 137
+		cont = 1
+		 noSuportadasPQ.size() = 137
+noSuportadas.size() = 9450
+contador = 116
+		 viz.size() = 8
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 8
+		cont = 0
+		 viz.size() = 11
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 19
+		cont = 1
+		 noSuportadasPQ.size() = 19
+noSuportadas.size() = 9469
+contador = 117
+		 viz.size() = 8
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 8
+		 viz.size() = 6
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 14
+		cont = 1
+		 viz.size() = 18
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 32
+		 viz.size() = 10
+		 solucoes.size() antes = 32
+		 solucoes.size() antes = 34
+		cont = 1
+		 noSuportadasPQ.size() = 34
+noSuportadas.size() = 9503
+contador = 118
+		 viz.size() = 8
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 8
+		 viz.size() = 1
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 9
+		 viz.size() = 5
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 14
+		 viz.size() = 5
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 16
+		cont = 3
+		 viz.size() = 84
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 100
+		cont = 1
+		 noSuportadasPQ.size() = 100
+noSuportadas.size() = 9603
+contador = 119
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 7
+		cont = 0
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 9610
+contador = 120
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 5
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 10
+		cont = 1
+		 viz.size() = 35
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 45
+		 viz.size() = 28
+		 solucoes.size() antes = 45
+		 solucoes.size() antes = 46
+		 viz.size() = 25
+		 solucoes.size() antes = 46
+		 solucoes.size() antes = 49
+		 viz.size() = 20
+		 solucoes.size() antes = 49
+		 solucoes.size() antes = 47
+		 viz.size() = 15
+		 solucoes.size() antes = 47
+		 solucoes.size() antes = 47
+		 viz.size() = 10
+		 solucoes.size() antes = 47
+		 solucoes.size() antes = 49
+		 viz.size() = 7
+		 solucoes.size() antes = 49
+		 solucoes.size() antes = 49
+		cont = 6
+		 noSuportadasPQ.size() = 49
+noSuportadas.size() = 9659
+contador = 121
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 2
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 6
+		 viz.size() = 4
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 10
+		 viz.size() = 4
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 14
+		 viz.size() = 2
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 16
+		 viz.size() = 4
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 20
+		 viz.size() = 4
+		 solucoes.size() antes = 20
+		 solucoes.size() antes = 24
+		 viz.size() = 2
+		 solucoes.size() antes = 24
+		 solucoes.size() antes = 26
+		 viz.size() = 4
+		 solucoes.size() antes = 26
+		 solucoes.size() antes = 30
+		 viz.size() = 4
+		 solucoes.size() antes = 30
+		 solucoes.size() antes = 34
+		cont = 10
+		 viz.size() = 85
+		 solucoes.size() antes = 34
+		 solucoes.size() antes = 119
+		cont = 1
+		 noSuportadasPQ.size() = 119
+noSuportadas.size() = 9778
+contador = 122
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 3
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 6
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 9
+		cont = 2
+		 viz.size() = 36
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 45
+		cont = 0
+		 noSuportadasPQ.size() = 45
+noSuportadas.size() = 9823
+contador = 123
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		 viz.size() = 3
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 5
+		 viz.size() = 1
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 9
+		 viz.size() = 1
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 10
+		 viz.size() = 2
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 12
+		 viz.size() = 3
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 15
+		 viz.size() = 2
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 17
+		 viz.size() = 1
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 18
+		 viz.size() = 3
+		 solucoes.size() antes = 18
+		 solucoes.size() antes = 21
+		cont = 10
+		 viz.size() = 75
+		 solucoes.size() antes = 21
+		 solucoes.size() antes = 96
+		cont = 1
+		 noSuportadasPQ.size() = 96
+noSuportadas.size() = 9919
+contador = 124
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 2
+		cont = 1
+		 viz.size() = 17
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 19
+		cont = 0
+		 noSuportadasPQ.size() = 19
+noSuportadas.size() = 9938
+contador = 125
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 9940
+Fim da segunda fase ... 
+648.6
+Total ...
+656.65
+1 72343
+2 72335
+4 72321
+10 72285
+30 72185
+72 72017
+177 71702
+191 71667
+423 71203
+456 71148
+610 70917
+615 70910
+795 70670
+943 70485
+1078 70323
+1138 70253
+1173 70213
+1197 70186
+4229 67154
+4289 67097
+4415 66978
+4517 66882
+4805 66612
+5030 66402
+5464 65999
+5707 65774
+6630 64922
+6980 64600
+7091 64498
+8255 63431
+8349 63345
+8874 62865
+9679 62130
+9736 62078
+10314 61551
+10494 61387
+10606 61285
+10684 61214
+14061 58144
+14516 57731
+15056 57241
+15830 56539
+16355 56063
+18019 54555
+18444 54170
+19663 53066
+20181 52597
+20371 52425
+22618 50392
+22900 50137
+23484 49609
+24576 48622
+25240 48022
+27565 45922
+28069 45467
+29381 44283
+29657 44034
+30524 43252
+31622 42262
+33184 40854
+33994 40124
+34631 39550
+42191 32746
+42992 32026
+43387 31671
+44353 30803
+45415 29849
+46787 28617
+47227 28222
+48475 27102
+49495 26187
+51351 24523
+51813 24109
+52917 23120
+53654 22460
+53740 22383
+56514 19901
+56684 19749
+57080 19395
+57926 18639
+58226 18371
+60326 16496
+60716 16148
+61530 15422
+62128 14889
+62403 14644
+62595 14473
+62668 14408
+62832 14262
+66063 11390
+66134 11327
+66320 11162
+66479 11021
+66831 10709
+67286 10306
+68144 9547
+68488 9243
+69916 7983
+70000 7909
+70850 7161
+71081 6958
+71163 6886
+73339 4982
+73432 4901
+73731 4641
+74256 4186
+74498 3977
+74556 3927
+75732 2919
+75772 2885
+76201 2522
+76239 2490
+76899 1940
+76916 1926
+77004 1854
+77020 1841
+77385 1549
+77413 1527
+77458 1492
+77818 1222
+77829 1214
+77899 1164
+78190 970
+78270 922
+78576 769
+78645 746
+78657 743
+3 72328
+5 72315
+6 72309
+7 72303
+8 72297
+9 72291
+11 72280
+12 72275
+13 72270
+15 72264
+14 72265
+16 72263
+18 72261
+17 72262
+19 72259
+29 72190
+28 72195
+27 72200
+26 72205
+25 72210
+24 72215
+23 72220
+22 72225
+21 72230
+20 72235
+31 72181
+32 72177
+33 72173
+39 72166
+38 72167
+36 72169
+37 72168
+57 72149
+53 72153
+47 72159
+60 72147
+55 72151
+45 72160
+51 72155
+43 72161
+49 72156
+41 72163
+58 72148
+40 72165
+61 72145
+56 72150
+34 72170
+71 72021
+70 72025
+69 72029
+68 72033
+67 72037
+66 72041
+65 72045
+64 72049
+63 72053
+62 72057
+73 72014
+118 71972
+115 71975
+77 72009
+76 72010
+78 72008
+96 71992
+97 71991
+98 71990
+140 71952
+108 71981
+130 71961
+134 71957
+160 71934
+143 71949
+111 71978
+99 71989
+136 71955
+171 71924
+82 72004
+138 71954
+105 71983
+120 71970
+92 71995
+102 71986
+151 71942
+79 72007
+122 71968
+86 72000
+104 71984
+169 71926
+94 71993
+168 71927
+100 71988
+124 71966
+106 71982
+166 71928
+142 71950
+74 72011
+110 71979
+147 71945
+145 71947
+126 71964
+101 71987
+150 71943
+158 71935
+116 71973
+83 72003
+84 72002
+164 71930
+149 71944
+131 71960
+157 71937
+109 71980
+103 71985
+81 72005
+112 71977
+144 71948
+91 71996
+162 71932
+87 71999
+113 71976
+141 71951
+163 71931
+153 71940
+93 71994
+170 71925
+128 71963
+129 71962
+125 71965
+155 71938
+123 71967
+119 71971
+90 71997
+135 71956
+133 71958
+85 72001
+121 71969
+154 71939
+165 71929
+178 71700
+179 71697
+180 71695
+181 71692
+182 71690
+183 71687
+184 71685
+185 71682
+186 71680
+187 71677
+188 71675
+190 71670
+189 71672
+192 71665
+193 71663
+194 71661
+195 71659
+260 71600
+210 71645
+261 71599
+239 71618
+226 71630
+222 71634
+205 71649
+231 71626
+233 71624
+244 71614
+227 71629
+212 71643
+235 71622
+232 71625
+257 71602
+207 71647
+213 71642
+253 71606
+273 71588
+217 71638
+274 71587
+230 71627
+200 71653
+241 71617
+225 71631
+291 71572
+275 71586
+262 71598
+268 71592
+283 71579
+211 71644
+245 71613
+208 71646
+234 71623
+218 71637
+228 71628
+258 71601
+281 71580
+264 71595
+238 71619
+246 71612
+263 71596
+292 71570
+280 71581
+251 71607
+203 71650
+236 71620
+254 71604
+223 71632
+255 71603
+214 71640
+286 71575
+249 71609
+266 71593
+289 71573
+269 71591
+248 71610
+196 71657
+276 71585
+284 71577
+278 71583
+287 71574
+198 71654
+220 71635
+197 71656
+201 71652
+242 71615
+271 71589
+422 71205
+421 71207
+420 71209
+419 71211
+418 71213
+417 71215
+416 71217
+415 71219
+424 71202
+425 71200
+426 71198
+427 71197
+428 71195
+434 71189
+436 71187
+431 71191
+432 71190
+429 71193
+435 71188
+455 71150
+454 71152
+453 71153
+452 71155
+451 71157
+450 71158
+449 71160
+448 71162
+447 71163
+445 71167
+446 71165
+444 71168
+442 71172
+443 71170
+441 71173
+440 71175
+439 71177
+438 71179
+437 71181
+457 71147
+491 71115
+458 71145
+460 71143
+459 71144
+464 71139
+511 71097
+503 71104
+512 71096
+533 71077
+513 71095
+473 71131
+504 71103
+474 71130
+543 71068
+553 71059
+544 71067
+514 71094
+517 71091
+527 71082
+518 71090
+466 71137
+548 71063
+495 71111
+519 71089
+530 71079
+505 71102
+469 71134
+545 71066
+467 71136
+485 71120
+515 71093
+462 71140
+487 71118
+506 71101
+478 71126
+516 71092
+499 71107
+529 71080
+525 71084
+528 71081
+486 71119
+475 71129
+541 71069
+465 71138
+549 71062
+471 71132
+551 71060
+526 71083
+476 71128
+550 71061
+494 71112
+489 71116
+497 71109
+536 71074
+522 71086
+547 71064
+537 71073
+500 71106
+540 71070
+470 71133
+538 71072
+546 71065
+496 71110
+520 71088
+483 71121
+498 71108
+461 71141
+501 71105
+507 71100
+479 71125
+554 71057
+509 71098
+481 71123
+508 71099
+534 71075
+468 71135
+492 71113
+523 71085
+531 71078
+480 71124
+477 71127
+612 70915
+611 70916
+614 70912
+613 70913
+617 70908
+616 70909
+689 70842
+649 70878
+697 70835
+650 70877
+662 70866
+619 70905
+700 70832
+618 70906
+636 70890
+637 70889
+648 70879
+638 70888
+639 70887
+680 70850
+632 70893
+698 70834
+713 70820
+656 70872
+657 70871
+622 70902
+660 70868
+690 70841
+692 70839
+693 70838
+672 70857
+710 70823
+620 70904
+661 70867
+699 70833
+671 70858
+711 70822
+701 70831
+621 70903
+631 70894
+681 70849
+691 70840
+702 70830
+643 70883
+712 70821
+663 70865
+623 70901
+642 70884
+703 70829
+645 70881
+669 70859
+684 70846
+676 70853
+625 70899
+675 70854
+658 70869
+627 70897
+651 70875
+714 70819
+673 70856
+666 70862
+705 70827
+633 70892
+678 70851
+664 70864
+695 70836
+706 70826
+667 70861
+685 70845
+644 70882
+682 70847
+708 70824
+640 70885
+694 70837
+653 70874
+687 70843
+634 70891
+654 70873
+686 70844
+646 70880
+629 70895
+794 70672
+793 70673
+792 70674
+791 70676
+790 70677
+797 70668
+798 70667
+796 70669
+891 70582
+817 70649
+803 70661
+857 70613
+819 70647
+829 70638
+850 70619
+881 70591
+840 70628
+802 70662
+860 70610
+842 70626
+879 70593
+799 70665
+861 70609
+828 70639
+851 70618
+888 70585
+821 70645
+800 70664
+848 70621
+818 70648
+830 70637
+841 70627
+887 70586
+880 70592
+849 70620
+870 70601
+839 70629
+811 70654
+812 70653
+820 70646
+843 70625
+883 70589
+893 70580
+822 70644
+871 70600
+863 70607
+872 70599
+882 70590
+873 70598
+892 70581
+801 70663
+862 70608
+823 70643
+852 70617
+865 70605
+815 70650
+868 70602
+809 70655
+884 70588
+889 70583
+864 70606
+833 70634
+836 70631
+826 70640
+813 70652
+877 70594
+805 70659
+855 70614
+807 70657
+831 70635
+835 70632
+825 70641
+853 70616
+846 70622
+885 70587
+806 70658
+858 70611
+844 70624
+875 70596
+804 70660
+837 70630
+834 70633
+866 70604
+942 70487
+941 70488
+940 70489
+939 70490
+938 70492
+937 70494
+945 70483
+947 70481
+946 70482
+944 70484
+1018 70416
+1034 70402
+986 70445
+958 70470
+995 70437
+975 70455
+1036 70400
+982 70449
+953 70475
+966 70463
+983 70448
+1014 70420
+973 70457
+965 70464
+1013 70421
+993 70439
+1026 70409
+1009 70424
+954 70474
+985 70446
+976 70454
+1006 70427
+984 70447
+979 70451
+1023 70412
+963 70466
+1003 70430
+987 70444
+956 70472
+1039 70397
+1005 70428
+955 70473
+1037 70399
+1022 70413
+1016 70418
+974 70456
+997 70435
+949 70478
+1028 70407
+994 70438
+967 70462
+998 70434
+964 70465
+1017 70417
+950 70477
+1033 70403
+996 70436
+1025 70410
+1035 70401
+1015 70419
+969 70460
+968 70461
+991 70440
+977 70453
+988 70443
+990 70441
+978 70452
+1004 70429
+1020 70414
+1038 70398
+1027 70408
+1024 70411
+1007 70426
+970 70459
+948 70479
+960 70468
+999 70433
+957 70471
+1019 70415
+1040 70396
+1029 70406
+959 70469
+951 70476
+989 70442
+961 70467
+1010 70423
+1008 70425
+980 70450
+1041 70395
+1000 70432
+971 70458
+1001 70431
+1030 70405
+1031 70404
+1011 70422
+1083 70318
+1080 70321
+1082 70319
+1081 70320
+1079 70322
+1101 70301
+1093 70308
+1089 70312
+1110 70293
+1088 70313
+1109 70294
+1098 70304
+1090 70311
+1111 70292
+1099 70303
+1108 70295
+1085 70315
+1091 70310
+1112 70291
+1100 70302
+1092 70309
+1102 70300
+1084 70316
+1103 70299
+1105 70297
+1104 70298
+1095 70306
+1094 70307
+1106 70296
+1096 70305
+1086 70314
+1137 70255
+1136 70256
+1135 70257
+1134 70258
+1133 70259
+1132 70260
+1131 70262
+1130 70263
+1129 70264
+1128 70265
+1127 70266
+1126 70267
+1125 70269
+1124 70270
+1123 70271
+1122 70272
+1121 70273
+1120 70274
+1119 70276
+1118 70277
+1117 70278
+1116 70279
+1115 70280
+1114 70281
+1113 70283
+1144 70247
+1143 70248
+1140 70251
+1142 70249
+1141 70250
+1139 70252
+1149 70242
+1148 70243
+1161 70231
+1158 70234
+1151 70240
+1150 70241
+1162 70230
+1159 70233
+1160 70232
+1164 70228
+1153 70238
+1152 70239
+1154 70237
+1165 70227
+1155 70236
+1145 70245
+1163 70229
+1146 70244
+1156 70235
+1172 70215
+1171 70216
+1170 70217
+1169 70218
+1168 70219
+1167 70220
+1166 70221
+1179 70207
+1175 70211
+1178 70208
+1180 70206
+1176 70210
+1177 70209
+1174 70212
+1181 70204
+1187 70198
+1188 70197
+1186 70199
+1183 70202
+1185 70200
+1184 70201
+1182 70203
+1189 70195
+1196 70188
+1195 70189
+1194 70190
+1193 70191
+1192 70192
+1191 70193
+1205 70178
+1203 70180
+1204 70179
+1202 70181
+1199 70184
+1201 70182
+1200 70183
+1198 70185
+1288 70103
+1289 70102
+1210 70173
+1247 70140
+1271 70118
+1259 70129
+1207 70176
+1279 70111
+1237 70149
+1209 70174
+1240 70146
+1251 70136
+1269 70120
+1258 70130
+1211 70172
+1249 70138
+1238 70148
+1208 70175
+1277 70113
+1291 70100
+1268 70121
+1287 70104
+1222 70162
+1239 70147
+1267 70122
+1206 70177
+1216 70168
+1257 70131
+1280 70110
+1228 70157
+1229 70156
+1261 70127
+1270 70119
+1250 70137
+1273 70116
+1226 70159
+1218 70166
+1278 70112
+1227 70158
+1281 70109
+1292 70099
+1220 70164
+1217 70167
+1219 70165
+1236 70150
+1274 70115
+1248 70139
+1212 70171
+1232 70153
+1265 70123
+1221 70163
+1224 70160
+1252 70135
+1263 70125
+1260 70128
+1272 70117
+1282 70108
+1213 70170
+1290 70101
+1231 70154
+1253 70134
+1294 70097
+1285 70105
+1233 70152
+1230 70155
+1262 70126
+1241 70145
+1242 70144
+1223 70161
+1214 70169
+1275 70114
+1254 70133
+1243 70143
+1244 70142
+1264 70124
+1245 70141
+1293 70098
+1283 70107
+1295 70096
+1255 70132
+1234 70151
+4231 67153
+4234 67150
+4233 67151
+4232 67152
+4235 67149
+4237 67147
+4236 67148
+4238 67146
+4241 67143
+4240 67144
+4252 67133
+4251 67134
+4239 67145
+4253 67132
+4242 67142
+4254 67131
+4243 67141
+4244 67140
+4255 67130
+4245 67139
+4256 67129
+4257 67128
+4247 67137
+4249 67135
+4246 67138
+4260 67125
+4258 67127
+4271 67115
+4261 67124
+4272 67114
+4259 67126
+4273 67113
+4274 67112
+4262 67123
+4263 67122
+4275 67111
+4248 67136
+4265 67120
+4264 67121
+4276 67110
+4266 67119
+4277 67109
+4267 67118
+4281 67105
+4282 67104
+4283 67103
+4285 67101
+4286 67100
+4287 67099
+4288 67098
+4280 67106
+4284 67102
+4279 67107
+4278 67108
+4269 67116
+4268 67117
+4292 67095
+4294 67093
+4293 67094
+4291 67096
+4295 67092
+4308 67080
+4297 67090
+4359 67034
+4298 67089
+4296 67091
+4329 67061
+4379 67016
+4328 67062
+4339 67052
+4320 67069
+4360 67033
+4381 67014
+4309 67079
+4310 67078
+4380 67015
+4321 67068
+4350 67042
+4372 67022
+4332 67058
+4351 67041
+4370 67024
+4340 67051
+4311 67077
+4301 67086
+4371 67023
+4299 67088
+4352 67040
+4300 67087
+4361 67032
+4382 67013
+4362 67031
+4342 67049
+4341 67050
+4312 67076
+4313 67075
+4333 67057
+4322 67067
+4343 67048
+4323 67066
+4363 67030
+4302 67085
+4354 67038
+4353 67039
+4303 67084
+4383 67012
+4384 67011
+4324 67065
+4365 67028
+4304 67083
+4314 67074
+4355 67037
+4364 67029
+4344 67047
+4373 67021
+4385 67010
+4315 67073
+4334 67056
+4335 67055
+4345 67046
+4374 67020
+4375 67019
+4336 67054
+4325 67064
+4356 67036
+4386 67009
+4316 67072
+4305 67082
+4387 67008
+4366 67027
+4357 67035
+4326 67063
+4306 67081
+4367 67026
+4317 67071
+4346 67045
+4337 67053
+4377 67017
+4376 67018
+4348 67043
+4318 67070
+4368 67025
+4330 67059
+4347 67044
+4418 66976
+4417 66977
+4422 66972
+4421 66973
+4433 66962
+4419 66975
+4434 66961
+4420 66974
+4474 66925
+4435 66960
+4423 66971
+4495 66906
+4505 66897
+4425 66969
+4485 66915
+4494 66907
+4445 66951
+4436 66959
+4507 66895
+4498 66903
+4424 66970
+4475 66924
+4477 66922
+4496 66905
+4506 66896
+4486 66914
+4446 66950
+4504 66898
+4456 66941
+4437 66958
+4488 66912
+4476 66923
+4458 66939
+4487 66913
+4457 66940
+4478 66921
+4467 66931
+4447 66949
+4459 66938
+4468 66930
+4508 66894
+4497 66904
+4448 66948
+4479 66920
+4438 66957
+4428 66966
+4489 66911
+4439 66956
+4426 66968
+4469 66929
+4449 66947
+4499 66902
+4480 66919
+4440 66955
+4509 66893
+4460 66937
+4429 66965
+4490 66910
+4427 66967
+4491 66909
+4510 66892
+4471 66927
+4511 66891
+4470 66928
+4500 66901
+4481 66918
+4501 66900
+4450 66946
+4441 66954
+4461 66936
+4430 66964
+4462 66935
+4512 66890
+4482 66917
+4442 66953
+4451 66945
+4431 66963
+4463 66934
+4452 66944
+4483 66916
+4492 66908
+4513 66889
+4502 66899
+4472 66926
+4453 66943
+4454 66942
+4464 66933
+4443 66952
+4465 66932
+4520 66880
+4522 66878
+4521 66879
+4519 66881
+4523 66877
+4525 66875
+4536 66865
+4537 66864
+4535 66866
+4557 66846
+4524 66876
+4607 66801
+4576 66829
+4527 66873
+4597 66810
+4547 66855
+4567 66837
+4538 66863
+4598 66809
+4608 66800
+4560 66843
+4577 66828
+4568 66836
+4609 66799
+4578 66827
+4589 66817
+4548 66854
+4528 66872
+4599 66808
+4526 66874
+4539 66862
+4579 66826
+4549 66853
+4569 66835
+4610 66798
+4580 66825
+4561 66842
+4570 66834
+4590 66816
+4581 66824
+4611 66797
+4600 66807
+4540 66861
+4601 66806
+4550 66852
+4562 66841
+4612 66796
+4541 66860
+4551 66851
+4571 66833
+4591 66815
+4530 66870
+4542 66859
+4552 66850
+4529 66871
+4592 66814
+4572 66832
+4593 66813
+4582 66823
+4543 66858
+4613 66795
+4603 66804
+4602 66805
+4583 66822
+4531 66869
+4563 66840
+4553 66849
+4532 66868
+4584 66821
+4573 66831
+4564 66839
+4614 66794
+4544 66857
+4565 66838
+4594 66812
+4585 66820
+4595 66811
+4533 66867
+4545 66856
+4605 66802
+4615 66793
+4574 66830
+4554 66848
+4604 66803
+4555 66847
+4587 66818
+4558 66844
+4586 66819
+4808 66610
+4810 66608
+4807 66611
+4812 66606
+4809 66609
+4824 66595
+4811 66607
+4823 66596
+4813 66605
+4822 66597
+4825 66594
+4845 66576
+4844 66577
+4866 66557
+4885 66540
+4835 66585
+4895 66531
+4865 66558
+4855 66567
+4836 66584
+4886 66539
+4877 66547
+4827 66592
+4814 66604
+4887 66538
+4896 66530
+4876 66548
+4857 66565
+4826 66593
+4897 66529
+4837 66583
+4868 66555
+4856 66566
+4867 66556
+4815 66603
+4858 66564
+4879 66545
+4898 66528
+4869 66554
+4878 66546
+4828 66591
+4838 66582
+4848 66573
+4888 66537
+4816 66602
+4839 66581
+4870 66553
+4850 66571
+4880 66544
+4899 66527
+4829 66590
+4900 66526
+4859 66563
+4817 66601
+4840 66580
+4818 66600
+4831 66588
+4881 66543
+4889 66536
+4849 66572
+4851 66570
+4860 66562
+4901 66525
+4871 66552
+4890 66535
+4830 66589
+4861 66561
+4872 66551
+4841 66579
+4819 66599
+4882 66542
+4852 66569
+4892 66533
+4862 66560
+4891 66534
+4902 66524
+4832 66587
+4842 66578
+4853 66568
+4863 66559
+4903 66523
+4883 66541
+4893 66532
+4873 66550
+4820 66598
+4846 66574
+4833 66586
+4874 66549
+5032 66401
+5034 66399
+5033 66400
+5048 66386
+5046 66388
+5047 66387
+5035 66398
+5036 66397
+5070 66366
+5069 66367
+5049 66385
+5090 66348
+5100 66339
+5038 66395
+5037 66396
+5122 66319
+5080 66357
+5050 66384
+5060 66375
+5101 66338
+5051 66383
+5121 66320
+5113 66327
+5110 66330
+5039 66394
+5062 66373
+5081 66356
+5120 66321
+5082 66355
+5061 66374
+5111 66329
+5091 66347
+5073 66363
+5123 66318
+5102 66337
+5093 66345
+5092 66346
+5040 66393
+5052 66382
+5114 66326
+5094 66344
+5053 66381
+5112 66328
+5074 66362
+5084 66353
+5041 66392
+5063 66372
+5103 66336
+5125 66316
+5083 66354
+5104 66335
+5054 66380
+5124 66317
+5085 66352
+5095 66343
+5075 66361
+5042 66391
+5064 66371
+5076 66360
+5065 66370
+5105 66334
+5096 66342
+5106 66333
+5126 66315
+5055 66379
+5115 66325
+5086 66351
+5116 66324
+5043 66390
+5077 66359
+5127 66314
+5056 66378
+5087 66350
+5066 66369
+5097 66341
+5117 66323
+5107 66332
+5044 66389
+5078 66358
+5057 66377
+5067 66368
+5098 66340
+5118 66322
+5128 66313
+5108 66331
+5058 66376
+5071 66364
+5088 66349
+5479 65986
+5466 65998
+5468 65996
+5467 65997
+5482 65983
+5469 65995
+5481 65984
+5493 65973
+5480 65985
+5533 65937
+5483 65982
+5553 65919
+5470 65994
+5503 65964
+5471 65993
+5534 65936
+5504 65963
+5525 65944
+5514 65954
+5484 65981
+5555 65917
+5556 65916
+5472 65992
+5473 65991
+5494 65972
+5524 65945
+5486 65979
+5557 65915
+5544 65927
+5507 65960
+5554 65918
+5516 65952
+5546 65925
+5505 65962
+5545 65926
+5485 65980
+5535 65935
+5536 65934
+5515 65953
+5495 65971
+5537 65933
+5506 65961
+5527 65942
+5517 65951
+5508 65959
+5496 65970
+5526 65943
+5547 65924
+5474 65990
+5548 65923
+5528 65941
+5538 65932
+5487 65978
+5518 65950
+5497 65969
+5558 65914
+5559 65913
+5549 65922
+5475 65989
+5509 65958
+5539 65931
+5540 65930
+5476 65988
+5499 65967
+5488 65977
+5529 65940
+5498 65968
+5489 65976
+5519 65949
+5550 65921
+5520 65948
+5560 65912
+5510 65957
+5530 65939
+5551 65920
+5500 65966
+5541 65929
+5490 65975
+5477 65987
+5511 65956
+5531 65938
+5561 65911
+5521 65947
+5563 65910
+5501 65965
+5522 65946
+5512 65955
+5491 65974
+5542 65928
+5724 65759
+5712 65770
+5709 65773
+5776 65712
+5722 65761
+5710 65772
+5796 65694
+5725 65758
+5723 65760
+5747 65738
+5768 65719
+5736 65748
+5711 65771
+5777 65711
+5766 65721
+5786 65703
+5714 65768
+5713 65769
+5746 65739
+5767 65720
+5757 65729
+5778 65710
+5735 65749
+5799 65691
+5737 65747
+5798 65692
+5749 65736
+5748 65737
+5787 65702
+5715 65767
+5716 65766
+5726 65757
+5800 65690
+5738 65746
+5729 65754
+5789 65700
+5758 65728
+5797 65693
+5727 65756
+5739 65745
+5769 65718
+5759 65727
+5728 65755
+5788 65701
+5801 65689
+5791 65698
+5780 65708
+5779 65709
+5770 65717
+5781 65707
+5750 65735
+5760 65726
+5790 65699
+5771 65716
+5751 65734
+5740 65744
+5717 65765
+5761 65725
+5752 65733
+5730 65753
+5802 65688
+5792 65697
+5718 65764
+5741 65743
+5762 65724
+5731 65752
+5719 65763
+5782 65706
+5783 65705
+5773 65714
+5793 65696
+5732 65751
+5772 65715
+5763 65723
+5803 65687
+5753 65732
+5742 65742
+5733 65750
+5720 65762
+5764 65722
+5774 65713
+5794 65695
+5784 65704
+5743 65741
+5754 65731
+5804 65686
+5806 65685
+5744 65740
+5755 65730
+6668 64888
+6644 64910
+6645 64909
+6632 64921
+6633 64920
+6634 64919
+6646 64908
+6699 64860
+6657 64898
+6635 64918
+6647 64907
+6669 64887
+6636 64917
+6659 64896
+6670 64886
+6710 64850
+6680 64877
+6700 64859
+6648 64906
+6649 64905
+6701 64858
+6720 64841
+6691 64867
+6658 64897
+6672 64884
+6637 64916
+6721 64840
+6671 64885
+6711 64849
+6681 64876
+6692 64866
+6690 64868
+6660 64895
+6682 64875
+6723 64838
+6702 64857
+6651 64903
+6693 64865
+6638 64915
+6650 64904
+6722 64839
+6712 64848
+6661 64894
+6683 64874
+6673 64883
+6713 64847
+6639 64914
+6652 64902
+6662 64893
+6704 64855
+6703 64856
+6663 64892
+6694 64864
+6724 64837
+6674 64882
+6684 64873
+6714 64846
+6640 64913
+6641 64912
+6695 64863
+6685 64872
+6653 64901
+6675 64881
+6715 64845
+6725 64836
+6664 64891
+6705 64854
+6665 64890
+6696 64862
+6706 64853
+6676 64880
+6654 64900
+6726 64835
+6686 64871
+6642 64911
+6717 64843
+6716 64844
+6727 64834
+6697 64861
+6707 64852
+6677 64879
+6655 64899
+6687 64870
+6666 64889
+6708 64851
+6728 64833
+6688 64869
+6718 64842
+6678 64878
+6983 64598
+6994 64588
+6982 64599
+7007 64576
+6995 64587
+6998 64584
+6985 64596
+6997 64585
+7006 64577
+7049 64538
+6984 64597
+6986 64595
+7040 64546
+6996 64586
+7020 64564
+7039 64547
+7029 64556
+7041 64545
+7019 64565
+7030 64555
+7050 64537
+7069 64520
+7008 64575
+7009 64574
+7070 64519
+7010 64573
+7021 64563
+7060 64528
+7042 64544
+6987 64594
+6999 64583
+7031 64554
+7071 64518
+7051 64536
+7061 64527
+7072 64517
+7011 64572
+7000 64582
+7052 64535
+7043 64543
+7022 64562
+6988 64593
+7062 64526
+7032 64553
+7023 64561
+7063 64525
+7001 64581
+7024 64560
+7033 64552
+7053 64534
+7064 64524
+7012 64571
+6989 64592
+7044 64542
+7073 64516
+7054 64533
+7034 64551
+7002 64580
+7013 64570
+7045 64541
+6990 64591
+7035 64550
+7025 64559
+7074 64515
+7065 64523
+7055 64532
+7014 64569
+7075 64514
+6991 64590
+7003 64579
+7046 64540
+7036 64549
+7076 64513
+7026 64558
+6992 64589
+7056 64531
+7004 64578
+7066 64522
+7015 64568
+7047 64539
+7057 64530
+7077 64512
+7027 64557
+7037 64548
+7079 64511
+7016 64567
+7058 64529
+7067 64521
+7017 64566
+7095 64495
+7117 64475
+7094 64496
+7106 64485
+7107 64484
+7150 64445
+7118 64474
+7096 64494
+7093 64497
+7105 64486
+7130 64463
+7128 64465
+7129 64464
+7151 64444
+7108 64483
+7140 64454
+7181 64417
+7119 64473
+7109 64482
+7180 64418
+7097 64493
+7131 64462
+7120 64472
+7141 64453
+7152 64443
+7142 64452
+7110 64481
+7171 64426
+7161 64435
+7162 64434
+7153 64442
+7098 64492
+7172 64425
+7182 64416
+7173 64424
+7121 64471
+7183 64415
+7111 64480
+7122 64470
+7163 64433
+7132 64461
+7154 64441
+7099 64491
+7133 64460
+7143 64451
+7174 64423
+7112 64479
+7134 64459
+7164 64432
+7123 64469
+7155 64440
+7100 64490
+7144 64450
+7175 64422
+7184 64414
+7145 64449
+7101 64489
+7185 64413
+7186 64412
+7113 64478
+7146 64448
+7165 64431
+7124 64468
+7176 64421
+7166 64430
+7135 64458
+7156 64439
+7102 64488
+7136 64457
+7157 64438
+7125 64467
+7103 64487
+7114 64477
+7147 64447
+7168 64428
+7126 64466
+7115 64476
+7158 64437
+7188 64410
+7187 64411
+7137 64456
+7167 64429
+7148 64446
+7190 64409
+7169 64427
+7138 64455
+7178 64419
+7159 64436
+7177 64420
+8281 63408
+8293 63397
+8280 63409
+8257 63430
+8258 63429
+8271 63417
+8270 63418
+8269 63419
+8268 63420
+8333 63361
+8259 63428
+8315 63377
+8283 63406
+8294 63396
+8304 63387
+8344 63351
+8282 63407
+8305 63386
+8260 63427
+8325 63368
+8326 63367
+8314 63378
+8346 63349
+8313 63379
+8261 63426
+8292 63398
+8272 63416
+8262 63425
+8345 63350
+8285 63404
+8316 63376
+8334 63360
+8273 63415
+8306 63385
+8337 63357
+8284 63405
+8335 63359
+8295 63395
+8338 63356
+8327 63366
+8274 63414
+8336 63358
+8263 63424
+8286 63403
+8328 63365
+8347 63348
+8297 63393
+8307 63384
+8317 63375
+8296 63394
+8275 63413
+8298 63392
+8339 63355
+8308 63383
+8309 63382
+8287 63402
+8348 63347
+8276 63412
+8264 63423
+8319 63373
+8318 63374
+8288 63401
+8330 63363
+8277 63411
+8329 63364
+8265 63422
+8299 63391
+8310 63381
+8340 63354
+8320 63372
+8266 63421
+8289 63400
+8321 63371
+8311 63380
+8341 63353
+8331 63362
+8278 63410
+8300 63390
+8290 63399
+8342 63352
+8301 63389
+8302 63388
+8323 63369
+8363 63333
+8388 63310
+8362 63334
+8396 63303
+8397 63302
+8353 63342
+8374 63323
+8351 63344
+8354 63341
+8410 63290
+8375 63322
+8365 63331
+8398 63301
+8352 63343
+8438 63265
+8386 63312
+8387 63311
+8408 63292
+8364 63332
+8376 63321
+8355 63340
+8379 63318
+8356 63339
+8439 63264
+8389 63309
+8419 63282
+8399 63300
+8366 63330
+8429 63273
+8377 63320
+8409 63291
+8367 63329
+8368 63328
+8378 63319
+8420 63281
+8380 63317
+8441 63262
+8400 63299
+8422 63279
+8390 63308
+8440 63263
+8421 63280
+8430 63272
+8357 63338
+8401 63298
+8391 63307
+8412 63288
+8431 63271
+8432 63270
+8411 63289
+8358 63337
+8423 63278
+8369 63327
+8370 63326
+8392 63306
+8381 63316
+8442 63261
+8402 63297
+8413 63287
+8403 63296
+8433 63269
+8382 63315
+8443 63260
+8359 63336
+8414 63286
+8404 63295
+8393 63305
+8444 63259
+8424 63277
+8371 63325
+8360 63335
+8383 63314
+8405 63294
+8434 63268
+8425 63276
+8394 63304
+8415 63285
+8372 63324
+8435 63267
+8445 63258
+8384 63313
+8426 63275
+8406 63293
+8446 63257
+8448 63256
+8427 63274
+8436 63266
+8417 63283
+8910 62833
+8887 62854
+8900 62842
+8877 62863
+8901 62841
+8899 62843
+8876 62864
+8888 62853
+8878 62862
+8889 62852
+8912 62831
+8934 62811
+8922 62822
+8902 62840
+8911 62832
+8890 62851
+8954 62793
+8923 62821
+8879 62861
+8924 62820
+8945 62801
+8933 62812
+8965 62783
+8892 62849
+8880 62860
+8903 62839
+8964 62784
+8891 62850
+8881 62859
+8944 62802
+8935 62810
+8913 62830
+8936 62809
+8914 62829
+8956 62791
+8904 62838
+8937 62808
+8957 62790
+8955 62792
+8947 62799
+8915 62828
+8893 62848
+8966 62782
+8925 62819
+8882 62858
+8926 62818
+8946 62800
+8916 62827
+8894 62847
+8905 62837
+8906 62836
+8927 62817
+8948 62798
+8967 62781
+8968 62780
+8895 62846
+8917 62826
+8883 62857
+8938 62807
+8928 62816
+8958 62789
+8884 62856
+8907 62835
+8896 62845
+8929 62815
+8959 62788
+8918 62825
+8949 62797
+8969 62779
+8939 62806
+8885 62855
+8908 62834
+8940 62805
+8930 62814
+8919 62824
+8950 62796
+8960 62787
+8970 62778
+8897 62844
+8920 62823
+8971 62777
+8931 62813
+8973 62776
+8952 62794
+8962 62785
+8942 62803
+9703 62109
+9692 62119
+9705 62107
+9717 62096
+9681 62129
+9704 62108
+9683 62127
+9706 62106
+9715 62098
+9726 62088
+9682 62128
+9693 62118
+9694 62117
+9727 62087
+9707 62105
+9716 62097
+9729 62085
+9708 62104
+9684 62126
+9685 62125
+9728 62086
+9709 62103
+9695 62116
+9696 62115
+9719 62094
+9718 62095
+9720 62093
+9697 62114
+9730 62084
+9686 62124
+9731 62083
+9687 62123
+9698 62113
+9710 62102
+9732 62082
+9699 62112
+9733 62081
+9721 62092
+9722 62091
+9688 62122
+9711 62101
+9712 62100
+9689 62121
+9723 62090
+9700 62111
+9734 62080
+9701 62110
+9690 62120
+9713 62099
+9724 62089
+9735 62079
+9750 62066
+9760 62057
+9751 62065
+9761 62056
+9738 62077
+9749 62067
+9824 61999
+9740 62075
+9739 62076
+9773 62045
+9804 62017
+9752 62064
+9772 62046
+9741 62074
+9762 62055
+9774 62044
+9805 62016
+9794 62026
+9783 62036
+9742 62073
+9795 62025
+9743 62072
+9775 62043
+9785 62034
+9753 62063
+9826 61997
+9763 62054
+9784 62035
+9765 62052
+9825 61998
+9807 62014
+9764 62053
+9797 62023
+9816 62006
+9815 62007
+9776 62042
+9796 62024
+9766 62051
+9754 62062
+9786 62033
+9827 61996
+9818 62004
+9806 62015
+9819 62003
+9755 62061
+9817 62005
+9744 62071
+9809 62012
+9828 61995
+9808 62013
+9767 62050
+9777 62041
+9787 62032
+9799 62021
+9788 62031
+9778 62040
+9798 62022
+9756 62060
+9789 62030
+9829 61994
+9779 62039
+9745 62070
+9820 62002
+9800 62020
+9830 61993
+9757 62059
+9831 61992
+9768 62049
+9769 62048
+9801 62019
+9810 62011
+9746 62069
+9811 62010
+9780 62038
+9790 62029
+9747 62068
+9791 62028
+9821 62001
+9802 62018
+9758 62058
+9812 62009
+9832 61991
+9822 62000
+9781 62037
+9770 62047
+9834 61990
+9792 62027
+9813 62008
+9835 61989
+10350 61519
+10338 61530
+10327 61540
+10352 61517
+10339 61529
+10316 61550
+10361 61509
+10328 61539
+10318 61548
+10373 61498
+10317 61549
+10382 61490
+10341 61527
+10340 61528
+10329 61538
+10372 61499
+10349 61520
+10319 61547
+10351 61518
+10362 61508
+10393 61480
+10384 61488
+10403 61471
+10383 61489
+10371 61500
+10363 61507
+10330 61537
+10374 61497
+10404 61470
+10342 61526
+10320 61546
+10353 61516
+10394 61479
+10385 61487
+10331 61536
+10343 61525
+10364 61506
+10321 61545
+10405 61469
+10375 61496
+10354 61515
+10332 61535
+10386 61486
+10396 61477
+10397 61476
+10344 61524
+10377 61494
+10395 61478
+10365 61505
+10322 61544
+10387 61485
+10355 61514
+10333 61534
+10366 61504
+10376 61495
+10406 61468
+10407 61467
+10323 61543
+10334 61533
+10388 61484
+10356 61513
+10345 61523
+10378 61493
+10367 61503
+10398 61475
+10408 61466
+10346 61522
+10324 61542
+10389 61483
+10357 61512
+10368 61502
+10335 61532
+10399 61474
+10379 61492
+10409 61465
+10411 61464
+10347 61521
+10390 61482
+10325 61541
+10336 61531
+10380 61491
+10358 61511
+10400 61473
+10369 61501
+10412 61463
+10391 61481
+10401 61472
+10413 61462
+10359 61510
+10530 61355
+10496 61386
+10529 61356
+10532 61353
+10519 61365
+10508 61375
+10498 61384
+10553 61334
+10497 61385
+10563 61325
+10507 61376
+10540 61346
+10562 61326
+10521 61363
+10551 61336
+10509 61374
+10552 61335
+10520 61364
+10541 61345
+10518 61366
+10499 61383
+10582 61308
+10510 61373
+10564 61324
+10583 61307
+10542 61344
+10574 61315
+10543 61343
+10531 61354
+10522 61362
+10584 61306
+10500 61382
+10555 61332
+10511 61372
+10533 61352
+10575 61314
+10565 61323
+10523 61361
+10554 61333
+10544 61342
+10501 61381
+10576 61313
+10512 61371
+10585 61305
+10577 61312
+10513 61370
+10566 61322
+10524 61360
+10557 61330
+10586 61304
+10534 61351
+10545 61341
+10535 61350
+10502 61380
+10546 61340
+10567 61321
+10587 61303
+10556 61331
+10536 61349
+10514 61369
+10588 61302
+10503 61379
+10525 61359
+10558 61329
+10568 61320
+10547 61339
+10526 61358
+10578 61311
+10515 61368
+10579 61310
+10504 61378
+10569 61319
+10548 61338
+10589 61301
+10559 61328
+10537 61348
+10570 61318
+10538 61347
+10560 61327
+10505 61377
+10580 61309
+10516 61367
+10527 61357
+10549 61337
+10590 61300
+10592 61299
+10571 61317
+10593 61298
+10572 61316
+10642 61253
+10663 61234
+10619 61274
+10653 61243
+10620 61273
+10610 61282
+10675 61223
+10665 61232
+10609 61283
+10608 61284
+10641 61254
+10631 61263
+10633 61261
+10652 61244
+10630 61264
+10621 61272
+10674 61224
+10643 61252
+10632 61262
+10654 61242
+10664 61233
+10611 61281
+10622 61271
+10656 61240
+10655 61241
+10634 61260
+10644 61251
+10612 61280
+10635 61259
+10666 61231
+10613 61279
+10623 61270
+10667 61230
+10645 61250
+10677 61221
+10678 61220
+10624 61269
+10646 61249
+10636 61258
+10676 61222
+10614 61278
+10679 61219
+10647 61248
+10625 61268
+10657 61239
+10668 61229
+10669 61228
+10658 61238
+10615 61277
+10637 61257
+10670 61227
+10680 61218
+10626 61267
+10659 61237
+10648 61247
+10638 61256
+10681 61217
+10649 61246
+10627 61266
+10616 61276
+10660 61236
+10671 61226
+10639 61255
+10617 61275
+10682 61216
+10628 61265
+10672 61225
+10650 61245
+10661 61235
+10683 61215
+10720 61182
+10708 61193
+10741 61163
+10688 61211
+10697 61203
+10686 61213
+10719 61183
+10709 61192
+10698 61202
+10753 61152
+10687 61212
+10710 61191
+10752 61153
+10711 61190
+10731 61172
+10743 61161
+10699 61201
+10742 61162
+10689 61210
+10732 61171
+10730 61173
+10700 61200
+10764 61142
+10722 61180
+10734 61169
+10721 61181
+10754 61151
+10744 61160
+10773 61134
+10774 61133
+10762 61144
+10712 61189
+10733 61170
+10763 61143
+10745 61159
+10690 61209
+10701 61199
+10755 61150
+10775 61132
+10713 61188
+10723 61179
+10691 61208
+10702 61198
+10766 61140
+10724 61178
+10747 61157
+10725 61177
+10776 61131
+10714 61187
+10756 61149
+10735 61168
+10757 61148
+10703 61197
+10692 61207
+10767 61139
+10746 61158
+10765 61141
+10715 61186
+10748 61156
+10737 61166
+10693 61206
+10768 61138
+10736 61167
+10704 61196
+10778 61129
+10758 61147
+10726 61176
+10777 61130
+10727 61175
+10716 61185
+10705 61195
+10769 61137
+10694 61205
+10749 61155
+10738 61165
+10779 61128
+10780 61127
+10759 61146
+10695 61204
+10717 61184
+10739 61164
+10760 61145
+10750 61154
+10728 61174
+10706 61194
+10770 61136
+10782 61126
+10771 61135
+10783 61125
+14149 58065
+14065 58141
+14096 58113
+14073 58134
+14074 58133
+14130 58082
+14064 58142
+14097 58112
+14106 58104
+14075 58132
+14086 58122
+14085 58123
+14084 58124
+14063 58143
+14098 58111
+14129 58083
+14109 58101
+14118 58093
+14095 58114
+14128 58084
+14107 58103
+14066 58140
+14117 58094
+14119 58092
+14138 58075
+14088 58120
+14076 58131
+14087 58121
+14150 58064
+14077 58130
+14140 58073
+14099 58110
+14067 58139
+14100 58109
+14120 58091
+14108 58102
+14089 58119
+14139 58074
+14110 58100
+14151 58063
+14132 58080
+14141 58072
+14078 58129
+14090 58118
+14121 58090
+14131 58081
+14068 58138
+14079 58128
+14152 58062
+14111 58099
+14122 58089
+14143 58070
+14101 58108
+14142 58071
+14069 58137
+14133 58079
+14091 58117
+14144 58069
+14153 58061
+14154 58060
+14112 58098
+14080 58127
+14102 58107
+14123 58088
+14134 58078
+14070 58136
+14113 58097
+14145 58068
+14092 58116
+14081 58126
+14135 58077
+14124 58087
+14103 58106
+14156 58058
+14114 58096
+14071 58135
+14082 58125
+14146 58067
+14155 58059
+14125 58086
+14093 58115
+14104 58105
+14136 58076
+14158 58057
+14115 58095
+14147 58066
+14159 58056
+14126 58085
+14160 58055
+14551 57700
+14529 57720
+14541 57709
+14572 57681
+14528 57721
+14518 57730
+14540 57710
+14550 57701
+14530 57719
+14573 57680
+14561 57691
+14539 57711
+14519 57729
+14582 57672
+14574 57679
+14593 57662
+14520 57728
+14531 57718
+14552 57699
+14584 57670
+14583 57671
+14605 57651
+14562 57690
+14553 57698
+14585 57669
+14604 57652
+14596 57659
+14521 57727
+14532 57717
+14543 57707
+14563 57689
+14564 57688
+14586 57668
+14594 57661
+14575 57678
+14595 57660
+14522 57726
+14542 57708
+14554 57697
+14555 57696
+14565 57687
+14533 57716
+14544 57706
+14587 57667
+14606 57650
+14576 57677
+14566 57686
+14534 57715
+14597 57658
+14607 57649
+14545 57705
+14523 57725
+14535 57714
+14524 57724
+14577 57676
+14588 57666
+14556 57695
+14608 57648
+14567 57685
+14609 57647
+14546 57704
+14599 57656
+14578 57675
+14536 57713
+14557 57694
+14525 57723
+14598 57657
+14568 57684
+14589 57665
+14579 57674
+14547 57703
+14526 57722
+14558 57693
+14548 57702
+14590 57664
+14537 57712
+14569 57683
+14600 57655
+14610 57646
+14611 57645
+14580 57673
+14601 57654
+14591 57663
+14613 57644
+14602 57653
+14559 57692
+14570 57682
+14614 57643
+14615 57642
+15058 57240
+15080 57220
+15122 57182
+15070 57229
+15060 57238
+15068 57231
+15079 57221
+15111 57192
+15144 57162
+15133 57172
+15113 57190
+15069 57230
+15092 57209
+15101 57201
+15071 57228
+15090 57211
+15124 57180
+15059 57239
+15093 57208
+15136 57169
+15104 57198
+15081 57219
+15091 57210
+15112 57191
+15082 57218
+15114 57189
+15061 57237
+15123 57181
+15083 57217
+15145 57161
+15102 57200
+15103 57199
+15115 57188
+15135 57170
+15134 57171
+15072 57227
+15105 57197
+15146 57160
+15094 57207
+15095 57206
+15125 57179
+15062 57236
+15073 57226
+15084 57216
+15147 57159
+15138 57167
+15106 57196
+15074 57225
+15126 57178
+15075 57224
+15063 57235
+15064 57234
+15117 57186
+15116 57187
+15085 57215
+15137 57168
+15096 57205
+15127 57177
+15107 57195
+15128 57176
+15086 57214
+15148 57158
+15129 57175
+15076 57223
+15065 57233
+15108 57194
+15150 57156
+15118 57185
+15149 57157
+15097 57204
+15087 57213
+15119 57184
+15077 57222
+15139 57166
+15066 57232
+15140 57165
+15098 57203
+15130 57174
+15088 57212
+15109 57193
+15131 57173
+15120 57183
+15141 57164
+15153 57154
+15099 57202
+15142 57163
+15151 57155
+15154 57153
+15155 57152
+15865 56508
+15844 56527
+15845 56526
+15832 56538
+15887 56488
+15853 56519
+15856 56516
+15896 56480
+15917 56461
+15885 56490
+15834 56536
+15874 56500
+15866 56507
+15907 56470
+15854 56518
+15833 56537
+15855 56517
+15843 56528
+15888 56487
+15877 56497
+15918 56460
+15842 56529
+15864 56509
+15878 56496
+15875 56499
+15900 56476
+15886 56489
+15857 56515
+15867 56506
+15846 56525
+15876 56498
+15835 56535
+15919 56459
+15897 56479
+15908 56469
+15889 56486
+15909 56468
+15879 56495
+15836 56534
+15910 56467
+15847 56524
+15868 56505
+15898 56478
+15858 56514
+15899 56477
+15890 56485
+15859 56513
+15920 56458
+15837 56533
+15922 56456
+15848 56523
+15921 56457
+15901 56475
+15869 56504
+15849 56522
+15880 56494
+15911 56466
+15870 56503
+15891 56484
+15838 56532
+15912 56465
+15902 56474
+15860 56512
+15881 56493
+15892 56483
+15839 56531
+15923 56455
+15882 56492
+15924 56454
+15871 56502
+15850 56521
+15903 56473
+15893 56482
+15913 56464
+15851 56520
+15861 56511
+15914 56463
+15840 56530
+15883 56491
+15904 56472
+15872 56501
+15925 56453
+15862 56510
+15927 56452
+15905 56471
+15894 56481
+15915 56462
+15928 56451
+15929 56450
+16390 56032
+16391 56031
+16380 56041
+16411 56013
+16367 56053
+16378 56043
+16402 56021
+16357 56062
+16379 56042
+16412 56012
+16358 56061
+16442 55985
+16368 56052
+16410 56014
+16369 56051
+16432 55994
+16370 56050
+16389 56033
+16359 56060
+16400 56023
+16421 56004
+16422 56003
+16399 56024
+16444 55983
+16423 56002
+16431 55995
+16433 55993
+16381 56040
+16360 56059
+16403 56020
+16371 56049
+16392 56030
+16413 56011
+16443 55984
+16401 56022
+16424 56001
+16414 56010
+16435 55991
+16404 56019
+16393 56029
+16425 56000
+16434 55992
+16361 56058
+16394 56028
+16382 56039
+16372 56048
+16426 55999
+16445 55982
+16383 56038
+16415 56009
+16373 56047
+16446 55981
+16384 56037
+16405 56018
+16362 56057
+16416 56008
+16395 56027
+16437 55989
+16427 55998
+16363 56056
+16406 56017
+16436 55990
+16374 56046
+16448 55979
+16447 55980
+16385 56036
+16417 56007
+16364 56055
+16396 56026
+16449 55978
+16428 55997
+16375 56045
+16407 56016
+16418 56006
+16438 55988
+16397 56025
+16439 55987
+16376 56044
+16365 56054
+16386 56035
+16387 56034
+16429 55996
+16408 56015
+16450 55977
+16440 55986
+16419 56005
+16452 55976
+16453 55975
+18096 54486
+18045 54532
+18076 54504
+18106 54477
+18074 54506
+18023 54552
+18043 54534
+18044 54533
+18064 54515
+18084 54497
+18042 54535
+18021 54554
+18031 54545
+18056 54522
+18022 54553
+18034 54542
+18087 54494
+18033 54543
+18055 54523
+18075 54505
+18032 54544
+18065 54514
+18052 54526
+18053 54525
+18088 54493
+18095 54487
+18063 54516
+18054 54524
+18098 54484
+18108 54475
+18035 54541
+18024 54551
+18077 54503
+18036 54540
+18057 54521
+18025 54550
+18066 54513
+18086 54495
+18067 54512
+18085 54496
+18026 54549
+18046 54531
+18047 54530
+18078 54502
+18097 54485
+18099 54483
+18109 54474
+18107 54476
+18079 54501
+18110 54473
+18089 54492
+18068 54511
+18058 54520
+18037 54539
+18069 54510
+18048 54529
+18100 54482
+18027 54548
+18111 54472
+18090 54491
+18059 54519
+18049 54528
+18070 54509
+18038 54538
+18102 54480
+18080 54500
+18028 54547
+18060 54518
+18039 54537
+18101 54481
+18112 54471
+18081 54499
+18091 54490
+18071 54508
+18050 54527
+18082 54498
+18103 54479
+18092 54489
+18072 54507
+18061 54517
+18029 54546
+18114 54469
+18040 54536
+18113 54470
+18093 54488
+18104 54478
+18116 54468
+18117 54467
+18479 54139
+18458 54158
+18468 54149
+18459 54157
+18510 54111
+18446 54169
+18478 54140
+18501 54119
+18520 54102
+18448 54167
+18467 54150
+18499 54121
+18500 54120
+18530 54093
+18480 54138
+18456 54160
+18489 54130
+18509 54112
+18511 54110
+18469 54148
+18531 54092
+18481 54137
+18460 54156
+18457 54159
+18533 54090
+18470 54147
+18447 54168
+18513 54108
+18477 54141
+18449 54166
+18502 54118
+18491 54128
+18490 54129
+18523 54099
+18450 54165
+18522 54100
+18521 54101
+18532 54091
+18471 54146
+18488 54131
+18512 54109
+18492 54127
+18482 54136
+18461 54155
+18504 54116
+18451 54164
+18472 54145
+18534 54089
+18483 54135
+18493 54126
+18503 54117
+18514 54107
+18494 54125
+18524 54098
+18462 54154
+18525 54097
+18535 54088
+18536 54087
+18473 54144
+18452 54163
+18505 54115
+18463 54153
+18515 54106
+18495 54124
+18474 54143
+18526 54096
+18484 54134
+18453 54162
+18516 54105
+18485 54133
+18464 54152
+18507 54113
+18496 54123
+18454 54161
+18527 54095
+18475 54142
+18486 54132
+18506 54114
+18537 54086
+18517 54104
+18465 54151
+18538 54085
+18518 54103
+18497 54122
+18528 54094
+18541 54083
+18542 54082
+18539 54084
+19676 53055
+19717 53018
+19696 53037
+19709 53025
+19708 53026
+19678 53053
+19667 53063
+19707 53027
+19749 52989
+19719 53016
+19677 53054
+19718 53017
+19720 53015
+19729 53007
+19698 53035
+19665 53065
+19666 53064
+19699 53034
+19689 53043
+19751 52987
+19697 53036
+19675 53056
+19739 52998
+19730 53006
+19687 53045
+19750 52988
+19700 53033
+19731 53005
+19679 53052
+19686 53046
+19752 52986
+19741 52996
+19728 53008
+19732 53004
+19688 53044
+19710 53024
+19742 52995
+19669 53061
+19740 52997
+19690 53042
+19701 53032
+19668 53062
+19721 53014
+19753 52985
+19680 53051
+19711 53023
+19691 53041
+19712 53022
+19722 53013
+19743 52994
+19670 53060
+19702 53031
+19723 53012
+19733 53003
+19713 53021
+19681 53050
+19671 53059
+19692 53040
+19744 52993
+19755 52983
+19734 53002
+19754 52984
+19735 53001
+19714 53020
+19682 53049
+19745 52992
+19703 53030
+19672 53058
+19724 53011
+19693 53039
+19725 53010
+19704 53029
+19683 53048
+19756 52982
+19746 52991
+19726 53009
+19694 53038
+19673 53057
+19715 53019
+19759 52980
+19705 53028
+19684 53047
+19757 52981
+19736 53000
+19760 52979
+19737 52999
+19761 52978
+19747 52990
+19762 52977
+20235 52549
+20216 52566
+20194 52586
+20204 52577
+20214 52568
+20227 52556
+20236 52548
+20196 52584
+20226 52557
+20183 52596
+20225 52558
+20185 52594
+20267 52520
+20256 52530
+20184 52595
+20215 52567
+20257 52529
+20206 52575
+20205 52576
+20268 52519
+20193 52587
+20195 52585
+20246 52539
+20248 52537
+20237 52547
+20186 52593
+20228 52555
+20270 52517
+20238 52546
+20259 52527
+20207 52574
+20247 52538
+20217 52565
+20239 52545
+20208 52573
+20219 52563
+20229 52554
+20258 52528
+20260 52526
+20198 52582
+20197 52583
+20249 52536
+20188 52591
+20187 52592
+20209 52572
+20218 52564
+20250 52535
+20230 52553
+20271 52516
+20269 52518
+20240 52544
+20251 52534
+20231 52552
+20199 52581
+20220 52562
+20210 52571
+20241 52543
+20261 52525
+20273 52514
+20200 52580
+20189 52590
+20252 52533
+20272 52515
+20221 52561
+20262 52524
+20211 52570
+20232 52551
+20263 52523
+20190 52589
+20242 52542
+20201 52579
+20222 52560
+20274 52513
+20233 52550
+20253 52532
+20212 52569
+20191 52588
+20264 52522
+20223 52559
+20243 52541
+20202 52578
+20265 52521
+20278 52510
+20275 52512
+20244 52540
+20254 52531
+20279 52509
+20276 52511
+20280 52508
+20384 52414
+20425 52377
+20394 52405
+20446 52358
+20404 52396
+20416 52385
+20386 52412
+20415 52386
+20375 52422
+20395 52404
+20405 52395
+20385 52413
+20426 52376
+20396 52403
+20373 52424
+20435 52368
+20437 52366
+20447 52357
+20383 52415
+20428 52374
+20459 52346
+20448 52356
+20397 52402
+20458 52347
+20406 52394
+20407 52393
+20387 52411
+20460 52345
+20417 52384
+20374 52423
+20436 52367
+20438 52365
+20408 52392
+20427 52375
+20450 52354
+20376 52421
+20418 52383
+20398 52401
+20457 52348
+20429 52373
+20449 52355
+20439 52364
+20377 52420
+20419 52382
+20410 52390
+20440 52363
+20399 52400
+20420 52381
+20409 52391
+20430 52372
+20451 52353
+20378 52419
+20461 52344
+20388 52410
+20389 52409
+20441 52362
+20379 52418
+20400 52399
+20421 52380
+20452 52352
+20390 52408
+20431 52371
+20411 52389
+20432 52370
+20442 52361
+20462 52343
+20401 52398
+20453 52351
+20422 52379
+20380 52417
+20463 52342
+20391 52407
+20443 52360
+20423 52378
+20412 52388
+20381 52416
+20433 52369
+20402 52397
+20467 52339
+20464 52341
+20465 52340
+20392 52406
+20454 52350
+20413 52387
+20468 52338
+20444 52359
+20455 52349
+20469 52337
+20470 52336
+22672 50344
+22631 50381
+22651 50363
+22664 50351
+22640 50373
+22663 50352
+22642 50371
+22704 50315
+22661 50354
+22662 50353
+22621 50390
+22674 50342
+22652 50362
+22632 50380
+22703 50316
+22622 50389
+22643 50370
+22694 50324
+22633 50379
+22683 50334
+22641 50372
+22630 50382
+22685 50332
+22673 50343
+22654 50360
+22686 50331
+22655 50359
+22682 50335
+22693 50325
+22705 50314
+22706 50313
+22684 50333
+22620 50391
+22695 50323
+22624 50387
+22653 50361
+22665 50350
+22696 50322
+22644 50369
+22676 50340
+22623 50388
+22675 50341
+22634 50378
+22697 50321
+22656 50358
+22635 50377
+22645 50368
+22666 50349
+22687 50330
+22677 50339
+22625 50386
+22667 50348
+22646 50367
+22657 50357
+22688 50329
+22708 50311
+22707 50312
+22698 50320
+22636 50376
+22709 50310
+22678 50338
+22647 50366
+22626 50385
+22668 50347
+22710 50309
+22648 50365
+22699 50319
+22658 50356
+22627 50384
+22637 50375
+22690 50327
+22689 50328
+22679 50337
+22669 50346
+22711 50308
+22659 50355
+22638 50374
+22700 50318
+22628 50383
+22680 50336
+22701 50317
+22670 50345
+22649 50364
+22714 50306
+22691 50326
+22712 50307
+22715 50305
+22717 50303
+22716 50304
+22935 50106
+22954 50089
+22923 50117
+22922 50118
+22946 50096
+22915 50124
+22945 50097
+22944 50098
+22964 50080
+22986 50060
+22943 50099
+22913 50126
+22955 50088
+22987 50059
+22914 50125
+22904 50134
+22903 50135
+22925 50115
+22976 50069
+22902 50136
+22934 50107
+22956 50087
+22933 50108
+22965 50079
+22936 50105
+22924 50116
+22912 50127
+22947 50095
+22957 50086
+22926 50114
+22988 50058
+22967 50077
+22937 50104
+22985 50061
+22905 50133
+22916 50123
+22948 50094
+22975 50070
+22979 50066
+22906 50132
+22977 50068
+22966 50078
+22969 50075
+22927 50113
+22949 50093
+22968 50076
+22907 50131
+22958 50085
+22917 50122
+22938 50103
+22908 50130
+22959 50084
+22990 50056
+22980 50065
+22918 50121
+22960 50083
+22978 50067
+22928 50112
+22970 50074
+22989 50057
+22991 50055
+22939 50102
+22929 50111
+22950 50092
+22981 50064
+22971 50073
+22919 50120
+22940 50101
+22951 50091
+22909 50129
+22961 50082
+22941 50100
+22930 50110
+22995 50052
+22992 50054
+22920 50119
+22982 50063
+22962 50081
+22931 50109
+22983 50062
+22910 50128
+22972 50072
+22952 50090
+22973 50071
+22996 50051
+22993 50053
+22997 50050
+22999 50048
+23507 49589
+23558 49543
+23517 49580
+23569 49533
+23530 49568
+23529 49569
+23539 49560
+23486 49608
+23570 49532
+23527 49571
+23559 49542
+23487 49607
+23518 49579
+23498 49597
+23497 49598
+23528 49570
+23506 49590
+23509 49587
+23519 49578
+23499 49596
+23538 49561
+23548 49552
+23572 49530
+23560 49541
+23550 49550
+23488 49606
+23549 49551
+23520 49577
+23489 49605
+23496 49599
+23531 49567
+23508 49588
+23540 49559
+23571 49531
+23541 49558
+23561 49540
+23500 49595
+23542 49557
+23511 49585
+23522 49575
+23501 49594
+23551 49549
+23552 49548
+23490 49604
+23510 49586
+23532 49566
+23521 49576
+23492 49602
+23543 49556
+23491 49603
+23562 49539
+23574 49528
+23563 49538
+23544 49555
+23533 49565
+23553 49547
+23502 49593
+23564 49537
+23512 49584
+23573 49529
+23523 49574
+23554 49546
+23575 49527
+23513 49583
+23503 49592
+23534 49564
+23514 49582
+23565 49536
+23524 49573
+23535 49563
+23493 49601
+23555 49545
+23525 49572
+23579 49524
+23576 49526
+23545 49554
+23546 49553
+23504 49591
+23515 49581
+23556 49544
+23566 49535
+23494 49600
+23580 49523
+23536 49562
+23577 49525
+23581 49522
+23567 49534
+23583 49520
+23582 49521
+24630 48574
+24651 48555
+24598 48603
+24622 48581
+24631 48573
+24621 48582
+24591 48609
+24609 48593
+24620 48583
+24640 48565
+24600 48601
+24579 48620
+24632 48572
+24610 48592
+24590 48610
+24601 48600
+24611 48591
+24599 48602
+24650 48556
+24578 48621
+24661 48546
+24580 48619
+24629 48575
+24589 48611
+24619 48584
+24612 48590
+24581 48618
+24642 48563
+24588 48612
+24623 48580
+24633 48571
+24653 48553
+24602 48599
+24641 48564
+24652 48554
+24663 48544
+24662 48545
+24603 48598
+24654 48552
+24592 48608
+24643 48562
+24613 48589
+24582 48617
+24634 48570
+24624 48579
+24583 48616
+24614 48588
+24644 48561
+24594 48606
+24593 48607
+24645 48560
+24666 48541
+24655 48551
+24664 48543
+24665 48542
+24635 48569
+24604 48597
+24625 48578
+24646 48559
+24615 48587
+24584 48615
+24656 48550
+24605 48596
+24626 48577
+24636 48568
+24595 48605
+24667 48540
+24657 48549
+24585 48614
+24647 48558
+24616 48586
+24606 48595
+24668 48539
+24637 48567
+24671 48537
+24627 48576
+24658 48548
+24596 48604
+24617 48585
+24586 48613
+24648 48557
+24672 48536
+24669 48538
+24607 48594
+24638 48566
+24659 48547
+24673 48535
+25275 47991
+25253 48011
+25294 47974
+25315 47955
+25286 47981
+25285 47982
+25273 47993
+25242 48021
+25284 47983
+25244 48019
+25304 47965
+25283 47984
+25254 48010
+25295 47973
+25255 48009
+25274 47992
+25328 47943
+25316 47954
+25266 47999
+25306 47963
+25326 47945
+25296 47972
+25327 47944
+25264 48001
+25324 47947
+25262 48003
+25276 47990
+25265 48000
+25325 47946
+25293 47975
+25317 47953
+25314 47956
+25263 48002
+25252 48012
+25267 47998
+25297 47971
+25243 48020
+25318 47952
+25298 47970
+25256 48008
+25307 47962
+25287 47980
+25308 47961
+25245 48018
+25305 47964
+25246 48017
+25288 47979
+25257 48007
+25277 47989
+25247 48016
+25278 47988
+25319 47951
+25330 47941
+25258 48006
+25329 47942
+25309 47960
+25289 47978
+25268 47997
+25310 47959
+25299 47969
+25279 47987
+25269 47996
+25248 48015
+25249 48014
+25300 47968
+25331 47940
+25320 47950
+25259 48005
+25290 47977
+25280 47986
+25321 47949
+25270 47995
+25291 47976
+25335 47937
+25332 47939
+25301 47967
+25260 48004
+25311 47958
+25271 47994
+25322 47948
+25281 47985
+25250 48013
+25336 47936
+25333 47938
+25302 47966
+25312 47957
+25337 47935
+25339 47933
+25338 47934
+27597 45894
+27619 45874
+27600 45891
+27578 45911
+27588 45902
+27639 45856
+27598 45893
+27650 45846
+27611 45881
+27620 45873
+27618 45875
+27580 45909
+27610 45882
+27567 45921
+27629 45865
+27589 45901
+27609 45883
+27568 45920
+27621 45872
+27579 45910
+27599 45892
+27649 45847
+27587 45903
+27628 45866
+27569 45919
+27590 45900
+27608 45884
+27631 45863
+27601 45890
+27577 45912
+27570 45918
+27602 45889
+27633 45861
+27591 45899
+27641 45854
+27622 45871
+27642 45853
+27581 45908
+27632 45862
+27630 45864
+27652 45844
+27571 45917
+27651 45845
+27612 45880
+27640 45855
+27592 45898
+27644 45851
+27613 45879
+27623 45870
+27582 45907
+27643 45852
+27572 45916
+27624 45869
+27573 45915
+27614 45878
+27653 45843
+27603 45888
+27593 45897
+27634 45860
+27604 45887
+27583 45906
+27645 45850
+27594 45896
+27584 45905
+27625 45868
+27659 45838
+27654 45842
+27615 45877
+27656 45840
+27655 45841
+27574 45914
+27605 45886
+27595 45895
+27635 45859
+27585 45904
+27626 45867
+27616 45876
+27660 45837
+27646 45849
+27636 45858
+27606 45885
+27575 45913
+27647 45848
+27661 45836
+27637 45857
+27657 45839
+27662 45835
+28091 45448
+28154 45391
+28102 45438
+28145 45399
+28082 45456
+28112 45429
+28132 45411
+28071 45466
+28122 45420
+28103 45437
+28125 45417
+28133 45410
+28084 45454
+28072 45465
+28092 45447
+28101 45439
+28081 45457
+28074 45463
+28124 45418
+28093 45446
+28146 45398
+28105 45435
+28083 45455
+28096 45443
+28113 45428
+28142 45402
+28147 45397
+28073 45464
+28114 45427
+28085 45453
+28094 45445
+28134 45409
+28143 45401
+28115 45426
+28117 45424
+28136 45407
+28076 45461
+28126 45416
+28148 45396
+28123 45419
+28104 45436
+28135 45408
+28095 45444
+28144 45400
+28127 45415
+28075 45462
+28116 45425
+28137 45406
+28106 45434
+28086 45452
+28156 45389
+28107 45433
+28153 45392
+28155 45390
+28118 45423
+28157 45388
+28128 45414
+28158 45387
+28087 45451
+28138 45405
+28159 45386
+28097 45442
+28077 45460
+28108 45432
+28149 45395
+28098 45441
+28163 45383
+28129 45413
+28119 45422
+28088 45450
+28160 45385
+28139 45404
+28109 45431
+28078 45459
+28140 45403
+28099 45440
+28089 45449
+28130 45412
+28164 45382
+28150 45394
+28120 45421
+28079 45458
+28151 45393
+28110 45430
+28165 45381
+28166 45380
+28161 45384
+29455 44217
+29436 44234
+29414 44254
+29423 44246
+29447 44224
+29437 44233
+29383 44282
+29454 44218
+29435 44235
+29415 44253
+29385 44280
+29393 44273
+29467 44206
+29404 44263
+29446 44225
+29434 44236
+29413 44255
+29425 44244
+29466 44207
+29394 44272
+29444 44227
+29426 44243
+29384 44281
+29405 44262
+29438 44232
+29395 44271
+29386 44279
+29424 44245
+29407 44260
+29445 44226
+29403 44264
+29406 44261
+29417 44251
+29396 44270
+29397 44269
+29416 44252
+29418 44250
+29428 44241
+29408 44259
+29458 44214
+29429 44240
+29427 44242
+29398 44268
+29448 44223
+29387 44278
+29456 44216
+29457 44215
+29388 44277
+29449 44222
+29459 44213
+29419 44249
+29474 44200
+29465 44208
+29464 44209
+29469 44204
+29468 44205
+29460 44212
+29409 44258
+29439 44231
+29430 44239
+29389 44276
+29450 44221
+29440 44230
+29399 44267
+29420 44248
+29470 44203
+29475 44199
+29451 44220
+29471 44202
+29461 44211
+29410 44257
+29390 44275
+29441 44229
+29400 44266
+29431 44238
+29411 44256
+29421 44247
+29401 44265
+29476 44198
+29462 44210
+29442 44228
+29472 44201
+29452 44219
+29391 44274
+29432 44237
+29477 44197
+29478 44196
+29711 43986
+29680 44014
+29710 43987
+29672 44021
+29740 43960
+29690 44005
+29662 44030
+29661 44031
+29701 43995
+29743 43957
+29700 43996
+29732 43967
+29660 44032
+29691 44004
+29730 43969
+29671 44022
+29699 43997
+29681 44013
+29713 43984
+29712 43985
+29689 44006
+29733 43966
+29720 43978
+29679 44015
+29659 44033
+29721 43977
+29682 44012
+29669 44024
+29744 43956
+29670 44023
+29714 43983
+29734 43965
+29683 44011
+29693 44002
+29674 44019
+29692 44003
+29705 43991
+29722 43976
+29694 44001
+29703 43993
+29702 43994
+29723 43975
+29673 44020
+29731 43968
+29663 44029
+29684 44010
+29704 43992
+29724 43974
+29664 44028
+29725 43973
+29715 43982
+29685 44009
+29736 43963
+29750 43951
+29742 43958
+29735 43964
+29741 43959
+29745 43955
+29716 43981
+29746 43954
+29695 44000
+29726 43972
+29665 44027
+29706 43990
+29675 44018
+29686 44008
+29676 44017
+29751 43950
+29737 43962
+29717 43980
+29696 43999
+29727 43971
+29666 44026
+29747 43953
+29707 43989
+29687 44007
+29697 43998
+29677 44016
+29752 43949
+29728 43970
+29738 43961
+29718 43979
+29748 43952
+29667 44025
+29753 43948
+29708 43988
+29754 43947
+30556 43224
+30578 43204
+30559 43221
+30576 43206
+30539 43239
+30569 43212
+30529 43248
+30567 43214
+30568 43213
+30599 43185
+30527 43250
+30546 43233
+30579 43203
+30607 43178
+30597 43187
+30570 43211
+30598 43186
+30536 43242
+30537 43241
+30566 43215
+30557 43223
+30547 43232
+30610 43175
+30577 43205
+30558 43222
+30600 43184
+30550 43229
+30548 43231
+30560 43220
+30530 43247
+30608 43177
+30588 43195
+30590 43193
+30549 43230
+30601 43183
+30587 43196
+30526 43251
+30538 43240
+30609 43176
+30528 43249
+30589 43194
+30540 43238
+30611 43174
+30580 43202
+30561 43219
+30571 43210
+30551 43228
+30602 43182
+30591 43192
+30581 43201
+30612 43173
+30531 43246
+30541 43237
+30572 43209
+30592 43191
+30582 43200
+30562 43218
+30532 43245
+30552 43227
+30617 43169
+30603 43181
+30583 43199
+30613 43172
+30542 43236
+30593 43190
+30573 43208
+30533 43244
+30553 43226
+30618 43168
+30563 43217
+30594 43189
+30543 43235
+30604 43180
+30614 43171
+30584 43198
+30574 43207
+30564 43216
+30554 43225
+30544 43234
+30619 43167
+30534 43243
+30585 43197
+30605 43179
+30595 43188
+30615 43170
+30620 43166
+30621 43165
+31676 42214
+31635 42251
+31674 42216
+31696 42196
+31675 42215
+31637 42249
+31627 42258
+31626 42259
+31646 42241
+31665 42224
+31666 42223
+31654 42234
+31644 42243
+31677 42213
+31664 42225
+31695 42197
+31624 42261
+31655 42233
+31645 42242
+31657 42231
+31625 42260
+31636 42250
+31698 42194
+31685 42206
+31634 42252
+31684 42207
+31658 42230
+31697 42195
+31707 42186
+31686 42205
+31687 42204
+31656 42232
+31706 42187
+31667 42222
+31638 42248
+31705 42188
+31688 42203
+31648 42239
+31678 42212
+31647 42240
+31668 42221
+31679 42211
+31689 42202
+31628 42257
+31629 42256
+31708 42185
+31649 42238
+31709 42184
+31700 42192
+31699 42193
+31669 42220
+31680 42210
+31639 42247
+31659 42229
+31690 42201
+31650 42237
+31660 42228
+31640 42246
+31715 42179
+31630 42255
+31710 42183
+31701 42191
+31670 42219
+31711 42182
+31691 42200
+31681 42209
+31671 42218
+31651 42236
+31661 42227
+31641 42245
+31716 42178
+31692 42199
+31631 42254
+31712 42181
+31702 42190
+31682 42208
+31662 42226
+31672 42217
+31652 42235
+31642 42244
+31632 42253
+31717 42177
+31703 42189
+31713 42180
+31718 42176
+31693 42198
+31719 42175
+33216 40826
+33238 40806
+33236 40808
+33259 40787
+33237 40807
+33199 40841
+33246 40799
+33208 40833
+33227 40816
+33187 40852
+33189 40850
+33228 40815
+33267 40780
+33209 40832
+33226 40817
+33206 40835
+33268 40779
+33198 40842
+33196 40844
+33188 40851
+33249 40796
+33186 40853
+33247 40798
+33217 40825
+33207 40834
+33197 40843
+33219 40823
+33230 40813
+33248 40797
+33218 40824
+33240 40804
+33239 40805
+33229 40814
+33250 40795
+33211 40830
+33210 40831
+33190 40849
+33220 40822
+33261 40785
+33258 40788
+33256 40790
+33270 40777
+33241 40803
+33257 40789
+33251 40794
+33269 40778
+33260 40786
+33221 40821
+33200 40840
+33231 40812
+33262 40784
+33271 40776
+33191 40848
+33242 40802
+33201 40839
+33202 40838
+33192 40847
+33277 40771
+33252 40793
+33212 40829
+33222 40820
+33232 40811
+33272 40775
+33253 40792
+33233 40810
+33223 40819
+33213 40828
+33203 40837
+33193 40846
+33278 40770
+33263 40783
+33243 40801
+33273 40774
+33264 40782
+33244 40800
+33224 40818
+33234 40809
+33214 40827
+33204 40836
+33279 40769
+33274 40773
+33265 40781
+33254 40791
+33194 40845
+33275 40772
+33280 40768
+33281 40767
+34026 40096
+34029 40093
+34007 40113
+34048 40076
+34046 40078
+34068 40058
+34009 40111
+34056 40069
+33999 40120
+34038 40085
+34016 40105
+34049 40075
+34019 40102
+34067 40059
+34047 40077
+34036 40087
+34066 40060
+34069 40057
+34018 40103
+34020 40101
+33996 40123
+34017 40104
+34079 40048
+34000 40119
+34008 40112
+34076 40051
+34039 40084
+34006 40114
+34057 40068
+34078 40049
+34028 40094
+34027 40095
+34077 40050
+33997 40122
+34070 40056
+34059 40066
+34010 40110
+34037 40086
+34058 40067
+34050 40074
+33998 40121
+34060 40065
+34030 40092
+34031 40091
+34051 40073
+34021 40100
+34061 40064
+34071 40055
+34040 40083
+34011 40109
+34062 40063
+34041 40082
+34001 40118
+34032 40090
+34012 40108
+34081 40046
+34080 40047
+34002 40117
+34087 40041
+34052 40072
+34042 40081
+34082 40045
+34072 40054
+34022 40099
+34083 40044
+34073 40053
+34063 40062
+34023 40098
+34013 40107
+34088 40040
+34003 40116
+34053 40071
+34043 40080
+34064 40061
+34033 40089
+34054 40070
+34034 40088
+34044 40079
+34014 40106
+34024 40097
+34004 40115
+34089 40039
+34084 40043
+34074 40052
+34090 40038
+34085 40042
+34091 40037
+34683 39504
+34687 39500
+34704 39485
+34655 39529
+34654 39530
+34636 39546
+34653 39531
+34714 39476
+34706 39483
+34634 39548
+34635 39547
+34645 39538
+34663 39522
+34697 39491
+34665 39520
+34673 39513
+34703 39486
+34716 39474
+34696 39492
+34693 39495
+34694 39494
+34686 39501
+34633 39549
+34643 39540
+34675 39511
+34705 39484
+34644 39539
+34666 39519
+34646 39537
+34637 39545
+34695 39493
+34708 39481
+34667 39518
+34657 39527
+34678 39508
+34674 39512
+34685 39502
+34676 39510
+34647 39536
+34698 39490
+34658 39526
+34715 39475
+34656 39528
+34713 39477
+34648 39535
+34684 39503
+34677 39509
+34688 39499
+34707 39482
+34664 39521
+34699 39489
+34668 39517
+34679 39507
+34669 39516
+34638 39544
+34649 39534
+34639 39543
+34717 39473
+34723 39468
+34724 39467
+34709 39480
+34689 39498
+34718 39472
+34659 39525
+34710 39479
+34690 39497
+34680 39506
+34660 39524
+34725 39466
+34719 39471
+34640 39542
+34670 39515
+34700 39488
+34720 39470
+34650 39533
+34671 39514
+34681 39505
+34651 39532
+34641 39541
+34726 39465
+34701 39487
+34691 39496
+34721 39469
+34661 39523
+34711 39478
+34727 39464
+34729 39463
+42195 32743
+42194 32744
+42202 32737
+42193 32745
+42197 32741
+42196 32742
+42206 32733
+42212 32728
+42203 32736
+42214 32726
+42205 32734
+42222 32719
+42216 32724
+42213 32727
+42215 32725
+42204 32735
+42223 32718
+42232 32710
+42233 32709
+42224 32717
+42225 32716
+42252 32692
+42254 32690
+42253 32691
+42245 32698
+42255 32689
+42244 32699
+42242 32701
+42262 32683
+42236 32706
+42263 32682
+42272 32674
+42256 32688
+42264 32681
+42275 32671
+42282 32665
+42207 32732
+42267 32678
+42235 32707
+42276 32670
+42208 32731
+42217 32723
+42198 32740
+42226 32715
+42218 32722
+42227 32714
+42243 32700
+42228 32713
+42238 32704
+42237 32705
+42234 32708
+42247 32696
+42246 32697
+42273 32673
+42265 32680
+42266 32679
+42248 32695
+42257 32687
+42268 32677
+42283 32664
+42274 32672
+42278 32668
+42277 32669
+42219 32721
+42258 32686
+42199 32739
+42209 32730
+42229 32712
+42249 32694
+42239 32703
+42259 32685
+42269 32676
+42210 32729
+42200 32738
+42284 32663
+42220 32720
+42279 32667
+42240 32702
+42230 32711
+42250 32693
+42260 32684
+42285 32662
+42270 32675
+42280 32666
+42286 32661
+43015 32006
+42996 32023
+43004 32016
+43023 31999
+42998 32021
+43003 32017
+42995 32024
+43005 32015
+43013 32008
+43016 32005
+43007 32013
+43006 32014
+42994 32025
+43017 32004
+43014 32007
+42997 32022
+43024 31998
+43033 31990
+43026 31996
+43053 31972
+43047 31977
+43055 31970
+43054 31971
+43018 32003
+43056 31969
+43025 31997
+43036 31987
+43034 31989
+43064 31962
+43035 31988
+43037 31986
+43044 31980
+43063 31963
+43043 31981
+43073 31954
+43083 31945
+43067 31959
+43065 31961
+43008 32012
+43045 31979
+43068 31958
+43027 31995
+43028 31994
+42999 32020
+43009 32011
+43038 31985
+43029 31993
+43019 32002
+43046 31978
+43048 31976
+43058 31967
+43057 31968
+43074 31953
+43039 31984
+43049 31975
+43066 31960
+43059 31966
+43084 31944
+43069 31957
+43082 31946
+43000 32019
+43020 32001
+43010 32010
+43030 31992
+43050 31974
+43040 31983
+43075 31952
+43011 32009
+43060 31965
+43085 31943
+43021 32000
+43076 31951
+43078 31949
+43077 31950
+43079 31948
+43001 32018
+43070 31956
+43041 31982
+43031 31991
+43051 31973
+43086 31942
+43071 31955
+43080 31947
+43061 31964
+43087 31941
+43389 31670
+43399 31661
+43409 31652
+43390 31669
+43428 31635
+43391 31668
+43398 31662
+43418 31644
+43410 31651
+43412 31649
+43421 31641
+43448 31617
+43411 31650
+43449 31616
+43413 31648
+43452 31613
+43441 31623
+43451 31614
+43440 31624
+43420 31642
+43442 31622
+43429 31634
+43438 31626
+43402 31658
+43430 31633
+43432 31631
+43458 31608
+43439 31625
+43459 31607
+43401 31659
+43419 31643
+43460 31606
+43477 31591
+43478 31590
+43450 31615
+43392 31667
+43408 31653
+43400 31660
+43403 31657
+43393 31666
+43394 31665
+43404 31656
+43423 31639
+43422 31640
+43424 31638
+43414 31647
+43433 31630
+43431 31632
+43434 31629
+43453 31612
+43443 31621
+43469 31598
+43468 31599
+43467 31600
+43444 31620
+43462 31604
+43463 31603
+43461 31605
+43454 31611
+43479 31589
+43464 31602
+43471 31596
+43472 31595
+43470 31597
+43473 31594
+43415 31646
+43425 31637
+43395 31664
+43405 31655
+43435 31628
+43480 31588
+43416 31645
+43445 31619
+43474 31593
+43465 31601
+43396 31663
+43406 31654
+43426 31636
+43436 31627
+43446 31618
+43455 31610
+43456 31609
+43481 31587
+43475 31592
+43482 31586
+44368 30790
+44364 30794
+44355 30802
+44365 30793
+44376 30783
+44357 30800
+44384 30776
+44356 30801
+44374 30785
+44377 30782
+44375 30784
+44358 30799
+44367 30791
+44359 30798
+44366 30792
+44378 30781
+44394 30767
+44385 30775
+44396 30765
+44395 30766
+44386 30774
+44407 30755
+44388 30772
+44435 30730
+44427 30737
+44414 30749
+44404 30758
+44406 30756
+44433 30732
+44444 30722
+44416 30747
+44398 30763
+44443 30723
+44423 30741
+44397 30764
+44417 30746
+44434 30731
+44436 30729
+44418 30745
+44425 30739
+44415 30748
+44426 30738
+44429 30735
+44438 30727
+44369 30789
+44379 30780
+44360 30797
+44387 30773
+44370 30788
+44389 30771
+44408 30754
+44424 30740
+44409 30753
+44405 30757
+44419 30744
+44399 30762
+44390 30770
+44428 30736
+44410 30752
+44380 30779
+44420 30743
+44361 30796
+44445 30721
+44437 30728
+44439 30726
+44400 30761
+44430 30734
+44391 30769
+44381 30778
+44371 30787
+44401 30760
+44411 30751
+44362 30795
+44421 30742
+44431 30733
+44446 30720
+44382 30777
+44440 30725
+44372 30786
+44392 30768
+44402 30759
+44447 30719
+44441 30724
+44412 30750
+44448 30718
+45418 29847
+45417 29848
+45426 29840
+45419 29846
+45420 29845
+45430 29836
+45440 29827
+45436 29831
+45437 29830
+45449 29819
+45458 29811
+45429 29837
+45439 29828
+45438 29829
+45457 29812
+45448 29820
+45427 29839
+45446 29822
+45428 29838
+45421 29844
+45422 29843
+45431 29835
+45468 29802
+45485 29787
+45477 29794
+45480 29791
+45469 29801
+45470 29800
+45447 29821
+45475 29796
+45459 29810
+45486 29786
+45479 29792
+45476 29795
+45466 29804
+45487 29785
+45488 29784
+45504 29770
+45490 29782
+45467 29803
+45506 29768
+45456 29813
+45505 29769
+45460 29809
+45450 29818
+45495 29778
+45489 29783
+45498 29775
+45496 29777
+45478 29793
+45500 29773
+45497 29776
+45432 29834
+45499 29774
+45461 29808
+45451 29817
+45441 29826
+45471 29799
+45481 29790
+45462 29807
+45442 29825
+45452 29816
+45423 29842
+45482 29789
+45491 29781
+45443 29824
+45433 29833
+45507 29767
+45501 29772
+45472 29798
+45453 29815
+45463 29806
+45424 29841
+45492 29780
+45473 29797
+45508 29766
+45502 29771
+45493 29779
+45444 29823
+45434 29832
+45483 29788
+45454 29814
+45464 29805
+45509 29765
+45510 29764
+46790 28615
+46798 28608
+46791 28614
+46792 28613
+46789 28616
+46799 28607
+46800 28606
+46808 28599
+46802 28604
+46801 28605
+46809 28598
+46811 28596
+46810 28597
+46818 28590
+46793 28612
+46819 28589
+46828 28581
+46837 28573
+46821 28587
+46794 28611
+46839 28571
+46857 28555
+46812 28595
+46829 28580
+46813 28594
+46822 28586
+46820 28588
+46823 28585
+46841 28569
+46859 28553
+46867 28546
+46838 28572
+46847 28564
+46848 28563
+46877 28537
+46858 28554
+46860 28552
+46850 28561
+46872 28541
+46871 28542
+46878 28536
+46830 28579
+46803 28603
+46804 28602
+46851 28560
+46842 28568
+46831 28578
+46832 28577
+46840 28570
+46852 28559
+46833 28576
+46849 28562
+46853 28558
+46843 28567
+46814 28593
+46824 28584
+46795 28610
+46869 28544
+46862 28550
+46868 28545
+46861 28551
+46805 28601
+46870 28543
+46844 28566
+46879 28535
+46863 28549
+46834 28575
+46854 28557
+46864 28548
+46873 28540
+46815 28592
+46825 28583
+46796 28609
+46806 28600
+46835 28574
+46880 28534
+46874 28539
+46845 28565
+46865 28547
+46826 28582
+46816 28591
+46855 28556
+46881 28533
+46875 28538
+47230 28220
+47238 28213
+47231 28219
+47232 28218
+47229 28221
+47250 28202
+47258 28195
+47248 28204
+47239 28212
+47240 28211
+47249 28203
+47242 28209
+47251 28201
+47252 28200
+47259 28194
+47277 28178
+47261 28192
+47270 28184
+47241 28210
+47278 28177
+47260 28193
+47233 28217
+47243 28208
+47234 28216
+47268 28186
+47288 28168
+47290 28166
+47297 28160
+47308 28150
+47253 28199
+47281 28174
+47291 28165
+47282 28173
+47287 28169
+47280 28175
+47298 28159
+47279 28176
+47299 28158
+47300 28157
+47269 28185
+47262 28191
+47263 28190
+47301 28156
+47311 28147
+47317 28142
+47318 28141
+47310 28148
+47316 28143
+47289 28167
+47309 28149
+47307 28151
+47272 28182
+47273 28181
+47271 28183
+47254 28198
+47244 28207
+47264 28189
+47274 28180
+47283 28172
+47293 28163
+47292 28164
+47235 28215
+47302 28155
+47303 28154
+47312 28146
+47319 28140
+47255 28197
+47294 28162
+47313 28145
+47284 28171
+47304 28153
+47245 28206
+47265 28188
+47236 28214
+47275 28179
+47246 28205
+47285 28170
+47256 28196
+47320 28139
+47305 28152
+47314 28144
+47295 28161
+47321 28138
+47266 28187
+47322 28137
+48478 27100
+48486 27093
+48480 27098
+48479 27099
+48498 27082
+48496 27084
+48488 27091
+48506 27075
+48487 27092
+48490 27089
+48499 27081
+48497 27083
+48477 27101
+48481 27097
+48507 27074
+48500 27080
+48482 27096
+48489 27090
+48527 27056
+48537 27047
+48515 27067
+48545 27040
+48526 27057
+48517 27065
+48539 27045
+48516 27066
+48510 27071
+48508 27073
+48491 27088
+48501 27079
+48509 27072
+48511 27070
+48528 27055
+48538 27046
+48554 27032
+48530 27053
+48535 27049
+48555 27031
+48546 27039
+48518 27064
+48536 27048
+48525 27058
+48520 27062
+48519 27063
+48549 27036
+48547 27038
+48564 27023
+48529 27054
+48548 27037
+48565 27022
+48560 27026
+48556 27030
+48558 27028
+48540 27044
+48557 27029
+48550 27035
+48566 27021
+48492 27087
+48531 27052
+48559 27027
+48483 27095
+48502 27078
+48512 27069
+48541 27043
+48521 27061
+48493 27086
+48551 27034
+48522 27060
+48532 27051
+48503 27077
+48567 27020
+48561 27025
+48542 27042
+48513 27068
+48484 27094
+48523 27059
+48494 27085
+48552 27033
+48533 27050
+48504 27076
+48568 27019
+48562 27024
+48543 27041
+48569 27018
+49497 26186
+49498 26185
+49517 26168
+49506 26178
+49507 26177
+49516 26169
+49526 26160
+49520 26165
+49508 26176
+49527 26159
+49499 26184
+49518 26167
+49536 26151
+49528 26158
+49510 26174
+49529 26157
+49535 26152
+49545 26143
+49509 26175
+49500 26183
+49501 26182
+49511 26173
+49502 26181
+49537 26150
+49519 26166
+49521 26164
+49546 26142
+49547 26141
+49538 26149
+49539 26148
+49530 26156
+49540 26147
+49512 26172
+49531 26155
+49541 26146
+49549 26139
+49577 26114
+49564 26126
+49584 26108
+49556 26133
+49548 26140
+49555 26134
+49566 26124
+49575 26116
+49586 26106
+49558 26131
+49574 26117
+49565 26125
+49568 26122
+49567 26123
+49569 26121
+49585 26107
+49559 26130
+49576 26115
+49557 26132
+49550 26138
+49580 26111
+49579 26112
+49560 26129
+49570 26120
+49578 26113
+49551 26137
+49522 26163
+49561 26128
+49532 26154
+49503 26180
+49513 26171
+49542 26145
+49523 26162
+49533 26153
+49587 26105
+49571 26119
+49552 26136
+49581 26110
+49504 26179
+49514 26170
+49562 26127
+49543 26144
+49572 26118
+49588 26104
+49582 26109
+49553 26135
+49524 26161
+49589 26103
+51353 24522
+51362 24514
+51372 24505
+51356 24519
+51354 24521
+51355 24520
+51373 24504
+51363 24513
+51366 24510
+51365 24511
+51364 24512
+51357 24518
+51367 24509
+51391 24488
+51383 24495
+51401 24479
+51385 24493
+51394 24485
+51402 24478
+51382 24496
+51381 24497
+51374 24503
+51392 24487
+51375 24502
+51393 24486
+51384 24494
+51376 24501
+51377 24500
+51386 24492
+51420 24462
+51410 24471
+51406 24474
+51412 24469
+51415 24466
+51368 24508
+51358 24517
+51387 24491
+51395 24484
+51403 24477
+51396 24483
+51397 24482
+51378 24499
+51411 24470
+51405 24475
+51413 24468
+51433 24450
+51439 24445
+51440 24444
+51404 24476
+51422 24460
+51431 24452
+51442 24442
+51414 24467
+51423 24459
+51441 24443
+51421 24461
+51424 24458
+51430 24453
+51432 24451
+51435 24448
+51425 24457
+51359 24516
+51388 24490
+51407 24473
+51416 24465
+51369 24507
+51426 24456
+51417 24464
+51427 24455
+51398 24481
+51379 24498
+51360 24515
+51408 24472
+51436 24447
+51434 24449
+51443 24441
+51437 24446
+51389 24489
+51370 24506
+51418 24463
+51399 24480
+51428 24454
+51444 24440
+51445 24439
+51815 24108
+51824 24100
+51827 24097
+51835 24090
+51825 24099
+51818 24105
+51817 24106
+51844 24082
+51816 24107
+51834 24091
+51826 24098
+51828 24096
+51837 24088
+51843 24083
+51836 24089
+51819 24104
+51829 24095
+51853 24074
+51846 24080
+51855 24072
+51854 24073
+51845 24081
+51838 24087
+51847 24079
+51848 24078
+51839 24086
+51820 24103
+51864 24064
+51857 24070
+51856 24071
+51849 24077
+51866 24062
+51883 24047
+51875 24054
+51863 24065
+51867 24061
+51872 24057
+51877 24052
+51868 24060
+51893 24038
+51892 24039
+51884 24046
+51882 24048
+51858 24069
+51865 24063
+51886 24044
+51830 24094
+51840 24085
+51821 24102
+51897 24034
+51894 24037
+51900 24032
+51903 24029
+51902 24030
+51896 24035
+51901 24031
+51904 24028
+51891 24040
+51888 24042
+51887 24043
+51895 24036
+51876 24053
+51878 24051
+51873 24056
+51874 24055
+51885 24045
+51869 24059
+51859 24068
+51850 24076
+51831 24093
+51860 24067
+51879 24050
+51841 24084
+51822 24101
+51851 24075
+51905 24027
+51889 24041
+51898 24033
+51870 24058
+51832 24092
+51861 24066
+51880 24049
+51906 24026
+52919 23119
+52929 23110
+52928 23111
+52920 23118
+52931 23108
+52930 23109
+52921 23117
+52938 23102
+52939 23101
+52941 23099
+52948 23093
+52922 23116
+52932 23107
+52933 23106
+52967 23076
+52951 23090
+52957 23085
+52947 23094
+52960 23082
+52950 23091
+52959 23083
+52958 23084
+52940 23100
+52949 23092
+52923 23115
+52942 23098
+52952 23089
+52924 23114
+52969 23074
+52979 23065
+52987 23058
+52966 23077
+52968 23075
+52961 23081
+52943 23097
+52962 23080
+52925 23113
+52934 23105
+52996 23050
+52982 23062
+52981 23063
+52976 23068
+52995 23051
+52988 23057
+52978 23066
+52977 23067
+52970 23073
+52944 23096
+52953 23088
+52971 23072
+52986 23059
+53005 23042
+53006 23041
+53007 23040
+52997 23049
+52990 23055
+52989 23056
+52998 23048
+53001 23045
+52991 23054
+53008 23039
+52972 23071
+52980 23064
+53000 23046
+52999 23047
+52963 23079
+52992 23053
+52973 23070
+52954 23087
+52935 23104
+52964 23078
+52983 23061
+52945 23095
+52974 23069
+52926 23112
+52936 23103
+53002 23044
+52993 23052
+52955 23086
+53003 23043
+53009 23038
+52984 23060
+53675 22442
+53658 22457
+53657 22458
+53666 22450
+53665 22451
+53656 22459
+53676 22441
+53678 22439
+53684 22434
+53685 22433
+53668 22448
+53659 22456
+53667 22449
+53669 22447
+53660 22455
+53679 22438
+53686 22432
+53677 22440
+53694 22425
+53696 22423
+53695 22424
+53687 22431
+53670 22446
+53688 22430
+53689 22429
+53661 22454
+53723 22399
+53722 22400
+53713 22408
+53706 22414
+53709 22411
+53718 22403
+53705 22415
+53703 22417
+53690 22428
+53697 22422
+53704 22416
+53698 22421
+53680 22437
+53699 22420
+53671 22445
+53681 22436
+53707 22413
+53724 22398
+53733 22390
+53719 22402
+53708 22412
+53714 22407
+53725 22397
+53716 22405
+53715 22406
+53662 22453
+53736 22387
+53732 22391
+53735 22388
+53738 22385
+53727 22395
+53737 22386
+53726 22396
+53734 22389
+53700 22419
+53717 22404
+53710 22410
+53691 22427
+53672 22444
+53728 22394
+53701 22418
+53729 22393
+53682 22435
+53711 22409
+53663 22452
+53720 22401
+53692 22426
+53673 22443
+53730 22392
+53739 22384
+53761 22365
+53751 22374
+53743 22381
+53752 22373
+53742 22382
+53753 22372
+53744 22380
+53754 22371
+53770 22357
+53762 22364
+53771 22356
+53745 22379
+53755 22370
+53746 22378
+53774 22353
+53773 22354
+53784 22344
+53791 22338
+53789 22340
+53772 22355
+53765 22361
+53763 22363
+53756 22369
+53764 22362
+53781 22347
+53780 22348
+53775 22352
+53782 22346
+53747 22377
+53809 22322
+53790 22339
+53799 22331
+53792 22337
+53776 22351
+53783 22345
+53766 22360
+53785 22343
+53757 22368
+53767 22359
+53800 22330
+53802 22328
+53793 22336
+53748 22376
+53830 22303
+53808 22323
+53803 22327
+53818 22314
+53801 22329
+53824 22308
+53829 22304
+53823 22309
+53827 22306
+53819 22313
+53804 22326
+53810 22321
+53813 22318
+53794 22335
+53812 22319
+53831 22302
+53820 22312
+53828 22305
+53822 22310
+53814 22317
+53811 22320
+53795 22334
+53777 22350
+53821 22311
+53805 22325
+53786 22342
+53796 22333
+53758 22367
+53768 22358
+53815 22316
+53787 22341
+53749 22375
+53832 22301
+53816 22315
+53825 22307
+53806 22324
+53797 22332
+53759 22366
+53778 22349
+53833 22300
+53834 22299
+56525 19892
+56516 19900
+56535 19883
+56526 19891
+56534 19884
+56537 19881
+56518 19898
+56545 19874
+56517 19899
+56536 19882
+56544 19875
+56527 19890
+56529 19888
+56528 19889
+56519 19897
+56520 19896
+56554 19866
+56553 19867
+56546 19873
+56539 19879
+56530 19887
+56556 19864
+56555 19865
+56538 19880
+56547 19872
+56521 19895
+56540 19878
+56563 19858
+56565 19856
+56557 19863
+56550 19869
+56566 19855
+56558 19862
+56564 19857
+56559 19861
+56548 19871
+56583 19840
+56582 19841
+56575 19847
+56578 19844
+56531 19886
+56522 19894
+56549 19870
+56568 19853
+56576 19846
+56572 19850
+56541 19877
+56532 19885
+56567 19854
+56560 19860
+56551 19868
+56586 19837
+56584 19839
+56573 19849
+56585 19838
+56577 19845
+56579 19843
+56574 19848
+56570 19851
+56569 19852
+56594 19830
+56604 19821
+56602 19823
+56591 19833
+56592 19832
+56605 19820
+56595 19829
+56603 19822
+56601 19824
+56593 19831
+56596 19828
+56597 19827
+56600 19825
+56588 19835
+56598 19826
+56587 19836
+56589 19834
+56523 19893
+56542 19876
+56561 19859
+56580 19842
+56607 19818
+56608 19817
+56695 19740
+56687 19747
+56689 19745
+56696 19739
+56686 19748
+56688 19746
+56704 19732
+56714 19723
+56705 19731
+56715 19722
+56707 19729
+56708 19728
+56706 19730
+56698 19737
+56697 19738
+56699 19736
+56690 19744
+56709 19727
+56716 19721
+56700 19735
+56691 19743
+56724 19714
+56725 19713
+56719 19718
+56726 19712
+56717 19720
+56723 19715
+56710 19726
+56728 19710
+56718 19719
+56727 19711
+56734 19705
+56733 19706
+56735 19704
+56720 19717
+56736 19703
+56729 19709
+56742 19698
+56746 19694
+56692 19742
+56701 19734
+56738 19701
+56745 19695
+56743 19697
+56744 19696
+56711 19725
+56702 19733
+56737 19702
+56721 19716
+56730 19708
+56756 19685
+56754 19687
+56755 19686
+56752 19689
+56753 19688
+56747 19693
+56749 19691
+56751 19690
+56748 19692
+56739 19700
+56740 19699
+56763 19679
+56766 19676
+56770 19673
+56764 19678
+56773 19670
+56765 19677
+56693 19741
+56712 19724
+56762 19680
+56761 19681
+56757 19684
+56758 19683
+56759 19682
+56731 19707
+56771 19672
+56772 19671
+56767 19675
+56776 19667
+56777 19666
+56775 19668
+56769 19674
+56774 19669
+56778 19665
+57082 19394
+57091 19386
+57092 19385
+57100 19378
+57093 19384
+57101 19377
+57084 19392
+57083 19393
+57102 19376
+57110 19369
+57111 19368
+57094 19383
+57085 19391
+57095 19382
+57086 19390
+57105 19373
+57112 19367
+57103 19375
+57104 19374
+57131 19350
+57129 19352
+57114 19365
+57120 19360
+57119 19361
+57087 19389
+57096 19381
+57121 19359
+57113 19366
+57115 19364
+57122 19358
+57106 19372
+57123 19357
+57116 19363
+57130 19351
+57132 19349
+57139 19343
+57144 19338
+57097 19380
+57088 19388
+57142 19340
+57141 19341
+57138 19344
+57107 19371
+57133 19348
+57125 19355
+57117 19362
+57126 19354
+57124 19356
+57151 19332
+57150 19333
+57140 19342
+57143 19339
+57152 19331
+57148 19335
+57149 19334
+57147 19336
+57098 19379
+57089 19387
+57158 19326
+57168 19317
+57171 19314
+57163 19321
+57170 19315
+57167 19318
+57169 19316
+57159 19325
+57162 19322
+57145 19337
+57161 19323
+57134 19347
+57157 19327
+57166 19319
+57153 19330
+57135 19346
+57160 19324
+57164 19320
+57154 19329
+57108 19370
+57136 19345
+57127 19353
+57155 19328
+57928 18638
+57938 18629
+57947 18621
+57930 18636
+57939 18628
+57937 18630
+57946 18622
+57929 18637
+57957 18612
+57940 18627
+57948 18620
+57931 18635
+57967 18603
+57956 18613
+57958 18611
+57965 18605
+57949 18619
+57932 18634
+57951 18617
+57950 18618
+57941 18626
+57974 18597
+57976 18595
+57960 18609
+57969 18601
+57975 18596
+57966 18604
+57968 18602
+57959 18610
+57942 18625
+57933 18633
+57952 18616
+57977 18594
+57962 18607
+57978 18593
+57970 18600
+57971 18599
+57943 18624
+57934 18632
+57987 18585
+57993 18580
+57996 18577
+57961 18608
+57953 18615
+57944 18623
+57963 18606
+57979 18592
+57972 18598
+57935 18631
+57998 18575
+57995 18578
+57997 18576
+57990 18582
+57984 18588
+57994 18579
+57980 18591
+57981 18590
+57988 18584
+57985 18587
+57989 18583
+57986 18586
+57991 18581
+57954 18614
+58016 18559
+58002 18572
+57999 18574
+58013 18562
+58004 18570
+58014 18561
+58000 18573
+58017 18558
+58005 18569
+58008 18566
+58007 18567
+58003 18571
+58012 18563
+58015 18560
+58010 18564
+58006 18568
+58009 18565
+57982 18589
+58228 18370
+58247 18353
+58230 18368
+58246 18354
+58238 18361
+58237 18362
+58229 18369
+58231 18367
+58240 18359
+58239 18360
+58248 18352
+58241 18358
+58267 18335
+58257 18344
+58265 18337
+58249 18351
+58256 18345
+58259 18342
+58232 18366
+58258 18343
+58250 18350
+58251 18349
+58266 18336
+58260 18341
+58276 18327
+58277 18326
+58270 18332
+58274 18329
+58268 18334
+58275 18328
+58233 18365
+58242 18357
+58261 18340
+58252 18348
+58278 18325
+58243 18356
+58234 18364
+58295 18310
+58293 18312
+58287 18317
+58296 18309
+58269 18333
+58288 18316
+58284 18320
+58285 18319
+58286 18318
+58279 18324
+58253 18347
+58244 18355
+58302 18304
+58305 18301
+58280 18323
+58281 18322
+58304 18302
+58297 18308
+58271 18331
+58299 18306
+58262 18339
+58272 18330
+58235 18363
+58298 18307
+58290 18314
+58294 18311
+58291 18313
+58289 18315
+58263 18338
+58254 18346
+58313 18294
+58315 18292
+58303 18303
+58306 18300
+58312 18295
+58316 18291
+58314 18293
+58307 18299
+58308 18298
+58310 18296
+58309 18297
+58317 18290
+58282 18321
+58318 18289
+58300 18305
+58319 18288
+60328 16495
+60339 16485
+60346 16479
+60337 16487
+60338 16486
+60347 16478
+60329 16494
+60330 16493
+60340 16484
+60355 16471
+60349 16476
+60357 16469
+60331 16492
+60356 16470
+60348 16477
+60350 16475
+60332 16491
+60358 16468
+60351 16474
+60341 16483
+60342 16482
+60333 16490
+60377 16451
+60375 16453
+60365 16462
+60366 16461
+60368 16459
+60359 16467
+60367 16460
+60360 16466
+60361 16465
+60378 16450
+60374 16454
+60376 16452
+60369 16458
+60370 16457
+60352 16473
+60334 16489
+60362 16464
+60343 16481
+60353 16472
+60393 16437
+60388 16441
+60387 16442
+60380 16448
+60384 16445
+60383 16446
+60386 16443
+60385 16444
+60344 16480
+60379 16449
+60371 16456
+60335 16488
+60363 16463
+60397 16433
+60396 16434
+60398 16432
+60394 16436
+60395 16435
+60389 16440
+60381 16447
+60390 16439
+60372 16455
+60391 16438
+60416 16416
+60408 16423
+60406 16425
+60402 16429
+60412 16420
+60405 16426
+60415 16417
+60407 16424
+60417 16415
+60403 16428
+60399 16431
+60422 16411
+60421 16412
+60411 16421
+60404 16427
+60413 16419
+60420 16413
+60414 16418
+60423 16410
+60439 16396
+60441 16394
+60425 16408
+60434 16400
+60431 16403
+60440 16395
+60435 16399
+60430 16404
+60433 16401
+60424 16409
+60432 16402
+60442 16393
+60426 16407
+60443 16392
+60418 16414
+60460 16377
+60455 16381
+60409 16422
+60451 16385
+60450 16386
+60452 16384
+60449 16387
+60453 16383
+60444 16391
+60427 16406
+60400 16430
+60436 16398
+60437 16397
+60458 16379
+60459 16378
+60448 16388
+60462 16375
+60461 16376
+60463 16374
+60454 16382
+60445 16390
+60428 16405
+60446 16389
+60456 16380
+60478 16361
+60479 16360
+60465 16372
+60482 16357
+60474 16364
+60470 16368
+60467 16371
+60481 16358
+60473 16365
+60469 16369
+60476 16363
+60472 16366
+60468 16370
+60471 16367
+60464 16373
+60718 16147
+60736 16131
+60737 16130
+60720 16145
+60719 16146
+60728 16138
+60727 16139
+60746 16122
+60745 16123
+60729 16137
+60738 16129
+60747 16121
+60730 16136
+60740 16127
+60721 16144
+60739 16128
+60731 16135
+60755 16114
+60748 16120
+60757 16112
+60722 16143
+60741 16126
+60732 16134
+60765 16105
+60764 16106
+60756 16113
+60750 16118
+60766 16104
+60759 16110
+60767 16103
+60749 16119
+60723 16142
+60758 16111
+60751 16117
+60733 16133
+60768 16102
+60760 16109
+60742 16125
+60761 16108
+60724 16141
+60785 16087
+60775 16096
+60782 16090
+60743 16124
+60778 16093
+60774 16097
+60734 16132
+60769 16101
+60752 16116
+60725 16140
+60753 16115
+60773 16098
+60784 16088
+60783 16089
+60777 16094
+60776 16095
+60779 16092
+60787 16085
+60786 16086
+60780 16091
+60788 16084
+60770 16100
+60762 16107
+60771 16099
+60795 16078
+60802 16072
+60796 16077
+60792 16081
+60805 16069
+60806 16068
+60807 16067
+60804 16070
+60790 16082
+60803 16071
+60810 16065
+60801 16073
+60811 16064
+60793 16080
+60812 16063
+60794 16079
+60830 16047
+60821 16055
+60820 16056
+60822 16054
+60819 16057
+60813 16062
+60829 16048
+60823 16053
+60831 16046
+60814 16061
+60841 16037
+60838 16040
+60840 16038
+60797 16076
+60815 16060
+60832 16045
+60825 16051
+60824 16052
+60839 16039
+60834 16043
+60842 16036
+60833 16044
+60816 16059
+60798 16075
+60789 16083
+60826 16050
+60817 16058
+60851 16028
+60856 16024
+60859 16021
+60858 16022
+60849 16030
+60808 16066
+60850 16029
+60852 16027
+60848 16031
+60799 16074
+60843 16035
+60835 16042
+60836 16041
+60853 16026
+60871 16010
+60866 16015
+60869 16012
+60860 16020
+60857 16023
+60854 16025
+60868 16013
+60865 16016
+60864 16017
+60867 16014
+60847 16032
+60861 16019
+60827 16049
+60844 16034
+60862 16018
+60845 16033
+60872 16009
+60876 16006
+60870 16011
+60879 16003
+60874 16008
+60880 16002
+61532 15421
+61551 15404
+61550 15405
+61534 15419
+61541 15413
+61533 15420
+61542 15412
+61561 15395
+61559 15397
+61543 15411
+61552 15403
+61560 15396
+61535 15418
+61554 15401
+61553 15402
+61544 15410
+61545 15409
+61562 15394
+61536 15417
+61537 15416
+61546 15408
+61572 15385
+61571 15386
+61570 15387
+61568 15389
+61555 15400
+61569 15388
+61564 15392
+61563 15393
+61538 15415
+61578 15380
+61580 15378
+61579 15379
+61581 15377
+61574 15383
+61582 15376
+61573 15384
+61565 15391
+61547 15407
+61556 15399
+61566 15390
+61548 15406
+61557 15398
+61598 15362
+61591 15368
+61589 15370
+61587 15372
+61583 15375
+61593 15366
+61601 15359
+61590 15369
+61597 15363
+61596 15364
+61599 15361
+61588 15371
+61600 15360
+61592 15367
+61575 15382
+61584 15374
+61585 15373
+61594 15365
+61539 15414
+61576 15381
+61602 15358
+61603 15357
+61605 15356
+61608 15353
+61606 15355
+61607 15354
+61625 15338
+61616 15346
+61624 15339
+61610 15351
+61623 15340
+61619 15343
+61615 15347
+61614 15348
+61627 15336
+61609 15352
+61626 15337
+61618 15344
+61617 15345
+61611 15350
+61628 15335
+61644 15321
+61636 15328
+61620 15342
+61647 15318
+61646 15319
+61637 15327
+61633 15331
+61629 15334
+61635 15329
+61642 15323
+61634 15330
+61645 15320
+61638 15326
+61621 15341
+61639 15325
+61641 15324
+61643 15322
+61630 15333
+61631 15332
+61612 15349
+61648 15317
+61656 15310
+61664 15303
+61663 15304
+61653 15313
+61650 15316
+61654 15312
+61655 15311
+61652 15314
+61666 15301
+61662 15305
+61665 15302
+61658 15308
+61651 15315
+62130 14888
+62140 14879
+62149 14871
+62139 14880
+62148 14872
+62131 14887
+62159 14862
+62158 14863
+62151 14869
+62157 14864
+62141 14878
+62150 14870
+62133 14885
+62132 14886
+62142 14877
+62169 14853
+62168 14854
+62160 14861
+62166 14856
+62167 14855
+62152 14868
+62134 14884
+62143 14876
+62144 14875
+62135 14883
+62179 14844
+62178 14845
+62175 14848
+62170 14852
+62177 14846
+62176 14847
+62153 14867
+62161 14860
+62145 14874
+62136 14882
+62180 14843
+62172 14850
+62163 14858
+62164 14857
+62154 14866
+62171 14851
+62162 14859
+62173 14849
+62146 14873
+62189 14835
+62194 14831
+62198 14827
+62137 14881
+62186 14838
+62190 14834
+62188 14836
+62187 14837
+62185 14839
+62181 14842
+62155 14865
+62208 14818
+62207 14819
+62201 14824
+62209 14817
+62197 14828
+62206 14820
+62204 14822
+62203 14823
+62199 14826
+62196 14829
+62200 14825
+62205 14821
+62195 14830
+62182 14841
+62191 14833
+62183 14840
+62216 14812
+62218 14809
+62210 14816
+62217 14810
+62212 14815
+62219 14808
+62214 14813
+62192 14832
+62405 14643
+62414 14635
+62424 14626
+62434 14617
+62423 14627
+62406 14642
+62426 14624
+62416 14633
+62407 14641
+62433 14618
+62425 14625
+62415 14634
+62432 14619
+62417 14632
+62427 14623
+62408 14640
+62418 14631
+62444 14608
+62443 14609
+62442 14610
+62435 14616
+62409 14639
+62410 14638
+62454 14599
+62450 14603
+62453 14600
+62441 14611
+62451 14602
+62437 14614
+62452 14601
+62419 14630
+62445 14607
+62436 14615
+62428 14622
+62411 14637
+62438 14613
+62455 14598
+62420 14629
+62446 14606
+62429 14621
+62439 14612
+62421 14628
+62412 14636
+62463 14591
+62462 14592
+62465 14589
+62464 14590
+62448 14604
+62447 14605
+62430 14620
+62459 14595
+62471 14584
+62470 14585
+62469 14586
+62460 14594
+62474 14581
+62472 14583
+62475 14580
+62473 14582
+62461 14593
+62466 14588
+62457 14596
+62493 14564
+62479 14577
+62483 14573
+62490 14567
+62480 14576
+62482 14574
+62489 14568
+62492 14565
+62484 14572
+62494 14563
+62491 14566
+62485 14571
+62478 14578
+62467 14587
+62497 14561
+62488 14569
+62487 14570
+62496 14562
+62498 14560
+62481 14575
+62506 14553
+62499 14559
+62508 14551
+62505 14554
+62500 14558
+62456 14597
+62516 14544
+62514 14546
+62515 14545
+62501 14557
+62510 14549
+62507 14552
+62518 14542
+62509 14550
+62517 14543
+62502 14556
+62519 14541
+62511 14548
+62476 14579
+62527 14534
+62529 14532
+62524 14537
+62525 14536
+62528 14533
+62523 14538
+62520 14540
+62503 14555
+62512 14547
+62526 14535
+62535 14527
+62534 14528
+62533 14529
+62532 14530
+62538 14524
+62537 14525
+62539 14523
+62530 14531
+62536 14526
+62555 14509
+62540 14522
+62554 14510
+62544 14519
+62545 14518
+62549 14514
+62542 14521
+62521 14539
+62597 14472
+62598 14471
+62626 14446
+62625 14447
+62615 14456
+62607 14463
+62624 14448
+62618 14453
+62606 14464
+62616 14455
+62599 14470
+62608 14462
+62600 14469
+62609 14461
+62617 14454
+62619 14452
+62610 14460
+62601 14468
+62627 14445
+62611 14459
+62602 14467
+62643 14431
+62636 14437
+62642 14432
+62629 14443
+62644 14430
+62628 14444
+62634 14439
+62638 14435
+62633 14440
+62646 14428
+62645 14429
+62620 14451
+62637 14436
+62635 14438
+62603 14466
+62639 14434
+62647 14427
+62630 14442
+62621 14450
+62612 14458
+62631 14441
+62622 14449
+62613 14457
+62604 14465
+62651 14424
+62655 14420
+62640 14433
+62654 14421
+62662 14414
+62663 14413
+62649 14425
+62661 14415
+62652 14423
+62660 14416
+62666 14410
+62648 14426
+62653 14422
+62664 14412
+62667 14409
+62665 14411
+62658 14417
+62657 14418
+62656 14419
+62679 14399
+62670 14407
+62671 14406
+62698 14382
+62688 14391
+62699 14381
+62680 14398
+62681 14397
+62697 14383
+62682 14396
+62672 14405
+62689 14390
+62673 14404
+62690 14389
+62691 14388
+62692 14387
+62683 14395
+62707 14374
+62709 14372
+62706 14375
+62700 14380
+62701 14379
+62674 14403
+62675 14402
+62718 14364
+62719 14363
+62715 14367
+62710 14371
+62717 14365
+62716 14366
+62693 14386
+62684 14394
+62708 14373
+62702 14378
+62685 14393
+62676 14401
+62712 14369
+62720 14362
+62711 14370
+62694 14385
+62703 14377
+62713 14368
+62695 14384
+62677 14400
+62686 14392
+62730 14353
+62721 14361
+62726 14357
+62704 14376
+62727 14356
+62724 14359
+62728 14355
+62725 14358
+62738 14346
+62735 14349
+62734 14350
+62737 14347
+62731 14352
+62740 14344
+62736 14348
+62729 14354
+62747 14338
+62744 14341
+62750 14335
+62754 14332
+62748 14337
+62742 14343
+62757 14329
+62749 14336
+62758 14328
+62743 14342
+62722 14360
+62824 14270
+62815 14278
+62825 14269
+62826 14268
+62817 14276
+62807 14285
+62797 14294
+62790 14300
+62816 14277
+62752 14334
+62762 14325
+62798 14293
+62806 14286
+62818 14275
+62788 14302
+62779 14310
+62808 14284
+62770 14318
+62791 14299
+62809 14283
+62799 14292
+62771 14317
+62827 14267
+62781 14308
+62763 14324
+62761 14326
+62789 14301
+62800 14291
+62760 14327
+62772 14316
+62819 14274
+62780 14309
+62828 14266
+62782 14307
+62773 14315
+62801 14290
+62792 14298
+62755 14331
+62753 14333
+62810 14282
+62764 14323
+62829 14265
+62765 14322
+62820 14273
+62802 14289
+62811 14281
+62793 14297
+62830 14264
+62783 14306
+62774 14314
+62756 14330
+62745 14340
+62746 14339
+62784 14305
+62821 14272
+62812 14280
+62803 14288
+62775 14313
+62766 14321
+62794 14296
+62831 14263
+62785 14304
+62767 14320
+62822 14271
+62804 14287
+62795 14295
+62813 14279
+62776 14312
+62786 14303
+62777 14311
+62768 14319
+62733 14351
+62834 14261
+62843 14253
+62835 14260
+62862 14236
+62852 14245
+62863 14235
+62853 14244
+62855 14242
+62844 14252
+62845 14251
+62836 14259
+62854 14243
+62837 14258
+62861 14237
+62846 14250
+62856 14241
+62847 14249
+62838 14257
+62871 14228
+62870 14229
+62872 14227
+62864 14234
+62873 14226
+62865 14233
+62839 14256
+62880 14220
+62882 14218
+62881 14219
+62879 14221
+62866 14232
+62874 14225
+62883 14217
+62857 14240
+62848 14248
+62840 14255
+62884 14216
+62875 14224
+62867 14231
+62876 14223
+62858 14239
+62849 14247
+62850 14246
+62841 14254
+62888 14213
+62892 14209
+62891 14210
+62894 14207
+62890 14211
+62889 14212
+62868 14230
+62859 14238
+62885 14215
+62893 14208
+62877 14222
+62897 14205
+62900 14202
+62901 14201
+62898 14204
+62899 14203
+62902 14200
+62906 14197
+62909 14194
+62908 14195
+62912 14191
+62903 14199
+62907 14196
+62910 14193
+62895 14206
+62886 14214
+62920 14184
+62917 14187
+62915 14189
+62919 14185
+62922 14183
+62913 14190
+62918 14186
+62916 14188
+62911 14192
+62904 14198
+66065 11389
+66073 11382
+66074 11381
+66066 11388
+66083 11373
+66084 11372
+66067 11387
+66076 11379
+66075 11380
+66068 11386
+66082 11374
+66085 11371
+66077 11378
+66092 11365
+66094 11363
+66091 11366
+66093 11364
+66069 11385
+66086 11370
+66095 11362
+66078 11377
+66087 11369
+66070 11384
+66079 11376
+66096 11361
+66103 11355
+66102 11356
+66100 11358
+66104 11354
+66101 11357
+66097 11360
+66111 11348
+66113 11346
+66109 11350
+66114 11345
+66112 11347
+66105 11353
+66088 11368
+66110 11349
+66071 11383
+66080 11375
+66089 11367
+66106 11352
+66098 11359
+66115 11344
+66107 11351
+66125 11335
+66120 11340
+66119 11341
+66122 11338
+66118 11342
+66123 11337
+66121 11339
+66116 11343
+66124 11336
+66127 11334
+66128 11333
+66129 11332
+66130 11331
+66131 11330
+66132 11329
+66133 11328
+66136 11326
+66144 11319
+66145 11318
+66137 11325
+66153 11311
+66146 11317
+66155 11309
+66154 11310
+66138 11324
+66147 11316
+66139 11323
+66156 11308
+66148 11315
+66164 11301
+66163 11302
+66162 11303
+66165 11300
+66140 11322
+66149 11314
+66157 11307
+66158 11306
+66166 11299
+66173 11293
+66172 11294
+66171 11295
+66175 11291
+66167 11298
+66141 11321
+66159 11305
+66174 11292
+66168 11297
+66150 11313
+66142 11320
+66151 11312
+66160 11304
+66176 11290
+66177 11289
+66169 11296
+66181 11286
+66186 11281
+66180 11287
+66183 11284
+66178 11288
+66193 11275
+66194 11274
+66189 11279
+66190 11278
+66195 11273
+66185 11282
+66192 11276
+66184 11283
+66187 11280
+66182 11285
+66191 11277
+66287 11192
+66295 11185
+66313 11169
+66249 11226
+66258 11218
+66304 11177
+66231 11242
+66296 11184
+66259 11217
+66277 11201
+66286 11193
+66305 11176
+66268 11209
+66239 11235
+66314 11168
+66250 11225
+66315 11167
+66232 11241
+66230 11243
+66269 11208
+66261 11215
+66279 11199
+66229 11244
+66306 11175
+66278 11200
+66297 11183
+66241 11233
+66260 11216
+66288 11191
+66240 11234
+66270 11207
+66251 11224
+66242 11232
+66298 11182
+66307 11174
+66262 11214
+66280 11198
+66233 11240
+66316 11166
+66289 11190
+66272 11205
+66271 11206
+66299 11181
+66308 11173
+66317 11165
+66234 11239
+66252 11223
+66253 11222
+66244 11230
+66243 11231
+66281 11197
+66263 11213
+66300 11180
+66290 11189
+66291 11188
+66273 11204
+66309 11172
+66282 11196
+66318 11164
+66254 11221
+66264 11212
+66301 11179
+66235 11238
+66310 11171
+66283 11195
+66319 11163
+66292 11187
+66255 11220
+66236 11237
+66245 11229
+66265 11211
+66274 11203
+66284 11194
+66246 11228
+66302 11178
+66293 11186
+66256 11219
+66275 11202
+66311 11170
+66237 11236
+66266 11210
+66221 11251
+66223 11249
+66225 11247
+66227 11245
+66226 11246
+66222 11250
+66224 11248
+66247 11227
+66322 11161
+66331 11153
+66323 11160
+66339 11146
+66341 11144
+66340 11145
+66324 11159
+66330 11154
+66333 11151
+66332 11152
+66325 11158
+66342 11143
+66334 11150
+66350 11136
+66349 11137
+66351 11135
+66335 11149
+66348 11138
+66326 11157
+66343 11142
+66352 11134
+66327 11156
+66344 11141
+66336 11148
+66353 11133
+66368 11120
+66362 11125
+66367 11121
+66361 11126
+66358 11129
+66328 11155
+66345 11140
+66337 11147
+66354 11132
+66346 11139
+66360 11127
+66357 11130
+66363 11124
+66359 11128
+66355 11131
+66369 11119
+66372 11116
+66371 11117
+66370 11118
+66366 11122
+66364 11123
+66373 11115
+66377 11112
+66375 11114
+66383 11107
+66376 11113
+66384 11106
+66393 11098
+66386 11104
+66385 11105
+66378 11111
+66394 11097
+66395 11096
+66392 11099
+66387 11103
+66402 11090
+66403 11089
+66401 11091
+66404 11088
+66379 11110
+66396 11095
+66405 11087
+66388 11102
+66397 11094
+66411 11082
+66412 11081
+66410 11083
+66414 11079
+66406 11086
+66380 11109
+66381 11108
+66389 11101
+66413 11080
+66398 11093
+66421 11073
+66424 11070
+66420 11074
+66419 11075
+66422 11072
+66423 11071
+66415 11078
+66390 11100
+66407 11085
+66399 11092
+66416 11077
+66408 11084
+66425 11069
+66417 11076
+66433 11062
+66442 11054
+66435 11061
+66437 11059
+66431 11065
+66426 11068
+66481 11020
+66489 11013
+66490 11012
+66482 11019
+66500 11003
+66499 11004
+66483 11018
+66491 11011
+66492 11010
+66484 11017
+66498 11005
+66493 11009
+66501 11002
+66507 10997
+66508 10996
+66509 10995
+66485 11016
+66510 10994
+66502 11001
+66494 11008
+66511 10993
+66503 11000
+66486 11015
+66495 11007
+66512 10992
+66519 10986
+66517 10988
+66518 10987
+66527 10979
+66529 10977
+66520 10985
+66525 10981
+66521 10984
+66516 10989
+66487 11014
+66504 10999
+66496 11006
+66513 10991
+66505 10998
+66514 10990
+66522 10983
+66528 10978
+66530 10976
+66531 10975
+66526 10980
+66523 10982
+66534 10973
+66533 10974
+66535 10972
+66536 10971
+66544 10964
+66545 10963
+66542 10966
+66543 10965
+66537 10970
+66553 10956
+66552 10957
+66551 10958
+66538 10969
+66554 10955
+66546 10962
+66555 10954
+66547 10961
+66564 10946
+66561 10949
+66563 10947
+66560 10950
+66562 10948
+66556 10953
+66557 10952
+66548 10960
+66572 10939
+66565 10945
+66570 10941
+66539 10968
+66540 10967
+66549 10959
+66558 10951
+66566 10944
+66571 10940
+66569 10942
+66574 10937
+66575 10936
+66567 10943
+66834 10707
+66833 10708
+66842 10700
+66835 10706
+66844 10698
+66843 10699
+66841 10701
+66836 10705
+66852 10691
+66851 10692
+66850 10693
+66861 10683
+66862 10682
+66860 10684
+66859 10685
+66837 10704
+66845 10697
+66853 10690
+66846 10696
+66854 10689
+66863 10681
+66855 10688
+66838 10703
+66847 10695
+66864 10680
+66856 10687
+66872 10673
+66868 10677
+66869 10676
+66870 10675
+66871 10674
+66865 10679
+66839 10702
+66848 10694
+66857 10686
+66873 10672
+66874 10671
+66866 10678
+66880 10666
+66878 10668
+66883 10663
+66882 10664
+66876 10670
+66877 10669
+66886 10661
+66879 10667
+66887 10660
+66888 10659
+66885 10662
+66889 10658
+66881 10665
+66896 10652
+66905 10644
+66907 10642
+66906 10643
+66894 10654
+66897 10651
+66895 10653
+66903 10646
+66899 10649
+66890 10657
+66891 10656
+66898 10650
+66904 10645
+66915 10635
+66916 10634
+66917 10633
+66900 10648
+66892 10655
+66908 10641
+66909 10640
+66901 10647
+66912 10638
+66911 10639
+66914 10636
+66921 10630
+66920 10631
+66913 10637
+66922 10629
+66923 10628
+66924 10627
+66930 10622
+66931 10621
+66932 10620
+66929 10623
+66933 10619
+66925 10626
+66940 10613
+66939 10614
+66941 10612
+66938 10615
+66934 10618
+66942 10611
+66926 10625
+66935 10617
+66951 10603
+66948 10606
+66947 10607
+66950 10604
+66946 10608
+66949 10605
+66952 10602
+66943 10610
+66918 10632
+66927 10624
+66944 10609
+66936 10616
+66953 10601
+67288 10305
+67296 10298
+67297 10297
+67289 10304
+67306 10289
+67290 10303
+67299 10295
+67298 10296
+67291 10302
+67308 10287
+67307 10288
+67305 10290
+67300 10294
+67317 10279
+67316 10280
+67315 10281
+67314 10282
+67292 10301
+67309 10286
+67301 10293
+67318 10278
+67310 10285
+67293 10300
+67302 10292
+67319 10277
+67311 10284
+67327 10270
+67323 10274
+67328 10269
+67325 10272
+67326 10271
+67294 10299
+67337 10261
+67334 10264
+67322 10275
+67333 10265
+67324 10273
+67335 10263
+67336 10262
+67320 10276
+67332 10266
+67331 10267
+67303 10291
+67312 10283
+67329 10268
+67343 10256
+67341 10258
+67340 10259
+67342 10257
+67348 10252
+67352 10248
+67349 10251
+67344 10255
+67350 10250
+67351 10249
+67353 10247
+67346 10253
+67363 10238
+67359 10242
+67358 10243
+67361 10240
+67354 10246
+67357 10244
+67362 10239
+67360 10241
+67345 10254
+67338 10260
+67355 10245
+67369 10233
+67366 10236
+67367 10235
+67368 10234
+67370 10232
+67371 10231
+67378 10225
+67379 10224
+67376 10227
+67374 10229
+67377 10226
+67389 10215
+67372 10230
+67364 10237
+67375 10228
+67380 10223
+67387 10217
+67385 10219
+67381 10222
+67386 10218
+67390 10214
+67383 10221
+68154 9539
+68146 9546
+68147 9545
+68155 9538
+68148 9544
+68156 9537
+68149 9543
+68157 9536
+68165 9529
+68163 9531
+68158 9535
+68164 9530
+68166 9528
+68172 9523
+68175 9520
+68171 9524
+68173 9522
+68174 9521
+68150 9542
+68167 9527
+68159 9534
+68176 9519
+68168 9526
+68151 9541
+68152 9540
+68160 9533
+68177 9518
+68181 9515
+68183 9513
+68184 9512
+68182 9514
+68180 9516
+68178 9517
+68185 9511
+68161 9532
+68169 9525
+68195 9502
+68191 9506
+68186 9510
+68189 9508
+68192 9505
+68194 9503
+68190 9507
+68193 9504
+68187 9509
+68198 9500
+68207 9492
+68199 9499
+68197 9501
+68206 9493
+68200 9498
+68208 9491
+68209 9490
+68201 9497
+68216 9484
+68217 9483
+68215 9485
+68214 9486
+68210 9489
+68218 9482
+68211 9488
+68219 9481
+68202 9496
+68203 9495
+68220 9480
+68212 9487
+68227 9474
+68226 9475
+68223 9478
+68224 9477
+68221 9479
+68204 9494
+68236 9466
+68233 9469
+68238 9464
+68234 9468
+68235 9467
+68228 9473
+68237 9465
+68225 9476
+68229 9472
+68232 9470
+68230 9471
+68490 9242
+68498 9235
+68491 9241
+68508 9226
+68500 9233
+68492 9240
+68501 9232
+68499 9234
+68493 9239
+68510 9224
+68502 9231
+68509 9225
+68507 9227
+68518 9217
+68517 9218
+68515 9220
+68516 9219
+68519 9216
+68494 9238
+68511 9223
+68503 9230
+68520 9215
+68512 9222
+68495 9237
+68527 9209
+68524 9212
+68525 9211
+68521 9214
+68496 9236
+68504 9229
+68526 9210
+68513 9221
+68505 9228
+68538 9199
+68535 9202
+68530 9206
+68528 9208
+68537 9200
+68522 9213
+68536 9201
+68532 9205
+68539 9198
+68533 9204
+68529 9207
+68534 9203
+69884 8012
+69909 7990
+69892 8005
+69847 8045
+69902 7996
+69893 8004
+69901 7997
+69836 8055
+69910 7989
+69827 8063
+69837 8054
+69876 8019
+69857 8036
+69894 8003
+69885 8011
+69911 7988
+69875 8020
+69856 8037
+69828 8062
+69867 8027
+69895 8002
+69877 8018
+69903 7995
+69878 8017
+69838 8053
+69912 7987
+69858 8035
+69869 8025
+69848 8044
+69886 8010
+69904 7994
+69887 8009
+69849 8043
+69896 8001
+69859 8034
+69830 8060
+69829 8061
+69870 8024
+69839 8052
+69913 7986
+69868 8026
+69840 8051
+69879 8016
+69905 7993
+69888 8008
+69860 8033
+69851 8041
+69897 8000
+69850 8042
+69871 8023
+69831 8059
+69914 7985
+69880 8015
+69906 7992
+69898 7999
+69832 8058
+69889 8007
+69841 8050
+69872 8022
+69915 7984
+69907 7991
+69861 8032
+69881 8014
+69852 8040
+69890 8006
+69862 8031
+69842 8049
+69899 7998
+69833 8057
+69819 8070
+69821 8068
+69818 8071
+69817 8072
+69823 8066
+69822 8067
+69820 8069
+69882 8013
+69825 8064
+69863 8030
+69834 8056
+69843 8048
+69873 8021
+69854 8038
+69865 8028
+69845 8046
+69844 8047
+69853 8039
+69864 8029
+69918 7982
+69926 7975
+69919 7981
+69927 7974
+69920 7980
+69936 7966
+69928 7973
+69921 7979
+69929 7972
+69934 7968
+69938 7964
+69935 7967
+69937 7965
+69930 7971
+69922 7978
+69944 7959
+69946 7957
+69947 7956
+69945 7958
+69943 7960
+69931 7970
+69939 7963
+69923 7977
+69940 7962
+69932 7969
+69924 7976
+69948 7955
+69949 7954
+69941 7961
+69953 7951
+69958 7946
+69952 7952
+69985 7923
+69976 7931
+69969 7937
+69968 7938
+69993 7916
+69977 7930
+69994 7915
+69978 7929
+69960 7945
+69986 7922
+69995 7914
+69961 7944
+69951 7953
+69987 7921
+69979 7928
+69962 7943
+69996 7913
+69970 7936
+69988 7920
+69980 7927
+69971 7935
+69997 7912
+69954 7950
+69963 7942
+69989 7919
+69981 7926
+69972 7934
+69998 7911
+69964 7941
+69955 7949
+69990 7918
+69999 7910
+69982 7925
+69973 7933
+69965 7940
+69956 7948
+69974 7932
+69991 7917
+69983 7924
+69966 7939
+69957 7947
+70002 7908
+70010 7901
+70011 7900
+70003 7907
+70004 7906
+70020 7892
+70018 7894
+70012 7899
+70013 7898
+70005 7905
+70021 7891
+70014 7897
+70019 7893
+70022 7890
+70006 7904
+70028 7885
+70030 7883
+70029 7884
+70027 7886
+70031 7882
+70015 7896
+70023 7889
+70007 7903
+70032 7881
+70024 7888
+70016 7895
+70008 7902
+70033 7880
+70025 7887
+70037 7877
+70040 7874
+70041 7873
+70038 7876
+70035 7879
+70036 7878
+70045 7870
+70043 7872
+70044 7871
+70046 7869
+70039 7875
+70047 7868
+70054 7862
+70056 7860
+70052 7864
+70053 7863
+70055 7861
+70048 7867
+70057 7859
+70049 7866
+70062 7855
+70061 7856
+70066 7851
+70063 7854
+70065 7852
+70050 7865
+70058 7858
+70060 7857
+70069 7849
+70071 7847
+70070 7848
+70064 7853
+70068 7850
+70072 7846
+70081 7838
+70079 7840
+70077 7842
+70078 7841
+70080 7839
+70073 7845
+70082 7837
+70074 7844
+70085 7835
+70087 7833
+70089 7831
+70086 7834
+70075 7843
+70083 7836
+70090 7830
+70088 7832
+70093 7828
+70852 7160
+70861 7152
+70860 7153
+70853 7159
+70854 7158
+70869 7145
+70868 7146
+70862 7151
+70855 7157
+70870 7144
+70871 7143
+70864 7149
+70863 7150
+70872 7142
+70856 7156
+70880 7135
+70879 7136
+70881 7134
+70876 7139
+70878 7137
+70877 7138
+70873 7141
+70865 7148
+70857 7155
+70874 7140
+70866 7147
+70858 7154
+70885 7131
+70887 7129
+70891 7125
+70889 7127
+70890 7126
+70883 7132
+70882 7133
+70888 7128
+70893 7124
+70886 7130
+70895 7122
+70894 7123
+70896 7121
+70902 7116
+70903 7115
+70901 7117
+70904 7114
+70905 7113
+70897 7120
+70914 7105
+70912 7107
+70910 7109
+70906 7112
+70898 7119
+70913 7106
+70909 7110
+70911 7108
+70907 7111
+70899 7118
+70920 7100
+70922 7098
+70919 7101
+70923 7097
+70915 7104
+70916 7103
+70924 7096
+70921 7099
+70918 7102
+71074 6965
+71066 6972
+71058 6979
+71059 6978
+71067 6971
+71075 6964
+71021 7012
+71041 6994
+71050 6986
+71002 7029
+71051 6985
+71022 7011
+71076 6963
+70993 7037
+71042 6993
+71012 7020
+70994 7036
+71060 6977
+71003 7028
+71068 6970
+70992 7038
+71077 6962
+71034 7000
+71023 7010
+71013 7019
+71069 6969
+71033 7001
+71043 6992
+70995 7035
+71052 6984
+71061 6976
+71053 6983
+71014 7018
+71004 7027
+71032 7002
+71035 6999
+71044 6991
+71015 7017
+71024 7009
+71078 6961
+71070 6968
+71062 6975
+71079 6960
+71025 7008
+70996 7034
+71005 7026
+71016 7016
+71045 6990
+71036 6998
+71071 6967
+71054 6982
+71063 6974
+70997 7033
+71006 7025
+71080 6959
+71026 7007
+71046 6989
+71072 6966
+71037 6997
+71055 6981
+71064 6973
+70998 7032
+71027 7006
+71018 7014
+71047 6988
+71017 7015
+71007 7024
+71038 6996
+71056 6980
+71008 7023
+70985 7044
+70984 7045
+70983 7046
+70986 7043
+70987 7042
+70982 7047
+70999 7031
+70989 7040
+71029 7004
+70988 7041
+71019 7013
+70990 7039
+71030 7003
+71048 6987
+71009 7022
+71028 7005
+71039 6995
+71000 7030
+71010 7021
+71091 6950
+71083 6957
+71084 6956
+71085 6955
+71093 6948
+71092 6949
+71086 6954
+71100 6942
+71101 6941
+71099 6943
+71094 6947
+71102 6940
+71103 6939
+71095 6946
+71087 6953
+71112 6931
+71096 6945
+71109 6934
+71110 6933
+71108 6935
+71088 6952
+71107 6936
+71113 6930
+71104 6938
+71111 6932
+71105 6937
+71089 6951
+71097 6944
+71116 6928
+71115 6929
+71118 6926
+71156 6893
+71140 6907
+71132 6914
+71123 6922
+71158 6891
+71148 6900
+71141 6906
+71149 6899
+71122 6923
+71157 6892
+71124 6921
+71133 6913
+71142 6905
+71150 6898
+71159 6890
+71125 6920
+71143 6904
+71151 6897
+71134 6912
+71126 6919
+71117 6927
+71127 6918
+71160 6889
+71152 6896
+71135 6911
+71144 6903
+71136 6910
+71128 6917
+71161 6888
+71145 6902
+71153 6895
+71137 6909
+71162 6887
+71119 6925
+71129 6916
+71154 6894
+71146 6901
+71138 6908
+71130 6915
+71120 6924
+71165 6885
+71173 6878
+71174 6877
+71166 6884
+71167 6883
+71175 6876
+71168 6882
+71181 6871
+71183 6869
+71182 6870
+71184 6868
+71176 6875
+71185 6867
+71177 6874
+71169 6881
+71192 6861
+71189 6864
+71190 6863
+71191 6862
+71193 6860
+71194 6859
+71186 6866
+71178 6873
+71170 6880
+71195 6858
+71187 6865
+71179 6872
+71171 6879
+71205 6850
+71197 6857
+71198 6856
+71206 6849
+71199 6855
+71207 6848
+71208 6847
+71200 6854
+71213 6843
+71215 6841
+71214 6842
+71209 6846
+71216 6840
+71217 6839
+71201 6853
+71225 6832
+71224 6833
+71226 6831
+71222 6835
+71223 6834
+71221 6836
+71218 6838
+71210 6845
+71202 6852
+71219 6837
+71211 6844
+71203 6851
+71227 6830
+71229 6829
+71230 6828
+71231 6827
+71232 6826
+71240 6819
+71237 6822
+71239 6820
+71238 6821
+71233 6825
+71241 6818
+71242 6817
+71234 6824
+71243 6816
+71235 6823
+71250 6810
+71249 6811
+71251 6809
+71247 6813
+71245 6815
+71246 6814
+71248 6812
+71253 6808
+71255 6806
+71254 6807
+71262 6800
+71261 6801
+71264 6798
+71256 6805
+71265 6797
+71263 6799
+71257 6804
+71271 6792
+71272 6791
+71273 6790
+71270 6793
+71274 6789
+71269 6794
+71266 6796
+71258 6803
+71267 6795
+71259 6802
+71275 6788
+71277 6787
+73341 4981
+73342 4980
+73343 4979
+73344 4978
+73348 4975
+73349 4974
+73351 4972
+73350 4973
+73357 4967
+73358 4966
+73356 4968
+73345 4977
+73352 4971
+73353 4970
+73359 4965
+73360 4964
+73361 4963
+73346 4976
+73354 4969
+73362 4962
+73366 4959
+73364 4961
+73371 4955
+73365 4960
+73367 4958
+73369 4956
+73368 4957
+73372 4954
+73426 4907
+73418 4914
+73410 4921
+73411 4920
+73427 4906
+73403 4927
+73384 4944
+73419 4913
+73428 4905
+73385 4943
+73393 4936
+73420 4912
+73412 4919
+73394 4935
+73374 4953
+73429 4904
+73421 4911
+73404 4926
+73413 4918
+73375 4952
+73383 4945
+73386 4942
+73395 4934
+73405 4925
+73414 4917
+73376 4951
+73430 4903
+73396 4933
+73422 4910
+73397 4932
+73406 4924
+73387 4941
+73415 4916
+73423 4909
+73431 4902
+73388 4940
+73407 4923
+73377 4950
+73398 4931
+73408 4922
+73416 4915
+73424 4908
+73379 4948
+73389 4939
+73378 4949
+73380 4947
+73399 4930
+73390 4938
+73391 4937
+73381 4946
+73400 4929
+73401 4928
+73434 4900
+73435 4899
+73442 4893
+73436 4898
+73441 4894
+73437 4897
+73444 4891
+73443 4892
+73445 4890
+73438 4896
+73446 4889
+73452 4884
+73451 4885
+73450 4886
+73449 4887
+73453 4883
+73439 4895
+73447 4888
+73454 4882
+73455 4881
+73459 4878
+73457 4880
+73458 4879
+73465 4873
+73460 4877
+73464 4874
+73466 4872
+73467 4871
+73468 4870
+73461 4876
+73469 4869
+73474 4865
+73473 4866
+73472 4867
+73475 4864
+73476 4863
+73462 4875
+73470 4868
+73477 4862
+73478 4861
+73480 4860
+73481 4859
+73483 4857
+73710 4660
+73717 4654
+73725 4647
+73726 4646
+73718 4653
+73683 4684
+73727 4645
+73643 4720
+73711 4659
+73644 4719
+73692 4676
+73672 4694
+73702 4667
+73664 4701
+73719 4652
+73673 4693
+73653 4711
+73693 4675
+73694 4674
+73654 4710
+73728 4644
+73703 4666
+73712 4658
+73645 4718
+73685 4682
+73704 4665
+73674 4692
+73720 4651
+73665 4700
+73684 4683
+73655 4709
+73675 4691
+73729 4643
+73714 4656
+73721 4650
+73713 4657
+73686 4681
+73695 4673
+73705 4664
+73730 4642
+73687 4680
+73666 4699
+73715 4655
+73667 4698
+73722 4649
+73656 4708
+73647 4716
+73646 4717
+73706 4663
+73657 4707
+73676 4690
+73696 4672
+73723 4648
+73707 4662
+73634 4728
+73632 4730
+73697 4671
+73668 4697
+73678 4688
+73635 4727
+73633 4729
+73679 4687
+73688 4679
+73637 4725
+73638 4724
+73649 4714
+73660 4704
+73677 4689
+73636 4726
+73648 4715
+73658 4706
+73708 4661
+73640 4722
+73698 4670
+73659 4705
+73689 4678
+73639 4723
+73669 4696
+73650 4713
+73680 4686
+73699 4669
+73690 4677
+73700 4668
+73651 4712
+73681 4685
+73670 4695
+73662 4702
+73641 4721
+73733 4640
+73740 4634
+73734 4639
+73735 4638
+73736 4637
+73742 4632
+73741 4633
+73743 4631
+73749 4626
+73737 4636
+73744 4630
+73745 4629
+73750 4625
+73748 4627
+73752 4623
+73751 4624
+73753 4622
+73738 4635
+73746 4628
+73756 4620
+73759 4617
+73760 4616
+73758 4618
+73764 4613
+73757 4619
+73755 4621
+73765 4612
+73761 4615
+73766 4611
+73763 4614
+73768 4609
+73767 4610
+73773 4605
+73771 4607
+73770 4608
+73778 4601
+73772 4606
+73775 4603
+73781 4598
+73774 4604
+73780 4599
+73779 4600
+73782 4597
+73776 4602
+73783 4596
+73788 4592
+73787 4593
+73785 4595
+73790 4590
+73789 4591
+73786 4594
+73794 4587
+73795 4586
+73797 4584
+73793 4588
+73796 4585
+73791 4589
+73798 4583
+73801 4581
+73805 4577
+73800 4582
+73802 4580
+73803 4579
+73804 4578
+73808 4575
+73811 4572
+73809 4574
+73810 4573
+73812 4571
+73813 4570
+73806 4576
+73818 4566
+73822 4563
+73820 4564
+73815 4569
+73816 4568
+73823 4562
+73824 4561
+73817 4567
+74258 4185
+74266 4178
+74259 4184
+74260 4183
+74261 4182
+74265 4179
+74267 4177
+74268 4176
+74269 4175
+74262 4181
+74276 4169
+74270 4174
+74263 4180
+74275 4170
+74272 4173
+74273 4172
+74277 4168
+74278 4167
+74274 4171
+74281 4165
+74289 4158
+74280 4166
+74283 4163
+74282 4164
+74287 4160
+74288 4159
+74290 4157
+74291 4156
+74284 4162
+74296 4152
+74298 4150
+74292 4155
+74285 4161
+74295 4153
+74294 4154
+74297 4151
+74299 4149
+74300 4148
+74303 4146
+74306 4143
+74302 4147
+74304 4145
+74311 4139
+74310 4140
+74309 4141
+74305 4144
+74312 4138
+74318 4133
+74317 4134
+74313 4137
+74314 4136
+74307 4142
+74320 4131
+74319 4132
+74321 4130
+74316 4135
+74322 4129
+74325 4127
+74324 4128
+74328 4124
+74326 4126
+74329 4123
+74327 4125
+74333 4120
+74331 4122
+74332 4121
+74334 4119
+74335 4118
+74341 4113
+74339 4115
+74336 4117
+74338 4116
+74342 4112
+74340 4114
+74343 4111
+74346 4109
+74347 4108
+74352 4104
+74344 4110
+74350 4105
+74354 4102
+74348 4107
+74500 3976
+74501 3975
+74502 3974
+74508 3969
+74503 3973
+74504 3972
+74510 3967
+74507 3970
+74511 3966
+74509 3968
+74512 3965
+74505 3971
+74515 3963
+74514 3964
+74518 3960
+74516 3962
+74517 3961
+74519 3959
+74529 3951
+74521 3958
+74536 3945
+74551 3932
+74550 3933
+74543 3939
+74537 3944
+74552 3931
+74544 3938
+74538 3943
+74545 3937
+74553 3930
+74546 3936
+74530 3950
+74547 3935
+74539 3942
+74554 3929
+74540 3941
+74555 3928
+74548 3934
+74531 3949
+74532 3948
+74522 3957
+74541 3940
+74533 3947
+74523 3956
+74524 3955
+74534 3946
+74525 3954
+74526 3953
+74527 3952
+74558 3926
+74566 3919
+74565 3920
+74559 3925
+74560 3924
+74561 3923
+74568 3917
+74567 3918
+74569 3916
+74562 3922
+74570 3915
+74563 3921
+74573 3913
+74576 3910
+74574 3912
+74572 3914
+74575 3911
+74577 3909
+74579 3908
+74587 3901
+74581 3906
+74586 3902
+74580 3907
+74582 3905
+74588 3900
+74589 3899
+74590 3898
+74583 3904
+74597 3892
+74594 3895
+74591 3897
+74584 3903
+74593 3896
+74595 3894
+74598 3891
+74596 3893
+74600 3890
+74601 3889
+74602 3888
+74608 3883
+74603 3887
+74607 3884
+74609 3882
+74610 3881
+74604 3886
+74616 3876
+74618 3874
+74615 3877
+74611 3880
+74612 3879
+74605 3885
+74614 3878
+74619 3873
+74621 3872
+74625 3868
+74622 3871
+74629 3865
+74628 3866
+74623 3870
+74624 3869
+74630 3864
+74631 3863
+74632 3862
+74617 3875
+74636 3859
+74633 3861
+74641 3855
+74635 3860
+74626 3867
+74639 3856
+74637 3858
+74638 3857
+74650 3849
+74644 3853
+74646 3850
+75720 2930
+75727 2924
+75644 2998
+75703 2945
+75645 2997
+75685 2961
+75713 2936
+75728 2923
+75721 2929
+75693 2954
+75664 2980
+75694 2953
+75722 2928
+75705 2943
+75704 2944
+75714 2935
+75674 2971
+75729 2922
+75665 2979
+75675 2970
+75684 2962
+75666 2978
+75686 2960
+75695 2952
+75696 2951
+75646 2996
+75723 2927
+75715 2934
+75730 2921
+75656 2987
+75647 2995
+75716 2933
+75724 2926
+75707 2941
+75706 2942
+75667 2977
+75687 2959
+75676 2969
+75697 2950
+75657 2986
+75633 3008
+75635 3006
+75634 3007
+75677 2968
+75731 2920
+75688 2958
+75636 3005
+75689 2957
+75660 2983
+75659 2984
+75669 2975
+75637 3004
+75679 2966
+75648 2994
+75708 2940
+75670 2974
+75717 2932
+75699 2948
+75668 2976
+75658 2985
+75641 3000
+75709 2939
+75638 3003
+75639 3002
+75649 2993
+75698 2949
+75661 2982
+75640 3001
+75678 2967
+75650 2992
+75680 2965
+75718 2931
+75700 2947
+75690 2956
+75681 2964
+75710 2938
+75691 2955
+75701 2946
+75725 2925
+75651 2991
+75642 2999
+75711 2937
+75662 2981
+75671 2973
+75682 2963
+75672 2972
+75652 2990
+75654 2988
+75734 2918
+75735 2917
+75742 2911
+75736 2916
+75737 2915
+75740 2913
+75741 2912
+75743 2910
+75744 2909
+75738 2914
+75745 2908
+75751 2903
+75749 2905
+75747 2907
+75750 2904
+75748 2906
+75754 2901
+75756 2899
+75752 2902
+75767 2890
+75760 2896
+75761 2895
+75768 2889
+75769 2888
+75762 2894
+75755 2900
+75763 2893
+75770 2887
+75764 2892
+75757 2898
+75771 2886
+75758 2897
+75765 2891
+75774 2884
+75775 2883
+75782 2877
+75780 2879
+75781 2878
+75776 2882
+75777 2881
+75783 2876
+75778 2880
+75784 2875
+75785 2874
+75787 2873
+75793 2868
+75789 2871
+75794 2867
+75788 2872
+75796 2865
+75792 2869
+75795 2866
+75790 2870
+76113 2601
+76190 2532
+76123 2592
+76196 2527
+76191 2531
+76197 2526
+76163 2556
+76133 2583
+76183 2538
+76198 2525
+76115 2599
+76142 2575
+76174 2546
+76162 2557
+76192 2530
+76184 2537
+76134 2582
+76175 2545
+76143 2574
+76114 2600
+76153 2565
+76164 2555
+76124 2591
+76165 2554
+76144 2573
+76154 2564
+76199 2524
+76176 2544
+76135 2581
+76185 2536
+76193 2529
+76155 2563
+76145 2572
+76125 2590
+76156 2562
+76186 2535
+76166 2553
+76146 2571
+76116 2598
+76126 2589
+76104 2609
+76103 2610
+76158 2560
+76137 2579
+76128 2587
+76106 2607
+76127 2588
+76107 2606
+76200 2523
+76136 2580
+76167 2552
+76102 2611
+76108 2605
+76105 2608
+76178 2542
+76129 2586
+76177 2543
+76119 2595
+76168 2551
+76110 2603
+76117 2597
+76187 2534
+76157 2561
+76149 2568
+76170 2549
+76179 2541
+76148 2569
+76118 2596
+76169 2550
+76138 2578
+76147 2570
+76180 2540
+76109 2604
+76120 2594
+76159 2559
+76130 2585
+76150 2567
+76139 2577
+76160 2558
+76194 2528
+76188 2533
+76181 2539
+76151 2566
+76111 2602
+76140 2576
+76121 2593
+76171 2548
+76131 2584
+76172 2547
+76203 2521
+76204 2520
+76209 2516
+76205 2519
+76206 2518
+76213 2512
+76211 2514
+76212 2513
+76210 2515
+76207 2517
+76215 2511
+76216 2510
+76222 2505
+76217 2509
+76234 2495
+76228 2500
+76235 2494
+76229 2499
+76236 2493
+76230 2498
+76223 2504
+76237 2492
+76231 2497
+76238 2491
+76224 2503
+76225 2502
+76218 2508
+76232 2496
+76226 2501
+76219 2507
+76220 2506
+76241 2489
+76247 2484
+76242 2488
+76243 2487
+76244 2486
+76250 2481
+76251 2480
+76249 2482
+76248 2483
+76245 2485
+76253 2479
+76254 2478
+76255 2477
+76259 2474
+76262 2471
+76261 2472
+76256 2476
+76260 2473
+76257 2475
+76263 2470
+76265 2469
+76266 2468
+76267 2467
+76268 2466
+76271 2464
+76274 2461
+76272 2463
+76273 2462
+76275 2460
+76269 2465
+76277 2459
+76278 2458
+76281 2456
+76284 2453
+76282 2455
+76285 2452
+76279 2457
+76895 1944
+76841 1992
+76822 2009
+76812 2018
+76896 1943
+76889 1949
+76861 1974
+76872 1964
+76851 1983
+76862 1973
+76891 1947
+76890 1948
+76832 2000
+76897 1942
+76881 1956
+76852 1982
+76853 1981
+76873 1963
+76883 1954
+76813 2017
+76882 1955
+76833 1999
+76802 2027
+76808 2021
+76800 2029
+76846 1987
+76816 2014
+76834 1998
+76876 1960
+76818 2012
+76856 1978
+76804 2025
+76885 1952
+76801 2028
+76826 2005
+76866 1969
+76848 1985
+76806 2023
+76825 2006
+76805 2024
+76824 2007
+76803 2026
+76844 1989
+76874 1962
+76845 1988
+76857 1977
+76867 1968
+76875 1961
+76892 1946
+76898 1941
+76884 1953
+76877 1959
+76835 1997
+76878 1958
+76823 2008
+76837 1995
+76836 1996
+76807 2022
+76827 2004
+76817 2013
+76847 1986
+76868 1967
+76828 2003
+76858 1976
+76886 1951
+76893 1945
+76849 1984
+76809 2020
+76887 1950
+76838 1994
+76829 2002
+76869 1966
+76879 1957
+76819 2011
+76810 2019
+76859 1975
+76820 2010
+76870 1965
+76839 1993
+76830 2001
+76863 1971
+76814 2015
+76854 1979
+76842 1990
+76864 1970
+76901 1939
+76902 1938
+76903 1937
+76906 1935
+76907 1934
+76904 1936
+76908 1933
+76909 1932
+76910 1931
+76912 1930
+76913 1929
+76914 1928
+76915 1927
+76918 1925
+76919 1924
+76920 1923
+76921 1922
+76923 1921
+76924 1920
+76928 1917
+76925 1919
+76926 1918
+76930 1915
+76931 1914
+76929 1916
+77000 1858
+76965 1889
+77001 1857
+76956 1897
+76967 1887
+76966 1888
+76957 1896
+76995 1862
+77002 1856
+76996 1861
+76987 1869
+76968 1886
+76988 1868
+76969 1885
+76938 1913
+76989 1867
+76990 1866
+76997 1860
+76941 1910
+76971 1883
+76979 1876
+76950 1902
+76962 1891
+76939 1912
+76958 1895
+76972 1882
+76961 1892
+76952 1900
+76982 1873
+76940 1911
+76951 1901
+77003 1855
+76949 1903
+76991 1865
+76953 1899
+76970 1884
+76942 1909
+76973 1881
+76963 1890
+76983 1872
+76998 1859
+76954 1898
+76993 1863
+76984 1871
+76974 1880
+76992 1864
+76943 1908
+76985 1870
+76945 1906
+76975 1879
+76944 1907
+76980 1874
+76947 1904
+76959 1893
+76977 1877
+77006 1853
+77007 1852
+77008 1851
+77009 1850
+77012 1848
+77011 1849
+77013 1847
+77017 1844
+77018 1843
+77016 1845
+77014 1846
+77019 1842
+77022 1840
+77023 1839
+77024 1838
+77028 1835
+77025 1837
+77027 1836
+77032 1832
+77029 1834
+77030 1833
+77034 1830
+77033 1831
+77035 1829
+77037 1828
+77040 1825
+77043 1823
+77038 1827
+77039 1826
+77042 1824
+77044 1822
+77047 1820
+77045 1821
+77049 1818
+77050 1817
+77048 1819
+77053 1815
+77052 1816
+77057 1812
+77058 1811
+77059 1810
+77054 1814
+77060 1809
+77055 1813
+77062 1808
+77063 1807
+77064 1806
+77065 1805
+77068 1803
+77067 1804
+77072 1800
+77069 1802
+77074 1798
+77070 1801
+77073 1799
+77078 1795
+77077 1796
+77079 1794
+77075 1797
+77080 1793
+77082 1792
+77085 1789
+77088 1787
+77083 1791
+77087 1788
+77084 1790
+77091 1785
+77089 1786
+77382 1552
+77347 1583
+77309 1617
+77379 1554
+77351 1579
+77340 1589
+77368 1564
+77320 1607
+77361 1570
+77294 1630
+77377 1556
+77383 1551
+77319 1608
+77311 1615
+77370 1562
+77372 1560
+77312 1614
+77313 1613
+77367 1565
+77369 1563
+77378 1555
+77289 1635
+77302 1623
+77293 1631
+77371 1561
+77322 1605
+77337 1592
+77360 1571
+77334 1594
+77362 1569
+77303 1622
+77332 1596
+77310 1616
+77363 1568
+77321 1606
+77301 1624
+77343 1586
+77352 1578
+77373 1559
+77314 1612
+77344 1585
+77384 1550
+77353 1577
+77323 1604
+77333 1595
+77304 1621
+77364 1567
+77380 1553
+77295 1629
+77324 1603
+77335 1593
+77305 1620
+77315 1611
+77374 1558
+77365 1566
+77345 1584
+77296 1628
+77356 1574
+77307 1618
+77326 1601
+77325 1602
+77375 1557
+77317 1609
+77306 1619
+77358 1572
+77286 1637
+77348 1581
+77329 1598
+77298 1626
+77299 1625
+77287 1636
+77330 1597
+77357 1573
+77349 1580
+77316 1610
+77328 1599
+77341 1587
+77338 1590
+77291 1632
+77354 1575
+77290 1633
+77387 1548
+77388 1547
+77389 1546
+77391 1545
+77392 1544
+77393 1543
+77394 1542
+77397 1540
+77410 1530
+77411 1529
+77405 1534
+77406 1533
+77407 1532
+77412 1528
+77401 1537
+77408 1531
+77402 1536
+77403 1535
+77399 1538
+77415 1526
+77416 1525
+77417 1524
+77419 1523
+77420 1522
+77421 1521
+77424 1519
+77422 1520
+77425 1518
+77428 1516
+77426 1517
+77433 1512
+77429 1515
+77430 1514
+77455 1495
+77456 1494
+77452 1497
+77451 1498
+77457 1493
+77446 1502
+77453 1496
+77447 1501
+77448 1500
+77449 1499
+77441 1506
+77442 1505
+77443 1504
+77437 1509
+77444 1503
+77438 1508
+77439 1507
+77432 1513
+77434 1511
+77435 1510
+77460 1491
+77461 1490
+77462 1489
+77464 1488
+77465 1487
+77466 1486
+77469 1484
+77470 1483
+77468 1485
+77472 1482
+77476 1479
+77483 1474
+77474 1480
+77477 1478
+77480 1476
+77478 1477
+77816 1224
+77812 1227
+77727 1303
+77774 1261
+77726 1304
+77765 1269
+77813 1226
+77725 1305
+77775 1260
+77756 1277
+77766 1268
+77776 1259
+77807 1231
+77806 1232
+77767 1267
+77737 1294
+77728 1302
+77817 1223
+77777 1258
+77814 1225
+77757 1276
+77748 1284
+77768 1266
+77808 1230
+77738 1293
+77729 1301
+77789 1247
+77749 1283
+77778 1257
+77769 1265
+77790 1246
+77772 1262
+77740 1291
+77781 1254
+77785 1250
+77759 1274
+77732 1298
+77731 1299
+77801 1236
+77741 1290
+77810 1228
+77739 1292
+77804 1233
+77758 1275
+77799 1238
+77720 1309
+77751 1281
+77719 1310
+77761 1272
+77779 1256
+77745 1286
+77809 1229
+77770 1264
+77734 1296
+77754 1278
+77803 1234
+77793 1243
+77800 1237
+77771 1263
+77723 1306
+77744 1287
+77752 1280
+77735 1295
+77795 1241
+77722 1307
+77780 1255
+77782 1253
+77797 1239
+77750 1282
+77743 1288
+77794 1242
+77791 1245
+77787 1248
+77721 1308
+77763 1270
+77784 1251
+77742 1289
+77746 1285
+77762 1271
+77760 1273
+77783 1252
+77753 1279
+77733 1297
+77786 1249
+77820 1221
+77823 1219
+77821 1220
+77824 1218
+77825 1217
+77827 1216
+77828 1215
+77831 1213
+77834 1211
+77832 1212
+77835 1210
+77836 1209
+77838 1208
+77841 1206
+77839 1207
+77842 1205
+77843 1204
+77897 1166
+77894 1168
+77898 1165
+77895 1167
+77890 1171
+77891 1170
+77892 1169
+77887 1173
+77888 1172
+77883 1176
+77885 1174
+77884 1175
+77881 1177
+77880 1178
+77876 1181
+77878 1179
+77877 1180
+77873 1183
+77874 1182
+77869 1186
+77870 1185
+77871 1184
+77866 1188
+77867 1187
+77863 1190
+77862 1191
+77864 1189
+77860 1192
+77859 1193
+77855 1196
+77856 1195
+77857 1194
+77851 1199
+77852 1198
+77853 1197
+77847 1202
+77848 1201
+77849 1200
+77845 1203
+77901 1163
+77904 1161
+77902 1162
+77905 1160
+77907 1159
+77908 1158
+77910 1157
+77913 1155
+77911 1156
+77914 1154
+77916 1153
+77919 1151
+77917 1152
+77920 1150
+77922 1149
+77923 1148
+77925 1147
+77928 1145
+77926 1146
+77929 1144
+77931 1143
+77934 1141
+77932 1142
+77935 1140
+77937 1139
+77938 1138
+77940 1137
+77943 1135
+77941 1136
+77944 1134
+77946 1133
+77949 1131
+77947 1132
+77950 1130
+78149 1006
+78189 971
+78100 1050
+78186 973
+78140 1014
+78150 1005
+78101 1049
+78187 972
+78181 977
+78161 995
+78111 1040
+78141 1013
+78145 1009
+78105 1045
+78151 1004
+78112 1039
+78107 1043
+78126 1026
+78092 1057
+78175 982
+78182 976
+78172 985
+78125 1027
+78152 1003
+78164 992
+78104 1046
+78117 1034
+78165 991
+78177 980
+78163 993
+78131 1022
+78115 1036
+78176 981
+78133 1020
+78132 1021
+78135 1018
+78136 1017
+78124 1028
+78094 1055
+78146 1008
+78093 1056
+78154 1001
+78166 990
+78157 998
+78122 1030
+78183 975
+78091 1058
+78143 1011
+78114 1037
+78103 1047
+78113 1038
+78144 1010
+78096 1053
+78174 983
+78168 988
+78156 999
+78095 1054
+78123 1029
+78097 1052
+78121 1031
+78153 1002
+78102 1048
+78162 994
+78173 984
+78184 974
+78098 1051
+78134 1019
+78155 1000
+78142 1012
+78106 1044
+78167 989
+78138 1015
+78109 1041
+78116 1035
+78127 1025
+78147 1007
+78128 1024
+78179 978
+78159 996
+78119 1032
+78108 1042
+78118 1033
+78129 1023
+78178 979
+78170 986
+78194 968
+78192 969
+78195 967
+78197 966
+78199 965
+78200 964
+78202 963
+78204 962
+78205 961
+78228 959
+78239 949
+78229 958
+78269 923
+78240 948
+78230 957
+78267 924
+78241 947
+78261 929
+78233 954
+78242 946
+78255 934
+78245 943
+78236 951
+78262 928
+78244 944
+78237 950
+78252 937
+78243 945
+78235 952
+78256 933
+78232 955
+78234 953
+78231 956
+78257 932
+78246 942
+78248 940
+78263 927
+78253 936
+78254 935
+78259 930
+78247 941
+78265 925
+78264 926
+78226 960
+78250 938
+78274 920
+78272 921
+78278 918
+78276 919
+78280 917
+78282 916
+78286 914
+78284 915
+78288 913
+78290 912
+78294 910
+78292 911
+78296 909
+78298 908
+78300 907
+78302 906
+78304 905
+78306 904
+78310 902
+78308 903
+78312 901
+78492 843
+78531 808
+78491 844
+78507 830
+78509 828
+78477 857
+78525 813
+78500 836
+78488 847
+78489 846
+78510 827
+78483 851
+78508 829
+78481 853
+78538 802
+78539 801
+78574 770
+78553 788
+78560 782
+78542 798
+78530 809
+78512 825
+78562 780
+78572 771
+78511 826
+78482 852
+78561 781
+78490 845
+78478 856
+78563 779
+78543 797
+78570 773
+78494 841
+78523 815
+78571 772
+78493 842
+78565 777
+78564 778
+78544 796
+78484 850
+78513 824
+78485 849
+78524 814
+78514 823
+78495 840
+78505 831
+78515 822
+78554 786
+78548 792
+78517 820
+78534 804
+78556 785
+78532 806
+78526 812
+78496 839
+78557 784
+78503 832
+78521 816
+78558 783
+78518 819
+78549 791
+78540 799
+78568 774
+78519 818
+78486 848
+78566 776
+78498 837
+78551 789
+78516 821
+78527 811
+78501 834
+78536 803
+78479 854
+78528 810
+78545 794
+78579 768
+78582 767
+78640 749
+78641 748
+78639 750
+78642 747
+78622 765
+78634 754
+78626 761
+78637 751
+78629 758
+78627 760
+78620 766
+78628 759
+78631 756
+78624 762
+78635 752
+78632 755
+78623 763
+78649 745
+78654 744
+MAXX = 78657 72343

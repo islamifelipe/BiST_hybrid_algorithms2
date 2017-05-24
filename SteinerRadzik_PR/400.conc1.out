@@ -1,0 +1,28 @@
+79398 arestas removidas
+396 obrigatorias
+Fim da primeira fase. Quantidade de solucoes suportadas : 2
+0
+maxSolPorTriangulo = 10000
+contador = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 2
+		cont = 2
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 2
+Fim da segunda fase ... 
+0
+Total ...
+0
+999 2000
+2000 999
+1999 1000
+1998 1001
+MAXX = 2000 2000

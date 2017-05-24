@@ -1,0 +1,4790 @@
+78419 arestas removidas
+24 obrigatorias
+Fim da primeira fase. Quantidade de solucoes suportadas : 185
+0.1
+maxSolPorTriangulo = 54
+contador = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 1
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 2
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 3
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 4
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 5
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 6
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 7
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 1
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1
+contador = 8
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1
+contador = 9
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1
+contador = 10
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 2
+contador = 11
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 1
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 3
+contador = 12
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 4
+contador = 13
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 1
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 5
+contador = 14
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 6
+contador = 15
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 7
+contador = 16
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 1
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 8
+contador = 17
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 2
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		 viz.size() = 0
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 1
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 11
+contador = 18
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 11
+contador = 19
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 1
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 12
+contador = 20
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		 viz.size() = 2
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		 viz.size() = 0
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 1
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 15
+contador = 21
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 1
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 17
+contador = 22
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 17
+contador = 23
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 1
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 20
+contador = 24
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 21
+contador = 25
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 4
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 1
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 25
+contador = 26
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 2
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 4
+		 viz.size() = 2
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		 viz.size() = 1
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 1
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 30
+contador = 27
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 2
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 32
+contador = 28
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 32
+contador = 29
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		 viz.size() = 0
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 1
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 35
+contador = 30
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		 viz.size() = 2
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 4
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 2
+		 viz.size() = 0
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 39
+contador = 31
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 3
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		 viz.size() = 2
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		cont = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		 viz.size() = 1
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		 viz.size() = 1
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		cont = 2
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 45
+contador = 32
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 46
+contador = 33
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 5
+		 viz.size() = 1
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		 viz.size() = 2
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		 viz.size() = 1
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		cont = 3
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 52
+contador = 34
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 53
+contador = 35
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 1
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 55
+contador = 36
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 4
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 5
+		 viz.size() = 4
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		cont = 3
+		 viz.size() = 2
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 8
+		 viz.size() = 2
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 8
+		 viz.size() = 1
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 8
+		 viz.size() = 1
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 8
+		 viz.size() = 0
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 8
+		cont = 4
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 63
+contador = 37
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 64
+contador = 38
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 2
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		 viz.size() = 3
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 6
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 7
+		cont = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 7
+		 viz.size() = 1
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 7
+		cont = 1
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 71
+contador = 39
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 2
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 4
+		 viz.size() = 2
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 6
+		cont = 3
+		 viz.size() = 2
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		 viz.size() = 0
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		cont = 1
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 77
+contador = 40
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 3
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		 viz.size() = 4
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 6
+		 viz.size() = 2
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 5
+		 viz.size() = 2
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 8
+		 viz.size() = 2
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 8
+		 viz.size() = 2
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 9
+		cont = 7
+		 viz.size() = 1
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 9
+		 viz.size() = 1
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 9
+		 viz.size() = 0
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 9
+		cont = 2
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 86
+contador = 41
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 86
+contador = 42
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 4
+		 viz.size() = 3
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 6
+		 viz.size() = 2
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		 viz.size() = 2
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 7
+		 viz.size() = 1
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 7
+		cont = 4
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 93
+contador = 43
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 94
+contador = 44
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		 viz.size() = 3
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 6
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 8
+		cont = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 8
+		cont = 0
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 102
+contador = 45
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 105
+contador = 46
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 2
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		 viz.size() = 0
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 1
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 108
+contador = 47
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 109
+contador = 48
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		cont = 0
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 115
+contador = 49
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 118
+contador = 50
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 5
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 6
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		cont = 2
+		 viz.size() = 2
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 7
+		 viz.size() = 2
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 8
+		 viz.size() = 2
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 9
+		cont = 2
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 127
+contador = 51
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 129
+contador = 52
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 131
+contador = 53
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 134
+contador = 54
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 4
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 5
+		 viz.size() = 2
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 2
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 8
+		 viz.size() = 2
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 8
+		 viz.size() = 2
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 9
+		cont = 2
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 143
+contador = 55
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 146
+contador = 56
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		 viz.size() = 5
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 7
+		cont = 1
+		 viz.size() = 3
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 10
+		 viz.size() = 2
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 11
+		 viz.size() = 2
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 12
+		 viz.size() = 3
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 14
+		 viz.size() = 2
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 15
+		 viz.size() = 3
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 16
+		 viz.size() = 4
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 16
+		 viz.size() = 1
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 16
+		 viz.size() = 1
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 16
+		 viz.size() = 1
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 16
+		cont = 10
+		 noSuportadasPQ.size() = 16
+noSuportadas.size() = 162
+contador = 57
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 3
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		cont = 1
+		 viz.size() = 2
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		 viz.size() = 0
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 1
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 167
+contador = 58
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 3
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		cont = 2
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 9
+		cont = 0
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 176
+contador = 59
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 6
+		 viz.size() = 2
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 7
+		 viz.size() = 1
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 7
+		cont = 2
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 183
+contador = 60
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 185
+contador = 61
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		 viz.size() = 4
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		 viz.size() = 4
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 8
+		 viz.size() = 5
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 9
+		 viz.size() = 4
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 9
+		cont = 4
+		 viz.size() = 2
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 10
+		 viz.size() = 2
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 12
+		 viz.size() = 2
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 12
+		 viz.size() = 2
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 12
+		 viz.size() = 1
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 12
+		 viz.size() = 1
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 12
+		 viz.size() = 0
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 12
+		cont = 6
+		 noSuportadasPQ.size() = 12
+noSuportadas.size() = 197
+contador = 62
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 199
+contador = 63
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 201
+contador = 64
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 6
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 7
+		 viz.size() = 6
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 9
+		cont = 2
+		 viz.size() = 3
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 11
+		 viz.size() = 3
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 13
+		 viz.size() = 3
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 13
+		 viz.size() = 3
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 13
+		 viz.size() = 1
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 13
+		cont = 4
+		 noSuportadasPQ.size() = 13
+noSuportadas.size() = 214
+contador = 65
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 1
+		 viz.size() = 2
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		 viz.size() = 0
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 1
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 219
+contador = 66
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 221
+contador = 67
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 5
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		 viz.size() = 4
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 7
+		cont = 2
+		 viz.size() = 3
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 10
+		 viz.size() = 3
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 10
+		 viz.size() = 2
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 11
+		 viz.size() = 3
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 13
+		 viz.size() = 2
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 14
+		 viz.size() = 2
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 14
+		 viz.size() = 1
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 14
+		 viz.size() = 1
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 14
+		 viz.size() = 1
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 14
+		 viz.size() = 1
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 14
+		cont = 10
+		 noSuportadasPQ.size() = 14
+noSuportadas.size() = 235
+contador = 68
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 237
+contador = 69
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 5
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 7
+		 viz.size() = 4
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 7
+		cont = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 7
+		cont = 0
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 244
+contador = 70
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		 viz.size() = 7
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 8
+		 viz.size() = 4
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 9
+		 viz.size() = 5
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 10
+		 viz.size() = 4
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 12
+		 viz.size() = 4
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 14
+		cont = 5
+		 viz.size() = 3
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 15
+		 viz.size() = 2
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 16
+		 viz.size() = 2
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 16
+		 viz.size() = 2
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 16
+		 viz.size() = 0
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 16
+		cont = 4
+		 noSuportadasPQ.size() = 16
+noSuportadas.size() = 260
+contador = 71
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 265
+contador = 72
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 4
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 7
+		 viz.size() = 2
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 8
+		 viz.size() = 6
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 13
+		 viz.size() = 4
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 14
+		cont = 4
+		 viz.size() = 2
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 15
+		 viz.size() = 1
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		 viz.size() = 0
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		cont = 2
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 280
+contador = 73
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 282
+contador = 74
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 285
+contador = 75
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		 viz.size() = 5
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 8
+		 viz.size() = 6
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 11
+		 viz.size() = 5
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 12
+		 viz.size() = 5
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 14
+		 viz.size() = 6
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 17
+		 viz.size() = 4
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 18
+		 viz.size() = 7
+		 solucoes.size() antes = 18
+		 solucoes.size() antes = 22
+		 viz.size() = 5
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 22
+		 viz.size() = 5
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 24
+		cont = 10
+		 viz.size() = 4
+		 solucoes.size() antes = 24
+		 solucoes.size() antes = 28
+		 viz.size() = 4
+		 solucoes.size() antes = 28
+		 solucoes.size() antes = 31
+		 viz.size() = 4
+		 solucoes.size() antes = 31
+		 solucoes.size() antes = 33
+		 viz.size() = 4
+		 solucoes.size() antes = 33
+		 solucoes.size() antes = 35
+		 viz.size() = 3
+		 solucoes.size() antes = 35
+		 solucoes.size() antes = 35
+		 viz.size() = 2
+		 solucoes.size() antes = 35
+		 solucoes.size() antes = 35
+		 viz.size() = 4
+		 solucoes.size() antes = 35
+		 solucoes.size() antes = 38
+		 viz.size() = 3
+		 solucoes.size() antes = 38
+		 solucoes.size() antes = 38
+		 viz.size() = 0
+		 solucoes.size() antes = 38
+		 solucoes.size() antes = 38
+		cont = 8
+		 noSuportadasPQ.size() = 38
+noSuportadas.size() = 323
+contador = 76
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 326
+contador = 77
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 331
+contador = 78
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 334
+contador = 79
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 336
+contador = 80
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		cont = 0
+		 viz.size() = 4
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 7
+		cont = 1
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 343
+contador = 81
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		 viz.size() = 5
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 7
+		 viz.size() = 4
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 8
+		 viz.size() = 4
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 10
+		 viz.size() = 4
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 12
+		 viz.size() = 6
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 16
+		cont = 5
+		 viz.size() = 4
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 19
+		 viz.size() = 2
+		 solucoes.size() antes = 19
+		 solucoes.size() antes = 20
+		 viz.size() = 2
+		 solucoes.size() antes = 20
+		 solucoes.size() antes = 20
+		 viz.size() = 1
+		 solucoes.size() antes = 20
+		 solucoes.size() antes = 20
+		cont = 3
+		 noSuportadasPQ.size() = 20
+noSuportadas.size() = 363
+contador = 82
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 366
+contador = 83
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 5
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 8
+		cont = 1
+		 viz.size() = 4
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 10
+		 viz.size() = 3
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 11
+		 viz.size() = 2
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 11
+		cont = 2
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 377
+contador = 84
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 381
+contador = 85
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 4
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		 viz.size() = 6
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 11
+		 viz.size() = 5
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 13
+		 viz.size() = 5
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 16
+		cont = 4
+		 viz.size() = 5
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 20
+		 viz.size() = 3
+		 solucoes.size() antes = 20
+		 solucoes.size() antes = 21
+		 viz.size() = 3
+		 solucoes.size() antes = 21
+		 solucoes.size() antes = 21
+		 viz.size() = 1
+		 solucoes.size() antes = 21
+		 solucoes.size() antes = 21
+		cont = 3
+		 noSuportadasPQ.size() = 21
+noSuportadas.size() = 402
+contador = 86
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 404
+contador = 87
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 409
+contador = 88
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 8
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 11
+		 viz.size() = 6
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 11
+		 viz.size() = 5
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 11
+		 viz.size() = 4
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 13
+		 viz.size() = 3
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 13
+		 viz.size() = 4
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 14
+		 viz.size() = 3
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 16
+		 viz.size() = 5
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 18
+		 viz.size() = 4
+		 solucoes.size() antes = 18
+		 solucoes.size() antes = 18
+		cont = 9
+		 viz.size() = 5
+		 solucoes.size() antes = 18
+		 solucoes.size() antes = 22
+		 viz.size() = 2
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 22
+		 viz.size() = 2
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 22
+		 viz.size() = 0
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 22
+		cont = 3
+		 noSuportadasPQ.size() = 22
+noSuportadas.size() = 431
+contador = 89
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 5
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 8
+		cont = 1
+		 viz.size() = 2
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 8
+		 viz.size() = 0
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 8
+		cont = 1
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 439
+contador = 90
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		cont = 0
+		 viz.size() = 6
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 13
+		 viz.size() = 4
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 14
+		cont = 1
+		 noSuportadasPQ.size() = 14
+noSuportadas.size() = 453
+contador = 91
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 457
+contador = 92
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		 viz.size() = 7
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 11
+		cont = 1
+		 viz.size() = 5
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 15
+		 viz.size() = 5
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 16
+		 viz.size() = 2
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 17
+		 viz.size() = 1
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 17
+		cont = 3
+		 noSuportadasPQ.size() = 17
+noSuportadas.size() = 474
+contador = 93
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 4
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 7
+		cont = 0
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 481
+contador = 94
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		 viz.size() = 1
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 8
+		cont = 1
+		 viz.size() = 6
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 14
+		 viz.size() = 4
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 16
+		 viz.size() = 5
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 18
+		 viz.size() = 8
+		 solucoes.size() antes = 18
+		 solucoes.size() antes = 22
+		 viz.size() = 6
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 25
+		cont = 4
+		 noSuportadasPQ.size() = 25
+noSuportadas.size() = 506
+contador = 95
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 509
+contador = 96
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		 viz.size() = 10
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 15
+		 viz.size() = 7
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		cont = 2
+		 viz.size() = 4
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 19
+		cont = 0
+		 noSuportadasPQ.size() = 19
+noSuportadas.size() = 528
+contador = 97
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		 viz.size() = 4
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 9
+		 viz.size() = 6
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 13
+		 viz.size() = 9
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 17
+		cont = 3
+		 viz.size() = 5
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 22
+		 viz.size() = 3
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 23
+		 viz.size() = 3
+		 solucoes.size() antes = 23
+		 solucoes.size() antes = 23
+		 viz.size() = 0
+		 solucoes.size() antes = 23
+		 solucoes.size() antes = 23
+		cont = 3
+		 noSuportadasPQ.size() = 23
+noSuportadas.size() = 551
+contador = 98
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 555
+contador = 99
+		 viz.size() = 9
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 9
+		 viz.size() = 6
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 10
+		 viz.size() = 3
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 11
+		cont = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 11
+		 viz.size() = 0
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 11
+		cont = 1
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 566
+contador = 100
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 1
+		 viz.size() = 5
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 10
+		cont = 0
+		 noSuportadasPQ.size() = 10
+noSuportadas.size() = 576
+contador = 101
+		 viz.size() = 8
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 8
+		cont = 0
+		 viz.size() = 6
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 13
+		 viz.size() = 6
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 16
+		cont = 1
+		 noSuportadasPQ.size() = 16
+noSuportadas.size() = 592
+contador = 102
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 596
+contador = 103
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 601
+contador = 104
+		 viz.size() = 8
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 8
+		 viz.size() = 6
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 11
+		 viz.size() = 5
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 14
+		 viz.size() = 5
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 16
+		 viz.size() = 5
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 19
+		 viz.size() = 6
+		 solucoes.size() antes = 19
+		 solucoes.size() antes = 23
+		 viz.size() = 5
+		 solucoes.size() antes = 23
+		 solucoes.size() antes = 24
+		 viz.size() = 6
+		 solucoes.size() antes = 24
+		 solucoes.size() antes = 28
+		 viz.size() = 8
+		 solucoes.size() antes = 28
+		 solucoes.size() antes = 34
+		 viz.size() = 8
+		 solucoes.size() antes = 34
+		 solucoes.size() antes = 39
+		cont = 10
+		 viz.size() = 7
+		 solucoes.size() antes = 39
+		 solucoes.size() antes = 46
+		 viz.size() = 4
+		 solucoes.size() antes = 46
+		 solucoes.size() antes = 48
+		 viz.size() = 6
+		 solucoes.size() antes = 48
+		 solucoes.size() antes = 53
+		 viz.size() = 4
+		 solucoes.size() antes = 53
+		 solucoes.size() antes = 54
+		cont = 4
+		 noSuportadasPQ.size() = 54
+noSuportadas.size() = 655
+contador = 105
+		 viz.size() = 9
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 9
+		cont = 0
+		 viz.size() = 4
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 11
+		 viz.size() = 1
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 11
+		cont = 1
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 666
+contador = 106
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		cont = 0
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 672
+contador = 107
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		cont = 0
+		 viz.size() = 8
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 15
+		 viz.size() = 5
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 20
+		 viz.size() = 8
+		 solucoes.size() antes = 20
+		 solucoes.size() antes = 25
+		 viz.size() = 4
+		 solucoes.size() antes = 25
+		 solucoes.size() antes = 28
+		cont = 3
+		 noSuportadasPQ.size() = 28
+noSuportadas.size() = 700
+contador = 108
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 7
+		cont = 0
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 707
+contador = 109
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 8
+		cont = 1
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 715
+contador = 110
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		cont = 0
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 721
+contador = 111
+		 viz.size() = 9
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 9
+		 viz.size() = 5
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 12
+		 viz.size() = 6
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 16
+		 viz.size() = 5
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 18
+		cont = 3
+		 viz.size() = 8
+		 solucoes.size() antes = 18
+		 solucoes.size() antes = 26
+		 viz.size() = 7
+		 solucoes.size() antes = 26
+		 solucoes.size() antes = 30
+		 viz.size() = 5
+		 solucoes.size() antes = 30
+		 solucoes.size() antes = 34
+		 viz.size() = 4
+		 solucoes.size() antes = 34
+		 solucoes.size() antes = 36
+		cont = 3
+		 noSuportadasPQ.size() = 36
+noSuportadas.size() = 757
+contador = 112
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		cont = 1
+		 viz.size() = 4
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 9
+		cont = 0
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 766
+contador = 113
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		cont = 0
+		 viz.size() = 8
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 14
+		 viz.size() = 2
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 15
+		cont = 1
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 781
+contador = 114
+		 viz.size() = 8
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 8
+		 viz.size() = 10
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 16
+		cont = 2
+		 viz.size() = 4
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 19
+		cont = 0
+		 noSuportadasPQ.size() = 19
+noSuportadas.size() = 800
+contador = 115
+		 viz.size() = 8
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 8
+		 viz.size() = 4
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 11
+		 viz.size() = 6
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 17
+		 viz.size() = 4
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 20
+		cont = 3
+		 viz.size() = 7
+		 solucoes.size() antes = 20
+		 solucoes.size() antes = 27
+		 viz.size() = 5
+		 solucoes.size() antes = 27
+		 solucoes.size() antes = 30
+		 viz.size() = 2
+		 solucoes.size() antes = 30
+		 solucoes.size() antes = 31
+		 viz.size() = 0
+		 solucoes.size() antes = 31
+		 solucoes.size() antes = 31
+		cont = 3
+		 noSuportadasPQ.size() = 31
+noSuportadas.size() = 831
+contador = 116
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		cont = 0
+		 viz.size() = 8
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 15
+		 viz.size() = 8
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 21
+		cont = 1
+		 noSuportadasPQ.size() = 21
+noSuportadas.size() = 852
+contador = 117
+		 viz.size() = 8
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 8
+		cont = 1
+		 viz.size() = 3
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 10
+		cont = 0
+		 noSuportadasPQ.size() = 10
+noSuportadas.size() = 862
+contador = 118
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 6
+		cont = 0
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 868
+contador = 119
+		 viz.size() = 9
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 9
+		cont = 1
+		 viz.size() = 6
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 15
+		cont = 0
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 883
+contador = 120
+		 viz.size() = 9
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 9
+		 viz.size() = 4
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 11
+		 viz.size() = 6
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 16
+		 viz.size() = 4
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 20
+		 viz.size() = 12
+		 solucoes.size() antes = 20
+		 solucoes.size() antes = 30
+		 viz.size() = 5
+		 solucoes.size() antes = 30
+		 solucoes.size() antes = 30
+		 viz.size() = 4
+		 solucoes.size() antes = 30
+		 solucoes.size() antes = 32
+		 viz.size() = 6
+		 solucoes.size() antes = 32
+		 solucoes.size() antes = 36
+		 viz.size() = 5
+		 solucoes.size() antes = 36
+		 solucoes.size() antes = 41
+		 viz.size() = 8
+		 solucoes.size() antes = 41
+		 solucoes.size() antes = 47
+		cont = 10
+		 viz.size() = 11
+		 solucoes.size() antes = 47
+		 solucoes.size() antes = 58
+		cont = 1
+		 noSuportadasPQ.size() = 58
+noSuportadas.size() = 941
+contador = 121
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 9
+		cont = 0
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 950
+contador = 122
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 8
+		cont = 0
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 958
+contador = 123
+		 viz.size() = 8
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 8
+		cont = 0
+		 viz.size() = 6
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 12
+		cont = 0
+		 noSuportadasPQ.size() = 12
+noSuportadas.size() = 970
+contador = 124
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		cont = 1
+		 viz.size() = 6
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 12
+		cont = 0
+		 noSuportadasPQ.size() = 12
+noSuportadas.size() = 982
+contador = 125
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		 viz.size() = 8
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 14
+		cont = 2
+		 viz.size() = 2
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 16
+		cont = 0
+		 noSuportadasPQ.size() = 16
+noSuportadas.size() = 998
+contador = 126
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 8
+		cont = 1
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 1006
+contador = 127
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 8
+		cont = 0
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 1014
+contador = 128
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		cont = 0
+		 viz.size() = 8
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 15
+		 viz.size() = 11
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 22
+		 viz.size() = 6
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 23
+		cont = 2
+		 noSuportadasPQ.size() = 23
+noSuportadas.size() = 1037
+contador = 129
+		 viz.size() = 7
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 7
+		cont = 0
+		 viz.size() = 8
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 15
+		 viz.size() = 6
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 18
+		 viz.size() = 7
+		 solucoes.size() antes = 18
+		 solucoes.size() antes = 22
+		 viz.size() = 5
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 24
+		 viz.size() = 4
+		 solucoes.size() antes = 24
+		 solucoes.size() antes = 26
+		 viz.size() = 0
+		 solucoes.size() antes = 26
+		 solucoes.size() antes = 26
+		cont = 5
+		 noSuportadasPQ.size() = 26
+noSuportadas.size() = 1063
+contador = 130
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		cont = 1
+		 viz.size() = 5
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 11
+		cont = 0
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1074
+contador = 131
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 1078
+contador = 132
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 8
+		cont = 0
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 1086
+contador = 133
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		 viz.size() = 3
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 9
+		 viz.size() = 4
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 12
+		 viz.size() = 3
+		 solucoes.size() antes = 12
+		 solucoes.size() antes = 15
+		cont = 3
+		 viz.size() = 9
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 24
+		 viz.size() = 8
+		 solucoes.size() antes = 24
+		 solucoes.size() antes = 27
+		 viz.size() = 8
+		 solucoes.size() antes = 27
+		 solucoes.size() antes = 32
+		 viz.size() = 5
+		 solucoes.size() antes = 32
+		 solucoes.size() antes = 35
+		cont = 3
+		 noSuportadasPQ.size() = 35
+noSuportadas.size() = 1121
+contador = 134
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		 viz.size() = 5
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 10
+		cont = 1
+		 viz.size() = 5
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 14
+		 viz.size() = 2
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 14
+		cont = 1
+		 noSuportadasPQ.size() = 14
+noSuportadas.size() = 1135
+contador = 135
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 7
+		cont = 0
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 1142
+contador = 136
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 6
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 11
+		 viz.size() = 3
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 11
+		cont = 1
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1153
+contador = 137
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 4
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 8
+		cont = 1
+		 viz.size() = 5
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 13
+		 viz.size() = 3
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 15
+		cont = 1
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 1168
+contador = 138
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		 viz.size() = 7
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 11
+		cont = 1
+		 viz.size() = 6
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 17
+		cont = 0
+		 noSuportadasPQ.size() = 17
+noSuportadas.size() = 1185
+contador = 139
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1190
+contador = 140
+		 viz.size() = 6
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 6
+		 viz.size() = 1
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 6
+		cont = 1
+		 viz.size() = 8
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 14
+		 viz.size() = 4
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 17
+		 viz.size() = 9
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 19
+		 viz.size() = 5
+		 solucoes.size() antes = 19
+		 solucoes.size() antes = 19
+		 viz.size() = 6
+		 solucoes.size() antes = 19
+		 solucoes.size() antes = 22
+		 viz.size() = 6
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 24
+		 viz.size() = 6
+		 solucoes.size() antes = 24
+		 solucoes.size() antes = 25
+		 viz.size() = 3
+		 solucoes.size() antes = 25
+		 solucoes.size() antes = 27
+		 viz.size() = 10
+		 solucoes.size() antes = 27
+		 solucoes.size() antes = 32
+		 viz.size() = 5
+		 solucoes.size() antes = 32
+		 solucoes.size() antes = 34
+		cont = 10
+		 noSuportadasPQ.size() = 34
+noSuportadas.size() = 1224
+contador = 141
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 0
+		 viz.size() = 5
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 9
+		 viz.size() = 4
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 11
+		cont = 2
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1235
+contador = 142
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 4
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 8
+		cont = 1
+		 viz.size() = 3
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 10
+		 viz.size() = 2
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 11
+		 viz.size() = 1
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 11
+		cont = 2
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1246
+contador = 143
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 1250
+contador = 144
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 5
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 9
+		 viz.size() = 3
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 11
+		 viz.size() = 2
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 11
+		cont = 2
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1261
+contador = 145
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		cont = 0
+		 viz.size() = 4
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 8
+		cont = 0
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 1269
+contador = 146
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 7
+		 viz.size() = 6
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 11
+		 viz.size() = 6
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 14
+		cont = 3
+		 viz.size() = 4
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 17
+		 viz.size() = 2
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 17
+		 viz.size() = 0
+		 solucoes.size() antes = 17
+		 solucoes.size() antes = 17
+		cont = 2
+		 noSuportadasPQ.size() = 17
+noSuportadas.size() = 1286
+contador = 147
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 6
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 8
+		cont = 1
+		 viz.size() = 4
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 11
+		 viz.size() = 0
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 11
+		cont = 1
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1297
+contador = 148
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 4
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 7
+		 viz.size() = 3
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 10
+		 viz.size() = 3
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 13
+		 viz.size() = 2
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 15
+		cont = 4
+		 viz.size() = 7
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 22
+		 viz.size() = 6
+		 solucoes.size() antes = 22
+		 solucoes.size() antes = 25
+		 viz.size() = 5
+		 solucoes.size() antes = 25
+		 solucoes.size() antes = 27
+		 viz.size() = 4
+		 solucoes.size() antes = 27
+		 solucoes.size() antes = 28
+		 viz.size() = 2
+		 solucoes.size() antes = 28
+		 solucoes.size() antes = 28
+		 viz.size() = 1
+		 solucoes.size() antes = 28
+		 solucoes.size() antes = 28
+		 viz.size() = 3
+		 solucoes.size() antes = 28
+		 solucoes.size() antes = 28
+		 viz.size() = 0
+		 solucoes.size() antes = 28
+		 solucoes.size() antes = 28
+		cont = 7
+		 noSuportadasPQ.size() = 28
+noSuportadas.size() = 1325
+contador = 149
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 4
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 7
+		 viz.size() = 5
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 11
+		cont = 2
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1336
+contador = 150
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 1
+		 viz.size() = 3
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1341
+contador = 151
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 4
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 8
+		 viz.size() = 4
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 11
+		cont = 2
+		 viz.size() = 4
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 13
+		 viz.size() = 3
+		 solucoes.size() antes = 13
+		 solucoes.size() antes = 15
+		 viz.size() = 2
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		 viz.size() = 1
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		 viz.size() = 0
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		cont = 4
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 1356
+contador = 152
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 1
+		 viz.size() = 2
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1361
+contador = 153
+		 viz.size() = 5
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 5
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 7
+		 viz.size() = 1
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 8
+		cont = 3
+		 viz.size() = 8
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 16
+		 viz.size() = 6
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 16
+		 viz.size() = 3
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 16
+		 viz.size() = 4
+		 solucoes.size() antes = 16
+		 solucoes.size() antes = 18
+		 viz.size() = 4
+		 solucoes.size() antes = 18
+		 solucoes.size() antes = 20
+		 viz.size() = 4
+		 solucoes.size() antes = 20
+		 solucoes.size() antes = 21
+		 viz.size() = 2
+		 solucoes.size() antes = 21
+		 solucoes.size() antes = 21
+		cont = 6
+		 noSuportadasPQ.size() = 21
+noSuportadas.size() = 1382
+contador = 154
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 1
+		 viz.size() = 2
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1387
+contador = 155
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		 viz.size() = 2
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		 viz.size() = 4
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 8
+		 viz.size() = 3
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 10
+		 viz.size() = 2
+		 solucoes.size() antes = 10
+		 solucoes.size() antes = 11
+		 viz.size() = 3
+		 solucoes.size() antes = 11
+		 solucoes.size() antes = 14
+		 viz.size() = 3
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 15
+		cont = 6
+		 viz.size() = 2
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		 viz.size() = 0
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		cont = 1
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 1402
+contador = 156
+		 viz.size() = 4
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 4
+		cont = 1
+		 viz.size() = 2
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1407
+contador = 157
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 1410
+contador = 158
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 5
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 8
+		 viz.size() = 4
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 8
+		 viz.size() = 5
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 12
+		cont = 2
+		 noSuportadasPQ.size() = 12
+noSuportadas.size() = 1422
+contador = 159
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 1424
+contador = 160
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 1427
+contador = 161
+		 viz.size() = 3
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		 viz.size() = 3
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 6
+		 viz.size() = 1
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 7
+		 viz.size() = 3
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 9
+		cont = 4
+		 viz.size() = 5
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 14
+		 viz.size() = 3
+		 solucoes.size() antes = 14
+		 solucoes.size() antes = 15
+		 viz.size() = 3
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		 viz.size() = 2
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		 viz.size() = 1
+		 solucoes.size() antes = 15
+		 solucoes.size() antes = 15
+		cont = 4
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 1442
+contador = 162
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1443
+contador = 163
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 1445
+contador = 164
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		 viz.size() = 2
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 4
+		 viz.size() = 3
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 7
+		 viz.size() = 3
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 8
+		 viz.size() = 2
+		 solucoes.size() antes = 8
+		 solucoes.size() antes = 9
+		cont = 4
+		 viz.size() = 4
+		 solucoes.size() antes = 9
+		 solucoes.size() antes = 13
+		cont = 0
+		 noSuportadasPQ.size() = 13
+noSuportadas.size() = 1458
+contador = 165
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		 viz.size() = 2
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 4
+		cont = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1463
+contador = 166
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 3
+		 viz.size() = 2
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 5
+		cont = 2
+		 viz.size() = 3
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 8
+		cont = 0
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 1471
+contador = 167
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		 viz.size() = 3
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 4
+		cont = 1
+		 viz.size() = 2
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 6
+		 viz.size() = 2
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 7
+		 viz.size() = 0
+		 solucoes.size() antes = 7
+		 solucoes.size() antes = 7
+		cont = 2
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 1478
+contador = 168
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 2
+		 viz.size() = 0
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 1480
+contador = 169
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		 viz.size() = 2
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 3
+		cont = 1
+		 viz.size() = 3
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 6
+		 viz.size() = 4
+		 solucoes.size() antes = 6
+		 solucoes.size() antes = 9
+		cont = 1
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 1489
+contador = 170
+		 viz.size() = 2
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 2
+		 viz.size() = 2
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 4
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 5
+		cont = 4
+		 viz.size() = 0
+		 solucoes.size() antes = 5
+		 solucoes.size() antes = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1494
+contador = 171
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 4
+		cont = 1
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 1498
+contador = 172
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1499
+contador = 173
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 2
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		 viz.size() = 0
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 3
+		cont = 2
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 1502
+contador = 174
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 1
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1503
+contador = 175
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1504
+contador = 176
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 2
+		cont = 1
+		 viz.size() = 2
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 4
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		 viz.size() = 1
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		 viz.size() = 0
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 3
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 1508
+contador = 177
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		cont = 0
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1509
+contador = 178
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1509
+contador = 179
+		 viz.size() = 1
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 1
+		 viz.size() = 1
+		 solucoes.size() antes = 1
+		 solucoes.size() antes = 2
+		 viz.size() = 1
+		 solucoes.size() antes = 2
+		 solucoes.size() antes = 3
+		 viz.size() = 1
+		 solucoes.size() antes = 3
+		 solucoes.size() antes = 4
+		cont = 4
+		 viz.size() = 0
+		 solucoes.size() antes = 4
+		 solucoes.size() antes = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 1513
+contador = 180
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1513
+contador = 181
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1513
+contador = 182
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1513
+contador = 183
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 viz.size() = 0
+		 solucoes.size() antes = 0
+		 solucoes.size() antes = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1513
+Fim da segunda fase. Quantidade de solucoes nao-suportadas: 1513
+24.77
+Total: 24.87 segundos
+11 10361
+12 10277
+13 10203
+14 10130
+15 10062
+16 10000
+17 9939
+18 9880
+20 9764
+21 9707
+22 9651
+24 9551
+26 9453
+28 9359
+30 9267
+32 9177
+34 9088
+36 9000
+40 8832
+41 8791
+43 8711
+47 8555
+50 8441
+51 8404
+55 8260
+57 8190
+62 8020
+68 7828
+71 7735
+72 7705
+76 7589
+81 7449
+88 7260
+90 7207
+97 7025
+99 6974
+102 6899
+111 6683
+113 6636
+121 6452
+128 6298
+138 6088
+139 6068
+147 5916
+149 5879
+158 5717
+162 5647
+166 5579
+168 5546
+175 5434
+179 5372
+189 5222
+192 5178
+195 5136
+199 5082
+209 4952
+213 4902
+230 4698
+236 4629
+248 4497
+256 4413
+259 4382
+272 4252
+275 4223
+278 4195
+292 4069
+298 4018
+301 3993
+316 3873
+319 3850
+327 3790
+344 3671
+350 3631
+366 3527
+369 3508
+373 3483
+412 3249
+416 3226
+422 3192
+426 3170
+429 3154
+437 3112
+458 3007
+462 2988
+474 2932
+479 2909
+501 2810
+504 2797
+510 2772
+533 2680
+542 2647
+562 2577
+567 2560
+585 2500
+593 2474
+625 2378
+629 2367
+650 2311
+674 2251
+679 2239
+691 2211
+705 2179
+725 2134
+730 2123
+736 2110
+813 1956
+825 1935
+832 1923
+868 1863
+876 1850
+886 1834
+893 1823
+941 1751
+951 1737
+981 1697
+1002 1670
+1034 1630
+1064 1594
+1076 1580
+1083 1572
+1099 1554
+1264 1389
+1275 1379
+1285 1370
+1303 1354
+1319 1340
+1340 1322
+1352 1312
+1363 1303
+1408 1267
+1444 1240
+1466 1224
+1473 1219
+1486 1210
+1555 1164
+1579 1149
+1592 1141
+1612 1129
+1640 1113
+1676 1093
+1687 1087
+1777 1042
+1804 1030
+1832 1018
+1844 1013
+1874 1001
+1900 991
+1948 973
+1981 961
+2068 932
+2107 920
+2127 914
+2183 898
+2205 892
+2297 869
+2323 863
+2395 847
+2423 841
+2442 837
+2527 820
+2543 817
+2565 813
+2661 797
+2674 795
+2694 792
+2813 775
+2858 769
+2946 758
+3014 750
+3041 747
+3141 737
+3207 731
+3303 723
+3329 721
+3385 717
+3415 715
+3446 713
+3526 708
+3560 706
+3578 705
+3678 700
+3700 699
+3724 698
+3755 697
+3787 696
+19 9822
+23 9608
+25 9502
+27 9407
+29 9313
+31 9223
+33 9133
+35 9044
+37 8958
+38 8916
+39 8874
+42 8751
+44 8672
+45 8633
+46 8594
+48 8517
+49 8479
+52 8370
+54 8296
+53 8334
+56 8226
+58 8156
+59 8138
+61 8054
+60 8090
+63 7988
+64 7956
+65 7925
+67 7860
+66 7896
+70 7766
+69 7797
+73 7676
+74 7647
+75 7618
+77 7562
+78 7533
+79 7505
+80 7478
+82 7422
+83 7395
+84 7368
+87 7287
+86 7314
+85 7341
+89 7236
+91 7181
+96 7051
+95 7077
+94 7103
+92 7155
+93 7130
+98 7000
+100 6950
+101 6924
+103 6875
+104 6851
+105 6827
+106 6804
+110 6707
+109 6731
+108 6755
+107 6779
+112 6660
+114 6613
+115 6590
+116 6567
+117 6544
+118 6522
+120 6475
+119 6498
+122 6430
+123 6408
+124 6386
+125 6364
+127 6320
+126 6342
+129 6277
+130 6256
+131 6235
+132 6214
+133 6193
+134 6172
+135 6151
+137 6109
+136 6130
+140 6050
+141 6032
+146 5935
+145 5954
+144 5973
+143 5992
+142 6011
+148 5898
+150 5861
+151 5843
+152 5825
+153 5808
+154 5789
+155 5774
+156 5761
+157 5736
+159 5700
+160 5682
+161 5665
+163 5630
+164 5614
+165 5596
+167 5563
+169 5530
+171 5515
+170 5519
+174 5450
+173 5470
+172 5491
+176 5419
+177 5403
+178 5388
+180 5357
+181 5342
+182 5327
+183 5316
+184 5312
+188 5237
+187 5252
+186 5268
+185 5284
+191 5193
+190 5208
+193 5165
+194 5151
+197 5111
+196 5123
+198 5096
+200 5069
+201 5056
+202 5043
+203 5032
+204 5026
+208 4965
+207 4978
+206 4993
+205 5005
+210 4940
+211 4927
+212 4915
+214 4890
+229 4710
+228 4722
+227 4734
+226 4746
+225 4758
+224 4770
+223 4782
+222 4794
+219 4830
+221 4806
+220 4818
+218 4842
+217 4854
+216 4866
+215 4878
+231 4687
+232 4675
+233 4664
+235 4641
+234 4652
+237 4618
+238 4608
+239 4596
+241 4575
+240 4586
+242 4566
+246 4521
+247 4509
+245 4533
+249 4487
+250 4478
+255 4424
+254 4434
+253 4445
+252 4455
+251 4466
+257 4403
+258 4393
+261 4362
+260 4372
+262 4352
+263 4342
+264 4332
+271 4262
+270 4272
+269 4282
+268 4292
+267 4302
+266 4312
+265 4322
+274 4233
+273 4243
+276 4214
+277 4205
+279 4186
+281 4169
+280 4177
+283 4152
+282 4160
+291 4078
+290 4087
+289 4096
+287 4114
+288 4105
+286 4123
+285 4132
+284 4142
+293 4061
+294 4052
+295 4044
+297 4027
+296 4035
+299 4010
+300 4002
+302 3985
+303 3977
+315 3881
+314 3889
+313 3897
+312 3905
+310 3921
+311 3913
+309 3929
+308 3937
+307 3945
+306 3953
+305 3961
+304 3969
+317 3866
+318 3858
+321 3835
+320 3843
+323 3820
+324 3814
+322 3828
+325 3805
+326 3798
+329 3776
+328 3783
+331 3762
+330 3769
+333 3748
+332 3755
+334 3741
+335 3734
+336 3727
+343 3678
+342 3685
+341 3692
+339 3706
+340 3699
+337 3720
+338 3713
+345 3665
+346 3658
+349 3638
+348 3645
+347 3651
+351 3625
+352 3618
+353 3612
+355 3599
+354 3605
+356 3592
+358 3579
+357 3586
+359 3573
+360 3566
+361 3560
+363 3547
+365 3534
+364 3540
+362 3553
+368 3515
+367 3521
+370 3502
+371 3496
+372 3490
+375 3471
+374 3477
+376 3465
+377 3459
+378 3453
+379 3447
+380 3441
+381 3435
+382 3429
+383 3423
+384 3417
+385 3411
+386 3405
+387 3399
+388 3393
+389 3387
+390 3381
+391 3375
+392 3369
+393 3363
+394 3357
+395 3351
+410 3261
+411 3255
+409 3267
+408 3273
+407 3279
+406 3285
+405 3291
+404 3297
+403 3303
+402 3309
+401 3315
+399 3327
+400 3321
+398 3333
+397 3339
+396 3345
+413 3244
+414 3238
+415 3232
+417 3221
+418 3215
+420 3204
+421 3198
+419 3210
+424 3181
+423 3187
+425 3176
+427 3165
+428 3160
+430 3149
+432 3140
+431 3145
+436 3118
+435 3124
+434 3128
+433 3133
+438 3107
+440 3097
+439 3102
+441 3092
+443 3083
+442 3087
+445 3072
+444 3077
+446 3068
+448 3057
+447 3063
+449 3053
+450 3048
+457 3012
+455 3022
+456 3017
+454 3027
+453 3032
+451 3042
+452 3038
+459 3003
+461 2993
+460 2998
+464 2979
+463 2984
+465 2974
+466 2970
+467 2965
+473 2937
+471 2946
+472 2942
+468 2960
+470 2951
+469 2956
+475 2928
+476 2923
+478 2914
+477 2919
+480 2905
+481 2900
+482 2896
+485 2882
+483 2891
+484 2887
+486 2878
+487 2873
+488 2869
+489 2864
+491 2855
+490 2860
+499 2819
+500 2815
+498 2824
+497 2828
+496 2833
+494 2842
+495 2837
+493 2846
+492 2851
+502 2806
+503 2802
+506 2790
+505 2793
+509 2777
+508 2781
+507 2785
+513 2760
+511 2768
+512 2764
+514 2756
+515 2752
+516 2748
+517 2744
+521 2728
+518 2740
+519 2736
+520 2732
+524 2716
+522 2724
+523 2720
+532 2684
+531 2688
+529 2697
+528 2700
+530 2692
+526 2708
+527 2705
+525 2712
+534 2677
+536 2669
+535 2673
+537 2666
+538 2662
+540 2655
+539 2658
+541 2651
+545 2637
+544 2640
+546 2635
+547 2632
+543 2644
+548 2631
+552 2628
+559 2588
+561 2581
+560 2584
+558 2591
+557 2595
+556 2602
+555 2604
+564 2571
+563 2574
+565 2567
+566 2564
+570 2550
+569 2554
+568 2557
+571 2547
+572 2544
+573 2541
+574 2537
+584 2504
+583 2507
+582 2510
+580 2517
+581 2514
+579 2520
+577 2527
+578 2524
+576 2530
+575 2534
+586 2497
+587 2494
+588 2491
+591 2481
+592 2478
+589 2490
+590 2485
+595 2468
+594 2471
+597 2462
+599 2458
+598 2459
+596 2465
+603 2455
+600 2456
+624 2382
+623 2384
+622 2387
+620 2393
+621 2390
+617 2402
+619 2396
+616 2405
+613 2415
+614 2411
+615 2408
+612 2418
+611 2421
+610 2429
+618 2399
+607 2454
+609 2431
+626 2376
+627 2374
+628 2370
+630 2365
+633 2357
+631 2362
+635 2351
+634 2354
+636 2349
+638 2343
+639 2341
+641 2336
+643 2332
+640 2338
+637 2346
+645 2327
+632 2359
+642 2333
+646 2322
+648 2317
+647 2320
+649 2314
+654 2302
+653 2304
+651 2309
+652 2306
+657 2295
+656 2296
+655 2299
+660 2286
+663 2279
+661 2284
+659 2289
+664 2277
+658 2291
+673 2254
+670 2261
+672 2256
+668 2267
+671 2259
+669 2264
+666 2271
+667 2269
+665 2274
+662 2281
+676 2247
+675 2249
+677 2244
+678 2242
+681 2235
+683 2230
+682 2232
+680 2237
+684 2228
+687 2221
+685 2225
+686 2223
+690 2214
+689 2216
+688 2218
+693 2207
+697 2201
+692 2209
+695 2203
+698 2195
+703 2185
+702 2186
+704 2182
+701 2189
+700 2191
+706 2178
+708 2173
+710 2168
+709 2171
+707 2175
+715 2164
+711 2166
+722 2141
+724 2137
+721 2143
+720 2146
+723 2139
+717 2155
+719 2148
+718 2150
+716 2157
+726 2132
+727 2130
+729 2126
+728 2128
+733 2117
+732 2119
+731 2121
+735 2113
+734 2115
+739 2104
+740 2102
+737 2108
+738 2106
+743 2096
+742 2098
+741 2100
+744 2094
+746 2090
+745 2092
+747 2088
+748 2086
+750 2082
+752 2078
+751 2080
+749 2084
+755 2072
+754 2074
+753 2076
+756 2070
+758 2066
+760 2062
+757 2068
+759 2064
+761 2060
+762 2058
+763 2057
+767 2048
+764 2054
+765 2053
+769 2044
+766 2051
+772 2039
+771 2040
+768 2046
+770 2042
+776 2033
+773 2037
+774 2034
+810 1962
+811 1960
+812 1958
+809 1964
+806 1970
+807 1968
+808 1966
+803 1976
+805 1972
+804 1974
+801 1980
+802 1978
+798 1986
+797 1992
+796 2004
+814 1955
+816 1951
+819 1946
+815 1953
+818 1948
+817 1950
+824 1938
+822 1941
+823 1939
+821 1942
+820 1944
+826 1934
+827 1932
+828 1930
+829 1929
+831 1926
+830 1927
+833 1922
+835 1919
+837 1916
+834 1920
+839 1914
+836 1917
+840 1910
+866 1867
+864 1870
+867 1865
+862 1873
+865 1868
+863 1872
+861 1875
+860 1877
+856 1883
+854 1887
+855 1885
+857 1882
+852 1891
+853 1888
+858 1880
+851 1892
+849 1897
+848 1899
+850 1894
+859 1878
+846 1902
+871 1859
+872 1857
+873 1856
+870 1860
+874 1854
+875 1852
+869 1862
+878 1848
+877 1849
+879 1846
+880 1844
+885 1837
+883 1839
+884 1838
+881 1842
+887 1833
+889 1830
+890 1828
+891 1827
+888 1831
+892 1826
+896 1819
+894 1822
+897 1817
+898 1816
+895 1820
+902 1810
+901 1811
+900 1813
+899 1814
+904 1807
+903 1808
+905 1806
+908 1801
+907 1803
+910 1800
+906 1804
+911 1798
+917 1795
+940 1753
+938 1756
+937 1757
+939 1754
+934 1762
+936 1759
+933 1763
+932 1765
+935 1760
+929 1769
+930 1768
+931 1766
+928 1771
+927 1772
+926 1774
+924 1780
+925 1779
+923 1792
+943 1749
+942 1750
+945 1746
+946 1744
+944 1747
+950 1739
+949 1740
+948 1742
+947 1743
+954 1734
+959 1729
+952 1736
+955 1732
+957 1730
+961 1725
+979 1700
+980 1699
+978 1701
+976 1704
+973 1708
+975 1705
+977 1703
+971 1711
+974 1707
+985 1692
+987 1690
+983 1695
+984 1694
+982 1696
+988 1688
+992 1683
+989 1687
+990 1686
+991 1685
+997 1678
+995 1679
+986 1691
+993 1682
+994 1681
+1001 1672
+999 1674
+998 1676
+1000 1673
+1004 1668
+1006 1665
+1005 1667
+1003 1669
+1008 1663
+1007 1664
+1012 1658
+1010 1660
+1013 1657
+1009 1662
+1016 1653
+1017 1652
+1014 1655
+1011 1659
+1015 1654
+1018 1650
+1021 1647
+1024 1643
+1020 1648
+1032 1633
+1030 1635
+1033 1632
+1031 1634
+1027 1639
+1029 1637
+1025 1642
+1026 1640
+1023 1644
+1028 1638
+1022 1645
+1019 1649
+1039 1625
+1037 1627
+1043 1621
+1035 1629
+1041 1622
+1040 1623
+1063 1596
+1062 1597
+1061 1598
+1058 1602
+1057 1603
+1054 1606
+1059 1600
+1052 1609
+1051 1610
+1055 1605
+1049 1613
+1053 1608
+1050 1611
+1047 1615
+1045 1618
+1068 1590
+1065 1593
+1071 1586
+1070 1587
+1067 1591
+1066 1592
+1069 1589
+1072 1585
+1075 1582
+1073 1584
+1078 1578
+1082 1574
+1081 1575
+1077 1579
+1080 1576
+1079 1577
+1085 1570
+1087 1568
+1089 1566
+1088 1567
+1086 1569
+1084 1571
+1091 1563
+1092 1562
+1090 1565
+1098 1556
+1097 1557
+1095 1559
+1094 1560
+1096 1558
+1093 1561
+1103 1550
+1102 1551
+1105 1548
+1104 1549
+1107 1546
+1101 1552
+1100 1553
+1106 1547
+1108 1545
+1111 1542
+1110 1543
+1112 1541
+1109 1544
+1114 1539
+1115 1538
+1113 1540
+1117 1536
+1121 1532
+1116 1537
+1120 1533
+1122 1531
+1118 1535
+1123 1530
+1119 1534
+1124 1529
+1126 1527
+1128 1525
+1125 1528
+1129 1524
+1133 1520
+1130 1523
+1134 1519
+1132 1521
+1137 1516
+1138 1515
+1135 1518
+1140 1513
+1142 1511
+1145 1508
+1136 1517
+1141 1512
+1144 1509
+1146 1507
+1148 1505
+1143 1510
+1149 1504
+1151 1503
+1261 1392
+1263 1390
+1259 1394
+1258 1395
+1256 1397
+1260 1393
+1262 1391
+1255 1399
+1254 1401
+1257 1396
+1253 1405
+1266 1388
+1268 1386
+1269 1385
+1270 1384
+1267 1387
+1273 1381
+1271 1383
+1274 1380
+1272 1382
+1277 1378
+1283 1372
+1280 1375
+1281 1374
+1278 1377
+1279 1376
+1284 1371
+1282 1373
+1287 1369
+1288 1368
+1291 1365
+1292 1364
+1290 1366
+1289 1367
+1302 1355
+1298 1359
+1297 1360
+1295 1362
+1300 1357
+1301 1356
+1305 1353
+1311 1347
+1306 1352
+1307 1351
+1308 1350
+1314 1345
+1318 1341
+1316 1343
+1315 1344
+1317 1342
+1313 1346
+1309 1349
+1326 1334
+1321 1339
+1322 1338
+1323 1337
+1330 1331
+1329 1332
+1325 1335
+1324 1336
+1328 1333
+1331 1330
+1332 1329
+1333 1328
+1337 1325
+1336 1326
+1339 1323
+1335 1327
+1348 1316
+1342 1321
+1344 1319
+1345 1318
+1350 1314
+1349 1315
+1346 1317
+1351 1313
+1355 1310
+1354 1311
+1360 1306
+1357 1308
+1359 1307
+1356 1309
+1362 1304
+1361 1305
+1370 1299
+1371 1298
+1365 1302
+1366 1301
+1367 1300
+1374 1297
+1376 1294
+1405 1270
+1401 1273
+1407 1268
+1403 1271
+1400 1274
+1402 1272
+1406 1269
+1398 1275
+1397 1276
+1396 1277
+1394 1279
+1393 1280
+1389 1283
+1395 1278
+1387 1285
+1391 1281
+1414 1263
+1410 1266
+1411 1265
+1415 1262
+1412 1264
+1438 1245
+1443 1241
+1439 1244
+1440 1243
+1442 1242
+1432 1249
+1434 1248
+1435 1247
+1430 1251
+1431 1250
+1428 1252
+1427 1253
+1422 1257
+1426 1254
+1436 1246
+1420 1258
+1423 1256
+1418 1260
+1419 1259
+1416 1261
+1424 1255
+1452 1235
+1446 1239
+1450 1236
+1449 1237
+1447 1238
+1455 1232
+1459 1230
+1465 1225
+1461 1228
+1462 1227
+1458 1231
+1468 1223
+1472 1220
+1471 1221
+1469 1222
+1480 1215
+1475 1218
+1476 1217
+1478 1216
+1481 1214
+1484 1212
+1482 1213
+1485 1211
+1494 1205
+1489 1208
+1488 1209
+1491 1207
+1492 1206
+1495 1204
+1497 1203
+1504 1198
+1500 1201
+1498 1202
+1501 1200
+1508 1196
+1503 1199
+1506 1197
+1511 1194
+1551 1167
+1549 1168
+1554 1165
+1552 1166
+1545 1171
+1548 1169
+1546 1170
+1543 1172
+1534 1178
+1542 1173
+1540 1174
+1539 1175
+1537 1176
+1530 1181
+1528 1182
+1532 1180
+1536 1177
+1533 1179
+1527 1183
+1524 1187
+1562 1160
+1557 1163
+1559 1162
+1560 1161
+1563 1159
+1570 1155
+1567 1157
+1565 1158
+1568 1156
+1578 1150
+1573 1153
+1571 1154
+1575 1152
+1576 1151
+1584 1146
+1583 1147
+1581 1148
+1586 1145
+1588 1144
+1591 1142
+1589 1143
+1598 1138
+1599 1137
+1594 1140
+1596 1139
+1601 1136
+1611 1130
+1606 1133
+1607 1132
+1603 1135
+1604 1134
+1609 1131
+1614 1128
+1619 1125
+1618 1126
+1623 1123
+1616 1127
+1621 1124
+1625 1122
+1628 1120
+1639 1114
+1632 1118
+1637 1115
+1633 1117
+1627 1121
+1631 1119
+1635 1116
+1644 1111
+1642 1112
+1649 1108
+1648 1109
+1654 1106
+1658 1104
+1646 1110
+1655 1105
+1651 1107
+1659 1103
+1661 1102
+1675 1094
+1670 1097
+1668 1098
+1673 1095
+1671 1096
+1665 1101
+1680 1091
+1678 1092
+1682 1090
+1686 1088
+1684 1089
+1689 1086
+1691 1085
+1693 1084
+1699 1081
+1698 1082
+1696 1083
+1775 1043
+1771 1045
+1773 1044
+1769 1046
+1765 1048
+1763 1049
+1767 1047
+1761 1050
+1759 1051
+1755 1053
+1757 1052
+1753 1054
+1747 1057
+1751 1055
+1749 1056
+1741 1060
+1745 1058
+1736 1063
+1743 1059
+1734 1064
+1730 1066
+1739 1061
+1732 1065
+1737 1062
+1726 1070
+1727 1067
+1723 1074
+1724 1071
+1783 1040
+1780 1041
+1784 1039
+1802 1031
+1795 1034
+1800 1032
+1798 1033
+1790 1037
+1791 1036
+1786 1038
+1793 1035
+1811 1027
+1810 1028
+1807 1029
+1816 1025
+1821 1023
+1830 1019
+1828 1020
+1825 1021
+1818 1024
+1823 1022
+1814 1026
+1838 1016
+1840 1015
+1835 1017
+1842 1014
+1850 1011
+1855 1009
+1847 1012
+1872 1002
+1867 1004
+1864 1005
+1859 1007
+1857 1008
+1862 1006
+1852 1010
+1869 1003
+1878 1000
+1880 999
+1882 998
+1885 997
+1895 993
+1898 992
+1894 994
+1890 995
+1906 989
+1908 988
+1903 990
+1911 987
+1916 985
+1914 986
+1924 982
+1927 981
+1919 984
+1922 983
+1935 978
+1943 975
+1946 974
+1940 976
+1938 977
+1932 979
+1930 980
+1957 970
+1959 969
+1968 966
+1966 967
+1954 971
+1951 972
+1962 968
+1979 962
+1976 963
+1970 965
+1973 964
+1990 958
+1984 960
+1987 959
+1993 957
+1999 955
+2002 954
+1996 956
+2008 952
+2011 951
+2014 950
+2027 946
+2062 934
+2059 935
+2056 936
+2065 933
+2050 938
+2047 939
+2053 937
+2044 940
+2039 942
+2035 943
+2032 944
+2041 941
+2029 945
+2017 949
+2005 953
+2023 947
+2020 948
+2072 931
+2075 930
+2078 929
+2098 923
+2104 921
+2094 924
+2086 927
+2101 922
+2092 925
+2088 926
+2081 928
+2111 919
+2117 917
+2121 916
+2124 915
+2114 918
+2138 911
+2131 913
+2141 910
+2134 912
+2148 908
+2152 907
+2145 909
+2159 905
+2176 900
+2180 899
+2173 901
+2169 902
+2166 903
+2162 904
+2155 906
+2187 897
+2194 895
+2191 896
+2198 894
+2202 893
+2213 890
+2209 891
+2221 888
+2217 889
+2225 887
+2233 885
+2229 886
+2240 884
+2289 871
+2293 870
+2285 872
+2281 873
+2277 874
+2273 875
+2265 877
+2269 876
+2261 878
+2257 879
+2250 881
+2246 882
+2253 880
+2302 868
+2306 867
+2310 866
+2315 865
+2319 864
+2332 861
+2328 862
+2337 860
+2341 859
+2355 856
+2346 858
+2350 857
+2359 855
+2364 854
+2368 853
+2373 852
+2377 851
+2382 850
+2391 848
+2386 849
+2400 846
+2406 845
+2409 844
+2414 843
+2419 842
+2433 839
+2428 840
+2438 838
+2454 835
+2448 836
+2458 834
+2522 821
+2513 823
+2517 822
+2507 824
+2503 826
+2504 825
+2502 827
+2493 830
+2495 828
+2533 819
+2538 818
+2549 816
+2555 815
+2560 814
+2571 812
+2577 811
+2583 810
+2589 809
+2595 808
+2607 806
+2613 805
+2602 807
+2655 798
+2649 799
+2643 800
+2631 802
+2637 801
+2619 804
+2625 803
+2668 796
+2688 793
+2681 794
+2708 790
+2701 791
+2716 789
+2722 788
+2736 786
+2743 785
+2729 787
+2751 784
+2758 783
+2806 776
+2800 777
+2799 778
+2791 779
+2821 774
+2828 773
+2843 771
+2838 772
+2852 770
+2866 768
+2874 767
+2882 766
+2891 765
+2898 764
+2939 759
+2931 760
+2925 761
+2963 756
+2955 757
+2972 755
+2997 752
+3006 751
+2989 753
+2980 754
+3023 749
+3032 748
+3051 746
+3062 745
+3073 744
+3121 739
+3131 738
+3111 740
+3104 741
+3100 743
+3101 742
+3152 736
+3163 735
+3174 734
+3185 733
+3196 732
+3220 730
+3291 724
+3279 725
+3272 726
+3317 722
+3344 720
+3371 718
+3357 719
+3400 716
+3431 714
+3462 712
+3510 709
+3494 710
+3478 711
+3545 707
+3598 704
+3618 703
+3638 702
+3658 701
+MAXX = 3787 10361

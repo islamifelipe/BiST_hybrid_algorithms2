@@ -1,0 +1,2895 @@
+78419 arestas removidas
+24 obrigatorias
+Fim da primeira fase. Quantidade de solucoes suportadas : 185
+0.12
+contador = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 1
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 2
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 3
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 4
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 5
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 6
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 0
+contador = 7
+		cont = 1
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1
+contador = 8
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1
+contador = 9
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1
+contador = 10
+		cont = 1
+		 noSuportadasPQ.size() = 1
+		cont = 1
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 2
+contador = 11
+		cont = 1
+		 noSuportadasPQ.size() = 1
+		cont = 1
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 3
+contador = 12
+		cont = 1
+		 noSuportadasPQ.size() = 1
+		cont = 1
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 4
+contador = 13
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 1
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 5
+contador = 14
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 6
+contador = 15
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 7
+contador = 16
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 8
+contador = 17
+		cont = 0
+		 noSuportadasPQ.size() = 3
+		cont = 2
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 11
+contador = 18
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 11
+contador = 19
+		cont = 1
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 12
+contador = 20
+		cont = 0
+		 noSuportadasPQ.size() = 3
+		cont = 1
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 15
+contador = 21
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 2
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 17
+contador = 22
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 17
+contador = 23
+		cont = 3
+		 noSuportadasPQ.size() = 3
+		cont = 2
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 20
+contador = 24
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 21
+contador = 25
+		cont = 1
+		 noSuportadasPQ.size() = 3
+		cont = 3
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 25
+contador = 26
+		cont = 2
+		 noSuportadasPQ.size() = 4
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 30
+contador = 27
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 32
+contador = 28
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 32
+contador = 29
+		cont = 2
+		 noSuportadasPQ.size() = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 35
+contador = 30
+		cont = 2
+		 noSuportadasPQ.size() = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 39
+contador = 31
+		cont = 1
+		 noSuportadasPQ.size() = 5
+		cont = 3
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 45
+contador = 32
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 46
+contador = 33
+		cont = 2
+		 noSuportadasPQ.size() = 5
+		cont = 0
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 52
+contador = 34
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 53
+contador = 35
+		cont = 1
+		 noSuportadasPQ.size() = 2
+		cont = 1
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 55
+contador = 36
+		cont = 6
+		 noSuportadasPQ.size() = 8
+		cont = 4
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 63
+contador = 37
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 64
+contador = 38
+		cont = 3
+		 noSuportadasPQ.size() = 6
+		cont = 3
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 71
+contador = 39
+		cont = 1
+		 noSuportadasPQ.size() = 4
+		cont = 3
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 77
+contador = 40
+		cont = 5
+		 noSuportadasPQ.size() = 8
+		cont = 7
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 86
+contador = 41
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 86
+contador = 42
+		cont = 7
+		 noSuportadasPQ.size() = 7
+		cont = 2
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 93
+contador = 43
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 94
+contador = 44
+		cont = 5
+		 noSuportadasPQ.size() = 8
+		cont = 4
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 102
+contador = 45
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 1
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 105
+contador = 46
+		cont = 2
+		 noSuportadasPQ.size() = 3
+		cont = 1
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 108
+contador = 47
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 109
+contador = 48
+		cont = 1
+		 noSuportadasPQ.size() = 6
+		cont = 4
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 115
+contador = 49
+		cont = 1
+		 noSuportadasPQ.size() = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 118
+contador = 50
+		cont = 4
+		 noSuportadasPQ.size() = 7
+		cont = 2
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 127
+contador = 51
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 129
+contador = 52
+		cont = 2
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 131
+contador = 53
+		cont = 0
+		 noSuportadasPQ.size() = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 134
+contador = 54
+		cont = 3
+		 noSuportadasPQ.size() = 7
+		cont = 4
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 143
+contador = 55
+		cont = 0
+		 noSuportadasPQ.size() = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 146
+contador = 56
+		cont = 3
+		 noSuportadasPQ.size() = 7
+		cont = 5
+		 noSuportadasPQ.size() = 16
+noSuportadas.size() = 162
+contador = 57
+		cont = 2
+		 noSuportadasPQ.size() = 5
+		cont = 1
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 167
+contador = 58
+		cont = 1
+		 noSuportadasPQ.size() = 7
+		cont = 7
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 178
+contador = 59
+		cont = 0
+		 noSuportadasPQ.size() = 5
+		cont = 0
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 185
+contador = 60
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 187
+contador = 61
+		cont = 8
+		 noSuportadasPQ.size() = 12
+		cont = 6
+		 noSuportadasPQ.size() = 12
+noSuportadas.size() = 199
+contador = 62
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 201
+contador = 63
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 203
+contador = 64
+		cont = 6
+		 noSuportadasPQ.size() = 12
+		cont = 8
+		 noSuportadasPQ.size() = 13
+noSuportadas.size() = 216
+contador = 65
+		cont = 1
+		 noSuportadasPQ.size() = 5
+		cont = 2
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 221
+contador = 66
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 223
+contador = 67
+		cont = 4
+		 noSuportadasPQ.size() = 11
+		cont = 3
+		 noSuportadasPQ.size() = 14
+noSuportadas.size() = 237
+contador = 68
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 239
+contador = 69
+		cont = 0
+		 noSuportadasPQ.size() = 5
+		cont = 1
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 246
+contador = 70
+		cont = 6
+		 noSuportadasPQ.size() = 14
+		cont = 4
+		 noSuportadasPQ.size() = 16
+noSuportadas.size() = 262
+contador = 71
+		cont = 0
+		 noSuportadasPQ.size() = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 267
+contador = 72
+		cont = 3
+		 noSuportadasPQ.size() = 12
+		cont = 1
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 282
+contador = 73
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 284
+contador = 74
+		cont = 0
+		 noSuportadasPQ.size() = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 287
+contador = 75
+		cont = 10
+		 noSuportadasPQ.size() = 20
+		cont = 13
+		 noSuportadasPQ.size() = 37
+noSuportadas.size() = 324
+contador = 76
+		cont = 0
+		 noSuportadasPQ.size() = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 327
+contador = 77
+		cont = 1
+		 noSuportadasPQ.size() = 4
+		cont = 1
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 332
+contador = 78
+		cont = 1
+		 noSuportadasPQ.size() = 3
+		cont = 1
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 335
+contador = 79
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 337
+contador = 80
+		cont = 1
+		 noSuportadasPQ.size() = 4
+		cont = 1
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 344
+contador = 81
+		cont = 4
+		 noSuportadasPQ.size() = 13
+		cont = 6
+		 noSuportadasPQ.size() = 20
+noSuportadas.size() = 364
+contador = 82
+		cont = 0
+		 noSuportadasPQ.size() = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 367
+contador = 83
+		cont = 0
+		 noSuportadasPQ.size() = 6
+		cont = 0
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 376
+contador = 84
+		cont = 0
+		 noSuportadasPQ.size() = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 380
+contador = 85
+		cont = 8
+		 noSuportadasPQ.size() = 21
+		cont = 7
+		 noSuportadasPQ.size() = 21
+noSuportadas.size() = 401
+contador = 86
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 403
+contador = 87
+		cont = 0
+		 noSuportadasPQ.size() = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 408
+contador = 88
+		cont = 6
+		 noSuportadasPQ.size() = 16
+		cont = 8
+		 noSuportadasPQ.size() = 22
+noSuportadas.size() = 430
+contador = 89
+		cont = 2
+		 noSuportadasPQ.size() = 8
+		cont = 1
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 438
+contador = 90
+		cont = 0
+		 noSuportadasPQ.size() = 6
+		cont = 3
+		 noSuportadasPQ.size() = 16
+noSuportadas.size() = 454
+contador = 91
+		cont = 0
+		 noSuportadasPQ.size() = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 458
+contador = 92
+		cont = 3
+		 noSuportadasPQ.size() = 15
+		cont = 2
+		 noSuportadasPQ.size() = 17
+noSuportadas.size() = 475
+contador = 93
+		cont = 0
+		 noSuportadasPQ.size() = 6
+		cont = 0
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 482
+contador = 94
+		cont = 2
+		 noSuportadasPQ.size() = 11
+		cont = 4
+		 noSuportadasPQ.size() = 25
+noSuportadas.size() = 507
+contador = 95
+		cont = 0
+		 noSuportadasPQ.size() = 3
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 510
+contador = 96
+		cont = 2
+		 noSuportadasPQ.size() = 14
+		cont = 2
+		 noSuportadasPQ.size() = 20
+noSuportadas.size() = 530
+contador = 97
+		cont = 4
+		 noSuportadasPQ.size() = 21
+		cont = 6
+		 noSuportadasPQ.size() = 23
+noSuportadas.size() = 553
+contador = 98
+		cont = 0
+		 noSuportadasPQ.size() = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 557
+contador = 99
+		cont = 1
+		 noSuportadasPQ.size() = 10
+		cont = 2
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 568
+contador = 100
+		cont = 0
+		 noSuportadasPQ.size() = 6
+		cont = 0
+		 noSuportadasPQ.size() = 10
+noSuportadas.size() = 578
+contador = 101
+		cont = 3
+		 noSuportadasPQ.size() = 18
+		cont = 0
+		 noSuportadasPQ.size() = 19
+noSuportadas.size() = 597
+contador = 102
+		cont = 0
+		 noSuportadasPQ.size() = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 601
+contador = 103
+		cont = 0
+		 noSuportadasPQ.size() = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 606
+contador = 104
+		cont = 13
+		 noSuportadasPQ.size() = 45
+		cont = 2
+		 noSuportadasPQ.size() = 56
+noSuportadas.size() = 662
+contador = 105
+		cont = 0
+		 noSuportadasPQ.size() = 9
+		cont = 0
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 673
+contador = 106
+		cont = 0
+		 noSuportadasPQ.size() = 5
+		cont = 0
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 679
+contador = 107
+		cont = 6
+		 noSuportadasPQ.size() = 30
+		cont = 0
+		 noSuportadasPQ.size() = 35
+noSuportadas.size() = 714
+contador = 108
+		cont = 0
+		 noSuportadasPQ.size() = 6
+		cont = 0
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 721
+contador = 109
+		cont = 0
+		 noSuportadasPQ.size() = 8
+		cont = 0
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 730
+contador = 110
+		cont = 0
+		 noSuportadasPQ.size() = 5
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 735
+contador = 111
+		cont = 6
+		 noSuportadasPQ.size() = 26
+		cont = 6
+		 noSuportadasPQ.size() = 45
+noSuportadas.size() = 780
+contador = 112
+		cont = 1
+		 noSuportadasPQ.size() = 7
+		cont = 0
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 789
+contador = 113
+		cont = 2
+		 noSuportadasPQ.size() = 15
+		cont = 6
+		 noSuportadasPQ.size() = 29
+noSuportadas.size() = 818
+contador = 114
+		cont = 0
+		 noSuportadasPQ.size() = 10
+		cont = 1
+		 noSuportadasPQ.size() = 19
+noSuportadas.size() = 837
+contador = 115
+		cont = 3
+		 noSuportadasPQ.size() = 21
+		cont = 0
+		 noSuportadasPQ.size() = 25
+noSuportadas.size() = 862
+contador = 116
+		cont = 3
+		 noSuportadasPQ.size() = 27
+		cont = 3
+		 noSuportadasPQ.size() = 29
+noSuportadas.size() = 891
+contador = 117
+		cont = 0
+		 noSuportadasPQ.size() = 8
+		cont = 1
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 902
+contador = 118
+		cont = 0
+		 noSuportadasPQ.size() = 6
+		cont = 0
+		 noSuportadasPQ.size() = 6
+noSuportadas.size() = 908
+contador = 119
+		cont = 0
+		 noSuportadasPQ.size() = 8
+		cont = 1
+		 noSuportadasPQ.size() = 14
+noSuportadas.size() = 922
+contador = 120
+		cont = 13
+		 noSuportadasPQ.size() = 53
+		cont = 1
+		 noSuportadasPQ.size() = 62
+noSuportadas.size() = 984
+contador = 121
+		cont = 0
+		 noSuportadasPQ.size() = 7
+		cont = 0
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 992
+contador = 122
+		cont = 0
+		 noSuportadasPQ.size() = 7
+		cont = 0
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 1000
+contador = 123
+		cont = 1
+		 noSuportadasPQ.size() = 9
+		cont = 0
+		 noSuportadasPQ.size() = 13
+noSuportadas.size() = 1013
+contador = 124
+		cont = 1
+		 noSuportadasPQ.size() = 7
+		cont = 0
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1024
+contador = 125
+		cont = 0
+		 noSuportadasPQ.size() = 8
+		cont = 1
+		 noSuportadasPQ.size() = 17
+noSuportadas.size() = 1041
+contador = 126
+		cont = 1
+		 noSuportadasPQ.size() = 6
+		cont = 1
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 1049
+contador = 127
+		cont = 0
+		 noSuportadasPQ.size() = 5
+		cont = 0
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 1057
+contador = 128
+		cont = 5
+		 noSuportadasPQ.size() = 27
+		cont = 0
+		 noSuportadasPQ.size() = 31
+noSuportadas.size() = 1088
+contador = 129
+		cont = 4
+		 noSuportadasPQ.size() = 23
+		cont = 0
+		 noSuportadasPQ.size() = 25
+noSuportadas.size() = 1113
+contador = 130
+		cont = 0
+		 noSuportadasPQ.size() = 6
+		cont = 1
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1124
+contador = 131
+		cont = 0
+		 noSuportadasPQ.size() = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 1128
+contador = 132
+		cont = 0
+		 noSuportadasPQ.size() = 6
+		cont = 0
+		 noSuportadasPQ.size() = 8
+noSuportadas.size() = 1136
+contador = 133
+		cont = 11
+		 noSuportadasPQ.size() = 42
+		cont = 11
+		 noSuportadasPQ.size() = 45
+noSuportadas.size() = 1181
+contador = 134
+		cont = 1
+		 noSuportadasPQ.size() = 11
+		cont = 0
+		 noSuportadasPQ.size() = 14
+noSuportadas.size() = 1195
+contador = 135
+		cont = 0
+		 noSuportadasPQ.size() = 6
+		cont = 0
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 1202
+contador = 136
+		cont = 2
+		 noSuportadasPQ.size() = 10
+		cont = 0
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1213
+contador = 137
+		cont = 1
+		 noSuportadasPQ.size() = 10
+		cont = 1
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 1228
+contador = 138
+		cont = 0
+		 noSuportadasPQ.size() = 6
+		cont = 3
+		 noSuportadasPQ.size() = 18
+noSuportadas.size() = 1246
+contador = 139
+		cont = 0
+		 noSuportadasPQ.size() = 4
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1251
+contador = 140
+		cont = 13
+		 noSuportadasPQ.size() = 29
+		cont = 13
+		 noSuportadasPQ.size() = 44
+noSuportadas.size() = 1295
+contador = 141
+		cont = 2
+		 noSuportadasPQ.size() = 9
+		cont = 2
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1306
+contador = 142
+		cont = 2
+		 noSuportadasPQ.size() = 11
+		cont = 2
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1317
+contador = 143
+		cont = 0
+		 noSuportadasPQ.size() = 4
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 1321
+contador = 144
+		cont = 2
+		 noSuportadasPQ.size() = 10
+		cont = 1
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1332
+contador = 145
+		cont = 0
+		 noSuportadasPQ.size() = 4
+		cont = 1
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 1341
+contador = 146
+		cont = 3
+		 noSuportadasPQ.size() = 13
+		cont = 3
+		 noSuportadasPQ.size() = 17
+noSuportadas.size() = 1358
+contador = 147
+		cont = 1
+		 noSuportadasPQ.size() = 8
+		cont = 2
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1369
+contador = 148
+		cont = 7
+		 noSuportadasPQ.size() = 26
+		cont = 9
+		 noSuportadasPQ.size() = 28
+noSuportadas.size() = 1397
+contador = 149
+		cont = 1
+		 noSuportadasPQ.size() = 8
+		cont = 2
+		 noSuportadasPQ.size() = 11
+noSuportadas.size() = 1408
+contador = 150
+		cont = 1
+		 noSuportadasPQ.size() = 3
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1413
+contador = 151
+		cont = 0
+		 noSuportadasPQ.size() = 4
+		cont = 5
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 1428
+contador = 152
+		cont = 1
+		 noSuportadasPQ.size() = 3
+		cont = 1
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1433
+contador = 153
+		cont = 10
+		 noSuportadasPQ.size() = 20
+		cont = 7
+		 noSuportadasPQ.size() = 22
+noSuportadas.size() = 1455
+contador = 154
+		cont = 0
+		 noSuportadasPQ.size() = 3
+		cont = 1
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1460
+contador = 155
+		cont = 6
+		 noSuportadasPQ.size() = 15
+		cont = 5
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 1475
+contador = 156
+		cont = 0
+		 noSuportadasPQ.size() = 3
+		cont = 0
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1480
+contador = 157
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 1483
+contador = 158
+		cont = 0
+		 noSuportadasPQ.size() = 4
+		cont = 4
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 1498
+contador = 159
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 1500
+contador = 160
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 1503
+contador = 161
+		cont = 7
+		 noSuportadasPQ.size() = 14
+		cont = 5
+		 noSuportadasPQ.size() = 15
+noSuportadas.size() = 1518
+contador = 162
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1519
+contador = 163
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 0
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 1521
+contador = 164
+		cont = 5
+		 noSuportadasPQ.size() = 11
+		cont = 1
+		 noSuportadasPQ.size() = 16
+noSuportadas.size() = 1537
+contador = 165
+		cont = 2
+		 noSuportadasPQ.size() = 4
+		cont = 2
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1542
+contador = 166
+		cont = 2
+		 noSuportadasPQ.size() = 5
+		cont = 5
+		 noSuportadasPQ.size() = 10
+noSuportadas.size() = 1552
+contador = 167
+		cont = 1
+		 noSuportadasPQ.size() = 4
+		cont = 3
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 1559
+contador = 168
+		cont = 0
+		 noSuportadasPQ.size() = 2
+		cont = 1
+		 noSuportadasPQ.size() = 2
+noSuportadas.size() = 1561
+contador = 169
+		cont = 2
+		 noSuportadasPQ.size() = 4
+		cont = 7
+		 noSuportadasPQ.size() = 9
+noSuportadas.size() = 1570
+contador = 170
+		cont = 3
+		 noSuportadasPQ.size() = 5
+		cont = 4
+		 noSuportadasPQ.size() = 5
+noSuportadas.size() = 1575
+contador = 171
+		cont = 1
+		 noSuportadasPQ.size() = 2
+		cont = 5
+		 noSuportadasPQ.size() = 7
+noSuportadas.size() = 1582
+contador = 172
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1583
+contador = 173
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 3
+noSuportadas.size() = 1586
+contador = 174
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 1
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1587
+contador = 175
+		cont = 0
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1588
+contador = 176
+		cont = 3
+		 noSuportadasPQ.size() = 4
+		cont = 2
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 1592
+contador = 177
+		cont = 1
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 1
+noSuportadas.size() = 1593
+contador = 178
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1593
+contador = 179
+		cont = 1
+		 noSuportadasPQ.size() = 1
+		cont = 0
+		 noSuportadasPQ.size() = 4
+noSuportadas.size() = 1597
+contador = 180
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1597
+contador = 181
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1597
+contador = 182
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1597
+contador = 183
+		cont = 0
+		 noSuportadasPQ.size() = 0
+		cont = 0
+		 noSuportadasPQ.size() = 0
+noSuportadas.size() = 1597
+Fim da segunda fase ... 
+35.9
+Total ...
+36.02
+11 10361
+12 10277
+13 10203
+14 10130
+15 10062
+16 10000
+17 9939
+18 9880
+20 9764
+21 9707
+22 9651
+24 9551
+26 9453
+28 9359
+30 9267
+32 9177
+34 9088
+36 9000
+40 8832
+41 8791
+43 8711
+47 8555
+50 8441
+51 8404
+55 8260
+57 8190
+62 8020
+68 7828
+71 7735
+72 7705
+76 7589
+81 7449
+88 7260
+90 7207
+97 7025
+99 6974
+102 6899
+111 6683
+113 6636
+121 6452
+128 6298
+138 6088
+139 6068
+147 5916
+149 5879
+158 5717
+162 5647
+166 5579
+168 5546
+175 5434
+179 5372
+189 5222
+192 5178
+195 5136
+199 5082
+209 4952
+213 4902
+230 4698
+236 4629
+248 4497
+256 4413
+259 4382
+272 4252
+275 4223
+278 4195
+292 4069
+298 4018
+301 3993
+316 3873
+319 3850
+327 3790
+344 3671
+350 3631
+366 3527
+369 3508
+373 3483
+412 3249
+416 3226
+422 3192
+426 3170
+429 3154
+437 3112
+458 3007
+462 2988
+474 2932
+479 2909
+501 2810
+504 2797
+510 2772
+533 2680
+542 2647
+562 2577
+567 2560
+585 2500
+593 2474
+625 2378
+629 2367
+650 2311
+674 2251
+679 2239
+691 2211
+705 2179
+725 2134
+730 2123
+736 2110
+813 1956
+825 1935
+832 1923
+868 1863
+876 1850
+886 1834
+893 1823
+941 1751
+951 1737
+981 1697
+1002 1670
+1034 1630
+1064 1594
+1076 1580
+1083 1572
+1099 1554
+1264 1389
+1275 1379
+1285 1370
+1303 1354
+1319 1340
+1340 1322
+1352 1312
+1363 1303
+1408 1267
+1444 1240
+1466 1224
+1473 1219
+1486 1210
+1555 1164
+1579 1149
+1592 1141
+1612 1129
+1640 1113
+1676 1093
+1687 1087
+1777 1042
+1804 1030
+1832 1018
+1844 1013
+1874 1001
+1900 991
+1948 973
+1981 961
+2068 932
+2107 920
+2127 914
+2183 898
+2205 892
+2297 869
+2323 863
+2395 847
+2423 841
+2442 837
+2527 820
+2543 817
+2565 813
+2661 797
+2674 795
+2694 792
+2813 775
+2858 769
+2946 758
+3014 750
+3041 747
+3141 737
+3207 731
+3303 723
+3329 721
+3385 717
+3415 715
+3446 713
+3526 708
+3560 706
+3578 705
+3678 700
+3700 699
+3724 698
+3755 697
+3787 696
+19 9822
+23 9601
+25 9502
+27 9406
+29 9313
+31 9223
+33 9133
+35 9045
+39 8874
+38 8916
+37 8960
+42 8751
+44 8673
+46 8594
+45 8636
+49 8479
+48 8517
+52 8368
+53 8332
+54 8296
+56 8226
+58 8156
+61 8054
+60 8088
+59 8122
+63 7988
+64 7956
+65 7925
+66 7898
+67 7862
+69 7800
+70 7767
+73 7676
+74 7647
+75 7619
+77 7561
+78 7534
+79 7505
+80 7478
+82 7422
+87 7287
+86 7314
+85 7341
+84 7368
+83 7395
+89 7234
+91 7181
+93 7129
+94 7105
+92 7155
+96 7051
+95 7079
+98 7001
+100 6949
+101 6924
+103 6875
+104 6851
+105 6827
+106 6803
+107 6779
+108 6755
+110 6707
+109 6731
+112 6660
+114 6613
+115 6590
+116 6567
+120 6475
+119 6498
+118 6521
+117 6544
+122 6430
+123 6410
+127 6320
+126 6342
+125 6364
+124 6387
+129 6277
+130 6256
+131 6235
+132 6214
+133 6193
+137 6109
+136 6130
+135 6151
+134 6172
+140 6049
+141 6030
+142 6011
+143 5992
+144 5973
+145 5954
+146 5935
+148 5898
+150 5861
+151 5843
+152 5825
+153 5808
+154 5789
+155 5771
+156 5753
+157 5735
+159 5701
+161 5666
+160 5682
+163 5630
+164 5613
+165 5596
+167 5563
+169 5530
+170 5515
+173 5466
+174 5450
+172 5482
+171 5498
+176 5419
+177 5403
+178 5388
+180 5357
+181 5342
+182 5327
+183 5312
+185 5283
+184 5298
+188 5237
+187 5252
+186 5269
+190 5208
+191 5193
+193 5164
+194 5150
+196 5123
+197 5110
+198 5098
+201 5056
+200 5069
+202 5043
+204 5018
+203 5030
+208 4965
+207 4978
+206 4991
+205 5004
+210 4940
+211 4928
+212 4915
+214 4890
+215 4878
+216 4866
+217 4854
+218 4843
+219 4831
+220 4824
+229 4710
+227 4734
+228 4722
+226 4746
+225 4758
+224 4770
+223 4782
+222 4795
+221 4807
+231 4687
+232 4675
+233 4664
+234 4652
+235 4641
+237 4618
+238 4607
+247 4508
+246 4519
+245 4530
+244 4541
+243 4552
+242 4563
+240 4585
+241 4574
+239 4596
+250 4477
+249 4487
+251 4472
+252 4471
+253 4462
+254 4437
+255 4424
+258 4393
+257 4403
+260 4372
+261 4362
+262 4352
+263 4342
+264 4332
+265 4322
+266 4312
+267 4302
+268 4292
+270 4272
+271 4262
+269 4282
+273 4243
+274 4233
+277 4205
+276 4214
+280 4177
+279 4186
+282 4159
+281 4168
+283 4150
+285 4132
+284 4141
+286 4123
+287 4114
+290 4087
+291 4078
+289 4096
+288 4105
+294 4052
+295 4044
+293 4061
+297 4027
+296 4035
+299 4010
+300 4002
+302 3985
+303 3977
+304 3969
+305 3961
+306 3953
+308 3938
+307 3946
+315 3881
+313 3897
+314 3889
+312 3905
+311 3914
+310 3922
+309 3933
+317 3866
+318 3858
+321 3835
+320 3843
+326 3798
+325 3805
+324 3813
+323 3821
+322 3831
+328 3783
+329 3776
+331 3762
+330 3769
+332 3755
+333 3748
+334 3741
+336 3727
+335 3734
+337 3720
+338 3713
+343 3678
+342 3685
+341 3692
+339 3706
+340 3699
+345 3665
+346 3658
+348 3645
+349 3638
+347 3654
+351 3625
+352 3618
+353 3612
+354 3605
+356 3592
+355 3599
+357 3586
+358 3581
+360 3572
+359 3575
+365 3534
+364 3540
+362 3553
+363 3547
+361 3564
+367 3521
+368 3515
+370 3502
+372 3490
+371 3496
+374 3477
+375 3471
+376 3465
+377 3459
+378 3453
+379 3447
+381 3435
+380 3441
+382 3429
+383 3423
+385 3411
+384 3417
+386 3405
+387 3399
+388 3393
+389 3387
+391 3376
+392 3370
+390 3382
+411 3255
+410 3261
+409 3267
+408 3273
+407 3279
+406 3285
+404 3297
+405 3291
+403 3303
+402 3309
+401 3315
+400 3321
+399 3327
+398 3333
+396 3345
+397 3339
+395 3351
+394 3359
+413 3244
+414 3238
+415 3232
+417 3221
+418 3216
+419 3209
+421 3198
+420 3204
+423 3187
+424 3181
+425 3176
+427 3166
+428 3160
+430 3150
+431 3144
+433 3133
+432 3140
+435 3124
+434 3131
+436 3118
+438 3107
+440 3097
+439 3103
+441 3092
+442 3088
+443 3082
+444 3077
+445 3073
+446 3068
+447 3063
+457 3012
+456 3017
+455 3022
+454 3027
+453 3032
+452 3037
+451 3042
+450 3047
+448 3060
+449 3054
+459 3003
+460 2998
+461 2993
+465 2976
+463 2984
+464 2979
+467 2970
+466 2971
+472 2944
+471 2948
+473 2937
+470 2953
+476 2923
+475 2928
+478 2914
+477 2919
+480 2905
+481 2900
+483 2891
+482 2896
+485 2882
+484 2887
+486 2878
+487 2873
+488 2869
+490 2860
+491 2855
+489 2864
+492 2851
+493 2846
+494 2842
+497 2828
+495 2837
+496 2833
+498 2824
+499 2819
+500 2815
+503 2802
+502 2806
+506 2790
+505 2793
+509 2777
+508 2781
+507 2785
+511 2768
+512 2764
+514 2756
+513 2760
+516 2748
+515 2752
+519 2736
+517 2744
+518 2740
+521 2728
+520 2733
+532 2684
+531 2688
+530 2693
+527 2704
+529 2696
+526 2708
+528 2700
+525 2712
+524 2716
+522 2724
+523 2720
+534 2677
+536 2669
+535 2673
+537 2666
+538 2662
+539 2658
+541 2651
+540 2655
+544 2641
+543 2644
+545 2637
+546 2634
+549 2630
+551 2629
+561 2581
+560 2584
+558 2591
+559 2588
+556 2598
+557 2595
+555 2602
+554 2606
+553 2609
+552 2621
+564 2571
+563 2574
+566 2564
+565 2567
+570 2550
+568 2557
+569 2554
+571 2547
+572 2544
+573 2540
+574 2537
+575 2534
+576 2530
+578 2524
+577 2527
+583 2507
+584 2504
+582 2510
+581 2514
+579 2520
+580 2517
+586 2497
+587 2495
+589 2488
+588 2491
+592 2478
+591 2481
+590 2484
+595 2468
+594 2471
+598 2461
+596 2465
+597 2462
+599 2456
+602 2451
+601 2452
+603 2446
+600 2453
+607 2443
+624 2382
+623 2384
+621 2390
+622 2387
+620 2393
+618 2399
+617 2402
+616 2405
+614 2411
+613 2414
+615 2408
+619 2396
+611 2422
+612 2418
+626 2377
+628 2370
+627 2373
+630 2365
+632 2359
+631 2362
+633 2357
+635 2351
+634 2354
+638 2345
+636 2349
+639 2341
+637 2346
+648 2318
+649 2314
+647 2319
+646 2322
+645 2325
+643 2330
+641 2335
+644 2328
+640 2339
+642 2333
+651 2309
+654 2302
+653 2304
+652 2306
+656 2296
+657 2294
+655 2299
+659 2289
+660 2286
+661 2284
+658 2291
+662 2282
+665 2274
+664 2276
+666 2272
+667 2269
+663 2279
+671 2259
+673 2254
+672 2256
+668 2266
+669 2264
+670 2261
+678 2242
+677 2244
+676 2247
+675 2249
+681 2235
+680 2237
+683 2230
+682 2232
+684 2228
+686 2223
+688 2218
+690 2214
+689 2216
+687 2221
+685 2225
+692 2210
+695 2203
+693 2207
+697 2201
+694 2205
+702 2187
+703 2184
+701 2189
+704 2182
+700 2193
+706 2177
+708 2173
+709 2170
+707 2175
+711 2166
+714 2159
+710 2168
+713 2161
+715 2157
+716 2155
+712 2164
+717 2152
+720 2146
+721 2144
+719 2148
+718 2150
+723 2139
+722 2141
+724 2137
+727 2130
+726 2132
+729 2126
+728 2128
+731 2121
+732 2119
+735 2113
+734 2115
+733 2117
+739 2104
+740 2102
+738 2106
+741 2100
+737 2108
+743 2096
+742 2098
+745 2092
+747 2088
+744 2094
+746 2090
+748 2086
+749 2084
+753 2076
+750 2082
+752 2078
+757 2068
+751 2080
+755 2072
+760 2062
+754 2074
+756 2070
+759 2064
+758 2066
+764 2054
+761 2060
+763 2056
+766 2050
+765 2052
+762 2058
+768 2046
+769 2045
+767 2048
+771 2040
+772 2038
+774 2034
+773 2036
+778 2026
+775 2032
+776 2031
+770 2042
+777 2029
+779 2025
+780 2022
+783 2021
+810 1962
+812 1958
+811 1960
+806 1970
+807 1968
+808 1966
+809 1964
+805 1972
+803 1978
+804 1975
+802 1982
+814 1955
+816 1951
+818 1948
+819 1946
+817 1950
+815 1953
+822 1941
+823 1939
+824 1937
+821 1943
+820 1944
+826 1934
+828 1931
+831 1925
+827 1932
+829 1929
+830 1927
+833 1922
+838 1914
+835 1918
+834 1920
+836 1917
+839 1912
+841 1908
+837 1915
+840 1910
+843 1905
+842 1907
+844 1903
+846 1900
+845 1902
+848 1897
+849 1895
+847 1898
+850 1893
+851 1892
+853 1888
+852 1890
+855 1885
+856 1883
+859 1880
+854 1887
+858 1881
+857 1882
+861 1876
+862 1873
+860 1879
+864 1870
+863 1872
+866 1867
+867 1865
+865 1869
+869 1862
+870 1860
+871 1859
+872 1857
+873 1855
+874 1854
+875 1852
+877 1849
+878 1847
+879 1846
+882 1842
+880 1844
+881 1843
+885 1837
+884 1838
+883 1839
+887 1833
+889 1830
+890 1828
+888 1831
+892 1825
+895 1820
+896 1819
+897 1817
+898 1816
+894 1822
+899 1814
+901 1811
+900 1813
+902 1810
+904 1807
+908 1801
+906 1804
+903 1808
+905 1805
+909 1799
+910 1798
+912 1795
+914 1792
+907 1802
+911 1796
+913 1793
+917 1787
+940 1753
+937 1757
+938 1756
+939 1754
+936 1759
+933 1763
+934 1762
+932 1765
+935 1760
+931 1766
+930 1768
+928 1771
+929 1769
+926 1774
+925 1775
+927 1772
+924 1777
+923 1778
+922 1780
+920 1784
+919 1786
+921 1781
+915 1790
+945 1746
+943 1749
+942 1750
+944 1747
+946 1744
+948 1742
+950 1739
+949 1740
+947 1743
+955 1732
+952 1736
+954 1733
+953 1735
+957 1729
+961 1724
+958 1728
+956 1731
+959 1727
+962 1723
+975 1705
+977 1703
+976 1704
+979 1700
+974 1707
+980 1699
+972 1709
+971 1711
+967 1716
+969 1713
+978 1701
+970 1712
+968 1715
+966 1717
+963 1721
+965 1719
+964 1720
+973 1708
+960 1725
+983 1695
+982 1696
+988 1689
+984 1694
+985 1692
+986 1691
+989 1687
+987 1690
+1001 1672
+998 1676
+999 1674
+994 1681
+996 1678
+995 1679
+997 1677
+992 1683
+991 1685
+993 1682
+1000 1673
+1005 1667
+1006 1665
+1003 1669
+1008 1663
+1010 1660
+1009 1662
+1007 1664
+1011 1659
+1016 1653
+1012 1658
+1013 1657
+1014 1655
+1019 1650
+1017 1652
+1018 1651
+1022 1647
+1015 1654
+1020 1648
+1023 1646
+1024 1643
+1033 1633
+1031 1634
+1030 1636
+1029 1638
+1028 1639
+1038 1626
+1037 1627
+1036 1628
+1035 1629
+1044 1618
+1040 1623
+1042 1621
+1047 1615
+1045 1617
+1048 1614
+1043 1620
+1051 1610
+1050 1611
+1041 1622
+1054 1606
+1049 1612
+1052 1609
+1057 1603
+1055 1605
+1053 1608
+1056 1604
+1061 1598
+1058 1602
+1059 1600
+1060 1599
+1062 1597
+1063 1596
+1046 1616
+1039 1624
+1068 1590
+1065 1593
+1069 1589
+1071 1586
+1067 1591
+1066 1592
+1072 1585
+1075 1582
+1074 1583
+1070 1587
+1073 1584
+1079 1577
+1078 1578
+1077 1579
+1080 1576
+1082 1574
+1081 1575
+1086 1569
+1084 1571
+1087 1568
+1089 1567
+1090 1566
+1085 1570
+1097 1557
+1098 1556
+1094 1560
+1093 1561
+1091 1563
+1095 1559
+1096 1558
+1092 1562
+1101 1552
+1105 1548
+1100 1553
+1102 1551
+1107 1546
+1104 1549
+1109 1544
+1110 1543
+1106 1547
+1108 1545
+1113 1540
+1115 1538
+1116 1537
+1114 1539
+1111 1542
+1119 1534
+1118 1535
+1123 1530
+1117 1536
+1120 1533
+1122 1531
+1125 1528
+1121 1532
+1127 1526
+1130 1523
+1126 1527
+1131 1522
+1128 1525
+1129 1524
+1124 1529
+1132 1521
+1134 1519
+1136 1517
+1135 1518
+1133 1520
+1137 1516
+1138 1515
+1140 1513
+1139 1514
+1143 1510
+1142 1511
+1144 1509
+1148 1505
+1141 1512
+1145 1508
+1147 1506
+1146 1507
+1152 1501
+1153 1500
+1151 1502
+1149 1504
+1155 1498
+1158 1497
+1261 1392
+1259 1395
+1262 1391
+1263 1390
+1258 1396
+1256 1399
+1260 1393
+1254 1401
+1257 1397
+1272 1382
+1266 1388
+1267 1387
+1270 1384
+1271 1383
+1268 1386
+1269 1385
+1274 1380
+1278 1377
+1281 1374
+1277 1378
+1279 1376
+1280 1375
+1283 1372
+1284 1371
+1282 1373
+1287 1369
+1288 1368
+1290 1366
+1289 1367
+1292 1365
+1293 1364
+1296 1361
+1294 1362
+1297 1360
+1299 1358
+1298 1359
+1302 1355
+1300 1357
+1311 1347
+1306 1352
+1305 1353
+1309 1350
+1310 1348
+1307 1351
+1314 1345
+1317 1343
+1315 1344
+1318 1341
+1313 1346
+1321 1339
+1322 1338
+1324 1336
+1323 1337
+1326 1334
+1325 1335
+1329 1332
+1339 1323
+1337 1325
+1332 1329
+1335 1327
+1336 1326
+1333 1328
+1330 1331
+1328 1333
+1338 1324
+1331 1330
+1348 1316
+1342 1321
+1343 1320
+1344 1319
+1346 1317
+1345 1318
+1351 1313
+1349 1315
+1354 1311
+1355 1310
+1356 1309
+1357 1308
+1359 1307
+1362 1304
+1361 1305
+1360 1306
+1365 1302
+1366 1301
+1367 1300
+1368 1299
+1371 1297
+1370 1298
+1376 1293
+1372 1296
+1373 1295
+1375 1294
+1378 1291
+1377 1292
+1380 1290
+1381 1289
+1385 1286
+1382 1288
+1383 1287
+1386 1285
+1387 1284
+1390 1282
+1388 1283
+1391 1281
+1396 1277
+1394 1279
+1392 1280
+1399 1275
+1404 1271
+1405 1270
+1401 1273
+1402 1272
+1407 1268
+1414 1263
+1410 1266
+1411 1265
+1412 1264
+1419 1259
+1418 1260
+1415 1262
+1420 1258
+1423 1256
+1416 1261
+1425 1255
+1422 1257
+1427 1253
+1428 1252
+1426 1254
+1431 1250
+1430 1251
+1435 1247
+1434 1248
+1432 1249
+1439 1244
+1441 1243
+1438 1246
+1443 1241
+1442 1242
+1446 1239
+1448 1238
+1450 1236
+1451 1235
+1457 1231
+1464 1226
+1458 1230
+1465 1225
+1462 1227
+1461 1228
+1455 1232
+1468 1223
+1469 1222
+1471 1221
+1472 1220
+1479 1215
+1476 1217
+1478 1216
+1481 1214
+1475 1218
+1484 1212
+1485 1211
+1482 1213
+1494 1205
+1488 1209
+1491 1207
+1489 1208
+1497 1203
+1495 1204
+1492 1206
+1503 1199
+1498 1202
+1500 1201
+1501 1200
+1506 1197
+1504 1198
+1507 1196
+1515 1191
+1509 1195
+1512 1193
+1513 1192
+1510 1194
+1521 1187
+1518 1189
+1516 1190
+1519 1188
+1524 1185
+1522 1186
+1531 1180
+1527 1183
+1525 1184
+1533 1179
+1528 1182
+1530 1181
+1543 1172
+1539 1175
+1542 1173
+1545 1171
+1537 1176
+1540 1174
+1536 1177
+1551 1167
+1554 1165
+1552 1166
+1549 1168
+1548 1169
+1534 1178
+1546 1170
+1557 1163
+1560 1161
+1559 1162
+1563 1159
+1562 1160
+1565 1158
+1567 1157
+1568 1156
+1570 1155
+1576 1151
+1578 1150
+1572 1154
+1573 1153
+1575 1152
+1583 1147
+1581 1148
+1584 1146
+1588 1144
+1586 1145
+1589 1143
+1591 1142
+1594 1140
+1597 1138
+1596 1139
+1599 1137
+1601 1136
+1602 1135
+1606 1133
+1609 1131
+1608 1132
+1604 1134
+1611 1130
+1618 1126
+1614 1128
+1619 1125
+1621 1124
+1616 1127
+1625 1122
+1623 1123
+1627 1121
+1639 1114
+1637 1115
+1635 1116
+1633 1117
+1628 1120
+1632 1118
+1630 1119
+1647 1110
+1644 1111
+1642 1112
+1675 1094
+1671 1096
+1673 1095
+1667 1098
+1666 1099
+1662 1101
+1660 1102
+1669 1097
+1658 1103
+1657 1104
+1651 1107
+1664 1100
+1655 1105
+1653 1106
+1649 1108
+1680 1091
+1678 1092
+1686 1088
+1684 1089
+1682 1090
+1691 1085
+1690 1086
+1699 1081
+1695 1083
+1693 1084
+1697 1082
+1701 1080
+1703 1079
+1705 1078
+1711 1075
+1707 1077
+1713 1074
+1709 1076
+1715 1073
+1721 1070
+1717 1072
+1720 1071
+1725 1068
+1723 1069
+1727 1067
+1729 1066
+1731 1065
+1733 1064
+1735 1063
+1741 1060
+1737 1062
+1743 1059
+1772 1045
+1775 1043
+1773 1044
+1765 1048
+1763 1049
+1769 1046
+1761 1050
+1759 1051
+1755 1053
+1757 1052
+1749 1056
+1747 1057
+1767 1047
+1753 1054
+1751 1055
+1745 1058
+1739 1061
+1780 1041
+1786 1038
+1789 1037
+1782 1040
+1795 1034
+1784 1039
+1793 1035
+1798 1033
+1802 1031
+1800 1032
+1791 1036
+1809 1028
+1807 1029
+1814 1026
+1816 1025
+1811 1027
+1821 1023
+1818 1024
+1828 1020
+1830 1019
+1823 1022
+1825 1021
+1841 1015
+1837 1016
+1835 1017
+1842 1014
+1850 1011
+1854 1009
+1857 1008
+1852 1010
+1859 1007
+1847 1012
+1869 1003
+1872 1002
+1864 1005
+1867 1004
+1862 1006
+1881 999
+1877 1000
+1882 998
+1886 997
+1892 995
+1895 993
+1893 994
+1898 992
+1887 996
+1908 988
+1906 989
+1911 987
+1903 990
+1914 986
+1916 985
+1922 983
+1924 982
+1919 984
+1935 978
+1927 981
+1940 976
+1946 974
+1938 977
+1932 979
+1943 975
+1930 980
+1959 969
+1954 971
+1957 970
+1951 972
+1962 968
+1976 963
+1979 962
+1973 964
+1970 965
+1965 967
+1968 966
+1990 958
+1993 957
+1984 960
+1999 955
+1996 956
+1988 959
+2011 951
+2008 952
+2005 953
+2014 950
+2020 948
+2017 949
+2032 944
+2030 945
+2038 942
+2035 943
+2047 939
+2041 941
+2050 938
+2063 934
+2066 933
+2059 935
+2056 936
+2054 937
+2044 940
+2026 946
+2023 947
+2002 954
+2072 931
+2081 928
+2078 929
+2085 927
+2091 925
+2075 930
+2088 926
+2101 922
+2104 921
+2094 924
+2098 923
+2111 919
+2114 918
+2117 917
+2121 916
+2124 915
+2131 913
+2180 899
+2176 900
+2173 901
+2169 902
+2162 904
+2155 906
+2166 903
+2159 905
+2148 908
+2145 909
+2135 912
+2141 910
+2152 907
+2138 911
+2187 897
+2194 895
+2191 896
+2202 893
+2198 894
+2209 891
+2217 889
+2213 890
+2229 886
+2221 888
+2225 887
+2237 884
+2233 885
+2241 883
+2245 882
+2249 881
+2253 880
+2257 879
+2265 877
+2261 878
+2269 876
+2273 875
+2293 870
+2289 871
+2281 873
+2277 874
+2285 872
+2303 868
+2306 867
+2317 865
+2310 866
+2319 864
+2328 862
+2332 861
+2337 860
+2341 859
+2346 858
+2355 856
+2350 857
+2359 855
+2364 854
+2368 853
+2377 851
+2382 850
+2373 852
+2391 848
+2386 849
+2407 845
+2400 846
+2410 844
+2415 843
+2419 842
+2428 840
+2438 838
+2433 839
+2453 835
+2448 836
+2458 834
+2464 833
+2522 821
+2512 823
+2517 822
+2502 825
+2493 827
+2487 828
+2508 824
+2497 826
+2477 830
+2483 829
+2475 832
+2533 819
+2538 818
+2555 815
+2549 816
+2560 814
+2577 811
+2571 812
+2583 810
+2589 809
+2595 808
+2607 806
+2601 807
+2619 804
+2631 802
+2613 805
+2625 803
+2655 798
+2649 799
+2643 800
+2637 801
+2668 796
+2681 794
+2688 793
+2708 790
+2701 791
+2715 789
+2722 788
+2729 787
+2736 786
+2750 784
+2757 783
+2743 785
+2766 782
+2772 781
+2799 777
+2806 776
+2789 779
+2793 778
+2784 780
+2821 774
+2828 773
+2836 772
+2843 771
+2851 770
+2866 768
+2874 767
+2882 766
+2931 760
+2922 761
+2939 759
+2906 763
+2898 764
+2891 765
+2914 762
+2955 757
+2963 756
+2972 755
+2997 752
+3006 751
+2989 753
+2980 754
+3024 749
+3032 748
+3051 746
+3061 745
+3131 738
+3121 739
+3111 740
+3101 741
+3091 742
+3081 743
+3071 744
+3152 736
+3174 734
+3185 733
+3196 732
+3163 735
+3219 730
+3291 724
+3280 725
+3267 726
+3255 727
+3243 728
+3231 729
+3317 722
+3344 720
+3373 718
+3361 719
+3400 716
+3431 714
+3462 712
+3478 711
+3494 710
+3510 709
+3543 707
+3598 704
+3658 702
+3661 701
+3646 703
+MAXX = 3787 10361
