@@ -37,10 +37,7 @@
 /*
 	PROVAR QUE SE a E b SAO DE TRIANGULOS RETÂNGULOS DIFERENTES, ENTAO a E b SAO INCOMPARAVEIS (prova visual)
 */
-/*
-	TODO: como se comportará para instâncias grandes (800+) anticorrelated e concave?
-	TODO: diminuir tempo
-*/
+
 #include <iostream>
 #include <map> 
 #include <list>
@@ -61,8 +58,11 @@
 #include <stdio.h>
 using namespace std;
 
-#define maxSizePath 10 // 10 é um bom valor (a priori)
-#define maxsolucoes 10000 // quantidade maxima de solucoes
+// TODO : deve ser melhor que o Transgenético
+// TODO : ver tempo e quantidade para instâncias grandes
+
+#define maxSizePath 18 // TODO
+#define porAreaTriangulo 60 // explicar isso melhor
 
 int idMST = 0;
 map <int, Aresta *> arestas;
@@ -256,6 +256,7 @@ int distance(Grafo *g, pair<int*, pair<float, float> > xi, pair<int*, pair<float
 		if (tem==false) cont++;
 	}
 	return cont;
+	//return sqrt((s1.second.first - s2.second.first)*(s1.second.first - s2.second.first) + (s1.second.second - s2.second.second)*(s1.second.second - s2.second.second));
 }
 
 void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<int*, pair<float, float> > x_target, list <pair<int*, pair<float, float> > > &solucoes, float cateto_x, float cateto_y, float escalarX, float escalarY, int maxSolPorTriangulo){
@@ -266,23 +267,25 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<i
 	delta = distance(g, x_start, x_target);
 	do {
 		//delta = distance(g, x_start, x_target); 
-		if (delta>=1 && cont<maxSizePath && solucoes.size()<maxSolPorTriangulo){
+		if (delta>=1 && cont<maxSizePath){ //&& solucoes.size()<maxSolPorTriangulo){
 			list <pair<int*,  pair<float, float> > > viz = vizinhos(g, x_start,cateto_x, cateto_y,solucoes); // somente os vizinhos dentro do triangulo formado pelos catetos x,y
-			float min = INT_MAX;
-			int min_delta = delta;
-			pair<int*, pair<float, float> > prox_start;
+			//float min = INT_MAX;
+			//int min_delta = delta;
+			//pair<int*, pair<float, float> > prox_start;
 			// cout<<"\t\t viz.size() = "<<viz.size()<<endl;
 			// cout<<"\t\t solucoes.size() antes = "<<solucoes.size()<<endl;
+			vector <pair <int , pair<int*, pair<float, float> > > > prox_start;
 			for (list<pair<int*, pair<float, float> > >::iterator viz_it=viz.begin(); viz_it!=viz.end(); viz_it++){ // coloca os vizinhos em retorno
 				bool ha = false;
 				int novoDelta = distance(g, *viz_it, x_target);
 				if (novoDelta<=delta-1){
-					float custo = (*viz_it).second.first*escalarX + (*viz_it).second.second*escalarY;
-					if (custo<min){
-						min = custo;
-						prox_start = (*viz_it);
-						min_delta= novoDelta;
-					}
+					// float custo = (*viz_it).second.first*escalarX + (*viz_it).second.second*escalarY;
+					// if (custo<min){
+					// 	min = custo;
+					// 	prox_start = (*viz_it);
+					// 	min_delta= novoDelta;
+					// }
+					prox_start.push_back(make_pair(novoDelta, (*viz_it)));
 				}
 				vector< list<pair<int*, pair<float, float> > >::iterator > dominadas;
 				//saber se está na zona de esclusao; se nao estiver, a insere
@@ -305,23 +308,25 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<i
 					 	solucoes.erase(dominadas[iii]); // retira as possiveis solucoes dominadas pela novas
 					 }
 					solucoes.push_back((*viz_it));
-				} else if ((prox_start.second.first != (*viz_it).second.first || prox_start.second.second != (*viz_it).second.second) && (x_start.second.first != (*viz_it).second.first || x_start.second.second != (*viz_it).second.second)) {
-					delete[] (*viz_it).first;
-				}
+				} //else if ((prox_start.second.first != (*viz_it).second.first || prox_start.second.second != (*viz_it).second.second) && (x_start.second.first != (*viz_it).second.first || x_start.second.second != (*viz_it).second.second)) {
+					//delete[] (*viz_it).first;
+				//}
 				//}
 			}
 			//cout<<"\t\t solucoes.size() antes = "<<solucoes.size()<<endl;
-			if (min!=INT_MAX){
-				x_start = prox_start;
-				if (min_delta==delta) delta--;
-				else delta = min_delta;
+			if (prox_start.size()>0){
+				int inx_random = rand()%prox_start.size();
+				x_start = prox_start[inx_random].second;
+				delta = prox_start[inx_random].first;
+				// if (min_delta==delta) delta--;
+				// else delta = min_delta;
 				cont++;
 			} else break;
-		} else if (cont>=maxSizePath || solucoes.size()>=maxSolPorTriangulo) {
+		} else if (cont>=maxSizePath){ //|| solucoes.size()>=maxSolPorTriangulo) {
 			break;
 		}
 	}while(delta>1);
-	//cout<<"\t\tcont = "<<cont<<endl;
+	cout<<"\t\tcont = "<<cont<<endl;
 }
 
 bool compare(pair<int*, pair<float, float> > p1, pair<int*, pair<float, float> > p2){
@@ -341,8 +346,6 @@ list < pair<int*, pair<float, float> > >  phase2KB(Grafo *g, list< pair<int*, pa
 	int contador = 0;
 	int size = extremas.size();
 	int maxSolPorTriangulo = 0;
-	if (size-1 > 0) maxSolPorTriangulo = (int) maxsolucoes/(size-1);
-	//cout<<"maxSolPorTriangulo = "<<maxSolPorTriangulo<<endl;
 	while (contador<size-1){
 		//cout<<"contador = "<<contador<<endl;
 		list< pair<int*, pair<float, float> > > noSuportadasPQ; // regiao viavel : conjunto de solucoes nao dominadas encontradas no triângulo pq (nao sao pontos)
@@ -356,17 +359,28 @@ list < pair<int*, pair<float, float> > >  phase2KB(Grafo *g, list< pair<int*, pa
 		xq = ponto_q.second.first;
 		yq = ponto_q.second.second;
 
-		path_relinking(g, ponto_p, ponto_q, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp), maxSolPorTriangulo);
-		//cout<<"\t\t noSuportadasPQ.size() = "<<noSuportadasPQ.size()<<endl;;
-		path_relinking(g, ponto_q, ponto_p, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp), maxSolPorTriangulo);
-		//cout<<"\t\t noSuportadasPQ.size() = "<<noSuportadasPQ.size()<<endl;;
-		noSoportadas.splice(noSoportadas.end(), noSuportadasPQ);
-		// for (list< pair<int*, pair<float, float> > >::iterator it = noSuportadasPQ.begin(); it!=noSuportadasPQ.end(); it++){
-		// 	noSoportadas.push_back((*it));
-		// }
+		int menor = (xq-xp);
+		if ((yp-yq)<menor) menor = (yp-yq);
+		menor--;
+		int ran = 0;
+		if (menor>0) ran = rand()%(70); //TODO
+		if (ran<menor){
+			cout<<"triângulo "<<contador<<endl;
+			cout<<"\t\tcateto x = "<<(xq-xp)<<endl;
+			cout<<"\t\tcateto y = "<<(yp-yq)<<endl;
+			cout<<"\t\thipotenusa = "<<(sqrt((xq-xp)*(xq-xp) +(yp-yq)*(yp-yq) ))<<endl;
+			cout<<"\t\tArea = "<<(((xq-xp)*(yp-yq))/2)<<endl;
+			path_relinking(g, ponto_p, ponto_q, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp), maxSolPorTriangulo);
+			//cout<<"\t\t noSuportadasPQ.size() = "<<noSuportadasPQ.size()<<endl;;
+			path_relinking(g, ponto_q, ponto_p, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp), maxSolPorTriangulo);
+			
+			cout<<"\t\t total noSuportadasPQ.size() = "<<noSuportadasPQ.size()<<endl;;
+			noSoportadas.splice(noSoportadas.end(), noSuportadasPQ);
+			cout<<endl;
+		}
 		contador++;
 
-		//cout<<"noSuportadas.size() = "<<noSoportadas.size()<<endl;
+		cout<<"noSuportadas.size() = "<<noSoportadas.size()<<endl;
 	}
 	return noSoportadas;
 

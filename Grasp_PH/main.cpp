@@ -9,7 +9,7 @@
 
 /*
 	Reduz o grafo (SS 2008)
-	Calcula vetores de escalarizacao (SS 2008) Armezenar numa arvore binaria balaciada
+	calcula os vetores de escalarizacao
 	Grasp{ (Baseado em parte no trabalho de Arroyo e Vianna)
 		Constroi solucao 
 		Busca local (PLS, baseado no algoritmo proposto por Drugan e Thierens (2012))
@@ -38,17 +38,14 @@ using namespace std;
 
 #define maxIteracoes 3
 #define maxSizePath 8 // 10 é um bom valor (a priori)
-
-
-/*	TODO: alterar a funcao vizinho do modo a retornar somente visinho diferentes, como foi feito no SRPR
-*/
+#define numVetores 1000
 
 int idMST = 0;
 map <int, Aresta *> arestas;
 Aresta ** arestasPtr;
 float yp, yq, xp, xq;
 struct tms tempsInit, tempsFinal1,tempsFinal2, tempsFinalBuscaLocal ; // para medir o tempo
-vector< pair<float, Aresta** > > preSorting;
+vector< float > vetoresEscalarizacao;
 
 bool isEgalObjetive(float t1_peso1, float t1_peso2, float t2_peso1, float t2_peso2){
 	return equalfloat(t1_peso1,t2_peso1) && equalfloat(t2_peso2,t1_peso2);
@@ -168,13 +165,31 @@ list <pair<int*,  pair<float, float> > > vizinhos(Grafo *g, pair<int*, pair<floa
 		 				int newPeso2 = peso2base+g->getArestas(i)->getPeso2();
 		 				// so insere se o vizinho nao for dominado por sol. Nao veriica se sol é dominado...
 		 				if ( (sol.second.first <= newPeso1 &&  sol.second.second <= newPeso2 && (sol.second.first < newPeso1 ||  sol.second.second < newPeso2))==false){
-		 					int *base = new int[g->getQuantVertices()-1];
-		 					for (int are = 0; are <g->getQuantVertices()-1; are++){
-		 						if (are == a) base[are] = i;
-		 						else base[are] = sol.first[are];
-		 					} 
-		 					retorno.push_back(make_pair(base, make_pair(newPeso1,newPeso2)));	
-		 					
+		 					bool isdominada = false;
+		 					vector< list<pair<int*, pair<float, float> > >::iterator > dominadas;
+	 						for (list<pair<int*, pair<float, float> > >::iterator it2=retorno.begin(); it2!=retorno.end() && isdominada == false; it2++){
+	 							if ((*it2).second.first<=newPeso1 && (*it2).second.second<=newPeso2 && ( (*it2).second.first<newPeso1 || (*it2).second.second<newPeso2)){
+	 								isdominada = true;
+	 							}else if ((*it2).second.first==newPeso1 && (*it2).second.second==newPeso2){
+	 								isdominada = true;
+	 							}
+	 							if (newPeso1<=(*it2).second.first && newPeso2<=(*it2).second.second && ( newPeso1<(*it2).second.first || newPeso2<(*it2).second.second)){
+	 								dominadas.push_back(it2); //se o vizinho domina algum outro vizinho
+								}
+	 						}
+	 						if (isdominada == false){
+			 					int *base = new int[g->getQuantVertices()-1];
+			 					for (int are = 0; are <g->getQuantVertices()-1; are++){
+			 						if (are == a) base[are] = i;
+			 						else base[are] = sol.first[are];
+			 					} 
+			 					for (int iii=0; iii<dominadas.size(); iii++){
+			 						delete[] (*dominadas[iii]).first;
+				 					retorno.erase(dominadas[iii]); // retira as possiveis solucoes dominadas pela novas
+					
+				 				}
+			 					retorno.push_back(make_pair(base, make_pair(newPeso1,newPeso2)));	
+		 					}
 		 				}
 		 			}
 		 		} 
@@ -281,18 +296,18 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<i
 			int min_delta = delta;
 			
 			for (list<pair<int*, pair<float, float> > >::iterator viz_it=viz.begin(); viz_it!=viz.end(); viz_it++){ // coloca os vizinhos em retorno
-				bool ha = false;
-				for (list<pair<int*, pair<float, float> > >::iterator viz_it2=viz_it; viz_it2!=viz.end(); viz_it2++){
-					if (((*viz_it2).second.first<=(*viz_it).second.first && (*viz_it2).second.second<=(*viz_it).second.second && ((*viz_it2).second.first<(*viz_it).second.first || (*viz_it2).second.second<(*viz_it).second.second))){
-						// se viz_it2 dominar viz_it,, remove viz_it
-						delete[] (*viz_it).first;
-						// viz.erase(viz_it);
-						// if (viz_it != viz.begin()) viz_it--;
-						ha = true;
-						break;
-					} 
-				}
-				if (ha == false){
+				 bool ha = false;
+				// for (list<pair<int*, pair<float, float> > >::iterator viz_it2=viz_it; viz_it2!=viz.end(); viz_it2++){
+				// 	if (((*viz_it2).second.first<=(*viz_it).second.first && (*viz_it2).second.second<=(*viz_it).second.second && ((*viz_it2).second.first<(*viz_it).second.first || (*viz_it2).second.second<(*viz_it).second.second))){
+				// 		// se viz_it2 dominar viz_it,, remove viz_it
+				// 		delete[] (*viz_it).first;
+				// 		// viz.erase(viz_it);
+				// 		// if (viz_it != viz.begin()) viz_it--;
+				// 		ha = true;
+				// 		break;
+				// 	} 
+				// }
+				//if (ha == false){
 					int novoDelta = distance(g, *viz_it, x_target);
 					if (novoDelta<=delta-1){
 						float custo = (*viz_it).second.first*lambda + (*viz_it).second.second*(1-lambda);
@@ -329,7 +344,7 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<i
 					} else if ((prox_start.second.first != (*viz_it).second.first || prox_start.second.second != (*viz_it).second.second) && (x_start.second.first != (*viz_it).second.first || x_start.second.second != (*viz_it).second.second)) {
 						delete[] (*viz_it).first;
 					}
-				}
+				//}
 			}
 			if (min!=INT_MAX){
 				for (int i=0; i<g->getQuantVertices()-1; i++) x_start.first[i] = prox_start.first[i];
@@ -361,17 +376,17 @@ void localSearch(Grafo *g, pair<int*, pair<float, float> > sol1,list <pair<int*,
 		for (list<pair<int*, pair<float, float> > >::iterator viz_it=viz.begin(); viz_it!=viz.end(); viz_it++){ // coloca os vizinhos em retorno
 
 			ha = false;
-			// ESTE FOR ABAIXO É IMPORTANTISSIMO 
-			/* ele se encarrega de selecionar os vizinhos promissores*/
-			for (list<pair<int*, pair<float, float> > >::iterator viz_it2=viz_it; viz_it2!=viz.end(); viz_it2++){
-				if (((*viz_it2).second.first<=(*viz_it).second.first && (*viz_it2).second.second<=(*viz_it).second.second && ((*viz_it2).second.first<(*viz_it).second.first || (*viz_it2).second.second<(*viz_it).second.second))){
-					// se viz_it2 dominar viz_it,, remove viz_it
-					delete[] (*viz_it).first;
-					ha = true;
-					break;
-				} 
-			}
-			if (ha == false){
+			// // ESTE FOR ABAIXO É IMPORTANTISSIMO // embutido na funcao vizinhança
+			// /* ele se encarrega de selecionar os vizinhos promissores*/
+			// for (list<pair<int*, pair<float, float> > >::iterator viz_it2=viz_it; viz_it2!=viz.end(); viz_it2++){
+			// 	if (((*viz_it2).second.first<=(*viz_it).second.first && (*viz_it2).second.second<=(*viz_it).second.second && ((*viz_it2).second.first<(*viz_it).second.first || (*viz_it2).second.second<(*viz_it).second.second))){
+			// 		// se viz_it2 dominar viz_it,, remove viz_it
+			// 		delete[] (*viz_it).first;
+			// 		ha = true;
+			// 		break;
+			// 	} 
+			// }
+			//if (ha == false){
 				vector< list<pair<int*, pair<float, float> > >::iterator > dominadas;
 				for (list<pair<int*, pair<float, float> > >::iterator it2=solucoes.begin(); it2!=solucoes.end(); it2++){
 					if (((*viz_it).second.first ==(*it2).second.first && (*viz_it).second.second == (*it2).second.second)){
@@ -403,7 +418,7 @@ void localSearch(Grafo *g, pair<int*, pair<float, float> > sol1,list <pair<int*,
 				} else {
 					delete[] (*viz_it).first;
 				}
-			}
+			
 		}
 		
 		contIteracoes++;
@@ -422,12 +437,20 @@ void localSearch(Grafo *g, pair<int*, pair<float, float> > sol1,list <pair<int*,
 	}
 }
 
-bool compare(pair<int*, pair<float, float> > p1, pair<int*, pair<float, float> > p2){
- 	float escl1 = p1.second.first*(yp-yq)+p1.second.second*(xq-xp);
- 	float escl2 = p2.second.first*(yp-yq)+p2.second.second*(xq-xp);
-	return (escl1<escl2);
-}
 
+
+
+void geraVetoresEscalarizacao () {
+
+    float v = 0.0;
+    float fator = 1.0;
+    for (int i = 0; i < numVetores; i++) {
+        float lambda = v/(numVetores-1.0);
+        vetoresEscalarizacao.push_back(lambda);
+        //lambda [i][1] = 1.0 - lambda [i][0];
+        v += fator;
+    }
+}
 
 void grasp(Grafo *g, float alfa, list <pair<int*, pair<float, float> > > &solucoes){
 	list <pair<int*, pair<float, float> > > elite1 = buscaDicotomica(g);
@@ -435,16 +458,21 @@ void grasp(Grafo *g, float alfa, list <pair<int*, pair<float, float> > > &soluco
 	for (list<pair<int*, pair<float, float> > >::iterator it222=elite1.begin(); it222!=elite1.end(); it222++){
 		elite.push_back(*it222);
 	}
-	cout<<"preSorting.size() = "<<preSorting.size()<<endl;
-	for (int itera = 0; itera<preSorting.size(); itera++){
+	geraVetoresEscalarizacao ();
+	cout<<"Quantidade de vetores calculados = "<<vetoresEscalarizacao.size()<<endl;
+	
+	for (int itera = 0; itera<vetoresEscalarizacao.size(); itera++){
+		cout<<"Itaracao = "<<itera<<endl;
 		int *nova = new int[g->getQuantVertices()-1];
-		pair<float, Aresta**> presort = preSorting[itera];
+		float lambda = vetoresEscalarizacao[itera];
+		mergesort(0, lambda, 1.0-lambda, 0, arestasPtr, g->getQuantArestas(),3);
+		//pair<float, Aresta**> presort = preSorting[itera];
 		float peso1=0, peso2=0;
 		int cont = 0;
 		Conjunto conc(g->getQuantVertices());
 		vector<Aresta *> amostral;
 		for (int i=0; i<g->getQuantArestas(); i++){
-			Aresta *a = presort.second[i];
+			Aresta *a = arestasPtr[i];
 			if (g->getStatus(a->getId())==1){ // obrigatoria
 				nova[cont++] = a->getId();
 				conc.union1(a->getOrigem(), a->getDestino());
@@ -502,13 +530,13 @@ void grasp(Grafo *g, float alfa, list <pair<int*, pair<float, float> > > &soluco
 					solucoes.erase(dominadas[iii]);
 				}
 				solucoes.push_back(sol1);
-				localSearch(g, sol1, solucoes,presort.first,elite);
+				localSearch(g, sol1, solucoes,lambda,elite);
 				
 			} else {
 				delete[] sol1.first;
 			}
 		}
-		delete[] preSorting[itera].second;
+		//delete[] preSorting[itera].second;
 	}
 }
 
@@ -541,9 +569,6 @@ int main(){
 	arestasPtr = my_grafo.getAllArestasPtr();
 
 	times(&tempsInit); // o tempo inclui o calculo dos vetores
-
- 	my_grafo.computaPreSorting();
-	preSorting = my_grafo.getPreSorting();
 
  	list <pair<int*, pair<float, float> > > arvores;//=buscaDicotomica(&my_grafo);
 	grasp(&my_grafo, 0.01, arvores);
