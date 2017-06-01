@@ -2,10 +2,91 @@
 388 obrigatorias
 Fim da primeira fase. Quantidade de solucoes suportadas : 10
 0.01
-Fim da segunda fase. Quantidade de solucoes nao-suportadas: 92
-Quantidade total de solucoes : 102
-1.49
-Total: 1.5 segundos
+noSuportadas.size() = 0
+triângulo 1
+		cateto x = 5
+		cateto y = 35
+		hipotenusa = 35.3553
+		Area = 87.5
+		cont = 4
+		cont = 0
+		 total noSuportadasPQ.size() = 4
+
+noSuportadas.size() = 4
+triângulo 2
+		cateto x = 2
+		cateto y = 12
+		hipotenusa = 12.1655
+		Area = 12
+		cont = 1
+		cont = 0
+		 total noSuportadasPQ.size() = 1
+
+noSuportadas.size() = 5
+triângulo 3
+		cateto x = 8
+		cateto y = 40
+		hipotenusa = 40.7922
+		Area = 160
+		cont = 6
+		cont = 2
+		 total noSuportadasPQ.size() = 7
+
+noSuportadas.size() = 12
+triângulo 4
+		cateto x = 20
+		cateto y = 80
+		hipotenusa = 82.4621
+		Area = 800
+		cont = 15
+		cont = 16
+		 total noSuportadasPQ.size() = 19
+
+noSuportadas.size() = 31
+triângulo 5
+		cateto x = 29
+		cateto y = 87
+		hipotenusa = 91.7061
+		Area = 1261.5
+		cont = 25
+		cont = 24
+		 total noSuportadasPQ.size() = 28
+
+noSuportadas.size() = 59
+triângulo 6
+		cateto x = 47
+		cateto y = 94
+		hipotenusa = 105.095
+		Area = 2209
+		cont = 40
+		cont = 4
+		 total noSuportadasPQ.size() = 46
+
+noSuportadas.size() = 105
+triângulo 7
+		cateto x = 105
+		cateto y = 105
+		hipotenusa = 148.492
+		Area = 5512.5
+		cont = 40
+		cont = 31
+		 total noSuportadasPQ.size() = 93
+
+noSuportadas.size() = 198
+triângulo 8
+		cateto x = 20
+		cateto y = 10
+		hipotenusa = 22.3607
+		Area = 100
+		cont = 9
+		cont = 0
+		 total noSuportadasPQ.size() = 9
+
+noSuportadas.size() = 207
+Fim da segunda fase. Quantidade de solucoes nao-suportadas: 207
+Quantidade total de solucoes : 217
+9.15
+Total: 9.16 segundos
 0 1211
 1 1203
 6 1168
@@ -18,16 +99,19 @@ Total: 1.5 segundos
 237 740
 2 1196
 3 1189
-5 1175
 4 1182
-7 1163
+5 1175
+7 1162
 9 1151
 10 1146
-11 1145
+11 1141
+12 1136
+13 1131
 15 1121
-14 1127
+14 1126
 17 1112
 18 1108
+19 1104
 35 1040
 34 1044
 33 1048
@@ -41,22 +125,13 @@ Total: 1.5 segundos
 25 1080
 24 1084
 23 1088
-22 1093
+22 1092
+21 1096
+20 1100
 37 1033
 38 1030
 39 1027
 40 1024
-41 1021
-42 1018
-43 1015
-44 1012
-45 1009
-46 1006
-47 1003
-48 1000
-49 997
-50 994
-51 993
 64 952
 63 955
 62 958
@@ -64,20 +139,69 @@ Total: 1.5 segundos
 60 964
 59 967
 58 970
+57 973
+56 976
+55 979
+54 982
+53 985
+52 988
+51 991
+50 994
+49 997
+48 1000
+47 1003
+46 1006
+45 1009
+44 1012
+43 1015
+42 1018
+41 1021
 66 947
 67 945
 68 943
 69 941
+70 939
+71 937
+72 935
+73 933
+74 931
+75 929
+76 927
+77 925
+78 923
+79 921
+80 919
+81 917
+82 915
+83 913
+84 911
+85 909
+86 907
+87 905
+88 903
+89 901
+90 899
+91 897
+92 895
+93 893
+94 891
+95 889
+96 887
+97 885
+98 883
+99 881
+100 879
+101 877
+102 875
+103 873
+105 870
+104 871
+106 868
 111 857
 110 859
+107 866
 109 861
 108 863
-107 865
-106 867
-105 869
-104 871
-103 873
-102 876
 113 854
 114 853
 115 852
@@ -92,7 +216,41 @@ Total: 1.5 segundos
 124 843
 125 842
 126 841
-128 840
+127 840
+128 839
+129 838
+130 837
+131 836
+132 835
+133 834
+134 833
+135 832
+136 831
+137 830
+138 829
+139 828
+140 827
+141 826
+142 825
+143 824
+144 823
+145 822
+146 821
+147 820
+148 819
+149 818
+150 817
+151 816
+152 815
+153 814
+154 813
+155 812
+156 811
+157 810
+161 807
+158 809
+162 806
+159 808
 216 751
 215 752
 214 753
@@ -104,8 +262,46 @@ Total: 1.5 segundos
 208 759
 207 760
 206 761
+205 762
+204 763
+203 764
+202 765
+201 766
+200 767
+199 768
+198 769
+197 770
+196 771
+195 772
+194 773
+193 774
+192 775
+191 776
+190 778
+189 779
+186 784
+188 780
+185 785
+187 781
+184 788
+183 789
+182 790
+179 796
+181 791
+178 797
+180 792
+177 798
+176 799
+173 805
+175 800
+174 801
 219 749
 221 748
 223 747
+225 746
+227 745
+229 744
+231 743
+233 742
 235 741
 MAXX = 237 1211

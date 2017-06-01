@@ -1,7 +1,7 @@
 177865 arestas removidas
 63 obrigatorias
 Fim da primeira fase. Quantidade de solucoes suportadas : 155
-0.12
+0.11
 noSuportadas.size() = 0
 noSuportadas.size() = 0
 noSuportadas.size() = 0
@@ -19,381 +19,390 @@ noSuportadas.size() = 0
 noSuportadas.size() = 0
 noSuportadas.size() = 0
 noSuportadas.size() = 0
-triângulo 17
-		cateto x = 7
-		cateto y = 245
-		hipotenusa = 245.1
-		Area = 857.5
-		cont = 5
-		cont = 0
-		 total noSuportadasPQ.size() = 6
-
-noSuportadas.size() = 6
-noSuportadas.size() = 6
-noSuportadas.size() = 6
-noSuportadas.size() = 6
-noSuportadas.size() = 6
-noSuportadas.size() = 6
-noSuportadas.size() = 6
-noSuportadas.size() = 6
-triângulo 25
-		cateto x = 2
-		cateto y = 52
-		hipotenusa = 52.0384
-		Area = 52
-		cont = 1
-		cont = 0
-		 total noSuportadasPQ.size() = 1
-
-noSuportadas.size() = 7
-noSuportadas.size() = 7
-triângulo 27
-		cateto x = 7
-		cateto y = 168
-		hipotenusa = 168.146
-		Area = 588
-		cont = 2
-		cont = 2
-		 total noSuportadasPQ.size() = 6
-
-noSuportadas.size() = 13
-noSuportadas.size() = 13
-noSuportadas.size() = 13
-noSuportadas.size() = 13
-triângulo 31
-		cateto x = 5
-		cateto y = 100
-		hipotenusa = 100.125
-		Area = 250
-		cont = 2
-		cont = 2
-		 total noSuportadasPQ.size() = 4
-
-noSuportadas.size() = 17
-noSuportadas.size() = 17
-noSuportadas.size() = 17
-noSuportadas.size() = 17
-noSuportadas.size() = 17
-noSuportadas.size() = 17
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
+noSuportadas.size() = 0
 triângulo 37
 		cateto x = 12
 		cateto y = 192
 		hipotenusa = 192.375
 		Area = 1152
+		cont = 7
+		cont = 4
+		 total noSuportadasPQ.size() = 11
+
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+noSuportadas.size() = 11
+triângulo 49
+		cateto x = 18
+		cateto y = 162
+		hipotenusa = 162.997
+		Area = 1458
+		cont = 8
+		cont = 6
+		 total noSuportadasPQ.size() = 17
+
+noSuportadas.size() = 28
+noSuportadas.size() = 28
+noSuportadas.size() = 28
+noSuportadas.size() = 28
+noSuportadas.size() = 28
+triângulo 54
+		cateto x = 27
+		cateto y = 189
+		hipotenusa = 190.919
+		Area = 2551.5
+		cont = 9
+		cont = 3
+		 total noSuportadasPQ.size() = 24
+
+noSuportadas.size() = 52
+noSuportadas.size() = 52
+noSuportadas.size() = 52
+noSuportadas.size() = 52
+noSuportadas.size() = 52
+noSuportadas.size() = 52
+noSuportadas.size() = 52
+noSuportadas.size() = 52
+triângulo 62
+		cateto x = 14
+		cateto y = 77
+		hipotenusa = 78.2624
+		Area = 539
+		cont = 6
+		cont = 2
+		 total noSuportadasPQ.size() = 13
+
+noSuportadas.size() = 65
+noSuportadas.size() = 65
+noSuportadas.size() = 65
+noSuportadas.size() = 65
+noSuportadas.size() = 65
+noSuportadas.size() = 65
+noSuportadas.size() = 65
+triângulo 69
+		cateto x = 45
+		cateto y = 180
+		hipotenusa = 185.54
+		Area = 4050
+		cont = 10
+		cont = 6
+		 total noSuportadasPQ.size() = 29
+
+noSuportadas.size() = 94
+triângulo 70
+		cateto x = 12
+		cateto y = 45
+		hipotenusa = 46.5725
+		Area = 270
 		cont = 1
 		cont = 2
 		 total noSuportadasPQ.size() = 10
 
-noSuportadas.size() = 27
-noSuportadas.size() = 27
-noSuportadas.size() = 27
-noSuportadas.size() = 27
-noSuportadas.size() = 27
-noSuportadas.size() = 27
-noSuportadas.size() = 27
-noSuportadas.size() = 27
-triângulo 45
-		cateto x = 14
-		cateto y = 154
-		hipotenusa = 154.635
-		Area = 1078
-		cont = 9
-		cont = 4
-		 total noSuportadasPQ.size() = 13
+noSuportadas.size() = 104
+triângulo 71
+		cateto x = 9
+		cateto y = 33
+		hipotenusa = 34.2053
+		Area = 148.5
+		cont = 3
+		cont = 1
+		 total noSuportadasPQ.size() = 8
 
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-noSuportadas.size() = 40
-triângulo 59
-		cateto x = 29
-		cateto y = 174
-		hipotenusa = 176.4
-		Area = 2523
-		cont = 5
-		cont = 8
-		 total noSuportadasPQ.size() = 28
-
-noSuportadas.size() = 68
-noSuportadas.size() = 68
-noSuportadas.size() = 68
-noSuportadas.size() = 68
-noSuportadas.size() = 68
-noSuportadas.size() = 68
-noSuportadas.size() = 68
-noSuportadas.size() = 68
-triângulo 67
-		cateto x = 6
-		cateto y = 27
-		hipotenusa = 27.6586
-		Area = 81
-		cont = 2
-		cont = 0
-		 total noSuportadasPQ.size() = 5
-
-noSuportadas.size() = 73
-noSuportadas.size() = 73
-noSuportadas.size() = 73
-noSuportadas.size() = 73
-noSuportadas.size() = 73
+noSuportadas.size() = 112
 triângulo 72
 		cateto x = 30
 		cateto y = 105
 		hipotenusa = 109.202
 		Area = 1575
-		cont = 7
-		cont = 3
-		 total noSuportadasPQ.size() = 29
+		cont = 9
+		cont = 2
+		 total noSuportadasPQ.size() = 28
 
-noSuportadas.size() = 102
-noSuportadas.size() = 102
-noSuportadas.size() = 102
+noSuportadas.size() = 140
+noSuportadas.size() = 140
+noSuportadas.size() = 140
 triângulo 75
 		cateto x = 71
 		cateto y = 213
 		hipotenusa = 224.522
 		Area = 7561.5
-		cont = 18
-		cont = 8
-		 total noSuportadasPQ.size() = 70
-
-noSuportadas.size() = 172
-noSuportadas.size() = 172
-noSuportadas.size() = 172
-triângulo 78
-		cateto x = 33
-		cateto y = 88
-		hipotenusa = 93.984
-		Area = 1452
+		cont = 10
 		cont = 7
-		cont = 3
-		 total noSuportadasPQ.size() = 32
+		 total noSuportadasPQ.size() = 50
 
-noSuportadas.size() = 204
+noSuportadas.size() = 190
+noSuportadas.size() = 190
+noSuportadas.size() = 190
+noSuportadas.size() = 190
 triângulo 79
 		cateto x = 44
 		cateto y = 110
 		hipotenusa = 118.474
 		Area = 2420
-		cont = 3
-		cont = 9
-		 total noSuportadasPQ.size() = 43
+		cont = 10
+		cont = 2
+		 total noSuportadasPQ.size() = 40
 
-noSuportadas.size() = 247
-noSuportadas.size() = 247
-triângulo 81
-		cateto x = 18
-		cateto y = 42
-		hipotenusa = 45.6946
-		Area = 378
+noSuportadas.size() = 230
+triângulo 80
+		cateto x = 5
+		cateto y = 12
+		hipotenusa = 13
+		Area = 30
+		cont = 1
 		cont = 0
-		cont = 4
-		 total noSuportadasPQ.size() = 17
+		 total noSuportadasPQ.size() = 4
 
-noSuportadas.size() = 264
-noSuportadas.size() = 264
-noSuportadas.size() = 264
-noSuportadas.size() = 264
+noSuportadas.size() = 234
+noSuportadas.size() = 234
+noSuportadas.size() = 234
+noSuportadas.size() = 234
+noSuportadas.size() = 234
 triângulo 85
 		cateto x = 113
 		cateto y = 226
 		hipotenusa = 252.676
 		Area = 12769
-		cont = 18
-		cont = 14
-		 total noSuportadasPQ.size() = 112
+		cont = 10
+		cont = 10
+		 total noSuportadasPQ.size() = 83
 
-noSuportadas.size() = 376
-noSuportadas.size() = 376
-noSuportadas.size() = 376
-noSuportadas.size() = 376
-noSuportadas.size() = 376
-triângulo 90
-		cateto x = 39
-		cateto y = 65
-		hipotenusa = 75.8024
-		Area = 1267.5
-		cont = 7
-		cont = 0
-		 total noSuportadasPQ.size() = 37
-
-noSuportadas.size() = 413
-noSuportadas.size() = 413
+noSuportadas.size() = 317
+noSuportadas.size() = 317
+noSuportadas.size() = 317
+noSuportadas.size() = 317
+noSuportadas.size() = 317
+noSuportadas.size() = 317
+noSuportadas.size() = 317
 triângulo 92
 		cateto x = 62
 		cateto y = 93
 		hipotenusa = 111.772
 		Area = 2883
-		cont = 11
-		cont = 6
-		 total noSuportadasPQ.size() = 61
+		cont = 10
+		cont = 9
+		 total noSuportadasPQ.size() = 59
 
-noSuportadas.size() = 474
-noSuportadas.size() = 474
-noSuportadas.size() = 474
-noSuportadas.size() = 474
-triângulo 96
-		cateto x = 36
-		cateto y = 45
-		hipotenusa = 57.6281
-		Area = 810
-		cont = 1
+noSuportadas.size() = 376
+noSuportadas.size() = 376
+noSuportadas.size() = 376
+triângulo 95
+		cateto x = 48
+		cateto y = 64
+		hipotenusa = 80
+		Area = 1536
+		cont = 10
 		cont = 5
-		 total noSuportadasPQ.size() = 34
+		 total noSuportadasPQ.size() = 45
 
-noSuportadas.size() = 508
-noSuportadas.size() = 508
-noSuportadas.size() = 508
-noSuportadas.size() = 508
+noSuportadas.size() = 421
+noSuportadas.size() = 421
+noSuportadas.size() = 421
+noSuportadas.size() = 421
+noSuportadas.size() = 421
 triângulo 100
 		cateto x = 181
 		cateto y = 181
 		hipotenusa = 255.973
 		Area = 16380.5
-		cont = 8
-		cont = 11
-		 total noSuportadasPQ.size() = 102
+		cont = 10
+		cont = 10
+		 total noSuportadasPQ.size() = 95
 
-noSuportadas.size() = 610
-noSuportadas.size() = 610
-noSuportadas.size() = 610
-triângulo 103
-		cateto x = 45
-		cateto y = 36
-		hipotenusa = 57.6281
-		Area = 810
-		cont = 3
-		cont = 3
-		 total noSuportadasPQ.size() = 34
+noSuportadas.size() = 516
+noSuportadas.size() = 516
+noSuportadas.size() = 516
+noSuportadas.size() = 516
+triângulo 104
+		cateto x = 52
+		cateto y = 39
+		hipotenusa = 65
+		Area = 1014
+		cont = 9
+		cont = 2
+		 total noSuportadasPQ.size() = 33
 
-noSuportadas.size() = 644
-noSuportadas.size() = 644
-noSuportadas.size() = 644
+noSuportadas.size() = 549
+noSuportadas.size() = 549
 triângulo 106
 		cateto x = 87
 		cateto y = 58
 		hipotenusa = 104.561
 		Area = 2523
-		cont = 4
 		cont = 10
+		cont = 9
 		 total noSuportadasPQ.size() = 57
 
-noSuportadas.size() = 701
-noSuportadas.size() = 701
-noSuportadas.size() = 701
-noSuportadas.size() = 701
-noSuportadas.size() = 701
+noSuportadas.size() = 606
+noSuportadas.size() = 606
+triângulo 108
+		cateto x = 55
+		cateto y = 33
+		hipotenusa = 64.1405
+		Area = 907.5
+		cont = 7
+		cont = 1
+		 total noSuportadasPQ.size() = 28
+
+noSuportadas.size() = 634
+triângulo 109
+		cateto x = 18
+		cateto y = 10
+		hipotenusa = 20.5913
+		Area = 90
+		cont = 3
+		cont = 1
+		 total noSuportadasPQ.size() = 9
+
+noSuportadas.size() = 643
+noSuportadas.size() = 643
 triângulo 111
 		cateto x = 170
 		cateto y = 85
 		hipotenusa = 190.066
 		Area = 7225
 		cont = 10
-		cont = 14
-		 total noSuportadasPQ.size() = 84
+		cont = 6
+		 total noSuportadasPQ.size() = 55
 
-noSuportadas.size() = 785
-triângulo 112
-		cateto x = 27
-		cateto y = 12
-		hipotenusa = 29.5466
-		Area = 162
-		cont = 0
-		cont = 0
-		 total noSuportadasPQ.size() = 9
-
-noSuportadas.size() = 794
-noSuportadas.size() = 794
-noSuportadas.size() = 794
+noSuportadas.size() = 698
+noSuportadas.size() = 698
+noSuportadas.size() = 698
+noSuportadas.size() = 698
 triângulo 115
 		cateto x = 65
 		cateto y = 26
 		hipotenusa = 70.0071
 		Area = 845
-		cont = 1
-		cont = 1
-		 total noSuportadasPQ.size() = 17
+		cont = 6
+		cont = 4
+		 total noSuportadasPQ.size() = 25
 
-noSuportadas.size() = 811
-noSuportadas.size() = 811
-noSuportadas.size() = 811
-noSuportadas.size() = 811
+noSuportadas.size() = 723
+triângulo 116
+		cateto x = 40
+		cateto y = 15
+		hipotenusa = 42.72
+		Area = 300
+		cont = 4
+		cont = 3
+		 total noSuportadasPQ.size() = 14
+
+noSuportadas.size() = 737
+noSuportadas.size() = 737
+triângulo 118
+		cateto x = 17
+		cateto y = 6
+		hipotenusa = 18.0278
+		Area = 51
+		cont = 2
+		cont = 1
+		 total noSuportadasPQ.size() = 5
+
+noSuportadas.size() = 742
 triângulo 119
 		cateto x = 162
 		cateto y = 54
 		hipotenusa = 170.763
 		Area = 4374
-		cont = 2
-		cont = 16
-		 total noSuportadasPQ.size() = 52
+		cont = 10
+		cont = 6
+		 total noSuportadasPQ.size() = 50
 
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-noSuportadas.size() = 863
-triângulo 131
-		cateto x = 126
-		cateto y = 21
-		hipotenusa = 127.738
-		Area = 1323
+noSuportadas.size() = 792
+noSuportadas.size() = 792
+noSuportadas.size() = 792
+noSuportadas.size() = 792
+noSuportadas.size() = 792
+noSuportadas.size() = 792
+noSuportadas.size() = 792
+triângulo 126
+		cateto x = 128
+		cateto y = 32
+		hipotenusa = 131.939
+		Area = 2048
+		cont = 10
 		cont = 7
-		cont = 3
-		 total noSuportadasPQ.size() = 20
+		 total noSuportadasPQ.size() = 31
 
-noSuportadas.size() = 883
-noSuportadas.size() = 883
-noSuportadas.size() = 883
-noSuportadas.size() = 883
-noSuportadas.size() = 883
-noSuportadas.size() = 883
-triângulo 137
-		cateto x = 90
-		cateto y = 10
-		hipotenusa = 90.5538
-		Area = 450
+noSuportadas.size() = 823
+noSuportadas.size() = 823
+noSuportadas.size() = 823
+triângulo 129
+		cateto x = 145
+		cateto y = 29
+		hipotenusa = 147.872
+		Area = 2102.5
+		cont = 10
+		cont = 3
+		 total noSuportadasPQ.size() = 28
+
+noSuportadas.size() = 851
+noSuportadas.size() = 851
+noSuportadas.size() = 851
+noSuportadas.size() = 851
+triângulo 133
+		cateto x = 112
+		cateto y = 16
+		hipotenusa = 113.137
+		Area = 896
+		cont = 8
 		cont = 5
-		cont = 3
-		 total noSuportadasPQ.size() = 9
+		 total noSuportadasPQ.size() = 15
 
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-noSuportadas.size() = 892
-Fim da segunda fase. Quantidade de solucoes nao-suportadas: 892
-Quantidade total de solucoes : 1047
-22.44
-Total: 22.56 segundos
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+noSuportadas.size() = 866
+Fim da segunda fase. Quantidade de solucoes nao-suportadas: 866
+Quantidade total de solucoes : 1021
+24.86
+Total: 24.97 segundos
 0 10092
 1 10026
 2 9970
@@ -549,896 +558,870 @@ Total: 22.56 segundos
 4218 730
 4241 729
 4267 728
-29 8728
-30 8693
-31 8658
-32 8623
-33 8588
-34 8554
-63 7687
-71 7487
-72 7463
-73 7440
-76 7367
-75 7391
-74 7416
-107 6683
-108 6663
-110 6623
-109 6643
 137 6132
+139 6100
+140 6084
+141 6068
 138 6116
-140 6104
-141 6097
-139 6106
+143 6036
+147 5972
 146 5988
-145 6004
-147 5973
-144 6020
-143 6043
-203 5228
-204 5217
-205 5206
-206 5195
-207 5184
-208 5173
-209 5162
-210 5151
-211 5140
-215 5096
-214 5107
-213 5118
-212 5129
-355 3945
-356 3939
-357 3933
-358 3927
-359 3921
-360 3915
-361 3910
-362 3903
-363 3897
-364 3891
-365 3885
-366 3879
-382 3783
-381 3789
-380 3795
-379 3801
-378 3807
-377 3813
-376 3819
-375 3825
-374 3831
-373 3837
-371 3849
-372 3843
-369 3861
-370 3855
-367 3873
-368 3867
-467 3345
-468 3340
-469 3336
-470 3331
-471 3327
-542 3048
+145 6005
+144 6021
+142 6053
+250 4746
+251 4738
+252 4729
+253 4720
+255 4702
+254 4711
+256 4693
+266 4602
+265 4611
+264 4620
+263 4629
+261 4647
+262 4638
+260 4657
+259 4665
+258 4675
+257 4685
+310 4250
+311 4243
+312 4236
+313 4229
+314 4222
+315 4218
+317 4212
+318 4205
+320 4191
+319 4198
+322 4178
+321 4185
+325 4168
+323 4172
+328 4137
+327 4144
+326 4151
+329 4133
+335 4075
+334 4083
+333 4095
+331 4119
+330 4126
+332 4096
+397 3698
+398 3692
+399 3687
+400 3681
+401 3676
+402 3670
+403 3665
+409 3632
+408 3637
+407 3643
+406 3649
+405 3655
+404 3660
+477 3301
+476 3305
+478 3297
+479 3294
+480 3290
+481 3286
+482 3282
+483 3279
+490 3277
+491 3273
+492 3253
+496 3247
+495 3250
+518 3137
+519 3133
+517 3142
+516 3148
+515 3152
+514 3156
+513 3160
+512 3170
+511 3174
+510 3178
+509 3182
+500 3243
+504 3216
+502 3224
+506 3202
+501 3233
+521 3126
+522 3122
+525 3114
+523 3118
+531 3088
+530 3092
+529 3096
+528 3103
+527 3107
+526 3111
+533 3081
+534 3077
+536 3070
+535 3073
+537 3066
+539 3059
+538 3062
+540 3055
 543 3044
+542 3048
+545 3039
 544 3041
-545 3037
-546 3034
-547 3030
-549 3023
-548 3027
-551 3016
-550 3020
-552 3013
-553 3009
-554 3006
-555 3002
-556 2999
-557 2995
-560 2985
-559 2988
-558 2992
-561 2981
-562 2978
+547 3032
+546 3036
+549 3026
+550 3022
+551 3019
+552 3016
+554 3009
+553 3013
+556 3002
+548 3028
+558 2995
+555 3006
+557 2999
+559 2992
+560 2989
+561 2985
+563 2978
+562 2982
+564 2975
 570 2950
 569 2953
-567 2960
 568 2957
-565 2967
-564 2971
+565 2972
 566 2964
-563 2974
-586 2897
-587 2894
 585 2900
-589 2888
-588 2891
-591 2883
-590 2885
-592 2879
-595 2870
-594 2873
-593 2876
-597 2864
-596 2868
-599 2858
-600 2855
-598 2861
-601 2852
-602 2850
-603 2846
-606 2837
-605 2840
-604 2843
-607 2834
-608 2831
-609 2828
-610 2825
-611 2822
-612 2819
-613 2816
-614 2813
-616 2807
-615 2810
-617 2804
-618 2801
-619 2798
-621 2792
-624 2783
-623 2786
-622 2789
-620 2795
-627 2774
-626 2777
-625 2780
-628 2771
-629 2768
-631 2762
-630 2765
+586 2897
+588 2892
+589 2891
+587 2894
+591 2885
+590 2888
+593 2879
+594 2876
+597 2867
+596 2870
+595 2873
+598 2865
+592 2881
+599 2861
+600 2858
+601 2856
+602 2853
+606 2845
+609 2842
+611 2831
+622 2814
+623 2811
+626 2803
+614 2828
+616 2817
+627 2800
+628 2797
+630 2791
+620 2816
+624 2805
+629 2794
+653 2696
 654 2693
 652 2699
-653 2696
 650 2705
 651 2702
-649 2709
-648 2711
+649 2708
 647 2714
-646 2717
 645 2720
-642 2729
-643 2726
+646 2717
+648 2711
 644 2723
-641 2732
-640 2735
-639 2738
-638 2741
-637 2744
+643 2728
+639 2741
+631 2789
+635 2753
+633 2758
 636 2747
-635 2751
-634 2753
-632 2759
-633 2756
-669 2652
-671 2646
-670 2649
-672 2644
-673 2641
-674 2638
-675 2636
-676 2633
-677 2630
-678 2628
-679 2625
-681 2620
-680 2622
-682 2617
-683 2614
-684 2612
-685 2609
-686 2606
-687 2604
-688 2601
-689 2598
-690 2596
-691 2593
-693 2588
-699 2572
-700 2569
-698 2574
-697 2577
-696 2580
-695 2582
-694 2585
-692 2590
-702 2564
-703 2561
+632 2766
 704 2559
+703 2561
+702 2564
+705 2557
+707 2552
 706 2554
-705 2556
+709 2547
+710 2545
 708 2549
-707 2551
-710 2544
-709 2546
-712 2539
-711 2541
-713 2537
+711 2542
+712 2540
+713 2539
+716 2533
 715 2535
-714 2536
+718 2528
+717 2530
+720 2523
+721 2521
+722 2518
+714 2537
+723 2516
+719 2525
+724 2514
+725 2511
+726 2509
+727 2507
+729 2503
+728 2504
+730 2501
+732 2496
+731 2498
+733 2494
+734 2491
+738 2485
 744 2459
 743 2461
 742 2464
-740 2469
 741 2466
-739 2471
-738 2474
-737 2476
-736 2479
-735 2481
-734 2484
-733 2486
-732 2489
-731 2491
-729 2496
-730 2494
-728 2499
-726 2504
-727 2501
-725 2506
-722 2514
-724 2509
-723 2511
-721 2516
-720 2519
-718 2524
-717 2527
-719 2521
-716 2530
-752 2440
-751 2442
-753 2437
-754 2435
-766 2407
-765 2409
-767 2405
-764 2412
-763 2414
-762 2416
-761 2419
-760 2421
-759 2423
-757 2428
-758 2426
-755 2433
-756 2430
-807 2316
-808 2314
-806 2318
+740 2482
+737 2490
+746 2454
+747 2452
+749 2447
+748 2449
 805 2320
+808 2315
+806 2318
+807 2316
 809 2312
 810 2310
 811 2308
-812 2306
-813 2304
-815 2300
-816 2298
-814 2302
-817 2296
-818 2294
-819 2292
-822 2286
-820 2290
-823 2284
-824 2282
-821 2288
-827 2276
-828 2274
-826 2278
-825 2280
-829 2272
-830 2270
-833 2264
-831 2268
-834 2262
-836 2258
-835 2260
-837 2256
-840 2250
-832 2266
-838 2254
-839 2252
-843 2244
-841 2248
-842 2246
-844 2242
-845 2240
-846 2238
-850 2230
-847 2236
-849 2232
-848 2234
-852 2226
-851 2228
-853 2224
-856 2218
-854 2222
-857 2216
-859 2212
-858 2214
-855 2220
-860 2210
-861 2208
-862 2206
-863 2204
-865 2200
-866 2198
-867 2196
-869 2192
-915 2100
-913 2104
+812 2307
+819 2304
+813 2305
+820 2302
+823 2296
+821 2300
+822 2298
+826 2291
+827 2288
+825 2292
+824 2294
+829 2286
+828 2287
+834 2285
+858 2254
+859 2252
+857 2256
+841 2267
+842 2266
+837 2273
+862 2246
+849 2257
+845 2260
+865 2240
+863 2244
+864 2242
+866 2238
+868 2234
+867 2236
+871 2230
+860 2248
+869 2232
 914 2102
 916 2098
-911 2108
-910 2110
+915 2100
+913 2104
 912 2106
 909 2112
+910 2110
+911 2108
 907 2116
-908 2114
-904 2122
-905 2120
 906 2118
+908 2114
 903 2124
+905 2120
+904 2122
 902 2126
 901 2128
-900 2130
 898 2134
 899 2132
 897 2136
+900 2130
+896 2138
 894 2142
 895 2140
-896 2138
+891 2148
 892 2146
 893 2144
-891 2148
-890 2150
 889 2152
+890 2150
+887 2156
 888 2154
 886 2158
-887 2156
-884 2162
-883 2164
-880 2170
-882 2166
-881 2168
-877 2176
-876 2178
-879 2172
-878 2174
-874 2182
-885 2160
-875 2180
-873 2184
-872 2186
-870 2190
-871 2188
-868 2194
-864 2202
-972 1999
-970 2002
-971 2000
-969 2004
-975 1994
-973 1997
-974 1995
-978 1989
-976 1992
-977 1990
-979 1987
-981 1984
-982 1982
-980 1985
-985 1977
-984 1979
-983 1980
-986 1975
-988 1972
-987 1974
-990 1969
-991 1967
-989 1970
-993 1964
-994 1962
-992 1965
-996 1959
-995 1961
-997 1957
-1006 1942
-1005 1944
-1004 1945
-1003 1947
-1002 1949
-1000 1953
-1001 1952
-999 1955
+885 2161
+881 2169
+883 2165
+884 2163
+882 2167
+879 2174
+877 2178
+875 2182
+880 2172
+876 2180
+878 2176
+874 2185
+873 2195
+1013 1931
 1014 1929
 1015 1928
-1013 1931
 1016 1926
-1018 1923
-1019 1922
 1017 1925
-1020 1920
-1022 1917
+1019 1922
+1018 1923
 1023 1916
+1022 1917
 1021 1919
-1024 1914
-1025 1913
+1020 1920
 1027 1910
+1028 1909
+1024 1914
+1029 1908
+1031 1905
 1026 1911
-1028 1908
-1029 1907
-1031 1904
-1035 1898
-1030 1905
-1033 1901
-1032 1902
-1034 1899
-1037 1895
-1036 1896
-1038 1893
-1039 1892
-1040 1890
-1041 1889
-1042 1887
-1044 1884
-1043 1886
-1045 1883
-1046 1881
-1048 1878
-1047 1880
-1049 1877
-1050 1875
-1057 1865
+1030 1906
+1032 1903
+1037 1896
+1033 1902
+1034 1900
+1035 1899
+1036 1897
+1039 1893
+1038 1894
+1040 1891
+1043 1887
 1071 1844
 1073 1841
-1072 1842
 1070 1845
+1072 1842
 1069 1847
-1068 1848
+1068 1849
+1066 1852
 1067 1850
+1064 1856
 1065 1853
-1063 1856
-1066 1851
-1064 1854
-1061 1859
-1062 1857
-1059 1862
-1060 1860
-1058 1863
-1056 1866
-1054 1869
-1055 1868
-1052 1872
-1051 1874
-1053 1871
-1144 1745
-1143 1746
-1142 1747
-1145 1743
-1147 1741
-1149 1739
-1148 1740
-1146 1742
-1150 1737
-1151 1736
-1175 1706
-1176 1705
-1173 1708
-1172 1710
-1174 1707
-1171 1711
-1170 1712
-1169 1713
-1168 1715
-1167 1716
-1166 1717
-1164 1720
-1165 1718
-1163 1721
-1162 1722
-1161 1723
-1160 1725
-1159 1726
-1157 1728
-1158 1727
-1156 1730
-1155 1731
-1153 1734
-1154 1732
+1063 1857
+1062 1859
+1058 1865
+1060 1862
+1061 1860
+1059 1863
+1057 1866
+1054 1871
+1056 1868
+1055 1869
+1051 1876
+1052 1874
+1053 1873
+1049 1879
+1050 1877
+1048 1880
+1047 1882
+1046 1883
+1044 1886
+1045 1885
+1042 1890
+1095 1810
+1097 1807
+1094 1811
+1096 1808
+1098 1806
+1099 1805
+1100 1803
+1102 1801
+1103 1799
+1106 1796
+1104 1798
+1101 1802
+1105 1797
+1107 1795
+1109 1793
+1108 1794
+1111 1790
+1110 1791
+1112 1789
+1113 1788
+1114 1787
+1115 1786
+1119 1781
+1118 1782
+1117 1783
+1116 1785
+1139 1751
+1140 1750
+1137 1754
+1138 1752
+1136 1755
+1135 1758
+1131 1764
+1133 1761
+1134 1760
+1132 1762
+1129 1766
+1127 1770
+1126 1771
+1128 1767
+1120 1779
+1125 1772
+1121 1778
+1122 1776
+1124 1773
+1216 1658
 1217 1657
 1215 1659
-1216 1658
-1214 1660
 1218 1656
+1214 1660
 1219 1655
 1220 1654
-1221 1653
 1222 1652
 1223 1651
-1224 1650
+1221 1653
 1225 1649
+1226 1648
 1227 1647
 1228 1646
-1226 1648
-1229 1645
+1224 1650
 1230 1644
+1229 1645
 1232 1642
-1233 1641
 1231 1643
+1233 1641
+1235 1639
 1234 1640
 1236 1638
 1237 1637
-1235 1639
-1238 1636
-1239 1635
-1240 1634
 1241 1633
-1242 1632
-1244 1630
+1238 1636
+1240 1634
+1239 1635
 1243 1631
+1242 1632
+1246 1628
+1244 1630
 1245 1629
+1248 1626
 1247 1627
 1249 1625
-1248 1626
 1250 1624
-1246 1628
 1253 1621
 1251 1623
-1256 1619
-1258 1618
 1254 1620
 1252 1622
-1267 1615
+1256 1618
+1255 1619
+1258 1616
 1390 1484
 1389 1485
-1391 1483
 1392 1482
+1391 1483
 1393 1481
 1388 1486
-1387 1487
-1386 1488
-1382 1492
-1381 1493
-1385 1489
-1384 1490
-1383 1491
-1380 1494
-1376 1498
-1377 1497
-1379 1495
-1378 1496
-1375 1499
-1374 1500
-1371 1503
-1372 1502
-1373 1501
-1370 1504
-1368 1506
-1367 1507
-1369 1505
-1366 1508
-1365 1509
-1364 1510
-1362 1512
-1358 1516
-1363 1511
-1360 1514
-1361 1513
-1357 1517
-1359 1515
-1354 1520
-1356 1518
-1355 1519
-1351 1523
-1353 1521
-1350 1524
-1352 1522
-1348 1526
-1349 1525
-1346 1528
-1345 1529
-1347 1527
-1344 1530
-1341 1533
-1342 1532
-1343 1531
-1339 1537
-1340 1535
-1338 1541
-1335 1550
-1336 1542
-1428 1452
-1429 1451
-1430 1450
-1431 1449
-1433 1448
-1434 1447
-1436 1445
-1435 1446
-1439 1443
-1438 1444
-1440 1442
-1441 1441
-1443 1440
-1444 1439
-1445 1438
-1446 1437
-1448 1436
-1470 1418
-1468 1420
-1469 1419
-1466 1421
-1463 1424
-1464 1423
-1460 1426
-1461 1425
-1465 1422
-1459 1427
-1458 1428
-1455 1430
-1456 1429
-1453 1432
-1454 1431
-1451 1433
-1449 1435
-1535 1370
+1387 1488
+1383 1492
+1385 1490
+1386 1489
+1382 1493
+1384 1491
+1379 1500
+1380 1495
+1374 1505
+1377 1502
+1375 1504
+1376 1503
+1378 1501
+1370 1509
+1373 1506
+1369 1510
+1368 1511
+1367 1512
+1366 1513
+1364 1515
+1360 1519
+1363 1516
+1362 1517
+1359 1520
+1361 1518
+1371 1507
+1357 1522
+1365 1514
+1358 1521
+1356 1523
+1354 1525
+1349 1539
+1352 1527
+1339 1553
+1338 1554
+1340 1552
+1341 1551
+1335 1559
+1337 1555
+1336 1556
+1342 1545
+1343 1540
+1350 1533
+1334 1565
+1332 1571
+1473 1416
+1477 1413
+1474 1415
+1475 1414
+1480 1411
+1478 1412
+1483 1409
+1482 1410
+1487 1408
+1489 1407
+1491 1405
+1490 1406
+1494 1403
+1493 1404
+1497 1401
+1499 1400
+1495 1402
+1500 1399
+1502 1398
+1503 1397
+1504 1395
+1507 1393
+1521 1380
+1522 1379
+1517 1383
+1518 1382
+1519 1381
+1516 1385
+1515 1387
+1513 1389
+1509 1392
+1514 1388
+1510 1390
 1532 1372
-1536 1369
 1533 1371
+1535 1370
 1539 1367
-1541 1366
+1536 1369
 1538 1368
 1542 1365
 1544 1364
 1545 1363
+1541 1366
+1548 1361
 1547 1362
-1549 1361
-1551 1359
 1550 1360
+1551 1359
+1554 1357
 1553 1358
 1556 1356
 1557 1355
-1554 1357
-1560 1353
-1559 1354
+1560 1354
+1561 1353
+1562 1352
+1564 1351
+1566 1350
+1570 1347
+1572 1346
+1568 1348
+1573 1345
+1575 1344
+1579 1341
+1581 1340
 1616 1316
 1613 1318
-1614 1317
-1610 1320
 1611 1319
-1605 1323
-1607 1322
+1614 1317
 1608 1321
-1604 1324
-1602 1325
-1599 1327
+1610 1320
+1607 1322
+1606 1323
+1603 1325
 1601 1326
+1604 1324
 1598 1328
-1596 1329
-1593 1331
-1595 1330
+1600 1327
+1597 1329
 1592 1332
-1587 1335
-1590 1333
-1586 1336
-1589 1334
-1584 1337
-1583 1338
-1581 1339
-1580 1340
+1595 1330
+1594 1331
+1591 1333
+1590 1334
+1584 1338
+1587 1336
+1588 1335
+1585 1337
+1582 1339
+1576 1343
 1577 1342
-1578 1341
-1575 1343
-1572 1345
-1574 1344
-1571 1346
-1566 1349
-1568 1348
-1565 1350
-1562 1352
-1563 1351
-1569 1347
-1722 1254
+1567 1349
+1627 1309
+1629 1308
+1630 1307
+1632 1306
+1636 1304
+1634 1305
+1638 1303
+1640 1302
+1641 1301
+1643 1300
+1645 1299
+1647 1298
+1651 1296
+1652 1295
+1655 1294
+1656 1293
+1649 1297
+1659 1292
+1661 1290
+1665 1289
+1667 1288
+1669 1286
+1679 1278
+1675 1280
+1677 1279
+1672 1282
+1674 1281
+1670 1283
+1684 1275
+1686 1274
+1682 1276
+1688 1273
+1691 1271
+1693 1270
+1697 1268
+1695 1269
+1689 1272
 1726 1252
-1728 1251
 1724 1253
-1732 1249
-1730 1250
-1734 1248
-1736 1247
-1742 1244
-1738 1246
-1744 1243
-1740 1245
-1746 1242
-1748 1241
-1752 1239
-1750 1240
-1754 1238
-1756 1237
-1758 1236
-1764 1233
-1760 1235
-1763 1234
-1766 1232
-1770 1230
-1768 1231
-1772 1229
-1776 1227
-1774 1228
-1780 1225
-1784 1223
-1782 1224
-1778 1226
-1788 1221
-1786 1222
-1791 1220
+1722 1254
+1731 1250
+1728 1251
+1735 1248
+1733 1249
+1737 1247
+1739 1246
+1754 1241
+1752 1242
+1756 1240
+1758 1239
+1764 1236
+1760 1238
+1766 1235
+1762 1237
+1749 1243
+1747 1244
+1741 1245
+1770 1233
+1772 1232
+1768 1234
+1780 1229
+1782 1228
+1784 1227
+1796 1221
+1798 1220
+1773 1230
+1806 1216
+1802 1218
+1804 1217
+1800 1219
+1786 1225
+1814 1212
+1810 1214
+1808 1215
+1821 1210
+1812 1213
+1789 1222
 1888 1171
+1884 1173
 1886 1172
 1882 1174
-1884 1173
-1880 1175
-1876 1177
+1881 1175
+1876 1182
 1878 1176
-1874 1178
-1872 1179
-1868 1181
-1870 1180
-1866 1182
-1862 1184
-1860 1185
-1864 1183
-1858 1186
-1852 1189
-1856 1187
-1854 1188
-1850 1190
-1848 1191
-1842 1194
-1844 1193
-1846 1192
-1840 1195
-1838 1196
-1834 1198
-1836 1197
-1832 1199
-1828 1201
-1830 1200
-1826 1202
-1824 1203
-1820 1205
-1818 1206
-1822 1204
-1816 1207
-1814 1208
-1810 1210
-1812 1209
-1808 1211
-1806 1212
-1801 1215
-1802 1214
-1804 1213
-1798 1216
-1793 1219
-1796 1217
-1794 1218
-1893 1169
-1895 1168
-1897 1167
-1913 1160
-1909 1162
-1915 1159
-1906 1164
-1911 1161
-1907 1163
+1877 1181
+1846 1209
+1858 1187
+1856 1189
+1857 1188
+1850 1191
+1849 1196
+1847 1198
 1995 1125
 2000 1123
 1997 1124
 2003 1122
-2005 1121
-2013 1119
-2031 1118
-2052 1102
+2007 1120
+2006 1121
+2011 1119
+2019 1116
+2014 1118
+2016 1117
+2027 1113
 2055 1101
+2052 1102
 2050 1103
-2047 1104
-2045 1105
-2042 1106
-2040 1107
+2048 1104
+2043 1106
+2046 1105
+2041 1107
 2038 1108
-2033 1114
-2035 1109
-2153 1065
+2034 1110
+2032 1111
+2029 1112
+2037 1109
+2026 1114
+2023 1115
+2063 1098
+2060 1099
+2065 1097
+2068 1096
+2071 1095
+2095 1086
+2092 1087
+2089 1088
+2087 1089
+2084 1090
+2081 1091
+2079 1092
+2076 1093
+2074 1094
+2136 1071
+2133 1072
+2139 1070
+2142 1069
+2145 1068
 2150 1066
+2153 1065
 2159 1063
 2156 1064
-2166 1061
 2162 1062
-2172 1059
-2306 1014
+2171 1059
+2165 1061
+2174 1058
+2177 1057
+2180 1056
+2168 1060
+2183 1055
+2186 1054
+2189 1053
+2193 1052
+2199 1050
+2196 1051
+2203 1049
+2209 1048
+2212 1047
+2215 1046
+2221 1044
+2218 1045
+2224 1043
+2227 1042
+2230 1041
+2233 1040
+2236 1039
+2239 1038
 2303 1015
+2306 1014
 2300 1016
 2291 1019
-2295 1018
-2288 1020
-2298 1017
+2294 1018
+2297 1017
+2289 1020
 2282 1022
-2285 1021
-2276 1024
-2279 1023
-2273 1025
-2270 1026
-2267 1027
-2264 1028
-2258 1030
-2262 1029
-2252 1032
-2255 1031
-2249 1033
-2243 1035
-2247 1034
-2237 1037
-2234 1038
-2240 1036
-2231 1039
-2225 1041
-2228 1040
-2222 1042
-2216 1044
-2213 1045
-2210 1046
-2207 1047
-2201 1049
-2204 1048
-2195 1051
-2198 1050
-2219 1043
-2192 1052
-2189 1053
-2178 1057
-2177 1058
-2186 1054
-2183 1055
-2181 1056
-2957 859
-2963 858
-2969 857
-2975 856
-2981 855
-2987 854
-2993 853
-2999 852
-3005 851
-3011 850
-3017 849
-3025 848
-3071 840
-3059 842
-3065 841
-3053 843
-3047 844
-3042 845
-3037 847
-3040 846
-3434 792
-3443 791
-3452 790
-3461 789
-3471 788
-3479 787
-3506 784
-3497 785
-3488 786
+2277 1026
+2274 1027
+2269 1029
+2271 1028
+2266 1030
+2263 1031
+2260 1032
+2254 1034
+2257 1033
+2252 1035
+2248 1036
+2280 1023
+2246 1037
+2495 959
+2503 957
+2499 958
+2510 956
+2514 955
+2522 953
+2530 951
+2526 952
+2534 950
+2538 949
+2515 954
+2543 948
+2555 945
+2615 929
+2611 930
+2607 931
+2602 933
+2603 932
+2599 934
+2591 936
+2595 935
+2587 937
+2583 938
+2579 939
+2568 942
+2560 944
+2564 943
+2575 940
+2571 941
+2553 946
+2549 947
+2745 900
+2750 899
+2755 898
+2760 897
+2765 896
+2770 895
+2775 894
+2780 893
+2785 892
+2790 891
+2800 890
+2805 889
+2810 888
+2815 887
+2825 885
+2820 886
+2830 884
+2835 883
+2841 882
+2875 874
+2880 873
+2869 876
+2870 875
+2864 877
+2859 878
+2854 879
+2851 880
+2847 881
+3097 836
+3104 835
+3111 834
+3118 833
+3125 832
+3132 831
+3195 822
+3181 824
+3188 823
+3180 825
+3173 826
+3166 827
+3160 828
+3152 829
+3146 830
 MAXX = 4267 10092

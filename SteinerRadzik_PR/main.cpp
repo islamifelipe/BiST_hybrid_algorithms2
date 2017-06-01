@@ -61,15 +61,14 @@ using namespace std;
 // TODO : deve ser melhor que o Transgenético
 // TODO : ver tempo e quantidade para instâncias grandes
 
-#define maxSizePath 18 // TODO
-#define porAreaTriangulo 60 // explicar isso melhor
+#define maxSizePath 20 // TODO
+#define maxVizinhos 10
 
 int idMST = 0;
 map <int, Aresta *> arestas;
 Aresta ** arestasPtr;
 float yp, yq, xp, xq;
 struct tms tempsInit, tempsFinal1,tempsFinal2, tempsFinalBuscaLocal ; // para medir o tempo
-list < pair<int*, pair<float, float> > > MSTs;
 
 bool isEgalObjetive(float t1_peso1, float t1_peso2, float t2_peso1, float t2_peso2){
 	return equalfloat(t1_peso1,t2_peso1) && equalfloat(t2_peso2,t1_peso2);
@@ -172,13 +171,14 @@ list <pair<int*, pair<float, float> > > phase1GM(Grafo *g){
 
 /* 	
 	uma arvore s' é vizinha de s sse elas diferem em somente uma aresta
-	retorna os vizinhos de "s" que nao sao dominados por "s"
+	retorna apenas solucoes que podem ser utilizadas no proximo passo do PR. max = maxSolucoes
+	Esta funcao ja atualiza o vetor solucoes
 */
-list <pair<int*,  pair<float, float> > > vizinhos(Grafo *g, pair<int*, pair<float, float> > sol, float cateto_x, float cateto_y, list <pair<int*, pair<float, float> > > &solucoes){
-	list <pair<int*,  pair<float, float> > > retorno;
-	for (int a = 0; a<g->getQuantVertices()-1 ; a++){ // n-1 (aresta que sairá)
-		int dof = (rand()%2);
-		if (g->getStatus(sol.first[a])==0 && dof==1){ // so sai se for opcional. Se for obrigatoria, nao sai
+list <pair<int*,  pair<float, float> > > vizinhos(Grafo *g, pair<int*, pair<float, float> > sol, float cateto_x, float cateto_y, list <pair<int*, pair<float, float> > > &solucoes, int quantSols, int prob){
+	list <pair<int*,  pair<float, float> > > retorno; /*possiveis candidatos*/
+	for (int a = 0; a<g->getQuantVertices()-1 && retorno.size()<quantSols ; a++){ // n-1 (aresta que sairá)
+		int dof = (rand()%101);
+		if (g->getStatus(sol.first[a])==0 && dof<=20){ // so sai se for opcional. Se for obrigatoria, nao sai
 			int idArestaSai = sol.first[a];
 			Conjunto conjunto(g->getQuantVertices());
 			for (int i = 0; i <g->getQuantVertices()-1; i++){
@@ -189,9 +189,9 @@ list <pair<int*,  pair<float, float> > > vizinhos(Grafo *g, pair<int*, pair<floa
 			int peso1base = sol.second.first - g->getArestas(sol.first[a])->getPeso1();
 			int peso2base = sol.second.second - g->getArestas(sol.first[a])->getPeso2();
 			vector<int> arestasPossiveis;
-		 	for (int i = 0; i <g->getQuantArestas(); i++){
-		 		int odfff=(rand()%2);
-		 		if (i!=idArestaSai && odfff==1){
+		 	for (int i = 0; i <g->getQuantArestas() && retorno.size()<quantSols; i++){
+		 		int odfff=(rand()%101);
+		 		if (i!=idArestaSai && odfff<=20){
 		 			if (conjunto.compare(g->getArestas(i)->getOrigem(), g->getArestas(i)->getDestino())==false){
 		 				int newPeso1 = peso1base+g->getArestas(i)->getPeso1();
 		 				int newPeso2 = peso2base+g->getArestas(i)->getPeso2();
@@ -229,6 +229,7 @@ list <pair<int*,  pair<float, float> > > vizinhos(Grafo *g, pair<int*, pair<floa
 					
 				 					}
 				 					retorno.push_back(make_pair(base, make_pair(newPeso1,newPeso2)));
+				 					if (retorno.size()>=quantSols) break;
 				 				}	
 		 					}
 		 				}
@@ -242,33 +243,33 @@ list <pair<int*,  pair<float, float> > > vizinhos(Grafo *g, pair<int*, pair<floa
 
 /*Quantidade de arestas que existem em xi (origem), mas que nao existem em xt(target). 
 Ou seja, a quantidade de arestas que restam à xi para chegar até xt*/
-int distance(Grafo *g, pair<int*, pair<float, float> > xi, pair<int*, pair<float, float> > xt){
-	int cont = 0;
-	bool tem = false;
-	if (xi.second.first == xt.second.first && xi.second.second == xt.second.second) return 0;
-	for (int i=0; i<g->getQuantVertices()-1; i++){ //arestas em xi
-		tem = false;
-		for (int t=0; t<g->getQuantVertices()-1; t++){ // arestas em xt
-			if (xt.first[t] == xi.first[i]) {
-				tem = true; break;
-			}
-		}
-		if (tem==false) cont++;
-	}
-	return cont;
-	//return sqrt((s1.second.first - s2.second.first)*(s1.second.first - s2.second.first) + (s1.second.second - s2.second.second)*(s1.second.second - s2.second.second));
+int distance(Grafo *g, pair<int*, pair<float, float> > s1, pair<int*, pair<float, float> > s2){
+	// int cont = 0;
+	// bool tem = false;
+	// if (xi.second.first == xt.second.first && xi.second.second == xt.second.second) return 0;
+	// for (int i=0; i<g->getQuantVertices()-1; i++){ //arestas em xi
+	// 	tem = false;
+	// 	for (int t=0; t<g->getQuantVertices()-1; t++){ // arestas em xt
+	// 		if (xt.first[t] == xi.first[i]) {
+	// 			tem = true; break;
+	// 		}
+	// 	}
+	// 	if (tem==false) cont++;
+	// }
+	// return cont;
+	return sqrt((s1.second.first - s2.second.first)*(s1.second.first - s2.second.first) + (s1.second.second - s2.second.second)*(s1.second.second - s2.second.second));
 }
 
-void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<int*, pair<float, float> > x_target, list <pair<int*, pair<float, float> > > &solucoes, float cateto_x, float cateto_y, float escalarX, float escalarY, int maxSolPorTriangulo){
+void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<int*, pair<float, float> > x_target, list <pair<int*, pair<float, float> > > &solucoes, float cateto_x, float cateto_y, float escalarX, float escalarY, int maxSolPorTriangulo, int prob){
 	pair<int*, pair<float, float> > x_start = make_pair(new int[g->getQuantVertices()-1], make_pair(x_startaux.second.first, x_startaux.second.second));
 	for (int i=0; i<g->getQuantVertices()-1; i++) x_start.first[i] = x_startaux.first[i];
-	int delta;
+	float delta;
 	int cont = 0;
 	delta = distance(g, x_start, x_target);
 	do {
 		//delta = distance(g, x_start, x_target); 
-		if (delta>=1 && cont<maxSizePath){ //&& solucoes.size()<maxSolPorTriangulo){
-			list <pair<int*,  pair<float, float> > > viz = vizinhos(g, x_start,cateto_x, cateto_y,solucoes); // somente os vizinhos dentro do triangulo formado pelos catetos x,y
+		if (delta>=1 && cont<maxSizePath && solucoes.size()<maxSolPorTriangulo){
+			list <pair<int*,  pair<float, float> > > viz = vizinhos(g, x_start,cateto_x, cateto_y,solucoes,maxSolPorTriangulo, prob); // somente os vizinhos dentro do triangulo formado pelos catetos x,y
 			//float min = INT_MAX;
 			//int min_delta = delta;
 			//pair<int*, pair<float, float> > prox_start;
@@ -277,7 +278,7 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<i
 			vector <pair <int , pair<int*, pair<float, float> > > > prox_start;
 			for (list<pair<int*, pair<float, float> > >::iterator viz_it=viz.begin(); viz_it!=viz.end(); viz_it++){ // coloca os vizinhos em retorno
 				bool ha = false;
-				int novoDelta = distance(g, *viz_it, x_target);
+				float novoDelta = distance(g, *viz_it, x_target);
 				if (novoDelta<=delta-1){
 					// float custo = (*viz_it).second.first*escalarX + (*viz_it).second.second*escalarY;
 					// if (custo<min){
@@ -322,7 +323,7 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<i
 				// else delta = min_delta;
 				cont++;
 			} else break;
-		} else if (cont>=maxSizePath){ //|| solucoes.size()>=maxSolPorTriangulo) {
+		} else if (cont>=maxSizePath || solucoes.size()>=maxSolPorTriangulo){ //|| solucoes.size()>=maxSolPorTriangulo) {
 			break;
 		}
 	}while(delta>1);
@@ -345,10 +346,8 @@ list < pair<int*, pair<float, float> > >  phase2KB(Grafo *g, list< pair<int*, pa
 	list< pair<int*, pair<float, float> > >::iterator it = extremas.begin(); 
 	int contador = 0;
 	int size = extremas.size();
-	int maxSolPorTriangulo = 0;
+	float areaTotal = 0;
 	while (contador<size-1){
-		//cout<<"contador = "<<contador<<endl;
-		list< pair<int*, pair<float, float> > > noSuportadasPQ; // regiao viavel : conjunto de solucoes nao dominadas encontradas no triângulo pq (nao sao pontos)
 		pair<int*, pair<float, float> > ponto_p = *(it);
 		pair<int*, pair<float, float> > ponto_q = *(++it);
 		int *p = ponto_p.first; 
@@ -359,29 +358,42 @@ list < pair<int*, pair<float, float> > >  phase2KB(Grafo *g, list< pair<int*, pa
 		xq = ponto_q.second.first;
 		yq = ponto_q.second.second;
 
-		int menor = (xq-xp);
-		if ((yp-yq)<menor) menor = (yp-yq);
-		menor--;
-		int ran = 0;
-		if (menor>0) ran = rand()%(70); //TODO
-		if (ran<menor){
-			cout<<"triângulo "<<contador<<endl;
-			cout<<"\t\tcateto x = "<<(xq-xp)<<endl;
-			cout<<"\t\tcateto y = "<<(yp-yq)<<endl;
-			cout<<"\t\thipotenusa = "<<(sqrt((xq-xp)*(xq-xp) +(yp-yq)*(yp-yq) ))<<endl;
-			cout<<"\t\tArea = "<<(((xq-xp)*(yp-yq))/2)<<endl;
-			path_relinking(g, ponto_p, ponto_q, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp), maxSolPorTriangulo);
+		float area = (((xq-xp)*(yp-yq))/2.0);
+		areaTotal+=area;
+		contador++;
+	}
+	contador = 0;
+	it = extremas.begin(); 
+	float toalprob = 0;
+	while (contador<size-1){
+		list< pair<int*, pair<float, float> > > noSuportadasPQ;
+		pair<int*, pair<float, float> > ponto_p = *(it);
+		pair<int*, pair<float, float> > ponto_q = *(++it);
+		int *p = ponto_p.first; 
+		int *q = ponto_q.first;
+		
+		xp = ponto_p.second.first;
+		yp = ponto_p.second.second;
+		xq = ponto_q.second.first;
+		yq = ponto_q.second.second;
+
+		float area = (((xq-xp)*(yp-yq))/2.0);
+		int prob = (area*100)/areaTotal;
+		int quantSols = 2000*prob/100;
+		//cout<<"sols triângulo "<<contador<<" : "<<quantSols<<endl;
+		if (quantSols>0){
+			path_relinking(g, ponto_p, ponto_q, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp), quantSols,prob);
 			//cout<<"\t\t noSuportadasPQ.size() = "<<noSuportadasPQ.size()<<endl;;
-			path_relinking(g, ponto_q, ponto_p, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp), maxSolPorTriangulo);
-			
-			cout<<"\t\t total noSuportadasPQ.size() = "<<noSuportadasPQ.size()<<endl;;
+			path_relinking(g, ponto_q, ponto_p, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp), quantSols,prob);
 			noSoportadas.splice(noSoportadas.end(), noSuportadasPQ);
-			cout<<endl;
 		}
+		cout<<"noSuportadas.size() = "<<noSoportadas.size()<<endl;
+
 		contador++;
 
-		cout<<"noSuportadas.size() = "<<noSoportadas.size()<<endl;
+	//	cout<<"noSuportadas.size() = "<<noSoportadas.size()<<endl;
 	}
+	
 	return noSoportadas;
 
 }
