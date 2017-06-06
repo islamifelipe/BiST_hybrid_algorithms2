@@ -71,7 +71,7 @@ typedef struct { // pra calcular as solucoes suportadas
 } ItemFila;
 
 
-/*Esta funcao é adptada do algoritmo propsoto na dissertacao de Monteiro (2010)
+/*Esta funcao é adaptada do algoritmo propsoto na dissertacao de Monteiro (2010)
 O procedimento usa uma filha pra obter solucoes suportadas bem distribuidas na fronteira de pareto
 O procedimento termina ou quando o limite de iteracoes é atingido ou quando acaba as solucoes suportadas*/
 list <pair<int*, pair<float, float> > >  suportadas(Grafo *g){
@@ -342,12 +342,11 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<i
 	int cont = 0;
 	delta = distance(g, x_start, x_target);
 	do {
+		cout<<"\t\tdelta = "<<delta<<endl;
 		//delta = distance(g, x_start, x_target); 
 		if (delta>=1 && cont<maxSizePath){
-			//cout<<"cont = "<<cont<<endl;
 			list <pair<int*,  pair<float, float> > > viz = vizinhos2(g, x_start,cateto_x, cateto_y, escalarX,escalarY); // somente os vizinhos dentro do triangulo formado pelos catetos x,y
 			float min = INT_MAX;
-			int min_delta = delta;
 			pair<int*, pair<float, float> > prox_start;
 			for (list<pair<int*, pair<float, float> > >::iterator viz_it=viz.begin(); viz_it!=viz.end(); viz_it++){ // coloca os vizinhos em retorno
 				//bool ha = false;
@@ -357,7 +356,6 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<i
 					if (custo<min){
 						min = custo;
 						prox_start = (*viz_it);
-						min_delta= novoDelta;
 					}
 				}
 			}
@@ -366,6 +364,7 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<i
 				localSearch(g,x_start, cateto_x, cateto_y, escalarX, escalarY);
 				bool ha = false;
 				delta = distance(g, x_start, x_target);
+				cout<<"\t\tdelta = "<<delta<<endl;
 				vector< list<pair<int*, pair<float, float> > >::iterator > dominadas;
 				//saber se está na zona de esclusao; se nao estiver, a insere
 				for (list<pair<int*, pair<float, float> > >::iterator it2=solucoes.begin(); it2!=solucoes.end(); it2++){
@@ -468,7 +467,7 @@ list < pair<int*, pair<float, float> > >  phase2KB(Grafo *g, list< pair<int*, pa
 		yq = ponto_q.second.second;
 		float minnnn = INT_MAX;
 		pair<int*, pair<float, float> > inittt; 
-		for (int lklkl = 0; lklkl<8; lklkl++){
+		for (int lklkl = 0; lklkl<5; lklkl++){
 			Aresta **arestasPtr = g->getAllArestasPtr();
 			mergesort(0, (yp-yq),(xq-xp), 0, arestasPtr, g->getQuantArestas(),3);
 			float num = ((float)(rand()%1001))/10000.0;
