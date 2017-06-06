@@ -58,11 +58,72 @@
 #include <stdio.h>
 using namespace std;
 
-// TODO : deve ser melhor que o Transgenético
-// TODO : ver tempo e quantidade para instâncias grandes
+// TODO : ver instâncias concave
 
-#define maxSizePath 20 // TODO
-#define maxVizinhos 10
+#define maxSizePath 5
+#define maxVizinhos 4
+#define maxSuportadas 70
+#define maxSearch 10
+
+typedef struct { // pra calcular as solucoes suportadas
+	pair<int*, pair<float, float> > s1; 
+	pair<int*, pair<float, float> > s2; 
+} ItemFila;
+
+
+/*Esta funcao é adptada do algoritmo propsoto na dissertacao de Monteiro (2010)
+O procedimento usa uma filha pra obter solucoes suportadas bem distribuidas na fronteira de pareto
+O procedimento termina ou quando o limite de iteracoes é atingido ou quando acaba as solucoes suportadas*/
+list <pair<int*, pair<float, float> > >  suportadas(Grafo *g){
+	list <pair<int*, pair<float, float> > > setSolucoes;
+	Aresta **arestasPtr = g->getAllArestasPtr();
+	queue <ItemFila> fila;
+	int *s1 = new int[g->getQuantVertices()-1]; // primeiro objetivo
+	float x=0, y=0; // objetivos
+	mergesort(0, 0, 0, 0, arestasPtr, g->getQuantArestas(),1);
+	kruskal(g, arestasPtr,s1,x, y); // arvore para o primeiro objetivo
+	pair<int*, pair<float, float> > ps1 = make_pair(s1, make_pair(x,y));
+	setSolucoes.push_back(ps1);
+	int* s2 = new int[g->getQuantVertices()-1];
+	mergesort(0, 0, 0, 0, arestasPtr, g->getQuantArestas(),2);
+	x=0, y=0;
+	kruskal(g, arestasPtr, s2,x, y); // arvore para o segundo objetivo
+	pair<int*, pair<float, float> > ps2 = make_pair(s2, make_pair(x,y));
+	setSolucoes.push_back(ps2);
+	fila.push((ItemFila){ps1, ps2});
+
+	int cont=2; 
+	while (fila.size()!=0){
+		ItemFila item = fila.front();
+		fila.pop();
+		pair<int*, pair<float, float> > s1 = item.s1;
+		pair<int*, pair<float, float> > s2 = item.s2;
+
+
+		float xl = s1.second.first;
+		float yl = s1.second.second;
+		float xll = s2.second.first;
+		float yll = s2.second.second;
+
+		int *A2 = new int[g->getQuantVertices()-1];
+		mergesort(xl, yl, xll, yll, arestasPtr, g->getQuantArestas(),3);
+		x=0; y=0;
+		kruskal(g, arestasPtr,A2,x, y);
+
+		if (x!=xl && x!=xll && y!=yl && y!=yll){
+			pair<int*, pair<float, float> > novo = make_pair(A2, make_pair(x, y));
+				
+			if (cont<maxSuportadas){
+				setSolucoes.push_back(novo);
+				cont++;
+			}
+			fila.push((ItemFila){s1, novo});
+			fila.push((ItemFila){novo, s2});
+		}
+
+	}
+	return setSolucoes;
+}
 
 int idMST = 0;
 map <int, Aresta *> arestas;
@@ -74,169 +135,53 @@ bool isEgalObjetive(float t1_peso1, float t1_peso2, float t2_peso1, float t2_pes
 	return equalfloat(t1_peso1,t2_peso1) && equalfloat(t2_peso2,t1_peso2);
 }
 
-
-void borderSearch(Grafo *g, list<pair<int*, pair<float, float> > > &resul, pair<int*, pair<float, float> > &sl, pair<int*, pair<float, float> > &sll){ 
-	
-	int *s1 = sl.first;
-	int *s2 = sll.first;
-	int * A2;
-	stack<pair<int*,int*> >  pilha;
-	stack<pair<float, float> > pilhaX;
-	stack<pair<float, float> > pilhaY;
-	stack<pair<int,list<pair<int*, pair<float, float> > >::iterator> >  pilhaIt; // 1 : antes ; 2 : depois
-	
-
-	pilha.push(make_pair(s1, s2));
-	pilhaX.push(make_pair(sl.second.first, sll.second.first)); //x's da primeira e sefunda solucao
-	pilhaY.push(make_pair(sl.second.second, sll.second.second)); //y's da primeira e segunda solucao
-	pilhaIt.push(make_pair(2, resul.begin()));
-
-
-	while (pilha.size()!=0){
-		pair<int*,int*> sols = pilha.top();
-		pilha.pop();
-		s1 = sols.first;
-		s2 = sols.second;
-		pair<int,list<pair<int*, pair<float, float> > >::iterator>  it = pilhaIt.top();
-		pilhaIt.pop();
-
-		pair<float, float> xs = pilhaX.top();
-		pair<float, float> ys =  pilhaY.top();
-		float xl = xs.first;
-		float yl = ys.first;
-		float xll = xs.second;
-		float yll = ys.second;
-
-		pilhaX.pop();
-		pilhaY.pop();
-
-		A2 = new int[g->getQuantVertices()-1];
-		mergesort(xl, yl, xll, yll, arestasPtr, g->getQuantArestas(),3);
-		float x, y;
-		kruskal(g, arestasPtr,A2,x, y);
-		if( !( (isEgalObjetive(x, y, xl, yl)) || (isEgalObjetive(x, y, xll, yll)) ) ){
-			if (it.first == 1){ // antes
-				resul.insert(it.second, make_pair(A2, make_pair(x,y)));//A2); 
-				it.second--;// it agora aponta para o item  A2
-			} else if (it.first == 2) { // depois
-				it.second++;
-				resul.insert(it.second, make_pair(A2, make_pair(x,y)));
-				it.second--;// it agora aponta para o item  A2
-			}
-
-			pilha.push(make_pair(A2, s2)); // L''
-			pilhaIt.push(make_pair(2,it.second)); 
-			pilhaX.push(make_pair(x, xll));
-			pilhaY.push(make_pair(y, yll));
-
-			pilha.push(make_pair(s1, A2));  // L'
-			pilhaIt.push(make_pair(1,it.second)); 
-			pilhaX.push(make_pair(xl, x));
-			pilhaY.push(make_pair(yl, y));
-			
-		}
-	
-	}
-}
-
-
-/*
-#### Primeira fase ####
-# A funcao phase1GM retorna a lista de arvores (elementos do espaço de decisao)
-# Cada arvore é representada simplismente como um vetor de 0s ou 1s.
-# Se o i-ésimo elemento do vetor é 1, entao a aresta de id=i está presente na arvore. Sera 0 caso contrario 
-# Portanto, retorna uma lista de inteiros
-*/
-list <pair<int*, pair<float, float> > > phase1GM(Grafo *g){
-	list< pair<int*, pair<float, float> > > result;
-	int *s1 = new int[g->getQuantVertices()-1];
-	float xr, yr; // nao utilisazado nesse caso
-	mergesort(0, 0, 0, 0, arestasPtr, g->getQuantArestas(),1);
-	kruskal(g, arestasPtr,s1,xr, yr); // arvore para o primeiro objetivo
-	pair<int*, pair<float, float> > ps1 = make_pair(s1, make_pair(xr,yr));
-	result.push_back(ps1);
-	int* s2 = new int[g->getQuantVertices()-1];
-	mergesort(0, 0, 0, 0, arestasPtr, g->getQuantArestas(),2);
-	float xr2, yr2;
-	kruskal(g, arestasPtr, s2,xr2, yr2); // arvore para o segundo objetivo
-	pair<int*, pair<float, float> > ps2 = make_pair(s2, make_pair(xr2,yr2));
-	
-	if (isEgalObjetive(xr, yr, xr2, yr2)==false){
-		borderSearch(g, result, ps1, ps2);
-		result.push_back(ps2);
-	}
-	return result;
- }
-
-
-/* 	
-	uma arvore s' é vizinha de s sse elas diferem em somente uma aresta
-	retorna apenas solucoes que podem ser utilizadas no proximo passo do PR. max = maxSolucoes
-	Esta funcao ja atualiza o vetor solucoes
-*/
-list <pair<int*,  pair<float, float> > > vizinhos(Grafo *g, pair<int*, pair<float, float> > sol, float cateto_x, float cateto_y, list <pair<int*, pair<float, float> > > &solucoes, int quantSols, int prob){
+list <pair<int*,  pair<float, float> > > vizinhos2(Grafo *g, pair<int*, pair<float, float> > sol, float cateto_x, float cateto_y, float escalarX, float escalarY){
 	list <pair<int*,  pair<float, float> > > retorno; /*possiveis candidatos*/
-	for (int a = 0; a<g->getQuantVertices()-1 && retorno.size()<quantSols ; a++){ // n-1 (aresta que sairá)
-		int dof = (rand()%101);
-		if (g->getStatus(sol.first[a])==0 && dof<=20){ // so sai se for opcional. Se for obrigatoria, nao sai
-			int idArestaSai = sol.first[a];
-			Conjunto conjunto(g->getQuantVertices());
-			for (int i = 0; i <g->getQuantVertices()-1; i++){
-				if (i!=a){
-					conjunto.union1(g->getArestas(sol.first[i])->getOrigem(), g->getArestas(sol.first[i])->getDestino());	
-				}
+	int custo = sol.second.first*escalarX + sol.second.second*escalarY; // int mesmo
+	for (int viz=0; viz<maxVizinhos && custo!=0; viz++){
+		float randdd = rand()%custo;
+		int idEscolhidaSair=0;
+		int soma = 0;
+		Conjunto conjunto(g->getQuantVertices());
+		for (int aa = 0; aa<g->getQuantVertices()-1; aa++){
+			int custoAresta = g->getArestas(sol.first[aa])->getPeso1()*escalarX + g->getArestas(sol.first[aa])->getPeso2()*escalarY;
+			if (randdd>=soma && randdd<custoAresta+soma){ // aresta foi escolhida
+				idEscolhidaSair = sol.first[aa];
+			} else { // aresta fica, ou seja, nao foi escolhida pra sair
+				conjunto.union1(g->getArestas(sol.first[aa])->getOrigem(), g->getArestas(sol.first[aa])->getDestino());	
 			}
-			int peso1base = sol.second.first - g->getArestas(sol.first[a])->getPeso1();
-			int peso2base = sol.second.second - g->getArestas(sol.first[a])->getPeso2();
+			soma+=custoAresta;
+		}
+		if (g->getStatus(idEscolhidaSair)==0){
+			
+			int peso1base = sol.second.first  - g->getArestas(idEscolhidaSair)->getPeso1();
+			int peso2base = sol.second.second - g->getArestas(idEscolhidaSair)->getPeso2();
+			///cout<<"Sai aresta id="<<idEscolhidaSair<<" Peso1 = "<<g->getArestas(idEscolhidaSair)->getPeso1()<<" Peso2 = "<<g->getArestas(idEscolhidaSair)->getPeso2()<<endl;
 			vector<int> arestasPossiveis;
-		 	for (int i = 0; i <g->getQuantArestas() && retorno.size()<quantSols; i++){
-		 		int odfff=(rand()%101);
-		 		if (i!=idArestaSai && odfff<=20){
+			for (int i = 0; i <g->getQuantArestas(); i++){
+		 		if (sol.first[i]!=idEscolhidaSair){
 		 			if (conjunto.compare(g->getArestas(i)->getOrigem(), g->getArestas(i)->getDestino())==false){
 		 				int newPeso1 = peso1base+g->getArestas(i)->getPeso1();
 		 				int newPeso2 = peso2base+g->getArestas(i)->getPeso2();
 		 				// so insere se o vizinho nao for dominado por sol. Nao veriica se sol é dominado...
 		 				if ( (sol.second.first <= newPeso1 &&  sol.second.second <= newPeso2 && (sol.second.first < newPeso1 ||  sol.second.second < newPeso2))==false){
 		 					if (newPeso1<cateto_x && newPeso2<cateto_y){ // garante que o vizinho esteja dentro do triângulo retângulo 
-		 						bool isdominada = false;
-		 						for (list<pair<int*, pair<float, float> > >::iterator it2=solucoes.begin(); it2!=solucoes.end() && isdominada == false; it2++){
-		 							if ((*it2).second.first<=newPeso1 && (*it2).second.second<=newPeso2 && ( (*it2).second.first<newPeso1 || (*it2).second.second<newPeso2)){
-		 								isdominada = true;
-		 							} else if ((*it2).second.first==newPeso1 && (*it2).second.second==newPeso2){
-		 								isdominada = true;
-		 							}
-		 						}	
-		 						vector< list<pair<int*, pair<float, float> > >::iterator > dominadas;
-		 						for (list<pair<int*, pair<float, float> > >::iterator it2=retorno.begin(); it2!=retorno.end() && isdominada == false; it2++){
-		 							if ((*it2).second.first<=newPeso1 && (*it2).second.second<=newPeso2 && ( (*it2).second.first<newPeso1 || (*it2).second.second<newPeso2)){
-		 								isdominada = true;
-		 							}else if ((*it2).second.first==newPeso1 && (*it2).second.second==newPeso2){
-		 								isdominada = true;
-		 							}
-		 							if (newPeso1<=(*it2).second.first && newPeso2<=(*it2).second.second && ( newPeso1<(*it2).second.first || newPeso2<(*it2).second.second)){
-		 								dominadas.push_back(it2); //se o vizinho domina algum outro vizinho
-									}
-		 						}
-		 						if (isdominada==false){
-			 						int *base = new int[g->getQuantVertices()-1];
-				 					for (int are = 0; are <g->getQuantVertices()-1; are++){
-				 						if (are == a) base[are] = i;
-				 						else base[are] = sol.first[are];
-				 					} 
-				 					for (int iii=0; iii<dominadas.size(); iii++){
-				 						delete[] (*dominadas[iii]).first;
-					 					retorno.erase(dominadas[iii]); // retira as possiveis solucoes dominadas pela novas
-					
-				 					}
-				 					retorno.push_back(make_pair(base, make_pair(newPeso1,newPeso2)));
-				 					if (retorno.size()>=quantSols) break;
-				 				}	
+		 						arestasPossiveis.push_back(i);
 		 					}
 		 				}
 		 			}
-		 		} 
+		 		}
 		 	}
-		 }
+		 	if (arestasPossiveis.size()>0){
+		 		int idEscolhidaEntra = arestasPossiveis[rand()%arestasPossiveis.size()];
+		 		int *base = new int[g->getQuantVertices()-1];
+				for (int are = 0; are <g->getQuantVertices()-1; are++){
+				 	if (sol.first[are] == idEscolhidaSair) base[are] = idEscolhidaEntra;
+				 	else base[are] = sol.first[are];
+				} 	
+				retorno.push_back(make_pair(base, make_pair(peso1base+g->getArestas(idEscolhidaEntra)->getPeso1(),peso2base+g->getArestas(idEscolhidaEntra)->getPeso2())));
+		 	}
+		} //else fora
 	}
 	return retorno;
 }
@@ -244,127 +189,272 @@ list <pair<int*,  pair<float, float> > > vizinhos(Grafo *g, pair<int*, pair<floa
 /*Quantidade de arestas que existem em xi (origem), mas que nao existem em xt(target). 
 Ou seja, a quantidade de arestas que restam à xi para chegar até xt*/
 int distance(Grafo *g, pair<int*, pair<float, float> > s1, pair<int*, pair<float, float> > s2){
-	// int cont = 0;
-	// bool tem = false;
-	// if (xi.second.first == xt.second.first && xi.second.second == xt.second.second) return 0;
-	// for (int i=0; i<g->getQuantVertices()-1; i++){ //arestas em xi
-	// 	tem = false;
-	// 	for (int t=0; t<g->getQuantVertices()-1; t++){ // arestas em xt
-	// 		if (xt.first[t] == xi.first[i]) {
-	// 			tem = true; break;
-	// 		}
-	// 	}
-	// 	if (tem==false) cont++;
-	// }
-	// return cont;
+	
 	return sqrt((s1.second.first - s2.second.first)*(s1.second.first - s2.second.first) + (s1.second.second - s2.second.second)*(s1.second.second - s2.second.second));
 }
 
-void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<int*, pair<float, float> > x_target, list <pair<int*, pair<float, float> > > &solucoes, float cateto_x, float cateto_y, float escalarX, float escalarY, int maxSolPorTriangulo, int prob){
+// void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<int*, pair<float, float> > x_target, list <pair<int*, pair<float, float> > > &solucoes, float cateto_x, float cateto_y, float escalarX, float escalarY){
+// 	pair<int*, pair<float, float> > x_start = make_pair(new int[g->getQuantVertices()-1], make_pair(x_startaux.second.first, x_startaux.second.second));
+// 	for (int i=0; i<g->getQuantVertices()-1; i++) x_start.first[i] = x_startaux.first[i];
+// 	float delta;
+// 	int cont = 0;
+// 	delta = distance(g, x_start, x_target);
+// 	do {
+// 		//delta = distance(g, x_start, x_target); 
+// 		if (delta>=1 && cont<maxSizePath ){ //&& solucoes.size()<maxSolPorTriangulo){
+// 			list <pair<int*,  pair<float, float> > > viz = vizinhos2(g, x_start,cateto_x, cateto_y, escalarX,escalarY); // somente os vizinhos dentro do triangulo formado pelos catetos x,y
+// 			vector <pair <int , pair<int*, pair<float, float> > > > prox_start;
+// 			for (list<pair<int*, pair<float, float> > >::iterator viz_it=viz.begin(); viz_it!=viz.end(); viz_it++){ // coloca os vizinhos em retorno
+// 				bool ha = false;
+// 				float novoDelta = distance(g, *viz_it, x_target);
+// 				if (novoDelta<=delta-1){
+// 					prox_start.push_back(make_pair(novoDelta, (*viz_it)));
+// 				}
+// 				vector< list<pair<int*, pair<float, float> > >::iterator > dominadas;
+// 				//saber se está na zona de esclusao; se nao estiver, a insere
+// 				for (list<pair<int*, pair<float, float> > >::iterator it2=solucoes.begin(); it2!=solucoes.end(); it2++){
+// 					if (((*viz_it).second.first ==(*it2).second.first && (*viz_it).second.second == (*it2).second.second)){
+// 						ha = true;
+// 						break;
+// 					} else if (((*it2).second.first<=(*viz_it).second.first && (*it2).second.second<=(*viz_it).second.second && ((*it2).second.first<(*viz_it).second.first || (*it2).second.second<(*viz_it).second.second))){
+// 						ha = true;
+// 						break;
+// 					} 
+// 					if ((*viz_it).second.first<=(*it2).second.first && (*viz_it).second.second<=(*it2).second.second && ((*viz_it).second.first<(*it2).second.first || (*viz_it).second.second<(*it2).second.second)){
+// 						dominadas.push_back(it2); //se o vizinho domina alguem da lista
+// 					}
+// 				}
+// 				if (ha==false){
+// 					for (int iii=0; iii<dominadas.size(); iii++){
+// 					// 	::delete[] (*dominadas[iii]).first;
+// 					 	solucoes.erase(dominadas[iii]); // retira as possiveis solucoes dominadas pela novas
+// 					 }
+// 					solucoes.push_back((*viz_it));
+// 				} //else if ((prox_start.second.first != (*viz_it).second.first || prox_start.second.second != (*viz_it).second.second) && (x_start.second.first != (*viz_it).second.first || x_start.second.second != (*viz_it).second.second)) {
+// 					//delete[] (*viz_it).first;
+// 				//}
+// 				//}
+// 			}
+// 			//cout<<"\t\t solucoes.size() antes = "<<solucoes.size()<<endl;
+// 			if (prox_start.size()>0){
+// 				int inx_random = rand()%prox_start.size();
+// 				x_start = prox_start[inx_random].second;
+// 				delta = prox_start[inx_random].first;
+// 				// if (min_delta==delta) delta--;
+// 				// else delta = min_delta;
+// 				cont++;
+// 			} else break;
+// 		} else if (cont>=maxSizePath){ //|| solucoes.size()>=maxSolPorTriangulo) {
+// 			break;
+// 		}
+// 	}while(delta>1);
+// 	cout<<"\t\tcont = "<<cont<<endl;
+// 	//cout<<"\t\tdelta = "<<delta<<endl;
+// }
+
+
+
+vector<pair <Aresta* , int > > restricted_list(int sizeArestas, float lambda1,float lambda2, Aresta** presort, float num, Conjunto &conjunto){
+	Aresta ** L = presort;
+	vector<pair <Aresta* , int > > ret;
+	bool first = false;
+	float w = -1;
+	for (int i=0; i<sizeArestas; i++){
+		if (L[i] != NULL){
+			if (first==false) {
+				w = L[i]->getPeso1()*(lambda1) + L[i]->getPeso2()*(lambda2);
+				first = true;
+			}
+			float peso = L[i]->getPeso1()*(lambda1) + L[i]->getPeso2()*(lambda2);
+			if (peso<=(1+num)*w){
+				if (conjunto.compare(L[i]->getOrigem(), L[i]->getDestino())==false){
+					ret.push_back(make_pair(L[i],i));
+				} else {
+					presort[i] = NULL;
+				}
+			}
+		}
+	}
+	return ret;
+}
+
+pair<int*, pair<float, float> > rmcKruskal(Grafo *g, float lambda1, float lambda2,Aresta** presort, float num){
+	pair<int*, pair<float, float> > ret = make_pair(new int[g->getQuantVertices()-1], make_pair(0,0)); 
+	int cont = 0;
+	Conjunto conjunto(g->getQuantVertices());
+	for (int i=0; i<g->getQuantArestas(); i++){
+		if (g->getStatus(presort[i]->getId())==1){ // se for obrigatoria
+			Aresta *a_new = presort[i];
+			ret.first[cont++]  = a_new->getId(); 
+			ret.second.first  +=a_new->getPeso1();
+			ret.second.second +=a_new->getPeso2();
+			conjunto.union1(a_new->getOrigem(), a_new->getDestino());
+			presort[i] = NULL;
+		}
+	}
+	while (cont<g->getQuantVertices()-1){
+		vector<pair <Aresta* , int > > restrictas = restricted_list(g->getQuantArestas(), lambda1,lambda2, presort, num,conjunto);
+		//cout<<"restrictas.size() = "<<restrictas.size()<<endl;
+		if (restrictas.size()>0){
+			int pos = rand()%restrictas.size();
+			Aresta *a_new = restrictas[pos].first;
+				conjunto.union1(a_new->getOrigem(), a_new->getDestino());
+				ret.first[cont++] = a_new->getId(); 
+				ret.second.first+=a_new->getPeso1();
+				ret.second.second+=a_new->getPeso2();
+				presort[restrictas[pos].second] = NULL;
+		}
+	}
+
+	return ret;
+}
+
+//edita sol com uma solucao que minimiza o custo escalarizado
+void localSearch(Grafo *g, pair<int*, pair<float, float> >  &sol, float cateto_x, float cateto_y, float escalarX, float escalarY){
+	//cout<<"Busca local"<<endl;
+	for (int i=0; i<maxSearch; i++){
+		list <pair<int*,  pair<float, float> > > viz = vizinhos2(g, sol ,cateto_x, cateto_y, escalarX,escalarY);
+		float min = sol.second.first*escalarX + sol.second.second*escalarY;
+		list<pair<int*, pair<float, float> > >::iterator it;
+		for (list<pair<int*, pair<float, float> > >::iterator it3=viz.begin(); it3!=viz.end(); it3++){
+			float custo = (*it3).second.first*escalarX + (*it3).second.second*escalarY;
+			if (custo<min){
+				min = custo;
+				it = it3;
+			}
+		}
+		if (min!=(sol.second.first*escalarX + sol.second.second*escalarY)){
+			for (int kgo = 0; kgo<g->getQuantVertices()-1; kgo++){
+				sol.first[kgo] = (*it).first[kgo];
+			}
+			//cout<<"melhorou"<<endl;
+			sol.second.first = (*it).second.first;
+			sol.second.second = (*it).second.second;
+		}
+	}
+
+}
+
+void path_relinking(Grafo *g, pair<int*, pair<float, float> > x_startaux, pair<int*, pair<float, float> > x_target, list <pair<int*, pair<float, float> > > &solucoes, float cateto_x, float cateto_y, float escalarX, float escalarY){
 	pair<int*, pair<float, float> > x_start = make_pair(new int[g->getQuantVertices()-1], make_pair(x_startaux.second.first, x_startaux.second.second));
 	for (int i=0; i<g->getQuantVertices()-1; i++) x_start.first[i] = x_startaux.first[i];
-	float delta;
+	int delta;
 	int cont = 0;
 	delta = distance(g, x_start, x_target);
 	do {
 		//delta = distance(g, x_start, x_target); 
-		if (delta>=1 && cont<maxSizePath && solucoes.size()<maxSolPorTriangulo){
-			list <pair<int*,  pair<float, float> > > viz = vizinhos(g, x_start,cateto_x, cateto_y,solucoes,maxSolPorTriangulo, prob); // somente os vizinhos dentro do triangulo formado pelos catetos x,y
-			//float min = INT_MAX;
-			//int min_delta = delta;
-			//pair<int*, pair<float, float> > prox_start;
-			// cout<<"\t\t viz.size() = "<<viz.size()<<endl;
-			// cout<<"\t\t solucoes.size() antes = "<<solucoes.size()<<endl;
-			vector <pair <int , pair<int*, pair<float, float> > > > prox_start;
+		if (delta>=1 && cont<maxSizePath){
+			//cout<<"cont = "<<cont<<endl;
+			list <pair<int*,  pair<float, float> > > viz = vizinhos2(g, x_start,cateto_x, cateto_y, escalarX,escalarY); // somente os vizinhos dentro do triangulo formado pelos catetos x,y
+			float min = INT_MAX;
+			int min_delta = delta;
+			pair<int*, pair<float, float> > prox_start;
 			for (list<pair<int*, pair<float, float> > >::iterator viz_it=viz.begin(); viz_it!=viz.end(); viz_it++){ // coloca os vizinhos em retorno
-				bool ha = false;
-				float novoDelta = distance(g, *viz_it, x_target);
+				//bool ha = false;
+				int novoDelta = distance(g, *viz_it, x_target);
 				if (novoDelta<=delta-1){
-					// float custo = (*viz_it).second.first*escalarX + (*viz_it).second.second*escalarY;
-					// if (custo<min){
-					// 	min = custo;
-					// 	prox_start = (*viz_it);
-					// 	min_delta= novoDelta;
-					// }
-					prox_start.push_back(make_pair(novoDelta, (*viz_it)));
+					float custo = (*viz_it).second.first*escalarX + (*viz_it).second.second*escalarY;
+					if (custo<min){
+						min = custo;
+						prox_start = (*viz_it);
+						min_delta= novoDelta;
+					}
 				}
+			}
+			if (min!=INT_MAX){
+				x_start = prox_start;
+				localSearch(g,x_start, cateto_x, cateto_y, escalarX, escalarY);
+				bool ha = false;
+				delta = distance(g, x_start, x_target);
 				vector< list<pair<int*, pair<float, float> > >::iterator > dominadas;
 				//saber se está na zona de esclusao; se nao estiver, a insere
 				for (list<pair<int*, pair<float, float> > >::iterator it2=solucoes.begin(); it2!=solucoes.end(); it2++){
-					if (((*viz_it).second.first ==(*it2).second.first && (*viz_it).second.second == (*it2).second.second)){
+					if ((x_start.second.first ==(*it2).second.first && x_start.second.second == (*it2).second.second)){
 						ha = true;
 						break;
-					} else if (((*it2).second.first<=(*viz_it).second.first && (*it2).second.second<=(*viz_it).second.second && ((*it2).second.first<(*viz_it).second.first || (*it2).second.second<(*viz_it).second.second))){
+					} else if (((*it2).second.first<=x_start.second.first && (*it2).second.second<=x_start.second.second && ((*it2).second.first<x_start.second.first || (*it2).second.second<x_start.second.second))){
 						ha = true;
 						break;
 					} 
-					if ((*viz_it).second.first<=(*it2).second.first && (*viz_it).second.second<=(*it2).second.second && ((*viz_it).second.first<(*it2).second.first || (*viz_it).second.second<(*it2).second.second)){
+					if (x_start.second.first<=(*it2).second.first && x_start.second.second<=(*it2).second.second && (x_start.second.first<(*it2).second.first || x_start.second.second<(*it2).second.second)){
 						dominadas.push_back(it2); //se o vizinho domina alguem da lista
 					}
-
 				}
 				if (ha==false){
 					for (int iii=0; iii<dominadas.size(); iii++){
 					// 	::delete[] (*dominadas[iii]).first;
 					 	solucoes.erase(dominadas[iii]); // retira as possiveis solucoes dominadas pela novas
 					 }
-					solucoes.push_back((*viz_it));
-				} //else if ((prox_start.second.first != (*viz_it).second.first || prox_start.second.second != (*viz_it).second.second) && (x_start.second.first != (*viz_it).second.first || x_start.second.second != (*viz_it).second.second)) {
-					//delete[] (*viz_it).first;
-				//}
-				//}
-			}
-			//cout<<"\t\t solucoes.size() antes = "<<solucoes.size()<<endl;
-			if (prox_start.size()>0){
-				int inx_random = rand()%prox_start.size();
-				x_start = prox_start[inx_random].second;
-				delta = prox_start[inx_random].first;
-				// if (min_delta==delta) delta--;
-				// else delta = min_delta;
+					solucoes.push_back(x_start);
+				} 
 				cont++;
 			} else break;
-		} else if (cont>=maxSizePath || solucoes.size()>=maxSolPorTriangulo){ //|| solucoes.size()>=maxSolPorTriangulo) {
+		} else if (cont>=maxSizePath) {
 			break;
 		}
 	}while(delta>1);
 	cout<<"\t\tcont = "<<cont<<endl;
 }
 
-bool compare(pair<int*, pair<float, float> > p1, pair<int*, pair<float, float> > p2){
- 	float escl1 = p1.second.first*(yp-yq)+p1.second.second*(xq-xp);
- 	float escl2 = p2.second.first*(yp-yq)+p2.second.second*(xq-xp);
-	return (escl1<escl2);
+
+/* Basseur, Seynhanave e Talbi (2005) sugerem o PLS apos o PR*/
+void PLS(Grafo *g, list <pair<int*, pair<float, float> > > &solucoes, float cateto_x, float cateto_y, float escalarX, float escalarY){
+	
+	for (int i=0; i<maxSearch; i++){
+		list <pair<int*,  pair<float, float> > > liii;
+		for (list<pair<int*, pair<float, float> > >::iterator it2=solucoes.begin(); it2!=solucoes.end(); it2++){
+			list <pair<int*,  pair<float, float> > > viz = vizinhos2(g, *it2 ,cateto_x, cateto_y, escalarX,escalarY);
+			liii.splice(liii.end(), viz);
+		}
+
+		for (list<pair<int*, pair<float, float> > >::iterator it3=liii.begin(); it3!=liii.end(); it3++){
+			bool ha=false;
+			vector< list<pair<int*, pair<float, float> > >::iterator > dominadas;
+				
+			for (list<pair<int*, pair<float, float> > >::iterator it4=solucoes.begin(); it4!=liii.end(); it4++){ // retira os dominados entre si
+				if ((*it4).second.first <= (*it3).second.first && (*it4).second.second <= (*it3).second.second && ((*it4).second.first < (*it3).second.first || (*it4).second.second < (*it3).second.second)){
+					ha=true;
+					break;
+				} else if ((*it4).second.first == (*it3).second.first && (*it4).second.second == (*it3).second.second){
+					ha=true;
+					break;
+				} else if ((*it3).second.first <= (*it4).second.first && (*it3).second.second <= (*it4).second.second && ((*it3).second.first < (*it4).second.first || (*it3).second.second < (*it4).second.second)){
+					dominadas.push_back(it4);
+				}
+			}
+
+			if (ha==false){
+				for (int iii=0; iii<dominadas.size(); iii++){
+					 solucoes.erase(dominadas[iii]); // retira as possiveis solucoes dominadas pela novas
+				}
+				solucoes.push_back((*it3));
+			} else {
+				//deleta
+			}
+		}
+
+	}
+	
+
 }
+
+bool compare(pair<int*, pair<float, float> > p1, pair<int*, pair<float, float> > p2){
+ 	return (p1.second.first<p2.second.first) || (p1.second.first==p2.second.first && p1.second.second<=p2.second.second);
+}
+
+
 
 // /* 
 // Recebe o grafo e a lista de solucoes soportads (as extremas do eixo convexo) 
 // Retorna a lista de solucoes nao-suportadas (aquelas que estao dentro de um triângulo formado por duas soluceos extremas)
 // Assim, teremos separadas as solucoes suportadas e nao suportadas
 // */
-list < pair<int*, pair<float, float> > >  phase2KB(Grafo *g, list< pair<int*, pair<float, float> > > extremas){
+list < pair<int*, pair<float, float> > >  phase2KB(Grafo *g, list< pair<int*, pair<float, float> > > &extremas){
+	extremas.sort(compare);
 	list< pair<int*, pair<float, float> > > noSoportadas; // resultado a ser retornado
 	list< pair<int*, pair<float, float> > >::iterator it = extremas.begin(); 
 	int contador = 0;
 	int size = extremas.size();
-	float areaTotal = 0;
-	while (contador<size-1){
-		pair<int*, pair<float, float> > ponto_p = *(it);
-		pair<int*, pair<float, float> > ponto_q = *(++it);
-		int *p = ponto_p.first; 
-		int *q = ponto_q.first;
-		
-		xp = ponto_p.second.first;
-		yp = ponto_p.second.second;
-		xq = ponto_q.second.first;
-		yq = ponto_q.second.second;
-
-		float area = (((xq-xp)*(yp-yq))/2.0);
-		areaTotal+=area;
-		contador++;
-	}
-	contador = 0;
-	it = extremas.begin(); 
-	float toalprob = 0;
 	while (contador<size-1){
 		list< pair<int*, pair<float, float> > > noSuportadasPQ;
 		pair<int*, pair<float, float> > ponto_p = *(it);
@@ -376,18 +466,67 @@ list < pair<int*, pair<float, float> > >  phase2KB(Grafo *g, list< pair<int*, pa
 		yp = ponto_p.second.second;
 		xq = ponto_q.second.first;
 		yq = ponto_q.second.second;
-
-		float area = (((xq-xp)*(yp-yq))/2.0);
-		int prob = (area*100)/areaTotal;
-		int quantSols = 2000*prob/100;
-		//cout<<"sols triângulo "<<contador<<" : "<<quantSols<<endl;
-		if (quantSols>0){
-			path_relinking(g, ponto_p, ponto_q, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp), quantSols,prob);
-			//cout<<"\t\t noSuportadasPQ.size() = "<<noSuportadasPQ.size()<<endl;;
-			path_relinking(g, ponto_q, ponto_p, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp), quantSols,prob);
-			noSoportadas.splice(noSoportadas.end(), noSuportadasPQ);
+		float minnnn = INT_MAX;
+		pair<int*, pair<float, float> > inittt; 
+		for (int lklkl = 0; lklkl<8; lklkl++){
+			Aresta **arestasPtr = g->getAllArestasPtr();
+			mergesort(0, (yp-yq),(xq-xp), 0, arestasPtr, g->getQuantArestas(),3);
+			float num = ((float)(rand()%1001))/10000.0;
+			pair<int*, pair<float, float> > tree = rmcKruskal(g, (yp-yq),(xq-xp), arestasPtr,num);
+			if (tree.second.first<xq && tree.second.second<yp) {
+				localSearch(g,tree, xq, yp, (yp-yq), (xq-xp));
+				bool ha = false;
+				vector< list<pair<int*, pair<float, float> > >::iterator > dominadas;
+				for (list<pair<int*, pair<float, float> > >::iterator it2=noSuportadasPQ.begin(); it2!=noSuportadasPQ.end(); it2++){
+					if ((tree.second.first ==(*it2).second.first && tree.second.second == (*it2).second.second)){
+						ha = true;
+						break;
+					} else if (((*it2).second.first<=tree.second.first && (*it2).second.second<=tree.second.second && ((*it2).second.first<tree.second.first || (*it2).second.second<tree.second.second))){
+						ha = true;
+						break;
+					} 
+					if (tree.second.first<=(*it2).second.first && tree.second.second<=(*it2).second.second && (tree.second.first<(*it2).second.first || tree.second.second<(*it2).second.second)){
+						dominadas.push_back(it2); //se o vizinho domina alguem da lista
+					}
+				}
+				if (ha==false){
+					for (int iii=0; iii<dominadas.size(); iii++){
+					// 	::delete[] (*dominadas[iii]).first;
+					 	noSoportadas.erase(dominadas[iii]); // retira as possiveis solucoes dominadas pela novas
+					 }
+					noSuportadasPQ.push_back(tree);
+					if ((tree.second.first*(yp-yq) + tree.second.second*(xq-xp))<minnnn){
+						minnnn=(tree.second.first*(yp-yq) + tree.second.second*(xq-xp));
+						inittt = tree;
+					}
+				}
+			}
 		}
-		cout<<"noSuportadas.size() = "<<noSoportadas.size()<<endl;
+		if (minnnn!=INT_MAX){
+			cout<<"Triângulo "<<contador<<endl;
+			path_relinking(g, inittt, ponto_q, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp));
+			path_relinking(g, ponto_q, inittt, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp));
+			
+			path_relinking(g, inittt, ponto_p, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp));
+			path_relinking(g, ponto_p, inittt, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp));
+			// cout<<"Antes PLS = "<<noSuportadasPQ.size()<<endl;
+			// PLS(g, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp));
+			// cout<<"Depois PLS = "<<noSuportadasPQ.size()<<endl;
+		} //else {
+		// 	path_relinking(g, ponto_p, ponto_q, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp));
+		// 	path_relinking(g, ponto_q, ponto_p, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp));
+			
+		// }
+
+		
+		// 	cout<<"\t\tArea = "<<(yp-yq)*(xq-xp)/2<<endl;
+		// 	path_relinking(g, ponto_p, ponto_q, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp));
+		// 	path_relinking(g, ponto_q, ponto_p, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp));
+		// 	//PLS(g, noSuportadasPQ, xq, yp, (yp-yq), (xq-xp));
+		// 	cout<<"noSuportadasPQ.size() = "<<noSuportadasPQ.size()<<endl;
+			noSoportadas.splice(noSoportadas.end(), noSuportadasPQ);
+			
+		// cout<<"noSuportadas.size() = "<<noSoportadas.size()<<endl;
 
 		contador++;
 
@@ -426,8 +565,8 @@ int main(int argc, const char * argv[]) {
 	}
 	int nA = id; // quantidade de arestas do grafo	
 	
-	my_grafo.excluiProibidas(); // primeiro, excluimos as proibidas
-	my_grafo.updateIndex(); // depois, atualizamos os idexes das arestas no map
+	 my_grafo.excluiProibidas(); // primeiro, excluimos as proibidas
+	 my_grafo.updateIndex(); // depois, atualizamos os idexes das arestas no map
 	my_grafo.marcaObrigatorias(); // determinanmos as obrigatorias
 	nA= my_grafo.getQuantArestas();
 
@@ -435,7 +574,7 @@ int main(int argc, const char * argv[]) {
 	arestasPtr = my_grafo.getAllArestasPtr();
  	times(&tempsInit);
 
-	 list <pair<int*, pair<float, float> > > arvores = phase1GM(&my_grafo);
+	 list <pair<int*, pair<float, float> > > arvores = suportadas(&my_grafo);
 	
 	cout<<"Fim da primeira fase. Quantidade de solucoes suportadas : "<<arvores.size()<<endl;
 	

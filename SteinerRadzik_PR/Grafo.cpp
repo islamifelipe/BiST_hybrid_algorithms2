@@ -92,7 +92,7 @@ bool maior(Aresta *a, Aresta *b){
     if (a->getPeso2()==b->getPeso2()) return a->getId()>b->getId();
     return false;
 }
-// codigo adptado de Sourd and Spaanjard(2008)
+// codigo adaptado de Sourd and Spaanjard(2008)
 void Grafo::excluiProibidas(){
   int removidas = 0;
     bool *verticesVisitados = new bool[n];
@@ -141,7 +141,7 @@ void Grafo::excluiProibidas(){
 
 }
 
-// codigo adptado de Sourd and Spaanjard(2008)
+// codigo adaptado de Sourd and Spaanjard(2008)
 void Grafo::marcaObrigatorias(){
   int obrigatorias = 0;
     bool *verticesVisitados = new bool[n];
