@@ -34,11 +34,11 @@ using namespace std;
 
 // #define maxSizePath 5
 #define maxVizinhos 4
-#define maxSuportadas 70
-#define maxSearch 4
-#define maxSolInit 3
-#define maxIteracoes 6
-#define referenceSetSize 5
+#define maxSuportadas 90
+#define maxSearch 5
+#define maxSolInit 5
+#define maxIteracoes 25
+#define referenceSetSize 4
 #define referenceSetSize1 2 // referenceSetSize1 < referenceSetSize 
 
 typedef struct { // pra calcular as solucoes suportadas
@@ -340,16 +340,17 @@ list < pair<int*, pair<float, float> > > phase2KB(Grafo *g, list< pair<int*, pai
 			for (int i=0; i<populacao.size(); i++){
 				localSearch(g,populacao[i], xq, yp, (yp-yq), (xq-xp), noSuportadasPQ);
 			}
-			populacao.push_back(ponto_q);
-			populacao.push_back(ponto_p);
-			sort (populacao.begin(), populacao.end(), compare);
 			vector < pair<int*, pair<float, float> > > reference ;
+			populacao.push_back(ponto_p);
+			populacao.push_back(ponto_q);
 			if (populacao.size()<referenceSetSize){
 				reference = populacao;
-				cout<<"populacao.size() = "<<populacao.size()<<endl;
+				cout<<"menor  = "<<populacao.size()<<endl;
+				break;
 			} else {
+				sort (populacao.begin(), populacao.end(), compare);
 				reference = getReferenceSet(populacao);
-				cout<<"MEAIOR OK"<<endl;
+				cout<<"MEAIOR OK = "<< populacao.size()<<endl;
 			}
 			populacao.clear();
 			for (int i=0; i<reference.size()-1; i++){
