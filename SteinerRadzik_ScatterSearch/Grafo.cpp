@@ -1,20 +1,39 @@
 #include "Grafo.h"
 #include <iostream>
 #include <stack>
+#include <utility>      // std::pair
 using namespace std;
 
 Grafo::Grafo(){};
 Grafo::Grafo(int n1){
+  m=0;
 	n = n1;
 	lista_vertices = new Vertice*[n];
 	matrixArestas = new Aresta**[n];
+  status = new int[499500];
 	for (int i=0; i<n; i++){
 		matrixArestas[i] = new Aresta*[n];
 		for (int j=0; j<n; j++){
 			matrixArestas[i][j] = NULL;
 		}
 	}
+  status = new int[499500];
+  arestasByIndex = new Aresta*[499500];
+}
 
+void Grafo::setN(int n1){
+  m=0;
+  n = n1;
+  lista_vertices = new Vertice*[n];
+  matrixArestas = new Aresta**[n];
+  for (int i=0; i<n; i++){
+    matrixArestas[i] = new Aresta*[n];
+    for (int j=0; j<n; j++){
+      matrixArestas[i][j] = NULL;
+    }
+  }
+  status = new int[499500];
+  arestasByIndex = new Aresta*[499500];
 }
 
 void Grafo::addVertice(int id){
@@ -27,7 +46,8 @@ Vertice *Grafo::getVertice(int id){
 }
 
 Aresta *Grafo::addAresta(int id, int origem, int destino, float peso1, float peso2){
-	Aresta *nova = new Aresta(id, origem, destino, peso1, peso2);
+	m++;
+  Aresta *nova = new Aresta(id, origem, destino, peso1, peso2);
 	//arestasByIndex[id] = nova; // transferido pra Update
 	matrixArestas[origem][destino] = nova;
 	matrixArestas[destino][origem] = nova;
@@ -40,19 +60,15 @@ Aresta * Grafo::getArestas(int i){ /*retorna a primeira posição do vetor arestas
 	return arestasByIndex[i];
 }
 int Grafo::getQuantArestas(){
-	return arestasByIndex.size();
+	return m;
 }
-map <int, Aresta *> Grafo::get_allArestas(){
-	return arestasByIndex;
 
-}
 
 int Grafo::getQuantVertices(){	
 	return n;	
 }
 Aresta ** Grafo::getAllArestasPtr(){
-	Aresta **arestasPtr = new Aresta*[arestasByIndex.size()];
-	for (int i=0; i<arestasByIndex.size(); i++){
+	for (int i=0; i<m; i++){
 		arestasPtr[i] = arestasByIndex[i];
 	}
 	return arestasPtr;
@@ -63,6 +79,7 @@ int Grafo::getStatus(int i){
 }
 
 void Grafo::updateIndex(){
+  m =0;
 	int id = 0;
 	for (int i=0; i<n; i++){
 		for (int j=i+1; j<n; j++){
@@ -70,9 +87,11 @@ void Grafo::updateIndex(){
 				arestasByIndex[id] = matrixArestas[i][j];
 				arestasByIndex[id]->setId(id);
 				status[id++] = 0;
+        m++;
 			}
 		}
 	}
+  arestasPtr = new Aresta*[m];
 }
 //Ta bom, poderia implementar o operador <, eu sei. Mas deu preguiça
 bool menor(Aresta *a, Aresta *b){
@@ -142,7 +161,8 @@ void Grafo::excluiProibidas(){
 }
 
 // codigo adaptado de Sourd and Spaanjard(2008)
-void Grafo::marcaObrigatorias(){
+pair<int*, pair<float, float> > Grafo::marcaObrigatorias(int &obrigatorias2){
+  pair<int*, pair<float, float> > ret = make_pair(new int[n-1], make_pair(0,0)); 
   int obrigatorias = 0;
     bool *verticesVisitados = new bool[n];
     stack<int> pilha;
@@ -175,14 +195,20 @@ void Grafo::marcaObrigatorias(){
             }
             if (verticesVisitados[destino]==false && status[matrixArestas[origem][destino]->getId()] == 0){
               //cout<<origem<<" "<<destino<<" "<<matrixArestas[origem][destino]->getPeso1()<<" "<<matrixArestas[origem][destino]->getPeso2()<<endl;
+              ret.first[obrigatorias] = matrixArestas[origem][destino]->getId();
+              ret.second.first += matrixArestas[origem][destino]->getPeso1();
+              ret.second.second += matrixArestas[origem][destino]->getPeso2();
               obrigatorias++;
               status[matrixArestas[origem][destino]->getId()] = 1;
+
             } 
         } //end if (matrixArestas[origem][destino]!=NULL){
       }
     }
     delete[] verticesVisitados;
     cout<<obrigatorias<<" obrigatorias"<<endl;
+    obrigatorias2 = obrigatorias; //IMPORTANTE
+    return ret;
 
 }
 
