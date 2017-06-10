@@ -140,7 +140,7 @@ list <pair<int*,  pair<float, float> > > vizinhos2(pair<int*, pair<float, float>
 			///cout<<"Sai aresta id="<<idEscolhidaSair<<" Peso1 = "<<g.getArestas(idEscolhidaSair)->getPeso1()<<" Peso2 = "<<g.getArestas(idEscolhidaSair)->getPeso2()<<endl;
 			vector<int> arestasPossiveis;
 			for (int i = 0; i <g.getQuantArestas(); i++){
-		 		if (sol.first[i]!=idEscolhidaSair){
+		 		if (i!=idEscolhidaSair){
 		 			if (conjunto.compare(g.getArestas(i)->getOrigem(), g.getArestas(i)->getDestino())==false){
 		 				int newPeso1 = peso1base+g.getArestas(i)->getPeso1();
 		 				int newPeso2 = peso2base+g.getArestas(i)->getPeso2();

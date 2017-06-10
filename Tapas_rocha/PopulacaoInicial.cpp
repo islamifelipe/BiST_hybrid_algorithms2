@@ -102,11 +102,11 @@ vector<pair <Aresta* , int > > restricted_list(int sizeArestas, float lambda, Ar
 	return ret;
 }
 
-pair<int*, pair<float, float> > rmcKruskal(Grafo *g, float lambda,Aresta** presort, float num){
+pair<int*, pair<float, float> > rmcKruskal(Grafo *g, float lambda,Aresta** presort, float num,  int quantObrigatorias){
 	pair<int*, pair<float, float> > ret = make_pair(new int[g->getQuantVertices()-1], make_pair(0,0)); 
 	int cont = 0;
 	Conjunto conjunto(g->getQuantVertices());
-	for (int i=0; i<g->getQuantArestas(); i++){
+	for (int i=0; i<g->getQuantArestas() &&  quantObrigatorias>0; i++){
 		if (g->getStatus(presort[i]->getId())==1){ // se for obrigatoria
 			Aresta *a_new = presort[i];
 			ret.first[cont++]  = a_new->getId(); 

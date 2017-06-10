@@ -2,24 +2,22 @@
 #define _GRAFO_H_
 
 #include "Vertice.h"
-#include "margeSort.h"
 #include <map>
 #include <vector>
-#include <utility>      // std::pair
 
 class Grafo{
 	
 	private:
-		int n;
+		int n,m;
 		Vertice **lista_vertices; /*Lista (fixa) de vértice. É um vetor de ponteiros. Cada vértice possui uma lista de arestas adjacentes.*/
-		map <int, Aresta *> arestasByIndex; /*lista de todas as arestas do Grafo.*/
-		map <int, int> status;
+		Aresta ** arestasByIndex; /*lista de todas as arestas do Grafo.*/
+		int *status; // maximo 499500
 		// se 0, é opcional
 		// se 1, é obrigatoria
 		// nao há aresta proibida (todas sao excluida a priori)
-		vector< pair<float, Aresta** > > arestasEscalarizadas; //estrutura utilizada para as m^2 possiveis ordenacoes das arestas escalaizadas
-		// o float é o lambda entre 0 e 1 (inclusive). O peso é computado como lambda*peso1 + (1 - lambda)*peso2
+
 		Aresta *** matrixArestas; // matrixArestas[i][j] = ponteiro para objeto aresta
+		Aresta **arestasPtr;
 	public:
 		Grafo(int n1);
 		Grafo();
@@ -33,15 +31,12 @@ class Grafo{
 		int getQuantArestas();
 		int getQuantVertices();
 		int getStatus(int i);
-		void setStatus(int i, int status111);
 		void updateIndex(); // deve ser chamada depois de chamar o método de excluir proibidas. 
 		//O método updateIndex pegas as arestas obrigatorias ou opcionais e reajusta os indices
 		void excluiProibidas();
-		void marcaObrigatorias();
-		void computaPreSorting();
-		Aresta *getArestas(int origem, int destino);
-		vector< pair<float, Aresta** > >getPreSorting();
-
+		pair<int*, pair<float, float> > marcaObrigatorias(int &obrigatorias2);
+		void setN(int n1);
+		void setStatus(int i, int status111);
 };
 
 #endif
