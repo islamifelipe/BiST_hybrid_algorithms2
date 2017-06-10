@@ -350,6 +350,7 @@ class ParetoSet {
                 fprintf(f,"%.10lf %.10lf\n",(*it)->f[0],(*it)->f[1]);
                 it++;
             }
+            fprintf(f,"\n");
         }
 
         void print () {
@@ -453,10 +454,10 @@ class rmcKruskal {
                     esc = ed;
                 else
                     esc = rand()%(edgeRCL - ed + 1) + ed; // rg.IRandom(ed,edgeRCL);
-
+                int cocdnt = 0;
                 while (uf.sameClass(edges[esc].a,edges[esc].b)){
                     esc = rand()%(edgeRCL - ed + 1) + ed; // rg.IRandom(ed,edgeRCL);
-                 //   cout<<"kfjkfjkrjf"<<endl;
+                  //  cout<<"cocdnt = "<<cocdnt++<<endl;
                 }
                 // coloca a aresta escolhida da RCL na solucao
                 s.arestas[cont][0] = edges[esc].a;
@@ -658,7 +659,7 @@ int main (int argc, const char * argv[]) { //parametros: instancia, "semente ale
 
     // verifica numero de parametros
     if (argc != 8) {
-        cout << "Parameter error. Usage: " << argv[0] << " (instance file) (random seed) (number of nodes) (number of objectives) (alfa) (approx set file) (log file)" << endl;
+        cout << "Parameter error. Usage: " << argv[0] << " (instance file) (random seed) (number of nodes) (number of objectives) (alfa) (pareto log) (tempo log)" << endl;
         exit (1);
     }
 
@@ -735,12 +736,17 @@ int main (int argc, const char * argv[]) { //parametros: instancia, "semente ale
     }
 
     //cout << "laco terminado" << endl;
-    FILE * approxfile = fopen (argv[6], "w");
+    FILE * approxfile = fopen (argv[6], "a"); // pareto log
     conjAprox->printFile (approxfile);
     fclose(approxfile);
 
     tempoDepois = clock();
     cout << "Tempo(s) = " << (double) (tempoDepois-tempoAntes) / CLOCKS_PER_SEC << endl;
+    list<Solucao *>::iterator it=conjAprox->lpareto.begin();
+    while (it!=conjAprox->lpareto.end()) {
+        cout<<(*it)->f[0]<<" "<<(*it)->f[1]<<endl;
+        it++;
+    }
     //cout << "krusexe: " << (double) krusexe / CLOCKS_PER_SEC  << endl;
     //cout << "addSol: " << (double) addSol / CLOCKS_PER_SEC << endl;
     //cout << "busca: " << (double) busca / CLOCKS_PER_SEC << endl;
@@ -751,8 +757,8 @@ int main (int argc, const char * argv[]) { //parametros: instancia, "semente ale
     //cout << "tbusca5: " << (double) tbusca5 / CLOCKS_PER_SEC << endl;
     //cout << "tbusca6: " << (double) tbusca6 / CLOCKS_PER_SEC << endl;
 
-    FILE * logfile = fopen (argv[7], "a");
-    fprintf (logfile, "%s%d\t%lf\n", argv[1], conjAprox->lsize, (double) (tempoDepois-tempoAntes) / CLOCKS_PER_SEC);
+    FILE * logfile = fopen (argv[7], "a"); // time log
+    fprintf (logfile, "%lf\n", (double) (tempoDepois-tempoAntes) / CLOCKS_PER_SEC);
     fclose(logfile);
 
     //libera memoria alocada
@@ -885,8 +891,9 @@ void buscaLocal (Solucao& s, int itr, ParetoSet * ps) {
     //tempodps = clock();
     //tbusca1 += tempodps-tempoantes;
 
-    while (improved) {
-
+    int cofefef = 0;
+    while (improved && cofefef<9000) {
+        cofefef++;
         //s.print();
         //tempoantes = clock();
 
@@ -995,6 +1002,7 @@ void buscaLocal (Solucao& s, int itr, ParetoSet * ps) {
                     if (*itrb != psol->p[j])
                         arvb.push(*itrb);
                 }
+               
                 while (!arvb.empty()) {
                     int bind = arvb.front();
                     arvb.pop();

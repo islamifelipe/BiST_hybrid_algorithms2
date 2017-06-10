@@ -424,7 +424,7 @@ int main(int argc, const char * argv[]) {
 		cin>>destino;
 		cin>>peso1;
 		cin>>peso2;
-		g.addAresta(id, origem, destino, peso1, peso2);
+		g.addAresta(id, origem-1, destino-1, peso1, peso2);
 		id++;
 	}
 	int nA = id; // quantidade de arestas do grafo	
