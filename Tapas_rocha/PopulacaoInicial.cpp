@@ -7,6 +7,7 @@
 #include "kruskal.h"
 #include <iostream>
 #include <queue>          // std::queue
+#include <cmath>
 
 typedef struct { // pra calcular as solucoes suportadas
 	pair<int*, pair<float, float> > s1; 
@@ -78,23 +79,24 @@ pair<int*, pair<float, float> > clone(Grafo *g, pair<int*, pair<float, float> > 
 	return ret;
 }
 
-vector<pair <Aresta* , int > > restricted_list(int sizeArestas, float lambda, Aresta** presort, float num, Conjunto &conjunto){
-	Aresta ** L = presort;
+
+vector<pair <Aresta* , int > > restricted_list(Grafo *g, float lambda1,float lambda2, Aresta** L, float num, Conjunto &conjunto){
+	//Aresta ** L = presort;
 	vector<pair <Aresta* , int > > ret;
 	bool first = false;
 	float w = -1;
-	for (int i=0; i<sizeArestas; i++){
+	for (int i=0; i<g->getQuantArestas(); i++){
 		if (L[i] != NULL){
 			if (first==false) {
-				w = L[i]->getPeso1()*(lambda) + L[i]->getPeso2()*(1-lambda);
+				w = L[i]->getPeso1()*(lambda1) + L[i]->getPeso2()*(lambda2);
 				first = true;
 			}
-			float peso = L[i]->getPeso1()*(lambda) + L[i]->getPeso2()*(1-lambda);
+			float peso = L[i]->getPeso1()*(lambda1) + L[i]->getPeso2()*(lambda2);
 			if (peso<=(1+num)*w){
 				if (conjunto.compare(L[i]->getOrigem(), L[i]->getDestino())==false){
 					ret.push_back(make_pair(L[i],i));
 				} else {
-					presort[i] = NULL;
+					L[i] = NULL;
 				}
 			}
 		}
@@ -102,11 +104,11 @@ vector<pair <Aresta* , int > > restricted_list(int sizeArestas, float lambda, Ar
 	return ret;
 }
 
-pair<int*, pair<float, float> > rmcKruskal(Grafo *g, float lambda,Aresta** presort, float num,  int quantObrigatorias){
+pair<int*, pair<float, float> > rmcKruskal(Grafo *g,float lambda1, float lambda2,Aresta** presort, float num,  int arestasObrigatorias){
 	pair<int*, pair<float, float> > ret = make_pair(new int[g->getQuantVertices()-1], make_pair(0,0)); 
 	int cont = 0;
 	Conjunto conjunto(g->getQuantVertices());
-	for (int i=0; i<g->getQuantArestas() &&  quantObrigatorias>0; i++){
+	for (int i=0; i<g->getQuantArestas() && arestasObrigatorias>0; i++){
 		if (g->getStatus(presort[i]->getId())==1){ // se for obrigatoria
 			Aresta *a_new = presort[i];
 			ret.first[cont++]  = a_new->getId(); 
@@ -117,7 +119,7 @@ pair<int*, pair<float, float> > rmcKruskal(Grafo *g, float lambda,Aresta** preso
 		}
 	}
 	while (cont<g->getQuantVertices()-1){
-		vector<pair <Aresta* , int > > restrictas = restricted_list(g->getQuantArestas(), lambda, presort, num,conjunto);
+		vector<pair <Aresta* , int > > restrictas = restricted_list(g, lambda1,lambda2, presort, num,conjunto);
 		//cout<<"restrictas.size() = "<<restrictas.size()<<endl;
 		if (restrictas.size()>0){
 			int pos = rand()%restrictas.size();
@@ -132,8 +134,9 @@ pair<int*, pair<float, float> > rmcKruskal(Grafo *g, float lambda,Aresta** preso
 
 	return ret;
 }
+
 // este procedimento é baseado no procedimento RandWalkRST
-pair<int*, pair<float, float> > RandomWalk(Grafo *g){
+pair<int*, pair<float, float> > RandomWalk(Grafo *g, int quantObrigatorias){
 	int v = rand()%g->getQuantVertices(); // vertice inicial
 	pair<int*, pair<float, float> > ret = make_pair(new int[g->getQuantVertices()-1], make_pair(0,0)); 
 	int cont = 0;
@@ -141,7 +144,7 @@ pair<int*, pair<float, float> > RandomWalk(Grafo *g){
 	// for (int i=0; i<g->getQuantVertices(); i++)isVisitado[i] = false;
 	// isVisitado[v] = true;
 	Conjunto conjunto(g->getQuantVertices());
-	for (int i=0; i<g->getQuantArestas(); i++){
+	for (int i=0; i<g->getQuantArestas() && quantObrigatorias>0; i++){
 		if (g->getStatus(i)==1){ // se for obrigatoria
 			ret.first[cont++]  = i; 
 			ret.second.first  += g->getArestas(i)->getPeso1();
@@ -179,31 +182,35 @@ bool thereis(vector< pair<int*, pair<float, float> > > &vetor, pair<int*, pair<f
 	return false;
 }
 
-vector< pair<int*, pair<float, float> > > getPopulacaoInicial(Grafo *g, Arquivo &global_arc){
+vector< pair<int*, pair<float, float> > > getPopulacaoInicial(Grafo *g, Arquivo &global_arc, int quantObrigatorias){
 	vector< pair<int*, pair<float, float> > > ret;
 	suportadas(g, ret, global_arc);
 	cout<<ret.size()<<" solucoes suportadas"<<endl;
 	int quantKruskal = (size_pop*por_max_rmckrus)/100;
-	float passo = 1.0/quantKruskal;
-	for (float i=passo; i<1.0; i+=passo){
+	//float passo = 1.0/quantKruskal;
+
+	for (float i=1; i<quantKruskal; i++){
+		float lambda1 = i/quantKruskal;
+		float lambda2 = 1.0 - lambda1;
+		// cout<<"lambda1 = "<<lambda1<<endl;
+		// cout<<"lambda2 = "<<lambda2<<endl;
 		Aresta **arestasPtr = g->getAllArestasPtr();
-		float lambda = i;
-		mergesort(0, lambda, 1.0-lambda, 0, arestasPtr, g->getQuantArestas(),3);
+		mergesort(0, lambda1, lambda2, 0, arestasPtr, g->getQuantArestas(),3);
 		float num = ((float)(rand()%1001))/10000.0;
-		pair<int*, pair<float, float> > tree = rmcKruskal(g, lambda, arestasPtr,num);
-		if (thereis(ret, tree) == false) {
+		pair<int*, pair<float, float> > tree = rmcKruskal(g, lambda1, lambda2, arestasPtr,num,quantObrigatorias);
+		//if (thereis(ret, tree) == false) {
 			ret.push_back(tree);
 			global_arc.adicionarSol(clone(g, tree));
-		} //else i-=passo;
+		//} //else i-=passo;
 	}
-	//cout<<ret.size()<<" individuos OBTIDOS APOS rmcKruskal"<<endl;
+	cout<<ret.size()<<" individuos OBTIDOS APOS rmcKruskal"<<endl;
 	int sizee =  ret.size();
 	for (int i=0; i<(size_pop - sizee);i++){
-		pair<int*, pair<float, float> > tree = RandomWalk(g);
-		if (thereis(ret, tree) == false) {
+		pair<int*, pair<float, float> > tree = RandomWalk(g, quantObrigatorias);
+		//if (thereis(ret, tree) == false) {
 			ret.push_back(tree);
 			global_arc.adicionarSol(clone(g, tree));
-		}// else i--;
+		//}// else i--;
 	}
 	cout<<ret.size()<<" individuos na populacao inicial"<<endl;
 	cout<<global_arc.getSize()<<" solucoes no arquivo inicial"<<endl;

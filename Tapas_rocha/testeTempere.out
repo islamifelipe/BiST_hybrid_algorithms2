@@ -1,0 +1,762 @@
+178878 arestas removidas
+388 obrigatorias
+10 solucoes suportadas
+28 individuos OBTIDOS APOS rmcKruskal
+102 individuos na populacao inicial
+28 solucoes no arquivo inicial
+geracao i = 0
+sizee = 28
+geracao i = 1
+sizee = 51
+geracao i = 2
+sizee = 66
+geracao i = 3
+sizee = 76
+geracao i = 4
+sizee = 82
+geracao i = 5
+sizee = 87
+geracao i = 6
+sizee = 92
+geracao i = 7
+sizee = 99
+geracao i = 8
+sizee = 103
+geracao i = 9
+sizee = 106
+geracao i = 10
+sizee = 113
+geracao i = 11
+sizee = 116
+geracao i = 12
+sizee = 119
+geracao i = 13
+sizee = 119
+geracao i = 14
+sizee = 123
+geracao i = 15
+sizee = 122
+geracao i = 16
+sizee = 123
+geracao i = 17
+sizee = 126
+geracao i = 18
+sizee = 126
+geracao i = 19
+sizee = 128
+Fim da primeira fase. Size = 130
+Ponto  = 106
+cont  = 0
+	 	 contMax = 0
+global_arc.getSize() = 133
+Ponto  = 88
+cont  = 1
+	 	 contMax = 0
+global_arc.getSize() = 134
+Ponto  = 107
+cont  = 2
+	 	 contMax = 0
+global_arc.getSize() = 136
+Ponto  = 38
+cont  = 3
+	 	 contMax = 0
+global_arc.getSize() = 136
+Ponto  = 17
+cont  = 4
+	 	 contMax = 0
+global_arc.getSize() = 137
+Ponto  = 68
+cont  = 5
+	 	 contMax = 0
+global_arc.getSize() = 139
+Ponto  = 12
+cont  = 6
+	 	 contMax = 0
+global_arc.getSize() = 140
+Ponto  = 17
+cont  = 7
+	 	 contMax = 0
+global_arc.getSize() = 140
+Ponto  = 110
+cont  = 8
+	 	 contMax = 0
+global_arc.getSize() = 142
+Ponto  = 103
+cont  = 9
+	 	 contMax = 0
+global_arc.getSize() = 143
+Ponto  = 5
+cont  = 10
+	 	 contMax = 0
+global_arc.getSize() = 143
+Ponto  = 103
+cont  = 11
+	 	 contMax = 0
+global_arc.getSize() = 145
+Ponto  = 58
+cont  = 12
+	 	 contMax = 0
+global_arc.getSize() = 145
+Ponto  = 61
+cont  = 13
+	 	 contMax = 0
+global_arc.getSize() = 145
+Ponto  = 100
+cont  = 14
+	 	 contMax = 0
+global_arc.getSize() = 146
+Ponto  = 97
+cont  = 15
+	 	 contMax = 0
+global_arc.getSize() = 149
+Ponto  = 40
+cont  = 16
+	 	 contMax = 0
+global_arc.getSize() = 150
+Ponto  = 95
+cont  = 17
+	 	 contMax = 0
+global_arc.getSize() = 150
+Ponto  = 9
+cont  = 18
+	 	 contMax = 0
+global_arc.getSize() = 151
+Ponto  = 43
+cont  = 19
+	 	 contMax = 0
+global_arc.getSize() = 151
+Ponto  = 61
+cont  = 20
+	 	 contMax = 0
+global_arc.getSize() = 151
+Ponto  = 25
+cont  = 21
+	 	 contMax = 0
+global_arc.getSize() = 152
+Ponto  = 72
+cont  = 22
+	 	 contMax = 0
+global_arc.getSize() = 153
+Ponto  = 48
+cont  = 23
+	 	 contMax = 0
+global_arc.getSize() = 153
+Ponto  = 47
+cont  = 24
+	 	 contMax = 0
+global_arc.getSize() = 153
+Ponto  = 48
+cont  = 25
+	 	 contMax = 0
+global_arc.getSize() = 153
+Ponto  = 47
+cont  = 26
+	 	 contMax = 0
+global_arc.getSize() = 153
+Ponto  = 34
+cont  = 27
+	 	 contMax = 0
+global_arc.getSize() = 154
+Ponto  = 6
+cont  = 28
+	 	 contMax = 0
+global_arc.getSize() = 156
+Ponto  = 63
+cont  = 29
+	 	 contMax = 0
+global_arc.getSize() = 156
+Ponto  = 60
+cont  = 30
+	 	 contMax = 0
+global_arc.getSize() = 156
+Ponto  = 57
+cont  = 31
+	 	 contMax = 0
+global_arc.getSize() = 156
+Ponto  = 57
+cont  = 32
+	 	 contMax = 0
+global_arc.getSize() = 156
+Ponto  = 88
+cont  = 33
+	 	 contMax = 0
+global_arc.getSize() = 158
+Ponto  = 28
+cont  = 34
+	 	 contMax = 0
+global_arc.getSize() = 158
+Ponto  = 40
+cont  = 35
+	 	 contMax = 0
+global_arc.getSize() = 159
+Ponto  = 1
+cont  = 36
+	 	 contMax = 0
+global_arc.getSize() = 160
+Ponto  = 4
+cont  = 37
+	 	 contMax = 0
+global_arc.getSize() = 161
+Ponto  = 57
+cont  = 38
+	 	 contMax = 0
+global_arc.getSize() = 162
+Ponto  = 42
+cont  = 39
+	 	 contMax = 0
+global_arc.getSize() = 162
+Ponto  = 57
+cont  = 40
+	 	 contMax = 0
+global_arc.getSize() = 161
+Ponto  = 51
+cont  = 41
+	 	 contMax = 0
+global_arc.getSize() = 161
+Ponto  = 51
+cont  = 42
+	 	 contMax = 0
+global_arc.getSize() = 161
+Ponto  = 59
+cont  = 43
+	 	 contMax = 0
+global_arc.getSize() = 162
+Ponto  = 40
+cont  = 44
+	 	 contMax = 0
+global_arc.getSize() = 162
+Ponto  = 29
+cont  = 45
+	 	 contMax = 0
+global_arc.getSize() = 162
+Ponto  = 8
+cont  = 46
+	 	 contMax = 0
+global_arc.getSize() = 163
+Ponto  = 42
+cont  = 47
+	 	 contMax = 0
+global_arc.getSize() = 163
+Ponto  = 79
+cont  = 48
+	 	 contMax = 0
+global_arc.getSize() = 163
+Ponto  = 48
+cont  = 49
+	 	 contMax = 0
+global_arc.getSize() = 163
+Ponto  = 59
+cont  = 50
+	 	 contMax = 0
+global_arc.getSize() = 165
+Ponto  = 52
+cont  = 51
+	 	 contMax = 0
+global_arc.getSize() = 166
+Ponto  = 8
+cont  = 52
+	 	 contMax = 0
+global_arc.getSize() = 166
+Ponto  = 70
+cont  = 53
+	 	 contMax = 0
+global_arc.getSize() = 167
+Ponto  = 62
+cont  = 54
+	 	 contMax = 0
+global_arc.getSize() = 169
+Ponto  = 70
+cont  = 55
+	 	 contMax = 0
+global_arc.getSize() = 169
+Ponto  = 53
+cont  = 56
+	 	 contMax = 0
+global_arc.getSize() = 170
+Ponto  = 7
+cont  = 57
+	 	 contMax = 0
+global_arc.getSize() = 170
+Ponto  = 16
+cont  = 58
+	 	 contMax = 0
+global_arc.getSize() = 170
+Ponto  = 59
+cont  = 59
+	 	 contMax = 0
+global_arc.getSize() = 170
+Ponto  = 42
+cont  = 60
+	 	 contMax = 0
+global_arc.getSize() = 170
+Ponto  = 60
+cont  = 61
+	 	 contMax = 0
+global_arc.getSize() = 171
+Ponto  = 47
+cont  = 62
+	 	 contMax = 0
+global_arc.getSize() = 173
+Ponto  = 19
+cont  = 63
+	 	 contMax = 0
+global_arc.getSize() = 173
+Ponto  = 39
+cont  = 64
+	 	 contMax = 0
+global_arc.getSize() = 174
+Ponto  = 25
+cont  = 65
+	 	 contMax = 0
+global_arc.getSize() = 174
+Ponto  = 55
+cont  = 66
+	 	 contMax = 0
+global_arc.getSize() = 174
+Ponto  = 13
+cont  = 67
+	 	 contMax = 0
+global_arc.getSize() = 174
+Ponto  = 31
+cont  = 68
+	 	 contMax = 0
+global_arc.getSize() = 174
+Ponto  = 53
+cont  = 69
+	 	 contMax = 0
+global_arc.getSize() = 175
+Ponto  = 13
+cont  = 70
+	 	 contMax = 0
+global_arc.getSize() = 175
+Ponto  = 14
+cont  = 71
+	 	 contMax = 0
+global_arc.getSize() = 176
+Ponto  = 25
+cont  = 72
+	 	 contMax = 0
+global_arc.getSize() = 178
+Ponto  = 46
+cont  = 73
+	 	 contMax = 0
+global_arc.getSize() = 179
+Ponto  = 29
+cont  = 74
+	 	 contMax = 0
+global_arc.getSize() = 179
+Ponto  = 22
+cont  = 75
+	 	 contMax = 0
+global_arc.getSize() = 179
+Ponto  = 22
+cont  = 76
+	 	 contMax = 0
+global_arc.getSize() = 179
+Ponto  = 21
+cont  = 77
+	 	 contMax = 0
+global_arc.getSize() = 179
+Ponto  = 9
+cont  = 78
+	 	 contMax = 0
+global_arc.getSize() = 179
+Ponto  = 37
+cont  = 79
+	 	 contMax = 0
+global_arc.getSize() = 181
+Ponto  = 47
+cont  = 80
+	 	 contMax = 0
+global_arc.getSize() = 181
+Ponto  = 32
+cont  = 81
+	 	 contMax = 0
+global_arc.getSize() = 182
+Ponto  = 23
+cont  = 82
+	 	 contMax = 0
+global_arc.getSize() = 182
+Ponto  = 27
+cont  = 83
+	 	 contMax = 0
+global_arc.getSize() = 182
+Ponto  = 15
+cont  = 84
+	 	 contMax = 0
+global_arc.getSize() = 182
+Ponto  = 3
+cont  = 85
+	 	 contMax = 0
+global_arc.getSize() = 182
+Ponto  = 5
+cont  = 86
+	 	 contMax = 0
+global_arc.getSize() = 182
+Ponto  = 2
+cont  = 87
+	 	 contMax = 0
+global_arc.getSize() = 183
+Ponto  = 23
+cont  = 88
+	 	 contMax = 0
+global_arc.getSize() = 185
+Ponto  = 22
+cont  = 89
+	 	 contMax = 0
+global_arc.getSize() = 185
+Ponto  = 30
+cont  = 90
+	 	 contMax = 0
+global_arc.getSize() = 185
+Ponto  = 35
+cont  = 91
+	 	 contMax = 0
+global_arc.getSize() = 185
+Ponto  = 15
+cont  = 92
+	 	 contMax = 0
+global_arc.getSize() = 185
+Ponto  = 11
+cont  = 93
+	 	 contMax = 0
+global_arc.getSize() = 185
+Ponto  = 12
+cont  = 94
+	 	 contMax = 0
+global_arc.getSize() = 185
+Ponto  = 23
+cont  = 95
+	 	 contMax = 0
+	 	 contMax = 1
+global_arc.getSize() = 186
+Ponto  = 17
+cont  = 96
+	 	 contMax = 0
+global_arc.getSize() = 186
+Ponto  = 20
+cont  = 97
+	 	 contMax = 0
+global_arc.getSize() = 189
+Ponto  = 22
+cont  = 98
+	 	 contMax = 0
+global_arc.getSize() = 189
+Ponto  = 21
+cont  = 99
+	 	 contMax = 0
+global_arc.getSize() = 189
+Ponto  = 11
+cont  = 100
+	 	 contMax = 0
+global_arc.getSize() = 189
+Ponto  = 18
+cont  = 101
+	 	 contMax = 0
+global_arc.getSize() = 189
+Ponto  = 11
+cont  = 102
+	 	 contMax = 0
+global_arc.getSize() = 189
+Ponto  = 21
+cont  = 103
+	 	 contMax = 0
+global_arc.getSize() = 191
+Ponto  = 20
+cont  = 104
+	 	 contMax = 0
+global_arc.getSize() = 191
+Ponto  = 3
+cont  = 105
+	 	 contMax = 0
+global_arc.getSize() = 191
+Ponto  = 19
+cont  = 106
+	 	 contMax = 0
+global_arc.getSize() = 192
+Ponto  = 4
+cont  = 107
+	 	 contMax = 0
+global_arc.getSize() = 193
+Ponto  = 20
+cont  = 108
+	 	 contMax = 0
+global_arc.getSize() = 194
+Ponto  = 2
+cont  = 109
+	 	 contMax = 0
+global_arc.getSize() = 195
+Ponto  = 16
+cont  = 110
+	 	 contMax = 0
+global_arc.getSize() = 195
+Ponto  = 16
+cont  = 111
+	 	 contMax = 0
+global_arc.getSize() = 195
+Ponto  = 11
+cont  = 112
+	 	 contMax = 0
+global_arc.getSize() = 195
+Ponto  = 6
+cont  = 113
+	 	 contMax = 0
+global_arc.getSize() = 196
+Ponto  = 10
+cont  = 114
+	 	 contMax = 0
+global_arc.getSize() = 196
+Ponto  = 3
+cont  = 115
+	 	 contMax = 0
+global_arc.getSize() = 197
+Ponto  = 6
+cont  = 116
+	 	 contMax = 0
+global_arc.getSize() = 197
+Ponto  = 7
+cont  = 117
+	 	 contMax = 0
+global_arc.getSize() = 197
+Ponto  = 3
+cont  = 118
+	 	 contMax = 0
+global_arc.getSize() = 197
+Ponto  = 7
+cont  = 119
+	 	 contMax = 0
+global_arc.getSize() = 197
+Ponto  = 3
+cont  = 120
+	 	 contMax = 0
+global_arc.getSize() = 198
+Ponto  = 4
+cont  = 121
+	 	 contMax = 0
+global_arc.getSize() = 198
+Ponto  = 3
+cont  = 122
+	 	 contMax = 0
+global_arc.getSize() = 198
+Ponto  = 3
+cont  = 123
+	 	 contMax = 0
+global_arc.getSize() = 198
+Ponto  = 1
+cont  = 124
+	 	 contMax = 0
+global_arc.getSize() = 198
+Ponto  = 3
+cont  = 125
+	 	 contMax = 0
+global_arc.getSize() = 198
+Ponto  = 1
+cont  = 126
+	 	 contMax = 0
+global_arc.getSize() = 198
+Ponto  = 1
+cont  = 127
+	 	 contMax = 0
+global_arc.getSize() = 199
+Fim da segunda fase. Size = 199
+9.85 segundos
+Resultado : 
+0 1211
+237 740
+112 855
+36 1036
+217 750
+16 1116
+65 949
+8 1156
+6 1168
+1 1203
+235 741
+225 746
+223 747
+227 745
+219 749
+205 762
+182 785
+158 809
+168 799
+163 804
+113 854
+85 909
+87 905
+48 1000
+41 1021
+26 1076
+11 1141
+7 1162
+45 1009
+4 1183
+67 945
+191 776
+32 1053
+172 796
+159 808
+72 935
+95 889
+106 869
+74 931
+149 818
+42 1018
+147 820
+52 988
+77 925
+83 913
+97 886
+78 923
+143 825
+81 918
+70 939
+214 755
+94 891
+49 997
+125 842
+100 879
+43 1015
+13 1131
+58 972
+128 839
+88 903
+56 978
+54 983
+138 829
+62 961
+131 836
+92 896
+60 967
+76 927
+118 849
+160 807
+157 810
+161 806
+173 795
+170 797
+25 1080
+27 1072
+28 1071
+93 893
+19 1106
+20 1103
+21 1102
+202 767
+175 793
+176 792
+178 791
+181 786
+183 784
+180 787
+86 907
+84 911
+179 789
+162 805
+164 803
+165 802
+63 956
+156 811
+17 1112
+15 1121
+18 1111
+98 884
+80 920
+79 921
+57 975
+59 969
+10 1148
+12 1136
+104 874
+103 876
+213 756
+212 757
+53 985
+75 929
+73 933
+2 1196
+9 1151
+114 853
+115 852
+82 915
+122 846
+107 867
+105 870
+89 901
+90 900
+148 819
+146 821
+145 822
+132 835
+130 837
+133 834
+23 1091
+216 751
+215 752
+167 800
+169 798
+139 828
+137 830
+140 827
+22 1099
+129 838
+127 840
+50 994
+91 898
+38 1031
+200 771
+201 769
+199 772
+44 1012
+66 947
+68 943
+154 814
+61 964
+64 952
+30 1063
+144 824
+142 826
+119 848
+120 847
+117 850
+96 887
+3 1190
+5 1177
+99 881
+101 877
+153 815
+221 748
+47 1003
+136 831
+135 832
+126 841
+124 843
+123 845
+51 991
+111 857
+55 980
+190 777
+189 778
+192 775
+193 774
+155 812
+204 763
+203 765
+206 761
+29 1070
+233 742
+14 1126
+40 1025
+33 1050
+34 1049
+31 1057
+71 937
+37 1033
+35 1040
+69 941
+46 1006
+110 862
+109 863
+24 1085
+150 817
+151 816
