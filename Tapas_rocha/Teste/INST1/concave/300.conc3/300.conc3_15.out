@@ -1,0 +1,16 @@
+44549 arestas removidas
+296 obrigatorias
+2 solucoes suportadas
+106 individuos OBTIDOS APOS rmcKruskal
+150 individuos na populacao inicial
+6 solucoes no arquivo inicial
+Fim da primeira fase. Size = 6
+Fim da segunda fase. Size = 6
+1.23 segundos
+Resultado : 
+1888 2886
+2886 1888
+2885 1889
+1889 2885
+2882 2883
+2883 2882

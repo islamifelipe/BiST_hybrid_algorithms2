@@ -1,0 +1,32 @@
+19690 arestas removidas
+187 obrigatorias
+2 solucoes suportadas
+106 individuos OBTIDOS APOS rmcKruskal
+150 individuos na populacao inicial
+21 solucoes no arquivo inicial
+Fim da primeira fase. Size = 22
+Fim da segunda fase. Size = 22
+2.25 segundos
+Resultado : 
+1980 2985
+2985 1980
+2984 1981
+2982 1983
+2980 1985
+2983 1982
+2981 1984
+2978 1987
+2979 1986
+1985 2980
+1986 2979
+1987 2978
+1982 2983
+1984 2981
+1983 2982
+1981 2984
+2977 1988
+1988 2977
+1989 2976
+2976 1989
+1990 2975
+2975 1990
