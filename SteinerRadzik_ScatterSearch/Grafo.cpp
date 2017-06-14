@@ -93,6 +93,14 @@ void Grafo::updateIndex(){
 	}
   arestasPtr = new Aresta*[m];
 }
+/*
+  IMPORTANTE: para o pre-processamento, deve-se 
+    (1) construir o grafo
+    (2) chamar primeiro excluiProibidas
+    (3) chamar updateIndex()
+    (4) chamar marcaObrigatorias
+*/
+
 //Ta bom, poderia implementar o operador <, eu sei. Mas deu preguiça
 bool menor(Aresta *a, Aresta *b){
     if (a->getPeso1()<b->getPeso1()) return a->getPeso2() <= b->getPeso2();
