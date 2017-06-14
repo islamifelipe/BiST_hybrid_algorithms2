@@ -1,15 +1,5 @@
 #!/bin/bash
 
-#para cada par de arquivos
-	#colocar os resultados do rocha e do tapas num unico arquivos
-	#executar o filter do PISA (gera o conjunto referência)
-	#calcular o hypervolume para cada arquivo do par (com base no conjunto de referência calculado anteriormente)
-	#juntar os dois resultados do hypervolume
-	#executar o teste estatistico de Mann-Whitney 
-	
-#esperar as concave ficarem prontas pra testar
-
-
 for p in 20 30 50
 do
 	for i in 1 2 3 4 5
@@ -26,4 +16,3 @@ do
 		
 	done
 done
-
