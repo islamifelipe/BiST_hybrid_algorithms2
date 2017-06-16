@@ -892,8 +892,9 @@ void buscaLocal (Solucao& s, int itr, ParetoSet * ps) {
     //tbusca1 += tempodps-tempoantes;
 
     int cofefef = 0;
-    while (improved && cofefef<9000) {
+    while (improved && cofefef<30000) {
         cofefef++;
+        //cout<<cofefef<<endl;
         //s.print();
         //tempoantes = clock();
 
