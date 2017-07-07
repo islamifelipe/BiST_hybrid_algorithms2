@@ -1,5 +1,5 @@
 
-all: Aresta.o Vertice.o Grafo.o Conjunto.o kruskal.o Heap.o margeSort.o graspph
+all: Aresta.o Vertice.o Grafo.o Conjunto.o kruskal.o Heap.o margeSort.o grid.o arquivo.o graspph
 
 Aresta.o : Aresta.cpp Aresta.h
 	g++ -g -c Aresta.cpp -o Aresta.o -O3 -w -Wall -mms-bitfields 
@@ -24,7 +24,14 @@ margeSort.o : margeSort.cpp margeSort.h
 
 main.o : main.cpp
 	g++ -g -c  main.cpp -o main.o -O3 -w -Wall -mms-bitfields 
-		
-graspph : main.o  Grafo.o Vertice.o Aresta.o Conjunto.o kruskal.o margeSort.o Heap.o  
-	g++ -o graspph Aresta.o  Vertice.o Grafo.o Conjunto.o kruskal.o Heap.o margeSort.o main.o -O3 -w -Wall -mms-bitfields 
+
+grid.o : Grid.cpp Grid.h
+	g++ -g -c  Grid.cpp -o  Grid.o -O3 -w -Wall -mms-bitfields 
+
+
+arquivo.o : arquivo.cpp arquivo.h
+	g++ -g -c  arquivo.cpp -o  arquivo.o -O3 -w -Wall -mms-bitfields 
+
+graspph : main.o  Grafo.o Vertice.o Aresta.o Conjunto.o kruskal.o margeSort.o Heap.o  grid.o arquivo.o
+	g++ -o graspph Aresta.o  Vertice.o Grafo.o Conjunto.o kruskal.o Heap.o margeSort.o grid.o arquivo.o main.o -O3 -w -Wall -mms-bitfields 
 	
