@@ -1,0 +1,32 @@
+19690 arestas removidas
+187 obrigatorias
+Fim da primeira fase. Quantidade de solucoes suportadas : 2
+0
+Fim da segunda fase. Quantidade de solucoes nao-suportadas: 19
+0.01
+Total antes = 21
+Total fora = 2
+Quantidade total de solucoes : 21
+Total: 0.01 segundos
+2985 1980
+1980 2985
+1985 2980
+2980 1985
+1984 2981
+1986 2979
+2981 1984
+2979 1986
+1987 2978
+1988 2977
+1990 2975
+2984 1981
+2983 1982
+1989 2976
+1983 2982
+1982 2983
+1981 2984
+2978 1987
+2977 1988
+2975 1990
+2976 1989
+MAXX = 2985 2985

@@ -145,10 +145,12 @@ void Grafo::excluiProibidas(){
                     if (matrixArestas[prox][destino]!=NULL && menor(matrixArestas[prox][destino], matrixArestas[origem][destino])) {
                       removidas++;
                       Aresta *mm = matrixArestas[origem][destino];
-                      lista_vertices[origem]->removeAresta(mm);
-                      lista_vertices[destino]->removeAresta(mm);
-                      matrixArestas[origem][destino] = NULL;
-                                matrixArestas[destino][origem] = NULL;
+                      // lista_vertices[origem]->removeAresta(mm);
+                      // lista_vertices[destino]->removeAresta(mm);
+                      //matrixArestas[origem][destino] = NULL;
+                        //        matrixArestas[destino][origem] = NULL;
+                          mm->setPeso1(999999999);
+                          mm->setPeso2(999999999);
                                 //clear stack
                                 for (int kgf = 0; pilha.empty()==false; kgf++){
                                     pilha.pop();

@@ -16,6 +16,8 @@ class Aresta{ //OK
 		int getDestino();
 		float getPeso1();
 		float getPeso2();
+		void setPeso1(float a);
+		void setPeso2(float a);
 		void setId(int novo);
 		void setOrigem(int n);
 		void setDestino(int n);

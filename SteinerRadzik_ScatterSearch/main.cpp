@@ -424,7 +424,7 @@ int main(int argc, const char * argv[]) {
 		cin>>destino;
 		cin>>peso1;
 		cin>>peso2;
-		g.addAresta(id, origem-1, destino-1, peso1, peso2);
+		g.addAresta(id, origem, destino, peso1, peso2);
 		id++;
 	}
 	int nA = id; // quantidade de arestas do grafo	
@@ -433,113 +433,119 @@ int main(int argc, const char * argv[]) {
 	 g.updateIndex(); // depois, atualizamos os idexes das arestas no map
 	obrigatorias = g.marcaObrigatorias(arestasObrigatorias); // determinanmos as obrigatorias PARAMETRO IMPORTANTE
 	nA= g.getQuantArestas();
-
- 	times(&tempsInit);
-
-	 list <pair<int*, pair<float, float> > > arvores = suportadas();
 	
-	cout<<"Fim da primeira fase. Quantidade de solucoes suportadas : "<<arvores.size()<<endl;
-	
-	times(&tempsFinal1);   /* current time */ // clock final
-	clock_t user_time1 = (tempsFinal1.tms_utime - tempsInit.tms_utime);
-	//cout<<user_time1<<endl;
-	cout<<(float) user_time1 / (float) sysconf(_SC_CLK_TCK)<<endl;//"Tempo do usuario por segundo : "
-   	times(&tempsInit);
+	//temporario
+	cout<<n<<endl;
+	for (int i=0;i<g.getQuantArestas(); i++){
+		cout<<g.getArestas(i)->getOrigem()<<" "<<g.getArestas(i)->getDestino()<<" "<<g.getArestas(i)->getPeso1()<<" "<<g.getArestas(i)->getPeso2()<<endl;
+	}
 
-	list <pair<int*, pair<float, float> > > noSuportadas = phase2KB(arvores);
-	
-	cout<<"Fim da segunda fase. Quantidade de solucoes nao-suportadas: "<<noSuportadas.size()<<endl;
-	cout<<"Quantidade total de solucoes : "<<noSuportadas.size()+arvores.size()<<endl;
-	
-	times(&tempsFinal2);   /* current time */ // clock final
-	clock_t user_time2 = (tempsFinal2.tms_utime - tempsInit.tms_utime);
-	//cout<<user_time2<<endl;
-	cout<<(float) user_time2 / (float) sysconf(_SC_CLK_TCK)<<endl;//"Tempo do usuario por segundo : "
-	cout<<"Total: ";
-	cout<<(float) (user_time1+user_time2) / (float) sysconf(_SC_CLK_TCK)<<" segundos"<<endl;
+ // 	times(&tempsInit);
 
-	FILE *paretoFront = fopen(argv[1],"a");
-   	FILE *tempofile = fopen(argv[2],"a");
+	//  list <pair<int*, pair<float, float> > > arvores = suportadas();
+	
+	// cout<<"Fim da primeira fase. Quantidade de solucoes suportadas : "<<arvores.size()<<endl;
+	
+	// times(&tempsFinal1);   /* current time */ // clock final
+	// clock_t user_time1 = (tempsFinal1.tms_utime - tempsInit.tms_utime);
+	// //cout<<user_time1<<endl;
+	// cout<<(float) user_time1 / (float) sysconf(_SC_CLK_TCK)<<endl;//"Tempo do usuario por segundo : "
+ //   	times(&tempsInit);
+
+	// list <pair<int*, pair<float, float> > > noSuportadas = phase2KB(arvores);
+	
+	// cout<<"Fim da segunda fase. Quantidade de solucoes nao-suportadas: "<<noSuportadas.size()<<endl;
+	// cout<<"Quantidade total de solucoes : "<<noSuportadas.size()+arvores.size()<<endl;
+	
+	// times(&tempsFinal2);   /* current time */ // clock final
+	// clock_t user_time2 = (tempsFinal2.tms_utime - tempsInit.tms_utime);
+	// //cout<<user_time2<<endl;
+	// cout<<(float) user_time2 / (float) sysconf(_SC_CLK_TCK)<<endl;//"Tempo do usuario por segundo : "
+	// cout<<"Total: ";
+	// cout<<(float) (user_time1+user_time2) / (float) sysconf(_SC_CLK_TCK)<<" segundos"<<endl;
+
+	// FILE *paretoFront = fopen(argv[1],"a");
+ //   	FILE *tempofile = fopen(argv[2],"a");
    
 
-   	fprintf(tempofile,"%.10lf\n", (float) (user_time1+user_time2) / (float) sysconf(_SC_CLK_TCK));
+ //   	fprintf(tempofile,"%.10lf\n", (float) (user_time1+user_time2) / (float) sysconf(_SC_CLK_TCK));
    	
 
 	
-    int i = 1, cont=0;
- 	float max_ob1 = -1, max_ob2 = -1;
-    for (list<pair<int*, pair<float, float> > >::iterator it=arvores.begin(); it!=arvores.end(); it++){
+ //    int i = 1, cont=0;
+ // 	float max_ob1 = -1, max_ob2 = -1;
+ //    for (list<pair<int*, pair<float, float> > >::iterator it=arvores.begin(); it!=arvores.end(); it++){
 		
-		float cont1=0, cont2=0;
-		pair<int*, pair<float, float> > arvr = (*it);
-		Conjunto conjjj(n);
-   		for (int a = 0; a<n-1; a++){ // cada aresta da arvore
-			int iddd = (arvr.first)[a];
-				// cout<<g.getArestas(iddd)->getOrigem() << " ";
-    // 			cout<<g.getArestas(iddd)->getDestino() << " ";
-    // 			cout<<g.getArestas(iddd)->getPeso1() << " ";
-    // 			cout<<g.getArestas(iddd)->getPeso2() << endl;
-				if (conjjj.compare(g.getArestas(iddd)->getOrigem(), g.getArestas(iddd)->getDestino())==false){
+	// 	float cont1=0, cont2=0;
+	// 	pair<int*, pair<float, float> > arvr = (*it);
+	// 	Conjunto conjjj(n);
+ //   		for (int a = 0; a<n-1; a++){ // cada aresta da arvore
+	// 		int iddd = (arvr.first)[a];
+	// 			// cout<<g.getArestas(iddd)->getOrigem() << " ";
+ //    // 			cout<<g.getArestas(iddd)->getDestino() << " ";
+ //    // 			cout<<g.getArestas(iddd)->getPeso1() << " ";
+ //    // 			cout<<g.getArestas(iddd)->getPeso2() << endl;
+	// 			if (conjjj.compare(g.getArestas(iddd)->getOrigem(), g.getArestas(iddd)->getDestino())==false){
 					
-					cont1+=g.getArestas(iddd)->getPeso1();
-					cont2+=g.getArestas(iddd)->getPeso2();
-					conjjj.union1(g.getArestas(iddd)->getOrigem(), g.getArestas(iddd)->getDestino());
+	// 				cont1+=g.getArestas(iddd)->getPeso1();
+	// 				cont2+=g.getArestas(iddd)->getPeso2();
+	// 				conjjj.union1(g.getArestas(iddd)->getOrigem(), g.getArestas(iddd)->getDestino());
     		
-				} else {
-					cout<<"ERROOOOOOOOOO"<<endl;
-					break;
-				}
-   		}
-   		if (cont1 != arvr.second.first || cont2 != arvr.second.second) {
-    		cout<<"ERROROFKROKFORKFORKF 3"<<endl;
-    		break;
-    	}
-    	cout<<arvr.second.first<<" "<<arvr.second.second<<endl;
-    	if (arvr.second.first>max_ob1) max_ob1 = arvr.second.first;
-    	if (arvr.second.second>max_ob2) max_ob2 = arvr.second.second;
-    	fprintf(paretoFront,"%.10lf %.10lf\n", arvr.second.first, arvr.second.second);
+	// 			} else {
+	// 				cout<<"ERROOOOOOOOOO"<<endl;
+	// 				break;
+	// 			}
+ //   		}
+ //   		if (cont1 != arvr.second.first || cont2 != arvr.second.second) {
+ //    		cout<<"ERROROFKROKFORKFORKF 3"<<endl;
+ //    		break;
+ //    	}
+ //    	cout<<arvr.second.first<<" "<<arvr.second.second<<endl;
+ //    	if (arvr.second.first>max_ob1) max_ob1 = arvr.second.first;
+ //    	if (arvr.second.second>max_ob2) max_ob2 = arvr.second.second;
+ //    	fprintf(paretoFront,"%.10lf %.10lf\n", arvr.second.first, arvr.second.second);
    	
-	}
+	// }
 
 
 
-	//cout<<"Resultado \n NAO SUPORTADAS"<<endl;
-    for (list<pair<int*, pair<float, float> > >::iterator it=noSuportadas.begin(); it!=noSuportadas.end(); it++){
-		float cont1=0, cont2=0;
-		pair<int*, pair<float, float> > arvr = (*it);
-		Conjunto conjjj(n);
-   		for (int a = 0; a<n-1; a++){ // cada aresta da arvore
-			int iddd = (arvr.first)[a];
-				// cout<<g.getArestas(iddd)->getOrigem() << " ";
-    // 			cout<<g.getArestas(iddd)->getDestino() << " ";
-    // 			cout<<g.getArestas(iddd)->getPeso1() << " ";
-    // 			cout<<g.getArestas(iddd)->getPeso2() << endl;
-				if (conjjj.compare(g.getArestas(iddd)->getOrigem(), g.getArestas(iddd)->getDestino())==false){
+	// //cout<<"Resultado \n NAO SUPORTADAS"<<endl;
+ //    for (list<pair<int*, pair<float, float> > >::iterator it=noSuportadas.begin(); it!=noSuportadas.end(); it++){
+	// 	float cont1=0, cont2=0;
+	// 	pair<int*, pair<float, float> > arvr = (*it);
+	// 	Conjunto conjjj(n);
+ //   		for (int a = 0; a<n-1; a++){ // cada aresta da arvore
+	// 		int iddd = (arvr.first)[a];
+	// 			// cout<<g.getArestas(iddd)->getOrigem() << " ";
+ //    // 			cout<<g.getArestas(iddd)->getDestino() << " ";
+ //    // 			cout<<g.getArestas(iddd)->getPeso1() << " ";
+ //    // 			cout<<g.getArestas(iddd)->getPeso2() << endl;
+	// 			if (conjjj.compare(g.getArestas(iddd)->getOrigem(), g.getArestas(iddd)->getDestino())==false){
 					
-					cont1+=g.getArestas(iddd)->getPeso1();
-					cont2+=g.getArestas(iddd)->getPeso2();
-					conjjj.union1(g.getArestas(iddd)->getOrigem(), g.getArestas(iddd)->getDestino());
+	// 				cont1+=g.getArestas(iddd)->getPeso1();
+	// 				cont2+=g.getArestas(iddd)->getPeso2();
+	// 				conjjj.union1(g.getArestas(iddd)->getOrigem(), g.getArestas(iddd)->getDestino());
     		
-				} else {
-					cout<<"ERROOOOOOOOOO"<<endl;
-					break;
-				}
-   		}
-   		if (cont1 != arvr.second.first || cont2 != arvr.second.second) {
-    		cout<<"ERROROFKROKFORKFORKF 3"<<endl;
-    		break;
-    	}
-    	cout<<(*it).second.first<<" "<<(*it).second.second<<endl;
-    	if ((*it).second.first>max_ob1) max_ob1 = (*it).second.first;
-    	if ((*it).second.second>max_ob2) max_ob2 = (*it).second.second;
-    	fprintf(paretoFront,"%.10lf %.10lf\n", (*it).second.first, (*it).second.second);
+	// 			} else {
+	// 				cout<<"ERROOOOOOOOOO"<<endl;
+	// 				break;
+	// 			}
+ //   		}
+ //   		if (cont1 != arvr.second.first || cont2 != arvr.second.second) {
+ //    		cout<<"ERROROFKROKFORKFORKF 3"<<endl;
+ //    		break;
+ //    	}
+ //    	cout<<(*it).second.first<<" "<<(*it).second.second<<endl;
+ //    	if ((*it).second.first>max_ob1) max_ob1 = (*it).second.first;
+ //    	if ((*it).second.second>max_ob2) max_ob2 = (*it).second.second;
+ //    	fprintf(paretoFront,"%.10lf %.10lf\n", (*it).second.first, (*it).second.second);
    	
-	}
+	// }
 
-	fprintf(paretoFront,"\n");
-   	fclose(paretoFront);
-   	fclose(tempofile);
+	// fprintf(paretoFront,"\n");
+ //   	fclose(paretoFront);
+ //   	fclose(tempofile);
 
-	cout<<"MAXX = "<<max_ob1<<" "<<max_ob2<<endl;
+	// cout<<"MAXX = "<<max_ob1<<" "<<max_ob2<<endl;
 	return 0;
 }

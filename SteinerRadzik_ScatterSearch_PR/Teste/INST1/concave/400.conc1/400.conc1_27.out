@@ -1,0 +1,17 @@
+79398 arestas removidas
+396 obrigatorias
+Fim da primeira fase. Quantidade de solucoes suportadas : 2
+0
+Fim da segunda fase. Quantidade de solucoes nao-suportadas: 5
+0.01
+Total antes = 7
+Total fora = 2
+Quantidade total de solucoes : 6
+Total: 0.01 segundos
+2000 999
+999 2000
+1000 1999
+1001 1998
+1998 1001
+1999 1000
+MAXX = 2000 2000

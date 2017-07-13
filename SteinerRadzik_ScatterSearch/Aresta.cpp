@@ -27,6 +27,15 @@ float Aresta::getPeso1(){
 float Aresta::getPeso2(){
 	return peso2;
 }
+
+void Aresta::setPeso1(float a){
+	peso1 = a;
+}
+
+void Aresta::setPeso2(float a){
+	peso2 = a;
+}
+
 void Aresta::setId(int novo){
 	id = novo;
 }

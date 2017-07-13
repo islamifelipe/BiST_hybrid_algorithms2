@@ -1,0 +1,29 @@
+set terminal png font "/usr/share/fonts/truetype/freefont/FreeSans.ttf" 18 size 1024,768
+
+set out "front1.out"
+set autoscale
+set notime
+set grid
+set title "transv4"
+set xlabel "Objective 1"
+set ylabel "Objective 2"
+plot "saida4" using 1:2 title "Saida transv4" with points 21, "../instancias/correlated/400.2/transgenetico/resultados/corr.400.2.out" using 1:2 title "Saida Transgenetico" with points 19
+
+set out "front2.out"
+set autoscale
+set notime
+set grid
+set title "transv4"
+set xlabel "Objective 1"
+set ylabel "Objective 2"
+plot "saida4" using 1:2 title "Saida transv4" with points 21, "../instancias/correlated/400.2/transv2/resultados/corr.400.2.out" using 1:2 title "Saida Transv2" with points 19
+
+
+set out "front3.out"
+set autoscale
+set notime
+set grid
+set title "transv4"
+set xlabel "Objective 1"
+set ylabel "Objective 2"
+plot "saida4" using 1:2 title "Saida transv4" with points 21, "saida3" using 1:2 title "Saida Transv4-2" with points 19

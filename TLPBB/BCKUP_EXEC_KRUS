@@ -1,0 +1,84 @@
+	void executar(SolucaoEdgeSet ref, int reftam, SolucaoEdgeSet &s, double lambda[NUMOBJETIVOS], double alfa, TRandomMersenne &rg) {
+
+		for(i,NUMOBJETIVOS) {
+			s.setObj(i,0.0);
+		}
+		uf.clear();
+		for(i,nArestas)
+			arestas[i].c = lambda[0]*f(0,arestas[i].a,arestas[i].b) + lambda[1]*f(1,arestas[i].a,arestas[i].b);
+
+		// ordena as arestas do grafo
+		stable_sort(arestas,arestas+((NUMEROVERTICES*(NUMEROVERTICES-1))/2),compEdge);
+		
+		// coloca NUMEROVERTICES-1 arestas do grafo sem formar ciclo
+		int cont = 0, edge = 0;
+
+		//coloca as arestas da solucao ref
+
+		for (i, reftam) {
+			s.edges [cont][0] = ref.edges [i][0]; 
+			s.edges[cont][1] = ref.edges[i][1];
+			s.setObj(0,s.getObj(0)+f(0,s.edges[cont][0],s.edges[cont][1]));
+			s.setObj(1,s.getObj(1)+f(1,s.edges[cont][0],s.edges[cont][1]));
+
+			int fa = 0;
+			/*int find = false;
+			
+			while (!find && fa < nArestas) {
+				if (arestas[fa].a == ref.edges[i][0] && arestas[fa].b == ref.edges[i][1]) find = true;
+				else fa++;
+			}
+
+			if (find) {
+				uf.unionClass( arestas[fa].a, arestas[fa].b );
+				cont++;
+			}
+			else {
+				cout << "ERRO FIND";
+			}
+			*/
+			if (ref.edges[i][0] > ref.edges[i][1]) {
+				fa = ref.edges[i][0]*(ref.edges[i][0]-1)/2 + ref.edges[i][1];
+				if (arestas[fa].a != ref.edges[i][0] || arestas[fa].b != ref.edges[i][1]);
+				//	fprintf (stderr, "\nERRO FIND\nfa: %d\nref: %d, %d\narestas:%d, %d\n", fa, ref.edges[i][0], ref.edges[i][1], arestas[fa].a, arestas[fa].b);
+			}
+
+			else {
+			//	fprintf (stderr, "\nINVERSAO\n");
+				fa = ref.edges[i][1]*(ref.edges[i][1]-1)/2 + ref.edges[i][0];
+				if (arestas[fa].a != ref.edges[i][1] || arestas[fa].b != ref.edges[i][0]);
+			//		fprintf (stderr, "\nERRO FIND ELSE\nfa: %d\nref: %d, %d\narestas:%d, %d\n", fa, ref.edges[i][0], ref.edges[i][1], arestas[fa].a, arestas[fa].b);
+
+				
+			}
+		}
+
+		while (cont < NUMEROVERTICES-1) {
+
+			// anda ate a proxima aresta que pode ser inserida
+			while (uf.sameClass(arestas[edge].a,arestas[edge].b)) edge++;
+
+			// encontra as arestas que tem custo ate alfa% maior que o da aresta "edge"
+			int edgeRCL = edge+1;
+			double maxCost = arestas[edge].c*(1.0+alfa);
+			while (edgeRCL < nArestas && arestas[edgeRCL].c < maxCost)
+				edgeRCL++;
+
+			// escolhe aleatoriamente uma aresta da lista ate que encontre uma que nao forma ciclo
+			int esc = rg.IRandom(edge,edgeRCL-1);
+			while (uf.sameClass(arestas[esc].a,arestas[esc].b))
+				esc = rg.IRandom(edge,edgeRCL-1);
+	
+			//printf("%d: aresta %d (%d,%d) --> (%lf)\n",cont,esc,arestas[esc].a,arestas[esc].b,custoKruskal[arestas[esc].a][arestas[esc].b]);
+
+			// coloca a aresta escolhida da RCL na solucao
+			s.edges[cont][0] = arestas[esc].a;
+			s.edges[cont][1] = arestas[esc].b;
+			s.setObj(0,s.getObj(0)+f(0,s.edges[cont][0],s.edges[cont][1]));
+			s.setObj(1,s.getObj(1)+f(1,s.edges[cont][0],s.edges[cont][1]));
+			uf.unionClass( arestas[esc].a, arestas[esc].b );
+			cont++;
+		}
+		sleep (5);
+	}
+

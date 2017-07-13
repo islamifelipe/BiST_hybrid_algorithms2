@@ -1,0 +1,103 @@
+6c6,7
+< void mcprim(SolucaoEdgeSet &s, double lambda[NUMOBJETIVOS], TRandomMersenne &rg) {
+---
+> void mcprim(SolucaoEdgeSet ref, int reftam, SolucaoEdgeSet &s, double lambda[NUMOBJETIVOS], TRandomMersenne &rg) {
+> 
+12,14c13
+< 	
+< 	int inicio = rg.IRandom(0,NUMEROVERTICES-1);
+< 	
+---
+> 
+21,24c20,85
+< 	
+< 	// menor distancia ate o inicio eh zero
+< 	mindist[inicio] = 0.0;
+< 	viz = inicio;
+---
+> 
+> 	fprintf (stderr, "iniciei\t");
+> 
+> 	// a seguir, todos os elementos de ref sao inseridos na arvore
+> 	bool newNode;
+> 	for (i, reftam) {
+> 		newNode = false;
+> 		for (j, 2) {
+> 			if (!arvore[ ref.edges[i][j] ]) {
+> 				arvore [ ref.edges[i][j] ] = true;
+> 				newNode = true;
+> 
+> 				//atualizacao das distancias minimas dos nos adjacentes
+> 				for(k,NUMEROVERTICES) {
+> 					double p = 0.0;
+> 					for(l,NUMOBJETIVOS) p += (lambda[l]*custos[l][ ref.edges[i][j] ][k]);
+> 					if (!arvore[k] && k != i && mindist[k] > p) {
+> 						mindist[k] = p;
+> 						ant[k] = i;
+> 					}
+> 				}
+> 			}
+> 		}
+> 		if (newNode) {
+> 			s.edges[cont][0] = ref.edges[i][0];
+> 			s.edges[cont][1] = ref.edges[i][1];
+> 			cont++;
+> 
+> 		}
+> 	}
+> 
+> 	fprintf (stderr, "ref inserido.\t");
+> 	/*fprintf (stderr, "\nsituacao da arvore:\n");
+> 	for (i, NUMEROVERTICES) {
+> 		if (arvore[i]) fprintf (stderr, "1\t");
+> 		else fprintf (stderr, "0\t");
+> 	}
+> 	fprintf (stderr, "\nSituacao de mindist:\n");
+> 	for (i, NUMEROVERTICES) {
+> 		if (mindist[i] == INF) fprintf (stderr, "INF\t");
+> 		else fprintf (stderr, "%f\t", mindist[i]);
+> 	}
+> 	fprintf (stderr, "\n");
+> 	*/
+> 	viz = -1;
+> 	maisprox = INF;
+> 
+> 	// procura o no que tem a menor distancia
+> 	// em relacao a arvore formada pelas arestas em ref
+> 	// e que ainda nao foi colocado
+> 	for(i,NUMEROVERTICES) {
+> 		if (!arvore[i] && mindist[i] < maisprox) {
+> 			viz = i;
+> 			maisprox = mindist[i];
+> 		}
+> 	}
+> 
+> 	fprintf (stderr, "viz inicial: %d, ant: %d, middist[viz]: %f\n", viz, ant[viz], mindist[viz]);
+> 
+> 	// adiciona a aresta entre ant[viz] e viz
+> 	s.edges[cont][0] = ant[viz];
+> 	s.edges[cont][1] = viz;
+> 	cont++;
+> 
+> 	fprintf (stderr, "indo while\t");
+> 
+39c100
+< 		
+---
+> 
+48c109,110
+< 		
+---
+> 
+> 		fprintf (stderr, "viz [%d]: %d, ant: %d, mindist[viz]: %f\n", cont, viz, ant[viz], mindist[viz]);
+53a116,122
+> 	fprintf (stderr, "saindo while\narestas em s:\n");
+> 
+> //	for (i, NUMEROVERTICES-1) {
+> //		fprintf (stderr, "(%d,%d)", s.edges[i][0],s.edges[i][1]);
+> //
+> //	}
+> //	fprintf (stderr, "\n");
+55a125,126
+> 
+> 	fprintf (stderr, "fim\n");
