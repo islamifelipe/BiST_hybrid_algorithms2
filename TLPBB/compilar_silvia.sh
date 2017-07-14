@@ -1,8 +1,8 @@
 
-for k in 50 #100 200 300 400 500 600 700 800 900 1000
+for k in 50 100 200 300 400 500 600 700 800 900 1000
 do
 	mkdir instancias/executaveis/$k
-	# echo "#define NUMEROVERTICES $k" >> param.h
+	echo "#define NUMEROVERTICES $k" >> param.h
 	#g++ transgenetico.cpp rand/mersenne.o -ansi -Wall -O2 -o ../instancias/concave/executaveis/transgenetico$k
 	#g++ transgenetico.cpp rand/mersenne.o -ansi -Wall -O2 -o ../instancias/correlated/executaveis/transgenetico$k
 	g++ transgenetico.cpp rand/mersenne.o -Wall -w -O2 -o instancias/executaveis/$k/transv5_$k

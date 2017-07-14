@@ -6,6 +6,7 @@
 #include <sys/times.h>
 #include <sys/types.h>
 #include <iostream>
+#include <stack>
 using namespace std;
 
 #include "rmcKruskal.cpp"
@@ -24,7 +25,8 @@ int numIndGenerated = 0;
 
 BoundedParetoSet global;
 SolucaoEdgeSet *pop[TAMANHOPOPULACAO];
-//SolucaoEdgeSet *ja_inseridas[5];
+SolucaoEdgeSet *ja_inseridas;
+bool isObrigatoria[NUMEROVERTICES][NUMEROVERTICES]; // se true, entao a aresta ij é obrigatoria. Se for false, nao é obrigatoria
 bool verticesVisitados[NUMEROVERTICES]; // by Felipe : esse vetor é utilizado sempre que se quiser verificar se um subconjunto de vértices foi visitado (deve ser inicializado)
 double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
 int idArestas[NUMEROVERTICES][NUMEROVERTICES]; // by Felipe : usado para guardar os ids das arestas
@@ -44,6 +46,10 @@ void input(char *arq) {
 		for (int j=0;j<NUMEROVERTICES;j++) {
 			custos[0][i][j] = NIL;// by FELIPE
 			custos[1][i][j] = NIL;// by FELIPE
+			custos[0][j][i] = NIL;// by FELIPE
+			custos[1][j][i] = NIL;// by FELIPE
+			idArestas[i][j] = NIL;// by FELIPE
+			idArestas[j][i] = NIL;// by FELIPE
 		}
 	}
 	int id = 0;
@@ -88,52 +94,111 @@ bool maior(int ai, int aj, int bi, int bj){
     return false;
 }
 
+/*as arestas obrigatorias sao inseridas no array obrigatorias*/
+void setObrigatorias(TRandomMersenne &rg){
+	int obrigatorias = 0;
+    stack<int> pilha;
+    for (int origem=0; origem<NUMEROVERTICES; origem++){
+    	for (int destino=origem+1; destino<NUMEROVERTICES; destino++){
+      		isObrigatoria[origem][destino] = false;
+      		if (idArestas[origem][destino]!=NIL){
+          		for (int i = 0; i < NUMEROVERTICES; i++) verticesVisitados[i] = false;
+          		verticesVisitados[origem] = true;
+            
+            	pilha.push(origem);
+            	while(pilha.empty()==false){
+	             	int current = pilha.top();
+	              	pilha.pop();
+	              	verticesVisitados[current] = true;
+	              	for (int adj=0; adj<NUMEROVERTICES; adj++){ // adjacentes a corrent
+	              		//TODO : if aqui
+	                	if (idArestas[current][adj] != NIL){
+		                	int prox = adj; 
+		                	// este if abaixo: se o prox vertice nao foi visitado
+			                //e se a aresta indo de corrente pra prox domina a aresta corrente (origem destino), entao...
+			                if (verticesVisitados[prox]==false && idArestas[current][prox]!=idArestas[origem][destino] && !maior(current,prox,origem,destino)){
+			                	//este if abaixo: se a aresta que vai de prox a destino (o destino do laço là de cima) exite, entao verifica se ela domina a aresta corrente (origem destino)
+			                 	if (idArestas[prox][destino]!=NIL && !maior(prox,destino,origem,destino)){
+				                    verticesVisitados[destino] = true;
+				                    break;
+		                  		} else {
+				                    pilha.push(prox);
+		                  		}
+		               		}
+		               	}
+	              	}
+	            }
+	            if (verticesVisitados[destino]==false){//&& status[matrixArestas[origem][destino]->getId()] == 0
+		            isObrigatoria[origem][destino] = true;
+		            obrigatorias++; 
+	            } 
+        	} 
+      	}
+    }
+    cout<<obrigatorias<<" obrigatorias"<<endl;
+}
 
+/*apos remover as arestas, é necessario atualizar os index das arestas que restam e depois marcar as obrigatorias*/
+void updateIndexArestas(){
+	int id = 0;
+	for (int i=0; i<NUMEROVERTICES; i++){
+		for (int j=i+1; j<NUMEROVERTICES; j++){
+			if (idArestas[i][j]!=NIL){
+				//cout<<custos[0][i][j]<<" "<<custos[1][i][j]<<" id = "<<id<<endl;
+				idArestas[i][j] = id;
+				idArestas[j][i] = id;
+				id++;
+			}
+		}
+	}
+
+}
+/*As arestas proibidas sao colocadas como NIL na matriz custos*/
 void retiraProibidas(){
-	// int removidas = 0;
- // 	//verticesVisitados
- //    stack<int> pilha;
- //    for (int origem=0; origem<n; origem++){
- //      for (int destino=origem+1; destino<n; destino++){
- //            if (custos[origem][destino]!=NULL){
- //            for (int i = 0; i < n; i++) verticesVisitados[i] = false;
- //            verticesVisitados[origem] = true;
- //              pilha.push(origem);
- //              while(pilha.empty()==false){
- //                int current = pilha.top();
- //                pilha.pop();
- //                verticesVisitados[current] = true;
- //                for (int adj = 0; adj<lista_vertices[current]->getGrau(); adj++){ // para cada adjacente do vertice corrente
- //                      int prox = lista_vertices[current]->getAresta(adj)->getDestino();
- //                        if (prox==current) prox = lista_vertices[current]->getAresta(adj)->getOrigem();
-                        
- //                        // este if abaixo: se o prox vertice nao foi visitado
- //                  //e se a aresta indo de corrente pra prox domina a aresta corrente (origem destino), entao...
- //                  if (verticesVisitados[prox]==false && menor(matrixArestas[current][prox], matrixArestas[origem][destino])){
- //                    //este if abaixo: se a aresta que vai de prox a destino (o destino do laço là de cima) exite, entao verifica se ela domina a aresta corrente (origem destino)
- //                    if (matrixArestas[prox][destino]!=NULL && menor(matrixArestas[prox][destino], matrixArestas[origem][destino])) {
- //                      removidas++;
- //                      Aresta *mm = matrixArestas[origem][destino];
- //                      lista_vertices[origem]->removeAresta(mm);
- //                      lista_vertices[destino]->removeAresta(mm);
- //                      matrixArestas[origem][destino] = NULL;
- //                                matrixArestas[destino][origem] = NULL;
- //                                //clear stack
- //                                for (int kgf = 0; pilha.empty()==false; kgf++){
- //                                    pilha.pop();
- //                                }
- //                      break;
- //                    } else {
- //                      pilha.push(prox);
- //                    }
- //                  }
- //                }
- //              }
- //        }
- //      }
- //    }
- //    delete[] verticesVisitados;
- //    cout<<removidas<<" arestas removidas"<<endl;
+	int removidas = 0;
+ 	//verticesVisitados
+    stack<int> pilha;
+    for (int origem=0; origem<NUMEROVERTICES; origem++){
+      	for (int destino=origem+1; destino<NUMEROVERTICES; destino++){
+            if (idArestas[origem][destino]!=NIL){
+            	for (int i = 0; i < NUMEROVERTICES; i++) verticesVisitados[i] = false;
+            	verticesVisitados[origem] = true;
+             	pilha.push(origem);
+              	while(pilha.empty()==false){
+                	int current = pilha.top();
+                	pilha.pop();
+                	verticesVisitados[current] = true;
+                	for (int adj=0; adj<NUMEROVERTICES; adj++){ // adjacentes a corrent
+                		if (idArestas[current][adj] != NIL){
+		            		int prox = adj;//lista_vertices[current]->getAresta(adj)->getDestino();
+		                    // este if abaixo: se o prox vertice nao foi visitado
+		             		//e se a aresta indo de corrente pra prox domina a aresta corrente (origem destino), entao...
+		              		if (verticesVisitados[prox]==false && menor(current,prox, origem,destino)){
+		                		//este if abaixo: se a aresta que vai de prox a destino (o destino do laço là de cima) exite, entao verifica se ela domina a aresta corrente (origem destino)
+		                		if (idArestas[prox][destino]!=NIL && menor(prox,destino,origem,destino)) {
+		                  			removidas++;
+		                  			custos[0][origem][destino] = NIL;
+		                            custos[0][destino][origem] = NIL;
+		                            custos[1][origem][destino] = NIL;
+		                            custos[1][destino][origem] = NIL;
+		                            idArestas[origem][destino] = NIL;
+		                            idArestas[destino][origem] = NIL;
+		                            //clear stack
+		                            for (int kgf = 0; pilha.empty()==false; kgf++){
+		                                pilha.pop();
+		                            }
+		                  			break;
+			                    } else {
+			                      	pilha.push(prox);
+			                    }
+		              		}
+		              	}
+                	}
+              	}
+        	}
+      	}
+    }
+    cout<<removidas<<" arestas removidas"<<endl;
 }
 
 void branch(){
@@ -155,7 +220,21 @@ int main( int argc,  char *argv[]) {
 
 	TRandomMersenne rg( std::atoi(argv[2]) );
 	input(argv[1]);
+	retiraProibidas();
+	updateIndexArestas();
+	setObrigatorias(rg);
+	// for (int i=0; i<NUMEROVERTICES; i++){
+	// 	for (int j=i+1; j<NUMEROVERTICES; j++){
+	// 		if (idArestas[i][j] != NIL){
+	// 			cout<<f(0,i,j)<<" "<<f(1,i,j);
+	// 			if (isObrigatoria[i][j] == true){
+	// 				cout<<" ==== > Obrigatoria";
+	// 			}
+	// 			cout<<endl;
+	// 		}
 
+	// 	}
+	// }
 	global.setNomeGlobalf (argv[3]);
 
 	FILE *paretoFront = fopen(argv[4],"a");
@@ -278,7 +357,7 @@ int main( int argc,  char *argv[]) {
 			probTrans -= probFactor;
 		}
 
-		fprintf(stderr,"Geracao %d (%d solucoes)\n",numGeracoes,global.getSize());
+		//fprintf(stderr,"Geracao %d (%d solucoes)\n",numGeracoes,global.getSize());
 		
 		numGeracoes++;
 
@@ -390,7 +469,7 @@ int main( int argc,  char *argv[]) {
 					pop[i]->geraIndividuoAleatorio();
 				}
 				numRodadas = 0;
-				fprintf(stderr,"DIVERSIFICANDO %.1lf%% DA POPULACAO!\n",PCTDIVERSIFICACAO*100.0);
+				//fprintf(stderr,"DIVERSIFICANDO %.1lf%% DA POPULACAO!\n",PCTDIVERSIFICACAO*100.0);
 			}
 		}
 		else {
@@ -406,13 +485,16 @@ int main( int argc,  char *argv[]) {
 		delete pop[i];
 	}
 		
-											// times(&tempoDepois);
-											// fprintf(stdout,"Tempo(s) = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
-											// fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	times(&tempoDepois);
+	fprintf(stdout,"Tempo do transgenético = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	fprintf(stdout,"Quantidade de soluçoes encontradas pelo transgenético = %i\n", global.getSize());
+	
+
+	//fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
 									   	
 
-	global.printSetPoints(stdout);
-	global.printSetPoints(paretoFront);
+	// global.printSetPoints(stdout);
+	// global.printSetPoints(paretoFront);
 		
 
 	

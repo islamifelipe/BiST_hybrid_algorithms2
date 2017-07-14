@@ -21,7 +21,8 @@ typedef struct {
 
 class SolucaoEdgeSet : public Solucao {
 	public:
-	int edges[NUMEROVERTICES-1][2];
+	int edges[NUMEROVERTICES-1][2]; //linhas : i-ésima aresta da solucao
+	// colunas : do vértice [0] ao vértice [1]
 	int nEdges;
 	UnionFind uf;
 	grafo *g;
@@ -48,9 +49,9 @@ class SolucaoEdgeSet : public Solucao {
 	 * Complexidade O(N) */
 	void calcularFitness() {
 		f[0] = f[1] = 0.0;
-		for (int i=0;i<NUMEROVERTICES-1;i++)
+		for (int i=0;i<NUMEROVERTICES-1;i++) // i-ésima aresta da solucao
 			for (int j=0;j<2;j++)
-				f[j] += f(j,edges[i][0],edges[i][1]);
+				f[j] += f(j,edges[i][0],edges[i][1]);  //j-ésimo custo da aresta de (edges[i][0],edges[i][1])
 
 		//cout<<f[0]<<" "<<f[1]<<endl;
 	}
@@ -134,9 +135,9 @@ class SolucaoEdgeSet : public Solucao {
 	/* Faz a troca das arestas ai e aj, religando no formato 2-OPT
 	 * Complexidade O(1) */
 	void trocaArestas(int ai, int aj, char tipo) {
-		int a = edges[ai][0];
+		int a = edges[ai][0]; // pega aresta que vai do vértice "a" ao vértice "b"
 		int b = edges[ai][1];
-		int c = edges[aj][0];
+		int c = edges[aj][0]; // pega aresta que vai do vértice "c" ao vértice "d"
 		int d = edges[aj][1];
 
 		int novaA[2]={0,0}, novaB[2]={0,0};
