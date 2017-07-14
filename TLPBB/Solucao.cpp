@@ -4,9 +4,8 @@
 #include "rand/randomc.h"
 #include "param.h"
 class Solucao {
-	protected:
-	double f[2];
 	public:
+	double f[2];
 	TRandomMersenne *rg;
 
 	public:

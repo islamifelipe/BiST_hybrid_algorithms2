@@ -25,7 +25,7 @@ int numIndGenerated = 0;
 
 BoundedParetoSet global;
 SolucaoEdgeSet *pop[TAMANHOPOPULACAO];
-SolucaoEdgeSet *ja_inseridas;
+//SolucaoEdgeSet *ja_inseridas;
 bool isObrigatoria[NUMEROVERTICES][NUMEROVERTICES]; // se true, entao a aresta ij é obrigatoria. Se for false, nao é obrigatoria
 bool verticesVisitados[NUMEROVERTICES]; // by Felipe : esse vetor é utilizado sempre que se quiser verificar se um subconjunto de vértices foi visitado (deve ser inicializado)
 double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
@@ -201,6 +201,45 @@ void retiraProibidas(){
     cout<<removidas<<" arestas removidas"<<endl;
 }
 
+
+
+// duas solucoes sao vizinhas, se, e somente se, diferem e uma, e somente uma, aresta
+BoundedParetoSet getVizinhos(SolucaoEdgeSet *s){ // by Felipe
+	s->uf.clear();
+	double peso0 = 0;
+	double peso1 = 0;
+	BoundedParetoSet ret;
+	for (int sai=0; sai<NUMEROVERTICES-1; sai++){  // arestas que podem sair
+    	if (isObrigatoria1(s->edges[sai][0],s->edges[sai][1])== false){//se nao for obrigatoria
+    		for (int demais=0; demais<NUMEROVERTICES-1; demais++){ 
+    			if (demais!=sai){ // junta, no unionFind, as demais arestas
+    				s->uf.unionClass(s->edges[demais][0],s->edges[demais][1]);
+    				peso0 += f(0,s->edges[demais][0],s->edges[demais][1]); // soma peso1
+					peso1 += f(1,s->edges[demais][0],s->edges[demais][1]); // soma peso2
+    			}
+    		}
+
+    		// busca uma aresta pra entrar
+    		for (int origem = 0; origem<NUMEROVERTICES; origem++){
+    			for (int destino=0; destino<NUMEROVERTICES; destino++){
+    				if (id(origem, destino)!=NIL) { // se a aresta existe
+    					if (s->uf.sameClass(origem,destino)==false){ // se nao forma ciclo
+    						double novoPeso0 = peso0+f(0,origem,destino);
+    						double novoPeso1 = peso1+f(1,origem,destino);
+    						if ((s->f[0]<=novoPeso0 && s->f[1]<=novoPeso1 && (s->f[0]<novoPeso0 || s->f[1]<novoPeso1))==false){
+    							//ret.adicionarSol();
+    						}
+    					}
+    				}
+    			}
+    		}
+    	}
+	}
+}
+
+
+
+
 void branch(){
 	// o arquivo global será o UB (upper bound)
 	
@@ -227,7 +266,7 @@ int main( int argc,  char *argv[]) {
 	// 	for (int j=i+1; j<NUMEROVERTICES; j++){
 	// 		if (idArestas[i][j] != NIL){
 	// 			cout<<f(0,i,j)<<" "<<f(1,i,j);
-	// 			if (isObrigatoria[i][j] == true){
+	// 			if (isObrigatoria1(i,j) == true){
 	// 				cout<<" ==== > Obrigatoria";
 	// 			}
 	// 			cout<<endl;

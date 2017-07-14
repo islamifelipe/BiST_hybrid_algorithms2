@@ -3,6 +3,7 @@
 
 #include <cstdio>
 #include <queue>
+#include <vector>
 #include "Solucao.cpp"
 #include "UnionFind.cpp"
 #include "param.h"
@@ -12,6 +13,8 @@
 using namespace std;
 
 extern double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
+extern bool isObrigatoria[NUMEROVERTICES][NUMEROVERTICES]; 
+extern int idArestas[NUMEROVERTICES][NUMEROVERTICES];
 
 typedef struct {
 	int listaadj[NUMEROVERTICES][NUMEROVERTICES], graus[NUMEROVERTICES];
@@ -30,7 +33,7 @@ class SolucaoEdgeSet : public Solucao {
 
 	SolucaoEdgeSet(int n,TRandomMersenne &r) {
 		nEdges = n;
-		f[0] = f[1] = 0.0;
+		f[0] = f[1] = -1;
 		rg = &r;
 		g = NULL;
 	}
@@ -45,6 +48,7 @@ class SolucaoEdgeSet : public Solucao {
         s.f[1] = f[1];
     }
 
+    
 	/* Calcula o fitness atual da solucao
 	 * Complexidade O(N) */
 	void calcularFitness() {
