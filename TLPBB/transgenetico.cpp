@@ -25,7 +25,9 @@ int numIndGenerated = 0;
 BoundedParetoSet global;
 SolucaoEdgeSet *pop[TAMANHOPOPULACAO];
 //SolucaoEdgeSet *ja_inseridas[5];
+bool verticesVisitados[NUMEROVERTICES]; // by Felipe : esse vetor é utilizado sempre que se quiser verificar se um subconjunto de vértices foi visitado (deve ser inicializado)
 double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
+int idArestas[NUMEROVERTICES][NUMEROVERTICES]; // by Felipe : usado para guardar os ids das arestas
 int numGeracoes = 0;
 rmcKruskal kruskal;
 
@@ -40,10 +42,11 @@ void input(char *arq) {
 	D(printf("1. Iniciando leitura dos custos\n");)
 	for (int i=0;i<NUMEROVERTICES;i++) {
 		for (int j=0;j<NUMEROVERTICES;j++) {
-			custos[0][i][j] = 999999999999;// by FELIPE
-			custos[1][i][j] = 999999999999;// by FELIPE
+			custos[0][i][j] = NIL;// by FELIPE
+			custos[1][i][j] = NIL;// by FELIPE
 		}
 	}
+	int id = 0;
 	while ( ! feof (file) ){
 			//if (NUMEROVERTICES < 1000) // by FELIPE
 			fscanf(file,"%d %d %f %f",&k,&l,&peso1, &peso2);
@@ -52,7 +55,10 @@ void input(char *arq) {
 			custos[1][l][k] = peso2;// by FELIPE
 			custos[0][k][l] = peso1;// by FELIPE
 			custos[1][k][l] = peso2;// by FELIPE
-			cout<<k<<" "<<l<<" "<<peso1<<" "<<peso2<<endl;// by FELIPE
+			idArestas[k][l] = id;
+			idArestas[l][k] = id;
+			id++;
+			//cout<<k<<" "<<l<<" "<<peso1<<" "<<peso2<<endl;// by FELIPE
 		}
 	//	}
 	//}
@@ -61,6 +67,83 @@ void input(char *arq) {
 
 }
 
+
+//a aresta é identificada como (i,j). O indice 0 é o primeiro peso, e o 1 é o seugndo peso
+//Ta bom, poderia implementar o operador <, eu sei. Mas deu preguiça
+bool menor(int ai, int aj, int bi, int bj){
+    if (custos[0][ai][aj]<custos[0][bi][bj]) return custos[1][ai][aj]<=custos[1][bi][bj];
+    if (custos[0][ai][aj]>custos[0][bi][bj]) return false;
+    //assert(a->getPeso1()==b->getPeso1()) 
+    if (custos[1][ai][aj]<custos[1][bi][bj]) return true;
+    if (custos[1][ai][aj]==custos[1][bi][bj]) return idArestas[ai][aj] < idArestas[bi][bj];
+    return false;
+}
+//idem
+bool maior(int ai, int aj, int bi, int bj){
+    if (custos[0][ai][aj]>custos[0][bi][bj]) return custos[1][ai][aj] >= custos[1][bi][bj];
+    if (custos[0][ai][aj]<custos[0][bi][bj]) return false;
+    //assert(a->getPeso1()==b->getPeso1()) 
+    if (custos[1][ai][aj]>custos[1][bi][bj]) return true;
+    if (custos[1][ai][aj]==custos[1][bi][bj]) return idArestas[ai][aj] >idArestas[bi][bj];
+    return false;
+}
+
+
+void retiraProibidas(){
+	// int removidas = 0;
+ // 	//verticesVisitados
+ //    stack<int> pilha;
+ //    for (int origem=0; origem<n; origem++){
+ //      for (int destino=origem+1; destino<n; destino++){
+ //            if (custos[origem][destino]!=NULL){
+ //            for (int i = 0; i < n; i++) verticesVisitados[i] = false;
+ //            verticesVisitados[origem] = true;
+ //              pilha.push(origem);
+ //              while(pilha.empty()==false){
+ //                int current = pilha.top();
+ //                pilha.pop();
+ //                verticesVisitados[current] = true;
+ //                for (int adj = 0; adj<lista_vertices[current]->getGrau(); adj++){ // para cada adjacente do vertice corrente
+ //                      int prox = lista_vertices[current]->getAresta(adj)->getDestino();
+ //                        if (prox==current) prox = lista_vertices[current]->getAresta(adj)->getOrigem();
+                        
+ //                        // este if abaixo: se o prox vertice nao foi visitado
+ //                  //e se a aresta indo de corrente pra prox domina a aresta corrente (origem destino), entao...
+ //                  if (verticesVisitados[prox]==false && menor(matrixArestas[current][prox], matrixArestas[origem][destino])){
+ //                    //este if abaixo: se a aresta que vai de prox a destino (o destino do laço là de cima) exite, entao verifica se ela domina a aresta corrente (origem destino)
+ //                    if (matrixArestas[prox][destino]!=NULL && menor(matrixArestas[prox][destino], matrixArestas[origem][destino])) {
+ //                      removidas++;
+ //                      Aresta *mm = matrixArestas[origem][destino];
+ //                      lista_vertices[origem]->removeAresta(mm);
+ //                      lista_vertices[destino]->removeAresta(mm);
+ //                      matrixArestas[origem][destino] = NULL;
+ //                                matrixArestas[destino][origem] = NULL;
+ //                                //clear stack
+ //                                for (int kgf = 0; pilha.empty()==false; kgf++){
+ //                                    pilha.pop();
+ //                                }
+ //                      break;
+ //                    } else {
+ //                      pilha.push(prox);
+ //                    }
+ //                  }
+ //                }
+ //              }
+ //        }
+ //      }
+ //    }
+ //    delete[] verticesVisitados;
+ //    cout<<removidas<<" arestas removidas"<<endl;
+}
+
+void branch(){
+	// o arquivo global será o UB (upper bound)
+	
+
+	// for (list<SolucaoEdgeSet *>::iterator i= sols.begin(); i!=sols.end(); i++){
+	// 	cout<<(*i)->getObj(0)<<" "<<(*i)->getObj(1)<<endl;
+	// }
+}
 
 int main( int argc,  char *argv[]) {
 
@@ -87,8 +170,6 @@ int main( int argc,  char *argv[]) {
 		pop[i] = new SolucaoEdgeSet(NUMEROVERTICES-1,rg);
 		numFalhas[i] = 0;
 	}
-	//for (int i = 0; i < 5; i++)
-	//	ja_inseridas[i] = new SolucaoEdgeSet (NUMEROVERTICES-1, rg);
 	/* PASSO 1: gera pop inicial com rmcprim e randomwalk */
 
 	/* gera as solucoes rmcPrim */
@@ -102,7 +183,7 @@ int main( int argc,  char *argv[]) {
 	int numIndGen = 0;
 
 
-
+	//populacao inicial
 	while (quant < quant_rmcPrim && wctr < 1.5*quant_rmcPrim) {
 		rmcPrim( *pop[numIndGen], lambda, rg );
 		if (wctr != quant_rmcPrim) {
@@ -139,10 +220,11 @@ int main( int argc,  char *argv[]) {
 		}
 		wctr++;
 	}
-	cerr << quant << " individuos gerados com o rmcPrim" << endl;
-	cerr << '\t' << sucrmcPrim << " sucesso no rmcPrim" << endl;
-	cerr << '\t' << rmcPrimbyrand << " rmcPrim no rand" << endl;
-	cerr << '\t' << existectr << " individuos gerados que ja estavam na pop" << endl;
+
+	// cerr << quant << " individuos gerados com o rmcPrim" << endl;
+	// cerr << '\t' << sucrmcPrim << " sucesso no rmcPrim" << endl;
+	// cerr << '\t' << rmcPrimbyrand << " rmcPrim no rand" << endl;
+	// cerr << '\t' << existectr << " individuos gerados que ja estavam na pop" << endl;
 
 
 	int rwctr = 0;
@@ -157,7 +239,7 @@ int main( int argc,  char *argv[]) {
 			rwctr++;
 	}
 
-	cerr << "tamanho do arquivo global no inicio: " << global.getSize() << endl;
+	//cerr << "tamanho do arquivo global no inicio: " << global.getSize() << endl;
 	//cout << rwctr << " individuos na fronteira de pareto com o random walk" << endl;
 
 
@@ -197,9 +279,7 @@ int main( int argc,  char *argv[]) {
 		}
 
 		fprintf(stderr,"Geracao %d (%d solucoes)\n",numGeracoes,global.getSize());
-		/*fprintf(stderr,"Grid:");
-		  for (int i=0;i<(1<<(NUMOBJETIVOS*PROFUNDIDADEGRID));i++) fprintf(stderr," %d",global.getPositionCount(i));
-		  fprintf(stderr,"\n");*/
+		
 		numGeracoes++;
 
 		// PASSO 1: cria os vetores PLASMIDEOS
@@ -228,40 +308,11 @@ int main( int argc,  char *argv[]) {
 					pl[i].geraPlasm_Solucao(**it,rg.IRandom((int)(0.25*NUMEROARESTAS),(int)(0.5*NUMEROARESTAS)));
 					tam_ctr = tam;
 					sair = true;
-
-					
-					/*
-					bool existe = false;
-					if (ja_ins) {
-						for (int j = 0; j < quant_ins; j++) {
-							if (**it == *ja_inseridas[j]) {
-								existe = true;
-								break;
-							}
-						}
-					}
-					if (!existe) {
-						ja_ins = true;
-						*ja_inseridas[quant_ins] = **it;
-						quant_ins++;
-						pl[i].geraPlasm_Solucao(**it,rg.IRandom((int)(0.3*NUMEROARESTAS),(int)(0.6*NUMEROARESTAS)));
-						tam_ctr = tam;
-						sair = true;
-					}
-					*/
 				}
 			}
 		}
 
-		/*
-		   cout << endl;
-		   for (int i = 0; i < NUMPLASMIDEOS; i++) {
-		   cout << "plasm [" << i << "]:" << endl;
-		   pl[i].printTrechoInserir();
-		   }
-		   cout << endl;
-		 */
-
+	
 		// TESTE TESTE TESTE TESTE TESTE
 
 		for (int i=0;i<TAMANHOPOPULACAO;i++) {
@@ -347,52 +398,50 @@ int main( int argc,  char *argv[]) {
 			numRodadas = 1;
 		}
 
-		}
-		while (numGeracoes < NUMEROITERACOES);
+	}while (numGeracoes < NUMEROITERACOES);
 		
 
-		// deleta os elementos da populacao e do offspring
-		for (int i=0;i<TAMANHOPOPULACAO;i++) {
-			delete pop[i];
-		}
-		//for (int i = 0; i < 5; i++)
-		//	delete ja_inseridas[i];
-
-		times(&tempoDepois);
-		fprintf(stdout,"Tempo(s) = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
-		fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
-   	
-
-		global.printSetPoints(stdout);
-		global.printSetPoints(paretoFront);
-		//FILE * sol = fopen ("solucoes.out", "w");
-		//if (sol != NULL) { global.printAllSolutions (sol); fclose (sol);}
-
-		global.clear();
-
-		cerr << "plasm1suc: " << plasm1suc << endl;
-		cerr << "plasm1fail: " << plasm1fail << endl;
-		cerr << "totalplasm1: " << totalplasm1 << endl;
-		cerr << "plasm1: percentual de melhoria -> " << (double)(plasm1suc)/(double)(totalplasm1) << endl << endl;
-
-		cerr << "plasm2suc: " << plasm2suc << endl;
-		cerr << "plasm2fail: " << plasm2fail << endl;
-		cerr << "totalplasm2: " << totalplasm2 << endl;
-		cerr << "plasm2: percentual de melhoria -> " << (double)(plasm2suc)/(double)(totalplasm2) << endl << endl;
-
-		cerr << "transsuc: " << transsuc << endl;
-		cerr << "transfail: " << transfail << endl;
-		cerr << "totaltrans: " << totaltrans << endl;
-		cerr << "trans: percentual de melhoria -> " << (double)(transsuc)/(double)(totaltrans) << endl << endl;
-
-		cerr << "rectranssuc: " << rectranssuc << endl;
-		cerr << "rectransfail: " << rectransfail << endl;
-		cerr << "totalrectrans: " << totalrectrans << endl;
-		cerr << "rectrans: percentual de melhoria -> " << (double)(rectranssuc)/(double)(totalrectrans) << endl;
-
-		fprintf(paretoFront,"\n");
-   		fclose(paretoFront);
-		fclose(tempofile);
-
-		return 0;
+	// deleta os elementos da populacao e do offspring
+	for (int i=0;i<TAMANHOPOPULACAO;i++) {
+		delete pop[i];
 	}
+		
+											// times(&tempoDepois);
+											// fprintf(stdout,"Tempo(s) = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+											// fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+									   	
+
+	global.printSetPoints(stdout);
+	global.printSetPoints(paretoFront);
+		
+
+	
+
+		// cerr << "plasm1suc: " << plasm1suc << endl;
+		// cerr << "plasm1fail: " << plasm1fail << endl;
+		// cerr << "totalplasm1: " << totalplasm1 << endl;
+		// cerr << "plasm1: percentual de melhoria -> " << (double)(plasm1suc)/(double)(totalplasm1) << endl << endl;
+
+		// cerr << "plasm2suc: " << plasm2suc << endl;
+		// cerr << "plasm2fail: " << plasm2fail << endl;
+		// cerr << "totalplasm2: " << totalplasm2 << endl;
+		// cerr << "plasm2: percentual de melhoria -> " << (double)(plasm2suc)/(double)(totalplasm2) << endl << endl;
+
+		// cerr << "transsuc: " << transsuc << endl;
+		// cerr << "transfail: " << transfail << endl;
+		// cerr << "totaltrans: " << totaltrans << endl;
+		// cerr << "trans: percentual de melhoria -> " << (double)(transsuc)/(double)(totaltrans) << endl << endl;
+
+		// cerr << "rectranssuc: " << rectranssuc << endl;
+		// cerr << "rectransfail: " << rectransfail << endl;
+		// cerr << "totalrectrans: " << totalrectrans << endl;
+		// cerr << "rectrans: percentual de melhoria -> " << (double)(rectranssuc)/(double)(totalrectrans) << endl;
+
+
+	global.clear();
+	fprintf(paretoFront,"\n");
+		fclose(paretoFront);
+	fclose(tempofile);
+
+	return 0;
+}
