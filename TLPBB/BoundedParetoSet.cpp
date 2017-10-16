@@ -10,7 +10,7 @@ using namespace std;
 
 class BoundedParetoSet : public ParetoSet {
 	private:
-	const static int MAXARCSIZE = 1000;
+	const static int MAXARCSIZE = 100000;
 	FILE *globalf;
 	bool existeFileGlobal;
     string nomeglobalf;

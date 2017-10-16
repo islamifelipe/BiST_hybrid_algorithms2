@@ -14,8 +14,9 @@ typedef struct {
 } range;
 
 class ParetoSet {
-	protected:
+	public:
 	list<SolucaoEdgeSet *> sol;
+	protected:
 	range rangeNovo[2], rangeAtual[2];
 	int frequencia[NUMEROVERTICES][NUMEROVERTICES];
 	Grid g;

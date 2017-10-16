@@ -20,20 +20,32 @@ using namespace std;
 #include "Transposon.cpp"
 #include "rmcPrim.cpp"
 
+typedef struct{
+	int edges[NUMEROVERTICES-1][2]; // arestas azuis
+	int nbEdges = 0; // numero de arestas azuis
+	list<pair<int, int> > uncolored; // arestas nao coloridas
+	float f0;
+	float f1;
+}Clause;
+// Representa um nó da árvore de busca do BB
+
 //variaveis globais
 int numIndGenerated = 0;
 
 BoundedParetoSet global;
 SolucaoEdgeSet *pop[TAMANHOPOPULACAO];
-//SolucaoEdgeSet *ja_inseridas;
+Clause clauseRoot;
+int obrigatorias = 0;
 bool isObrigatoria[NUMEROVERTICES][NUMEROVERTICES]; // se true, entao a aresta ij é obrigatoria. Se for false, nao é obrigatoria
 bool verticesVisitados[NUMEROVERTICES]; // by Felipe : esse vetor é utilizado sempre que se quiser verificar se um subconjunto de vértices foi visitado (deve ser inicializado)
 double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
 int idArestas[NUMEROVERTICES][NUMEROVERTICES]; // by Felipe : usado para guardar os ids das arestas
 int numGeracoes = 0;
 rmcKruskal kruskal;
+//BoundedParetoSet vizinhosGlobal; // usado para vizinhos
 
 int numFalhas[TAMANHOPOPULACAO];
+
 
 void input(char *arq) {
 	FILE *file = fopen(arq,"r");
@@ -96,7 +108,6 @@ bool maior(int ai, int aj, int bi, int bj){
 
 /*as arestas obrigatorias sao inseridas no array obrigatorias*/
 void setObrigatorias(TRandomMersenne &rg){
-	int obrigatorias = 0;
     stack<int> pilha;
     for (int origem=0; origem<NUMEROVERTICES; origem++){
     	for (int destino=origem+1; destino<NUMEROVERTICES; destino++){
@@ -130,6 +141,11 @@ void setObrigatorias(TRandomMersenne &rg){
 	            }
 	            if (verticesVisitados[destino]==false){//&& status[matrixArestas[origem][destino]->getId()] == 0
 		            isObrigatoria[origem][destino] = true;
+		            clauseRoot.edges[obrigatorias][0] = origem;
+		            clauseRoot.edges[obrigatorias][1] = destino;
+		            clauseRoot.f0 += custos[0][origem][destino];
+		            clauseRoot.f1 += custos[1][origem][destino];
+		            clauseRoot.nbEdges++;
 		            obrigatorias++; 
 	            } 
         	} 
@@ -204,30 +220,43 @@ void retiraProibidas(){
 
 
 // duas solucoes sao vizinhas, se, e somente se, diferem e uma, e somente uma, aresta
-BoundedParetoSet getVizinhos(SolucaoEdgeSet *s){ // by Felipe
+void vizinhos(SolucaoEdgeSet *s, list<SolucaoEdgeSet *> &vizi){ // by Felipe
 	s->uf.clear();
 	double peso0 = 0;
 	double peso1 = 0;
-	BoundedParetoSet ret;
 	for (int sai=0; sai<NUMEROVERTICES-1; sai++){  // arestas que podem sair
     	if (isObrigatoria1(s->edges[sai][0],s->edges[sai][1])== false){//se nao for obrigatoria
+    		SolucaoEdgeSet *novaSol = new SolucaoEdgeSet(NUMEROVERTICES-1,*(s->rg));
+    		int contArestasNovaSol = 0;
     		for (int demais=0; demais<NUMEROVERTICES-1; demais++){ 
     			if (demais!=sai){ // junta, no unionFind, as demais arestas
     				s->uf.unionClass(s->edges[demais][0],s->edges[demais][1]);
     				peso0 += f(0,s->edges[demais][0],s->edges[demais][1]); // soma peso1
 					peso1 += f(1,s->edges[demais][0],s->edges[demais][1]); // soma peso2
+    				novaSol->edges[contArestasNovaSol][0] = s->edges[demais][0];
+    				novaSol->edges[contArestasNovaSol][1] = s->edges[demais][1];
+    				contArestasNovaSol++;
     			}
+    		
     		}
 
     		// busca uma aresta pra entrar
     		for (int origem = 0; origem<NUMEROVERTICES; origem++){
     			for (int destino=0; destino<NUMEROVERTICES; destino++){
-    				if (id(origem, destino)!=NIL) { // se a aresta existe
+    				if ((s->edges[sai][0]!=origem || s->edges[sai][1]!=destino) && id(origem, destino)!=NIL) { // se a aresta existe
     					if (s->uf.sameClass(origem,destino)==false){ // se nao forma ciclo
     						double novoPeso0 = peso0+f(0,origem,destino);
     						double novoPeso1 = peso1+f(1,origem,destino);
     						if ((s->f[0]<=novoPeso0 && s->f[1]<=novoPeso1 && (s->f[0]<novoPeso0 || s->f[1]<novoPeso1))==false){
-    							//ret.adicionarSol();
+    							novaSol->edges[NUMEROVERTICES-1-1][0] = origem;
+    							novaSol->edges[NUMEROVERTICES-1-1][1] = destino;
+    							novaSol->f[0] = novoPeso0;
+    							novaSol->f[1] = novoPeso1;
+    							vizi.push_back(novaSol);
+    							if (global.adicionarSol(novaSol)==true){
+    								cout<<novoPeso0<<" "<<novoPeso1<<endl;
+    								
+    							}
     						}
     					}
     				}
@@ -235,18 +264,132 @@ BoundedParetoSet getVizinhos(SolucaoEdgeSet *s){ // by Felipe
     		}
     	}
 	}
+	cout<<endl;
 }
 
+// RETODO
+/*Esta função retorna a aresta escolhida para fazer o branch em um nó da árvore de busca*/
+list<pair<int, int> >::iterator getArestaBranch(int &i, int &j, Clause &no){
+	list<pair<int, int> >::iterator ret_0;
+	list<pair<int, int> >::iterator ret_1;
+	list<pair<int, int> >::iterator ret;
+	list<pair<int, int> >::iterator it = no.uncolored.begin();
+	int min_i_0 = (*it).first;
+	int min_j_0 = (*it).second;
 
+	int min_i_1 = (*it).first;
+	int min_j_1 = (*it).second;
 
+	for (; it!=no.uncolored.end(); it++){
+		// a aresta que tem o menor peso 0
+		if(custos[0][(*it).first][(*it).second]<custos[0][min_i_0][min_j_0]){
+			min_i_0 = (*it).first;
+			min_j_0 = (*it).second;
+			ret_0 = it;
+		}
+		// a aresta que tem o menor peso 1
+		if(custos[1][(*it).first][(*it).second]<custos[1][min_i_1][min_j_1]){
+			min_i_1 = (*it).first;
+			min_j_1 = (*it).second;
+			ret_1 = it;
+		}
+	}
+	i = min_i_0;
+	j = min_j_0;
+	ret = ret_0;
+	if (custos[1][min_i_1][min_j_1] < custos[0][i][j]){
+		i = min_i_1;
+		j = min_j_1;
+		ret = ret_1;
+	}
+	return ret;
+}
 
+// TODO
 void branch(){
 	// o arquivo global será o UB (upper bound)
-	
+	//constroi o clause root
+	for (int origem=0; origem<NUMEROVERTICES; origem++){
+		for (int destino=origem+1; destino<NUMEROVERTICES; destino++){
+			if (idArestas[origem][destino] != NIL && isObrigatoria1(origem,destino)==false){
+				clauseRoot.uncolored.push_back(make_pair(origem, destino));
+			}
+		}
+	}
+	int i, j;
+	list<pair<int, int> >::iterator it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
+	it = getArestaBranch(i, j, clauseRoot);
+	cout<<i<<" "<<j<<" " <<custos[0][i][j]<<" "<<custos[1][i][j]<<endl;
+	clauseRoot.uncolored.erase(it);
 
-	// for (list<SolucaoEdgeSet *>::iterator i= sols.begin(); i!=sols.end(); i++){
-	// 	cout<<(*i)->getObj(0)<<" "<<(*i)->getObj(1)<<endl;
-	// }
 }
 
 int main( int argc,  char *argv[]) {
@@ -259,7 +402,7 @@ int main( int argc,  char *argv[]) {
 
 	TRandomMersenne rg( std::atoi(argv[2]) );
 	input(argv[1]);
-	retiraProibidas();
+	retiraProibidas(); //  TODO: incluir na contabilizacao do tempo
 	updateIndexArestas();
 	setObrigatorias(rg);
 	// for (int i=0; i<NUMEROVERTICES; i++){
@@ -529,6 +672,29 @@ int main( int argc,  char *argv[]) {
 	fprintf(stdout,"Quantidade de soluçoes encontradas pelo transgenético = %i\n", global.getSize());
 	
 
+	times(&tempoAntes);
+		list<SolucaoEdgeSet *>::iterator it = global.sol.begin();
+		for (; it!=global.sol.end(); it++){
+			list<SolucaoEdgeSet *> vizi;
+			vizi.push_back(*it);
+			list<SolucaoEdgeSet *>::iterator it2 = vizi.begin();
+			for (int kkk=0; it2!=vizi.end() && kkk<10; kkk++, it2++){
+				vizinhos((*it2), vizi);
+				cout<<"Quantidade = "<<global.getSize()<<endl;
+			}
+		}
+		// list<SolucaoEdgeSet *>::iterator it2 = vizinhosGlobal.sol.begin();
+		// for (; it2!=vizinhosGlobal.sol.end(); it2++){ 
+		// 	global.adicionarSol(*it2);
+		// }
+		// vizinhosGlobal.clear();
+
+		
+	times(&tempoDepois);
+	fprintf(stdout,"Tempo vizinhos = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	fprintf(stdout,"Quantidade de soluçoes encontradas pela vizinhanca = %i\n", global.getSize());
+	
+
 	//fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
 									   	
 
@@ -559,9 +725,9 @@ int main( int argc,  char *argv[]) {
 		// cerr << "rectrans: percentual de melhoria -> " << (double)(rectranssuc)/(double)(totalrectrans) << endl;
 
 
-	global.clear();
+	//global.clear();
 	fprintf(paretoFront,"\n");
-		fclose(paretoFront);
+	fclose(paretoFront);
 	fclose(tempofile);
 
 	return 0;
