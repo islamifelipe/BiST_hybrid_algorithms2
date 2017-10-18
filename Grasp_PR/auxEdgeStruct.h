@@ -4,15 +4,14 @@
 
 /*This code file was kindly provided by Monteiro */
 
-struct auxEdgeStruct {
+typedef struct{ // utilizado pra ordenaçao do grasp
 
-	int a;
-	int b;
-	double c1;
-	double c2;
-	double fit;
+	int origem;
+	int destino;
+	double peso1;
+	double peso2;
 
-};
+}auxEdgeStruct;
 
 struct fitVecNode {
 	int a, b;

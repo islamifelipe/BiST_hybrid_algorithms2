@@ -53,7 +53,7 @@ class BoundedParetoSet : public ParetoSet {
 				}
 			}
 			
-			if (**i >> *s || **i == *s)
+			if (**i >> *s || **i == *s) // evita inserir soluçoes dominadas ou duplicadas
 				return false;
 			i++;
 		}

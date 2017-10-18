@@ -17,7 +17,15 @@
 
 // Parâmetros do arquivo externo
 #define PROFUNDIDADEGRID 5 // profundidade da grid
-#define MAXARCSIZE 100 // limite do arquivo externo
+#define MAXARCSIZE 300 // limite do arquivo externo
 
+
+// parâmetro do GRASP
+#define ALFA 0.01
+#define NUMVETORES_GRASP 700
+
+//parâmetros da busca local
+#define MAX_LS 30
+#define MAX_VIZ 20
 
 #endif

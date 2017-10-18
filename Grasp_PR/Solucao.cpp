@@ -19,26 +19,15 @@ public:
 	public:
 	Solucao() {}
 
+	// Bi-objetivo
 	bool operator>> (Solucao &d) { // testa se this domina d
-		bool ge = false;
-		for (int i=0; i<NUMOBJETIVOS; i++){ 
-			if (f[i] < d.getObj(i)) {//// se existe pelo menos um objetivo de this que é extritamente menor que d  
-				ge = true;
-			}
-			if (!(f[i] <= d.getObj(i))) { // se todos os objetivos de this sao menores ou iguais aos objetivos de d
-				return false;
-			}
-		}
-		return ge;
+		double ele[2] = {d.getObj(0),d.getObj(1)}, diff[2] = { ele[0] - f[0] , ele[1] - f[1] };
+		if (diff[0] > EPS && (diff[1] > EPS || fabs(diff[1]) < EPS))
+			return true;
+		if ((diff[0] > EPS || fabs(diff[0]) < EPS) && diff[1] > EPS)
+			return true;
+		return false;
 		
-
-
-		// double ele[2] = {d.getObj(0),d.getObj(1)}, diff[2] = { ele[0] - f[0] , ele[1] - f[1] };
-		// if (diff[0] > EPS && (diff[1] > EPS || fabs(diff[1]) < EPS))
-		// 	return true;
-		// if ((diff[0] > EPS || fabs(diff[0]) < EPS) && diff[1] > EPS)
-		// 	return true;
-		// return false;
 	}
 
 	const double getObj(int o) {
