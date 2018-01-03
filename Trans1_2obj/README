@@ -1,0 +1,24 @@
+Esta pasta contém o codigo referente ao Transgenético com patamares, Nincho e reciclagem baseada em crownd distance para 2 objetivos
+
+Plasmideos
+	1 - plas1 (recombinado) (rmcPrim)
+	2 - plas2 (advém do DNA de um endossimbionte)
+	3 - plas3 (advém do DNA de dois endossimbiontes)
+
+Transponsson
+	1 - primTrans
+	2 - SA_trans (como aqui é bi-objetivo, é bom citar um dos trabalhos em tag azul) (RETIRAR!!!!)
+	3 - TS_trans
+
+Reciclagem (baseada na descriçao da dissertaçao do Hudson)
+	+ baseada em crownd distance (CD)
+	+ pega |P| individuos da lixeira com o maior CD
+	+ **** INICIALMENTE, PODE-SE APLICAR A RECICLAGEM A CADA k (constante - nao parâmetro) ITERACOES. ISSO PODE SER REVISTO
+
+Patamares
+	++ Inspirado em Monteiro (2010) e na dissertaçao de Monteiro 
+	#probPlasm é a probabilidade de executar os plasmideos. 1 - #probPlasm é a probabiliade de executar os transponssons
+	++ Conforme o processo evolucionario avança, #probPlasm é incrementado por um #probFator
+	++ Dentro de cada grupo (plasmideos ou transponssons) seleciona-se, para cada cromossomo, um vetor para atacar. O vetor é selecionado com prababiliade diretamente proporcional à sua eficiência (quantos ataques bem sucedidos).
+
+	TODO VERSAO 2: se for o caso, podemos dividir em três niveis de probabilidade (plasmideo, transponsson1, transponsson2)
