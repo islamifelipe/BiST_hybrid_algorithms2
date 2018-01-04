@@ -36,6 +36,8 @@ using namespace std;
 double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
 SolucaoEdgeSet *populacao[TAMANHOPOPULACAO];
 BoundedParetoSet arc_global;
+int objetivoOrdenacao; // esta variavel é utilizada para designar qual objetivo será utilizado para ordenar as soluçoes
+	
 
 struct tms tempoAntes, tempoDepois;
 
@@ -57,6 +59,10 @@ void input(){
 			}
 		}
 	}
+}
+
+bool compare2(SolucaoEdgeSet *s1, SolucaoEdgeSet *s2){
+	return s1->distance > s2->distance; // maior distância
 }
 
 int main(int argc, char *argv[]){
@@ -99,13 +105,15 @@ int main(int argc, char *argv[]){
 	// 	cout<<sol->getObj(0)<<" "<<sol->getObj(1)<<endl;
 	// }
 
-	// cout<<"\nLixeira: "<<endl;
-	// list<SolucaoEdgeSet *> lixeira = arc_global.lixeira;
-	// list<SolucaoEdgeSet *>::iterator it = lixeira.begin();
-	// while (it!=lixeira.end()){
-	// 	cout<<(*it)->getObj(0)<<" "<<(*it)->getObj(1)<<endl;
-	// 	it++;
-	// }
+	cout<<"\nLixeira: "<<endl;
+	arc_global.crowndDistance();
+	list<SolucaoEdgeSet *> lixeira = arc_global.lixeira;
+	lixeira.sort(compare2);
+	list<SolucaoEdgeSet *>::iterator it = lixeira.begin();
+	while (it!=lixeira.end()){
+		cout<<(*it)->getObj(0)<<" "<<(*it)->getObj(1)<<" ---> "<<(*it)->distance<<endl;
+		it++;
+	}
 
 	times(&tempoDepois);
 

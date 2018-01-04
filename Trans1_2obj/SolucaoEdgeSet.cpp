@@ -30,6 +30,7 @@ class SolucaoEdgeSet : public Solucao {
 	int nEdges;
 	UnionFind uf;
 	grafo *g;
+	double distance; // crownd distance // utilizada no NSGA-II e na reciclagem do Hudson
 	double antigof[NUMOBJETIVOS];
 
 	SolucaoEdgeSet(int n) {
@@ -325,7 +326,7 @@ class SolucaoEdgeSet : public Solucao {
 				return false;
 			}
 		}
-		cout<<"It's a tree!"<<endl;;
+		cout<<"It's a tree! õ/"<<endl;;
 		return true;
 	}
 

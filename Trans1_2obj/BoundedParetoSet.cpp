@@ -4,16 +4,23 @@
 #include "ParetoSet.cpp"
 #include <cstdio>
 #include <string>
+#include <list>
 
 /*This code file was kindly provided by Monteiro */
 
 
 using namespace std;
 
+extern int objetivoOrdenacao; // esta variavel é utilizada para designar qual objetivo será utilizado para ordenar as soluçoes
+
+bool compare1(SolucaoEdgeSet *s1, SolucaoEdgeSet *s2){
+	return s1->getObj(objetivoOrdenacao) < s2->getObj(objetivoOrdenacao);
+}
+
 class BoundedParetoSet : public ParetoSet {
 	private:
 	const static int MAXARCSIZE = 300;
-	//FILE *globalf;
+ 	//FILE *globalf;
 	//bool existeFileGlobal;
     //string nomeglobalf;
 	
@@ -124,6 +131,37 @@ class BoundedParetoSet : public ParetoSet {
 
 		//ASS ( assert( confereGrid() ); )
 		return true;
+	}
+
+	
+	void crowndDistance(){ // by Felipe
+		#define INF 1e9
+		int l = lixeira.size();
+		list<SolucaoEdgeSet *>::iterator it = lixeira.begin();
+		while (it!=lixeira.end()){
+			(*it)->distance = 0;
+			it++;
+		}
+		for (int m=0; m<NUMOBJETIVOS; m++){ // para cada objetivo m
+			objetivoOrdenacao = m;
+			lixeira.sort(compare1);
+			(*lixeira.begin())->distance = INF;
+			(lixeira.back())->distance = INF; // É ISSO MESMO: back() NAO retorna um ponteiro interator!!! 
+			it = lixeira.begin();
+			it++; // começa do 1 (2 do Hudson)
+			for (int i = 1; i<(l-1); i++){
+				it++; // pos
+				double objPos = (*it)->getObj(m);
+				it--; // volta para pro original
+				it--; //previous
+				double objPrev = (*it)->getObj(m);
+				it++; // volta para pro original
+				(*it)->distance = (*it)->distance + (objPos - objPrev);
+				it++; // avança
+			}
+			// termina no l-2 (end-1) ou (l-1 do Hudson)
+		}
+		#undef INF
 	}
 };
 

@@ -1,13 +1,13 @@
 Esta pasta contém o codigo referente ao Transgenético com patamares, Nincho e reciclagem baseada em crownd distance para 2 objetivos
 
 Plasmideos
-	1 - plas1 (recombinado) (rmcPrim)
-	2 - plas2 (advém do DNA de um endossimbionte)
-	3 - plas3 (advém do DNA de dois endossimbiontes)
+	OK 1 - plas1 (recombinado) (rmcPrim)
+	OK 2 - plas2 (advém do DNA de um endossimbionte)
+	OK 3 - plas3 (advém do DNA de dois endossimbiontes)
 
 Transponsson
-	1 - primTrans
-	2 - SA_trans (como aqui é bi-objetivo, é bom citar um dos trabalhos em tag azul) (RETIRAR!!!!)
+	OK 1 - primTrans
+	-- 2 - SA_trans (como aqui é bi-objetivo, é bom citar um dos trabalhos em tag azul) (RETIRAR!!!!)
 	3 - TS_trans
 
 Reciclagem (baseada na descriçao da dissertaçao do Hudson)
@@ -22,3 +22,9 @@ Patamares
 	++ Dentro de cada grupo (plasmideos ou transponssons) seleciona-se, para cada cromossomo, um vetor para atacar. O vetor é selecionado com prababiliade diretamente proporcional à sua eficiência (quantos ataques bem sucedidos).
 
 	TODO VERSAO 2: se for o caso, podemos dividir em três niveis de probabilidade (plasmideo, transponsson1, transponsson2)
+
+	TODO VERSAO 3: experimentar outros plasmideos
+
+	TODO VERSAO 4: retirar a hibridização
+
+	Questao: a lixeira possui apenas as soluçoes que sao retiradas do arquio externo? Ou também possui aquelas soluçoes que nem chegam a entrar no arquivo externo? Eu entendi que seriam TODAS as soluçoes que seriam descartadas (2o caso)
