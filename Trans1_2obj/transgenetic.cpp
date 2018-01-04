@@ -27,8 +27,8 @@ The data structure and some functions were kindly provided by Monteiro (2010)
 #include "popInicial.cpp"
 // #include "vetoresDirecao.cpp"
 // #include "simulatedannealing.cpp"
-// #include "Plasmideo.cpp"
-// #include "primTransposon.cpp"
+#include "Plasmideo.cpp"
+#include "primTransposon.cpp"
 // #include "kruskalTransposon.cpp"
 
 using namespace std;
@@ -74,24 +74,38 @@ int main(int argc, char *argv[]){
 	alocaPopulacao(populacao);
 	gerarPopulacao1(populacao);
 
-	cout<<"Popualaçao: "<<endl;
-	for (int i=0; i<TAMANHOPOPULACAO; i++){
-		cout<<populacao[i]->getObj(0)<<" "<<populacao[i]->getObj(1)<<endl;
-	}
+	// Plasmideo pl;
+	int index = IRandom(0,89);
+	double lambda[2] = {0.765,0.235};
+	populacao[index]->isTree();
+	PrimTransposon ptrans;
+	SolucaoEdgeSet copia = *populacao[index];
+	ptrans.atacaSolucao(copia,lambda);
+	// int tamanho = IRandom(2,(int)(0.5*(NUMEROVERTICES-1)));
+	// pl.geraPlasTwoSolutions(*populacao[30], *populacao[80], tamanho);
+	cout<<populacao[index]->getObj(0)<<" "<<populacao[index]->getObj(1)<<endl;
+	// SolucaoEdgeSet copia = *populacao[index];//*populacao[index];
+	// pl.atacaSolucao(copia);
+	copia.isTree();
+	cout<<copia.getObj(0)<<" "<<copia.getObj(1)<<endl;
+	// cout<<"Popualaçao: "<<endl;
+	// for (int i=0; i<TAMANHOPOPULACAO; i++){
+	// 	cout<<populacao[i]->getObj(0)<<" "<<populacao[i]->getObj(1)<<endl;
+	// }
 
-	cout<<"\nArquivo: "<<endl;
-	for (int i=0; i<arc_global.getSize(); i++){
-		SolucaoEdgeSet *sol = arc_global.getSolucao(i);
-		cout<<sol->getObj(0)<<" "<<sol->getObj(1)<<endl;
-	}
+	// cout<<"\nArquivo: "<<endl;
+	// for (int i=0; i<arc_global.getSize(); i++){
+	// 	SolucaoEdgeSet *sol = arc_global.getSolucao(i);
+	// 	cout<<sol->getObj(0)<<" "<<sol->getObj(1)<<endl;
+	// }
 
-	cout<<"\nLixeira: "<<endl;
-	list<SolucaoEdgeSet *> lixeira = arc_global.lixeira;
-	list<SolucaoEdgeSet *>::iterator it = lixeira.begin();
-	while (it!=lixeira.end()){
-		cout<<(*it)->getObj(0)<<" "<<(*it)->getObj(1)<<endl;
-		it++;
-	}
+	// cout<<"\nLixeira: "<<endl;
+	// list<SolucaoEdgeSet *> lixeira = arc_global.lixeira;
+	// list<SolucaoEdgeSet *>::iterator it = lixeira.begin();
+	// while (it!=lixeira.end()){
+	// 	cout<<(*it)->getObj(0)<<" "<<(*it)->getObj(1)<<endl;
+	// 	it++;
+	// }
 
 	times(&tempoDepois);
 

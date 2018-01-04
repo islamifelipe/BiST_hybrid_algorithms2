@@ -58,7 +58,7 @@ class SolucaoEdgeSet : public Solucao {
 
 		// cout<<f[0]<<" "<<f[1]<<endl;
 	}
-	
+
 	/* Calcula o fitness de uma soluçao parcial com tam arestas
 	 * Complexidade O(N) */
 	void calcularFitness(int tam) {
@@ -299,6 +299,33 @@ class SolucaoEdgeSet : public Solucao {
 			v[1] += f(1,edges[i][0],edges[i][1]);
 		}
 		if (fabs(v[0])-EPS > f[0] || fabs(v[1])-EPS > f[1]) return false;
+		return true;
+	}
+
+
+	bool isTree(){ // verificador
+		//cout<<"Teste  = ";
+		UnionFind uf;
+		bool vetkktk[NUMEROVERTICES];
+		for(int i=0; i<NUMEROVERTICES; i++)vetkktk[i] = false;
+		for (int i=0; i<NUMEROVERTICES-1; i++){
+			if (uf.sameClass(this->edges[i][0],this->edges[i][1])==false){
+				vetkktk[this->edges[i][0]] = true;
+				vetkktk[this->edges[i][1]] = true;
+				uf.unionClass(this->edges[i][0],this->edges[i][1]);
+			} else {
+				cout<<"ERROROROROROROROROROROROROROR TREEEE"<<endl;
+				return false;
+			}
+		}
+		for(int i=0; i<NUMEROVERTICES; i++){
+			if (vetkktk[i]==false) {
+				cout<<"ERROROROROROROROROROROROROROR TREEEE"<<endl;
+				
+				return false;
+			}
+		}
+		cout<<"It's a tree!"<<endl;;
 		return true;
 	}
 
