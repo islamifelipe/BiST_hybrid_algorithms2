@@ -9,12 +9,12 @@ Plasmideos
 
 Transponsson
 	OK 1 - primTrans
-	-- SEM HIBRIDIZACAO
+	-- 2 - tabuTrans
 
 Reciclagem (baseada na descriçao da dissertaçao do Hudson)
 	+ baseada em crownd distance (CD)
 	+ pega |P| individuos da lixeira com o maior CD
-
+	
 
 Patamares
 	++ Inspirado em Monteiro (2010) e na dissertaçao de Monteiro 

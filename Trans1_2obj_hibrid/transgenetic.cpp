@@ -3,7 +3,7 @@
 
 Copyright Islame Felipe da COSTA FERNANDES (2018)
 	
-This code implements a new transgenetic algorithmic for Bi-objective spanning tree 
+This code implements a new hybrid transgenetic algorithmic for Bi-objective spanning tree 
 The data structure and some functions were kindly provided by Monteiro (2010)
 
 
