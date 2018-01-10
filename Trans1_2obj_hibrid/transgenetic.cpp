@@ -27,6 +27,7 @@ The data structure and some functions were kindly provided by Monteiro (2010)
 #include "popInicial.cpp"
 // #include "vetoresDirecao.cpp"
 // #include "simulatedannealing.cpp"
+#include "Tabu.cpp"
 #include "Plasmideo.cpp"
 #include "primTransposon.cpp"
 // #include "kruskalTransposon.cpp"
@@ -58,12 +59,20 @@ float sumMelhoriaPlasm3= 0; // conta o quanto o plasm3 melhora
 int contPrimTrans= 0; // conta a quantidade e vezes em que o primTrans tenta atacar
 int contSucessPrimTrans= 0; // conta a quantidade de sucesso que o primTrans obteve
 float sumMelhoriaPrimTrans= 0; // conta o quanto o PrimTrans melhora
-
+int contBT = 0;
+int contSucessBT = 0;
+float sumMelhoriaBT = 0;
 
 void input(){
 	int n; // esta leitura de "n" é somente para cumprir o formato da instância. Os valores de fato estao em param.h
 	cin>>n; // quantidade de vertices
-
+	for (int i=0;i<NUMEROVERTICES-1;i++) {
+		for (int j=i+1;j<NUMEROVERTICES;j++) {
+			for (int ob = 0; ob<NUMOBJETIVOS; ob++){
+				custos[ob][i][j] = 10e9;
+			}
+		}
+	}
 	int org, dest;
 	for (int i=0;i<NUMEROVERTICES-1;i++) {
 		for (int j=i+1;j<NUMEROVERTICES;j++) {
@@ -180,6 +189,7 @@ void crowndDistance(){ // by Felipe
 		it = lixeira.begin();
 		int contt = 0;
 		while (it!=lixeira.end() && contt < TAMANHOPOPULACAO){ // preenche populacao
+			buscaTabu((*it)); // experimentos preliminares comprovaram que aqui é melhor
 			*populacao[contt] = *(*it); /// com * mesmo !!!
 			contt++;
 			it++;
@@ -216,7 +226,6 @@ void transgenetic(){
 				}
 			} else { // um transponsson ataca
 				// escolhe-se um transponsson
-
 				SolucaoEdgeSet *copia = new SolucaoEdgeSet(NUMEROVERTICES-1);
 				*copia = *populacao[pppt];
 				double randd = genrand64_real3();
@@ -227,8 +236,7 @@ void transgenetic(){
 				if (*copia >> *populacao[pppt] || resul == true){
 					*populacao[pppt] = *copia;
 					contSucessPrimTrans++;
-					
-				}
+				} 
 			}
 		}
 
@@ -265,11 +273,11 @@ int main(int argc, char *argv[]){
 
 	times(&tempoAntes);
 	
-	transgenetic();
+	//transgenetic();
 
 
-	// alocaPopulacao(populacao);
-	// gerarPopulacao1(populacao);
+	alocaPopulacao(populacao);
+	gerarPopulacao1(populacao);
 
 	// Plasmideo pl;
 	// int index = IRandom(0,89);
@@ -295,26 +303,55 @@ int main(int argc, char *argv[]){
 	// 	SolucaoEdgeSet *sol = arc_global.getSolucao(i);
 	// 	cout<<sol->getObj(0)<<" "<<sol->getObj(1)<<endl;
 	// }
+	//PrimTransposon ptrans;
+	// for (int index=0; index<TAMANHOPOPULACAO; index++){
+	// 	// cout<<"\n\n"<<endl;
+	// 	//int index = IRandom(0,89);
+	// 	// cout<<populacao[index]->getObj(0)<<" "<<populacao[index]->getObj(1)<<endl;
+	// 	//SolucaoEdgeSet *copia = new SolucaoEdgeSet(NUMEROVERTICES-1);
+	// 	//*copia = *populacao[index];
+	// 	// //double randd = genrand64_real3();
+	// 	// //double lambda[2] = {randd, 1.0 - randd};
+	// 	// //ptrans.atacaSolucao(*copia,lambda);
+	// 	bool resul = buscaTabu(populacao[index]);
+	// 	//copia->getVizinho1(IRandom(0,NUMEROVERTICES-1-1),*populacao[index]);
+	// 	//copia->isTree();
+	// 	if (resul == true){
+	// 		cout<<"1"<<endl;
+	// 		//*populacao[index] = *copia;
+	// 	}
+	// 	// cout<<populacao[index]->getObj(0)<<" "<<populacao[index]->getObj(1)<<endl;
+	// 	// cout<<"\n\n"<<endl;
+	// }
+
+	// cout<<"\nArquivo: "<<endl;
+	// for (int i=0; i<arc_global.getSize(); i++){
+	// 	SolucaoEdgeSet *sol = arc_global.getSolucao(i);
+	// 	cout<<sol->getObj(0)<<" "<<sol->getObj(1)<<endl;
+	// }
 
 	// cout<<"\nLixeira: "<<endl;
 	// crowndDistance();
-	
+		
+	transgenetic();
 
 	times(&tempoDepois);
 
-	// list<SolucaoEdgeSet *> lisd = arc_global.getElementos();
-	// list<SolucaoEdgeSet *>::iterator i = lisd.begin();
-	// 	SolucaoEdgeSet *s;
-	// 	while (i != lisd.end()) {
-	// 		s = *i;
-	// 		fprintf(stdout,"%.10lf %.10lf\n",s->getObj(0),s->getObj(1));
-	// 		i++;
-	// 	}
+	list<SolucaoEdgeSet *> lisd = arc_global.getElementos();
+	list<SolucaoEdgeSet *>::iterator i = lisd.begin();
+		SolucaoEdgeSet *s;
+		while (i != lisd.end()) {
+			s = *i;
+			fprintf(stdout,"%.10lf %.10lf\n",s->getObj(0),s->getObj(1));
+			i++;
+		}
 	
-	arc_global.printSetPoints(stdout);
+	//arc_global.printSetPoints(stdout);
 	fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
 	fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
 
+	cout<<(double) contSucessPrimTrans/contPrimTrans<<endl;;
+	cout<<(double) contSucessBT/contBT<<endl;;
 
 	fclose(samplefile);
 	fclose(tempofile);
