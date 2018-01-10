@@ -57,7 +57,7 @@ bool isTabu(int origem, int destino, list <tabuItem> &tabu_list){
 }
 
 /*a busca tabu edita a solucao 's' que foi passada como argumento*/
-bool buscaTabu(SolucaoEdgeSet *s){
+bool buscaTabu(SolucaoEdgeSet *s, double lambda[NUMOBJETIVOS]){
 	bool ret = false;
 	BoundedParetoSet local_arc;
 	list<SolucaoEdgeSet *> arqq  = arc_global.getElementos();
@@ -81,7 +81,7 @@ bool buscaTabu(SolucaoEdgeSet *s){
 		r = 0;
 		do{	
 			r++;
-			int e = s_linha->getVizinho1(NUMEROVERTICES-1-1,*s);
+			int e = s_linha->getVizinho1(NUMEROVERTICES-1-1,*s, lambda);
 			origem_a1 = s_linha->edges[e][0];
 			destin_a1 = s_linha->edges[e][1];
 			// vizinhança

@@ -323,7 +323,7 @@ class SolucaoEdgeSet : public Solucao {
 	@param intervalo (0, iI), 0<=iI<NUMVERTICES-1 que diz a faixa de sorteio da aresta a ser excluída
 	// TODO: receber um array de arestas pre-ordenado de acordo com um vetor de escalalizaçao
 	*/
-	int getVizinho1(int iI, SolucaoEdgeSet &soloriginal){
+	int getVizinho1(int iI, SolucaoEdgeSet &soloriginal, double lambda[NUMOBJETIVOS]){
 		uf.clear();
 		for (int k=0;k<NUMOBJETIVOS;k++) f[k] = 0.0; // (re)inicializa os objetivos
 		
@@ -345,13 +345,13 @@ class SolucaoEdgeSet : public Solucao {
 		double obj1 = f(1, soloriginal.edges[e][0], soloriginal.edges[e][1]);
 		for (int i=0;i<NUMEROVERTICES-1;i++) {
 			for (int j=i+1;j<NUMEROVERTICES;j++) {
-				if ((obj0<=f(0,i,j) && obj1<=f(1,i,j) && (obj0<f(0,i,j) || obj1<f(1,i,j)))==false){
-					if (uf.sameClass(i,j)==false){
+				//if ((obj0<=f(0,i,j) && obj1<=f(1,i,j) && (obj0<f(0,i,j) || obj1<f(1,i,j)))==false){
+					if ((f(0,i,j)*lambda[0] + f(1,i,j)*lambda[1] < obj0*lambda[0] + obj1*lambda[1]) && uf.sameClass(i,j)==false){
 						amostral[conttAmotral][0] = i;
 						amostral[conttAmotral][1] = j;
 						conttAmotral++;
 					}
-				}
+				//}
 			}
 		}
 
