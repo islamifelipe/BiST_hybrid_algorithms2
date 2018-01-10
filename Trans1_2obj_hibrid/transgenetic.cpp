@@ -159,10 +159,19 @@ void crowndDistance(){ // by Felipe
 		//list<SolucaoEdgeSet *> arqq  = arc_global.getElementos();
 		//lixeira.splice(lixeira.end(), arqq); // une a lixeira ao arquivo externo,
 		list<SolucaoEdgeSet *> lixeira = nds.getElementos();
+		double randd = genrand64_real3();
+		double lambda[2] = {randd, 1.0 - randd};
 		int l = lixeira.size();
 		cout<<"Tamanho da lixeira = "<<l<<endl;
 		it = lixeira.begin();
 		while (it!=lixeira.end()){
+			if (genrand64_real3() < 0.5) {
+				contBT++;
+				if (buscaTabu((*it), lambda)) contSucessBT++;
+				 // experimentos preliminares comprovaram que aqui é melhor
+				/*Justificativa da probabilidade de 50% : com esta probabiliade, é possível mesclar 
+				soluçoes intensificadas (melhores) e soluçoes nao-intensificadas*/
+			}
 			(*it)->distance = 0;
 			it++;
 		}
@@ -185,13 +194,12 @@ void crowndDistance(){ // by Felipe
 			}
 			// termina no l-2 (end-1) ou (l-1 do Hudson)
 		}
-		double randd = genrand64_real3();
-		double lambda[2] = {randd, 1.0 - randd};
+		
 		lixeira.sort(compare2);
 		it = lixeira.begin();
 		int contt = 0;
 		while (it!=lixeira.end() && contt < TAMANHOPOPULACAO){ // preenche populacao
-			buscaTabu((*it), lambda); // experimentos preliminares comprovaram que aqui é melhor
+			
 			*populacao[contt] = *(*it); /// com * mesmo !!!
 			contt++;
 			it++;
