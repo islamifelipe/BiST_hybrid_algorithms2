@@ -70,6 +70,7 @@ void input(){
 		for (int j=i+1;j<NUMEROVERTICES;j++) {
 			for (int ob = 0; ob<NUMOBJETIVOS; ob++){
 				custos[ob][i][j] = 10e9;
+				custos[ob][j][i] = 10e9;
 			}
 		}
 	}

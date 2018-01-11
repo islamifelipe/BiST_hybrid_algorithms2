@@ -149,7 +149,7 @@ class ParetoSet {
 			j++;
 		}
 
-		SolucaoEdgeSet *t = new SolucaoEdgeSet(s->nEdges,*(s->rg));
+		SolucaoEdgeSet *t = new SolucaoEdgeSet(s->nEdges);
 		*t = *s;
 		// adiciona ao conjunto pareto
 		sol.push_front( t );

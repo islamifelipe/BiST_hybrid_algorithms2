@@ -321,7 +321,6 @@ class SolucaoEdgeSet : public Solucao {
 		e' nao forma ciclo
 
 	@param intervalo (0, iI), 0<=iI<NUMVERTICES-1 que diz a faixa de sorteio da aresta a ser excluída
-	// TODO: receber um array de arestas pre-ordenado de acordo com um vetor de escalalizaçao
 	*/
 	int getVizinho1(int iI, SolucaoEdgeSet &soloriginal, double lambda[NUMOBJETIVOS]){
 		uf.clear();

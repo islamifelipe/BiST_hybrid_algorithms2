@@ -35,13 +35,12 @@ class SolucaoEdgeSet : public Solucao {
 	grafo *g;
 	
 
-	SolucaoEdgeSet(int n,TRandomMersenne &r) {
+	SolucaoEdgeSet(int n) {
 		
 		nEdges = n;
 		for (int i=0; i<NUMOBJETIVOS; i++){
 			f[i]=0;
 		}
-		rg = &r;
 		g = NULL;
 	}
 	~SolucaoEdgeSet() {
@@ -81,7 +80,7 @@ class SolucaoEdgeSet : public Solucao {
             vertlist[i]=i;
         int vertctr = NUMEROVERTICES-1; //tamanho valido da lista;
 
-        int v_ind = rg->IRandom(0,vertctr);
+        int v_ind = IRandom(0,vertctr);
         int v_esc = vertlist[v_ind];
         vertlist [v_ind] = vertlist[vertctr];
         vertlist [vertctr] = v_esc;
@@ -90,8 +89,8 @@ class SolucaoEdgeSet : public Solucao {
         int cont = 0;
         while (cont < NUMEROVERTICES-1) {
 
-            viz1 = vertlist [rg->IRandom(vertctr+1, NUMEROVERTICES-1)]; // sorteia algum vértice ja na arvore
-            viz2_ind = rg->IRandom(0,vertctr);// sorteia um fora
+            viz1 = vertlist [IRandom(vertctr+1, NUMEROVERTICES-1)]; // sorteia algum vértice ja na arvore
+            viz2_ind = IRandom(0,vertctr);// sorteia um fora
             viz2 = vertlist[viz2_ind];
 
             vertlist [viz2_ind] = vertlist[vertctr];
@@ -124,7 +123,7 @@ class SolucaoEdgeSet : public Solucao {
     	}
     	int cont=0;
     	while (cont<NUMEROVERTICES-1 && amostral.size()>0){
-			int are = rg->IRandom(0,amostral.size()-1);
+			int are = IRandom(0,amostral.size()-1);
 			if (uf.sameClass(amostral[are].first,amostral[are].second)==false){
 				uf.unionClass(amostral[are].first,amostral[are].second);
 				if (amostral[are].first<amostral[are].second){
@@ -140,28 +139,6 @@ class SolucaoEdgeSet : public Solucao {
 		}
 		if (cont<NUMEROVERTICES-1) cout<<"ERROR RandomWalk cont = "<<cont<<" amostral.size() = "<<amostral.size()<<endl;
     }
-
- //    /* Faz o crossover entre dois individuos.
- //    BAseado no crossover sugerido por Raidl and Julstrom (2003)*/
-	// void crossover(const SolucaoEdgeSet &pai, const SolucaoEdgeSet &mae) {
-	// 	contCrossovers++;
-	// 	bool unionGraph[NUMEROVERTICES][NUMEROVERTICES];
-	// 	memset(unionGraph,false,sizeof(unionGraph));
-
-	// 	for (int i=0;i<NUMEROVERTICES-1;i++) {
-	// 		if (!unionGraph[pai.edges[i][0]][pai.edges[i][1]]) {
-	// 			unionGraph[pai.edges[i][0]][pai.edges[i][1]] = unionGraph[pai.edges[i][1]][pai.edges[i][0]] = true;
-	// 		}
-	// 	}
-	// 	for (int i=0;i<NUMEROVERTICES-1;i++) {
-	// 		if (!unionGraph[mae.edges[i][0]][mae.edges[i][1]]) {
-	// 			unionGraph[mae.edges[i][0]][mae.edges[i][1]] = unionGraph[mae.edges[i][1]][mae.edges[i][0]] = true;
-	// 		}
-	// 	}
-	// 	RandomWalk(unionGraph);
-	// 	calcularObjetivos();
-	// }
-
 
 	void printSolucao() {
 		for (int i=0;i<NUMEROVERTICES-1;i++){
@@ -260,7 +237,94 @@ class SolucaoEdgeSet : public Solucao {
 		return tipoTroca;
 	}
 
-	
+	/*Sorteia-se uma aresta e pra sair. Sorteia-se uma aresta e' que pode entrar tal que:
+		e' nao é dominada por e
+		e' nao forma ciclo
+
+	@param intervalo (0, iI), 0<=iI<NUMVERTICES-1 que diz a faixa de sorteio da aresta a ser excluída
+	*/
+	int getVizinho1(int iI, SolucaoEdgeSet &soloriginal){
+		uf.clear();
+		for (int k=0;k<NUMOBJETIVOS;k++) f[k] = 0.0; // (re)inicializa os objetivos
+		
+		int e = IRandom(0,iI);
+		//cout<<"e = "<<soloriginal.edges[e][0]<<" "<<soloriginal.edges[e][1]<<endl;
+		for (int i=0;i<NUMEROVERTICES-1;i++){
+			if (i != e) {
+				edges[i][0] = soloriginal.edges[i][0];
+				edges[i][1] = soloriginal.edges[i][1];
+				uf.unionClass(edges[i][0],edges[i][1]);
+				for (int k=0;k<NUMOBJETIVOS;k++)
+					f[k] +=  f(k,edges[i][0],edges[i][1]);
+			}
+		}
+
+		int amostral[NUMEROVERTICES*NUMEROVERTICES][2];
+		int conttAmotral = 0; 
+		// ATENCAO: GRAFO COMPLETO
+		double obj0 = f(0, soloriginal.edges[e][0], soloriginal.edges[e][1]);
+		double obj1 = f(1, soloriginal.edges[e][0], soloriginal.edges[e][1]);
+		//cout<<obj0<<" "<<obj1<<endl;
+		for (int i=0;i<NUMEROVERTICES-1;i++) {
+			for (int j=i+1;j<NUMEROVERTICES;j++) {
+				if ((obj0<=f(0,i,j) && obj1<=f(1,i,j) && (obj0<f(0,i,j) || obj1<f(1,i,j)))==false){
+					//cout<<i<<" "<<j<<" "<<f(0,i,j)<<" "<<f(1,i,j)<<" "<<f(0,i,j)*lambda + f(1,i,j)*(1.0-lambda)<<" "<<obj0*lambda + obj1*(1.0-lambda)<<endl;
+					//(f(0,i,j)*lambda + f(1,i,j)*(1.0-lambda) < obj0*lambda + obj1*(1.0-lambda)) &&
+					if (uf.sameClass(i,j)==false){
+						amostral[conttAmotral][0] = i;
+						amostral[conttAmotral][1] = j;
+						conttAmotral++;
+					}
+				}
+			}
+		}
+
+		//cout<<"conttAmotral = "<<conttAmotral<<endl;
+		if (conttAmotral>0){
+			int index = IRandom(0, conttAmotral-1);
+			edges[e][0] = amostral[index][0];
+			edges[e][1] = amostral[index][1];
+		} else { // nao foi possivel encontrar um vizinho com os critérios pre-definidos
+			edges[e][0] = soloriginal.edges[e][0];
+			edges[e][1] = soloriginal.edges[e][1];
+		}
+		for (int k=0;k<NUMOBJETIVOS;k++)
+			f[k] += f(k,edges[e][0],edges[e][1]);
+		return e;
+	}
+
+	bool isTree(){ // verificador
+		//cout<<"Teste  = ";
+		UnionFind uf;
+		bool vetkktk[NUMEROVERTICES];
+		double obj0 = 0, obj1 = 0;
+		for(int i=0; i<NUMEROVERTICES; i++)vetkktk[i] = false;
+		for (int i=0; i<NUMEROVERTICES-1; i++){
+			if (uf.sameClass(this->edges[i][0],this->edges[i][1])==false){
+				obj0 += f(0, this->edges[i][0], this->edges[i][1]);
+				obj1 += f(1, this->edges[i][0], this->edges[i][1]);
+				vetkktk[this->edges[i][0]] = true;
+				vetkktk[this->edges[i][1]] = true;
+				uf.unionClass(this->edges[i][0],this->edges[i][1]);
+			} else {
+				cout<<"ERROROROROROROROROROROROROROR TREEEE 1 "<<endl;
+				return false;
+			}
+		}
+		for(int i=0; i<NUMEROVERTICES; i++){
+			if (vetkktk[i]==false) {
+				cout<<"ERROROROROROROROROROROROROROR TREEEE 2"<<endl;
+				return false;
+			}
+		}
+		if (obj0!=this->getObj(0) || obj1!=this->getObj(1)){
+			cout<<"ERROROROROROROROROROROROROROR OBJETIVOS 3"<<endl;
+			return false;
+		}
+		cout<<"It's a tree! õ/"<<endl;;
+		return true;
+	}
+
 
 };
 

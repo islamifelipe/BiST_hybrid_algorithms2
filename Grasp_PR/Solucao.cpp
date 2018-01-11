@@ -3,21 +3,17 @@
 
 /*This code file was kindly provided by Monteiro */
 
-#include "rand/randomc.h"
 #include "param.h"
 class Solucao {
 	protected:
 	double f[NUMOBJETIVOS];
-public:
-	TRandomMersenne *rg;
-
-	public:
-	void setObj(int i, double v) { // set the i-th objective with value v
-		f[i] = v;
-	}
 
 	public:
 	Solucao() {}
+
+	void setObj(int i, double v) { // set the i-th objective with value v
+		f[i] = v;
+	}
 
 	// Bi-objetivo
 	bool operator>> (Solucao &d) { // testa se this domina d
@@ -35,7 +31,7 @@ public:
 	}
 
 	void operator=(Solucao &s) { // assign s to this object 
-		rg = s.rg;
+		//rg = s.rg;
 		for (int i=0; i<NUMOBJETIVOS; i++){
 			f[i] = s.f[i];
 		}
