@@ -21,10 +21,13 @@
 
 // parâmetro do GRASP
 #define ALFA 0.01 // alfa para saber o tamanho da LRC
-#define NUMVETORES_GRASP 700 // numero de vetores de escalaizaçao para o grasp
+#define NUMVETORES_GRASP 700 //700 // numero de vetores de escalaizaçao para o grasp
+#define INTERVALO_PR 50
 
 //parâmetros da busca local
 #define MAX_LS 30 // quantidade de iteraçoes da busca local
 #define MAX_VIZ 10	// quantidade de vizinhos da busca local
+
+#define maxPR 10
 
 #endif

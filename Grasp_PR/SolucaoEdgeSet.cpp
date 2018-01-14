@@ -293,6 +293,9 @@ class SolucaoEdgeSet : public Solucao {
 		return e;
 	}
 
+
+	
+
 	bool isTree(){ // verificador
 		//cout<<"Teste  = ";
 		UnionFind uf;

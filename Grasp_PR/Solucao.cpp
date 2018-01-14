@@ -15,6 +15,13 @@ class Solucao {
 		f[i] = v;
 	}
 
+	void incrementeF(int i, double v) { // increments the i-th objective with value v
+		f[i] += v;
+	}
+	void decrementeF(int i, double v){
+		f[i] -= v;
+	}
+
 	// Bi-objetivo
 	bool operator>> (Solucao &d) { // testa se this domina d
 		double ele[2] = {d.getObj(0),d.getObj(1)}, diff[2] = { ele[0] - f[0] , ele[1] - f[1] };

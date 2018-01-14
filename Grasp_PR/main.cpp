@@ -36,11 +36,13 @@
 // #include "rmcPrim.cpp"
 #include "BoundedParetoSet.cpp"
 #include "SolucaoEdgeSet.cpp"
+#include "PathRelinking.cpp"
 
 using namespace std;
 
 double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
 BoundedParetoSet *arquivoLimitadoGlobal;
+BoundedParetoSet *pool; // pool das soluçoes que irao ser submetidas ao Peth relinking
 std::vector<auxEdgeStruct> listaArestas;
 double lambda;
 /*ARQUIVO GLOBAL LIMITADO A MAXARCSIZE SOLUCOES*/
@@ -74,21 +76,6 @@ void input(){
 	}
 }
 
-/*retorna a quantidade de arestas que existem em s1 que nao existem em s2*/
-int distancia(SolucaoEdgeSet s1, SolucaoEdgeSet s2){
-	int cont=0;
-	for (int i=0; i<NUMEROVERTICES-1; i++){
-		bool ha = false;
-		for (int j=0; j<NUMEROVERTICES-1 && ha==false; j++){
-			if ((s2.edges[j][0]==s1.edges[i][0] && s2.edges[j][1]==s1.edges[i][1]) || (s2.edges[j][0]==s1.edges[i][1] && s2.edges[j][1]==s1.edges[i][0])){
-				ha = true;
-			}
-		}	
-		if (ha==false) cont++;
-	}
-	return cont;
-}
-
 
 //retorna “verdadeiro” caso sl esteja em uma regiao menos populosa que s com relacao ao arquivo local_arc.
 bool m_grid(SolucaoEdgeSet *sl, SolucaoEdgeSet *s){
@@ -120,37 +107,9 @@ bool buscaLocal(SolucaoEdgeSet *s){
 		
 		contIteracoes++;
 	}while (contIteracoes<MAX_VIZ && s_was_modified == true);
+	// TODO: delete s_linha ou alocar fora 
 	return ret;
 }
-
-
-
-// void buscaLocal(SolucaoEdgeSet &sol, double lambda){
-// 	SolucaoEdgeSet xk(NUMEROVERTICES-1);
-// 	SolucaoEdgeSet nova(NUMEROVERTICES-1);
-// 	xk = sol;
-// 	for (int i=0; i<MAX_LS; i++){
-// 		//double min = xk.getObj(0)*lambda + xk.getObj(1)*(1.0-lambda);
-// 		SolucaoEdgeSet minSol = xk;
-// 		for (int viz=0; viz<MAX_VIZ; viz++){
-// 			//gerou o vizinho
-// 			a1 = rg.IRandom(0,NUMEROVERTICES-1-1);
-			// while ((a2 = rg.IRandom(0,NUMEROVERTICES-1-1)) == a1);
-			// nova.trocaArestas(a1,a2,nova.calcularTrocaArestas(a1,a2,xk),xk);
-
-// 			bool added = arquivoLimitadoGlobal->adicionarSol(&nova);
-// 			if (added==true){
-// 				//min = custonovo;
-// 				// cout<<"OKFOEKFOEKFOEKFOEKFOEKFOEKFOK"<<endl;
-// 				// cout<<distancia(minSol, nova)<<endl;
-// 				minSol = nova;
-// 			}
-// 		}
-// 		//cout<<"min = "<<min<<endl;
-// 		xk = minSol;
-// 	}
-// }
-
 
 
 
@@ -163,8 +122,9 @@ void grasp(){
 
 	/*grasp : ordena as arestas (BI-OBJETIVO) de acordo com um lambda 
 	limita o LRC com tamanho max(1, alfa*listaArestas.size())  */
-
+	int conttt = 0;
 	for (int itera = 0; itera<NUMVETORES_GRASP; itera++){
+		 conttt++;
 		lambda = (double) itera/(NUMVETORES_GRASP-1.0);
 		//cout<<lambda<<" "<<1.0-lambda<<endl;
 		//cout<<"Itaracao = "<<itera<<endl;
@@ -204,10 +164,28 @@ void grasp(){
 		novaSol.calcularObjetivos();
 		arquivoLimitadoGlobal->adicionarSol(&novaSol);
 		
-		// SolucaoEdgeSet *s_linha = new SolucaoEdgeSet(NUMEROVERTICES-1);
-		// s_linha->getVizinho1(NUMEROVERTICES-1-1,novaSol, lambda);
-		bool resulBL = buscaLocal(&novaSol); /// a buscaLocal ja adiciona ao arquivoLimitadoGlobal
-		cout<<"resulBL = "<<resulBL<<endl;
+		buscaLocal(&novaSol); /// a buscaLocal ja adiciona ao arquivoLimitadoGlobal
+		pool->adicionarSol(&novaSol);
+
+		if (conttt == INTERVALO_PR){
+			conttt = 0;
+			//cout<<"pool->getSize() = "<<pool->getSize()<<endl;
+			//buscar pares de soluçoes em pool que sao mais proximas
+			//PR
+			list<SolucaoEdgeSet *> listPool = pool->getElementos();
+			list<SolucaoEdgeSet *>::iterator it1 = listPool.begin();
+			
+			// for (;it1!=listPool.end();it1++){
+			// 	list<SolucaoEdgeSet *>::iterator it2 = it1;
+			// 	it2++;
+			// 	for (;it2!=listPool.end();it2++){
+			// 		cout<<"arquivoLimitadoGlobal->getSize() = "<<arquivoLimitadoGlobal->getSize()<<endl;
+			// 		pathrelinking(*it1, *it2);
+			// 		cout<<"arquivoLimitadoGlobal->getSize() = "<<arquivoLimitadoGlobal->getSize()<<endl;
+			// 	}
+			// }
+			pool->clear();
+		}
 	}
 	
 }
@@ -227,6 +205,7 @@ void grasp(){
 	input(); // ler instância
 
 	arquivoLimitadoGlobal = new BoundedParetoSet();
+	pool = new BoundedParetoSet();
 	arquivoLimitadoGlobal->setNomeGlobalf(lixeira);
 
 	
