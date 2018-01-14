@@ -62,16 +62,16 @@ class BoundedParetoSet : public ParetoSet {
 		// (se nenhuma solucao vai sair do conjunto), remove a mais populosa
 		if (remover.size() == 0 && getSize()+1 > MAXARCSIZE) {
 			//fprintf(stderr,"BoundedPareto: removendo a solucao mais populosa de pop = %d\n",maiorPositionCount);
-			if (!existeFileGlobal) {
-				globalf = fopen (nomeglobalf.data(), "a");
-				existeFileGlobal = true;
-			}
-			else {
-				if (globalf == NULL)
-					cerr << "erro ao abrir arquivo!!" << endl;
-				else
-					printOnePoint (maisPopuloso, globalf);
-			}
+			// if (!existeFileGlobal) {
+			// 	globalf = fopen (nomeglobalf.data(), "a");
+			// 	existeFileGlobal = true;
+			// }
+			// else {
+			// 	if (globalf == NULL)
+			// 		cerr << "erro ao abrir arquivo!!" << endl;
+			// 	else
+			// 		printOnePoint (maisPopuloso, globalf);
+			// }
 			remover.push_back(maisPopuloso);
 		}
 

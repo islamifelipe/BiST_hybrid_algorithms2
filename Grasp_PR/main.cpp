@@ -41,11 +41,12 @@
 using namespace std;
 
 double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
-BoundedParetoSet *arquivoLimitadoGlobal;
+BoundedParetoSet *arquivoLimitadoGlobal; /*ARQUIVO GLOBAL LIMITADO A MAXARCSIZE SOLUCOES*/
 BoundedParetoSet *pool; // pool das soluçoes que irao ser submetidas ao Peth relinking
 std::vector<auxEdgeStruct> listaArestas;
 double lambda;
-/*ARQUIVO GLOBAL LIMITADO A MAXARCSIZE SOLUCOES*/
+
+struct tms tempoAntes, tempoDepois;
 
 void input(){
 	int n; // esta leitura de n é somente para cumprir o formato da instância. O valore de fato está em param.h
@@ -63,6 +64,8 @@ void input(){
 		for (int j=i+1;j<NUMEROVERTICES;j++) {
 			cin>>org;
 			cin>>dest;
+			org--;
+			dest--;
 			if (org!=i) cout<<"ERRO Leitura 1"<<endl;
 			if (dest!=j) cout<<"ERRO Leitura 2"<<endl;
 			for (int ob = 0; ob<NUMOBJETIVOS; ob++){
@@ -200,17 +203,25 @@ void grasp(){
 	cout<<"Semente utilizada : "<<seemente<<endl;
 	FILE *samplefile = fopen(argv[2],"a");
 	FILE *tempofile = fopen(argv[3],"a");
-	char *lixeira = argv[4];
+	//char *lixeira = argv[4];
 	input(); // ler instância
 
 	arquivoLimitadoGlobal = new BoundedParetoSet();
 	pool = new BoundedParetoSet();
-	arquivoLimitadoGlobal->setNomeGlobalf(lixeira);
+	//arquivoLimitadoGlobal->setNomeGlobalf(lixeira);
 
+	times(&tempoAntes);
 	
 	grasp();
 
+	times(&tempoDepois);
+
+	fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+
+
 	arquivoLimitadoGlobal->printSetPoints(stdout);
+	arquivoLimitadoGlobal->printSetPoints(samplefile);
 	cout<<"Size = "<<arquivoLimitadoGlobal->getSize()<<endl;
 
 
