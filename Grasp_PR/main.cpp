@@ -170,20 +170,19 @@ void grasp(){
 		if (conttt == INTERVALO_PR){
 			conttt = 0;
 			//cout<<"pool->getSize() = "<<pool->getSize()<<endl;
-			//buscar pares de soluçoes em pool que sao mais proximas
 			//PR
 			list<SolucaoEdgeSet *> listPool = pool->getElementos();
 			list<SolucaoEdgeSet *>::iterator it1 = listPool.begin();
 			
-			// for (;it1!=listPool.end();it1++){
-			// 	list<SolucaoEdgeSet *>::iterator it2 = it1;
-			// 	it2++;
-			// 	for (;it2!=listPool.end();it2++){
-			// 		cout<<"arquivoLimitadoGlobal->getSize() = "<<arquivoLimitadoGlobal->getSize()<<endl;
-			// 		pathrelinking(*it1, *it2);
-			// 		cout<<"arquivoLimitadoGlobal->getSize() = "<<arquivoLimitadoGlobal->getSize()<<endl;
-			// 	}
-			// }
+			for (;it1!=listPool.end();it1++){
+				list<SolucaoEdgeSet *>::iterator it2 = it1;
+				it2++;
+				for (;it2!=listPool.end();it2++){
+				//	cout<<"arquivoLimitadoGlobal->getSize() = "<<arquivoLimitadoGlobal->getSize()<<endl;
+					pathrelinking(*it1, *it2);
+				//	cout<<"arquivoLimitadoGlobal->getSize() = "<<arquivoLimitadoGlobal->getSize()<<endl;
+				}
+			}
 			pool->clear();
 		}
 	}

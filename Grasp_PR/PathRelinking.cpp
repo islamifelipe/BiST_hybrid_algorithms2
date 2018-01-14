@@ -112,10 +112,8 @@ void pathrelinking(SolucaoEdgeSet *start, SolucaoEdgeSet *target){
 	distanciaOriginal = getArestasSai(startaux, target); // arestas que estao em startaux que nao estao em target
 	do{
 		if (distanciaOriginal>0){
-			cout<<"distanciaOriginal = "<<distanciaOriginal<<endl;
 			//vizinhos que nao sao dominados por 'startaux' e que se aproximam do target
 			std::vector<SolucaoEdgeSet * > vizinhos = getVizinho2(startaux, distanciaOriginal, target);
-			cout<<"vizinhos.size() = "<<vizinhos.size()<<endl;
 			if (vizinhos.size()>0){
 				*startaux = *vizinhos[IRandom(0, vizinhos.size()-1)];
 				distanciaOriginal = getArestasSai(startaux, target);
@@ -125,7 +123,6 @@ void pathrelinking(SolucaoEdgeSet *start, SolucaoEdgeSet *target){
 			}
 		}
 	} while (distanciaOriginal > 0 && contMax<maxPR);
-	cout<<"contMax = "<<contMax<<endl;
 	delete startaux;
 }
 
