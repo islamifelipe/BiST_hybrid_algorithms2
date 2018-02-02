@@ -66,6 +66,7 @@ int contBT = 0;
 int contSucessBT = 0;
 float sumMelhoriaBT = 0;
 
+int amostralARESTAS[NUMEROVERTICES*(NUMEROVERTICES-1)/2][2];
 
 //parametros proIrace
 int numgeracoes;

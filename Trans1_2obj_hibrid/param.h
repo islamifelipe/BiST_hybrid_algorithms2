@@ -10,7 +10,7 @@
 #define PROFUNDIDADEGRID 5 
 
 #define NUMOBJETIVOS 2 // FIXO
-#define NUMEROVERTICES 800 // Varia
+#define NUMEROVERTICES 1000 // Varia
 #define NUMEROARESTAS (NUMEROVERTICES-1)
 
 #define TAMANHOPOPULACAO 100  // tamanho da populaçao
@@ -19,9 +19,9 @@
 /*Há 3 tipos de plasmideos. A quantidade de plasmideos criada para cada tipo depende da taxa de eficiência do mesmo.
  Inicialmente,  todos tem a mesma quantidade (5) (probabiliade 33,333%)*/
 
-#define INI_GER_SET 4 //8 //6 //4 // a cada INI_GER_SET geraçoes consecutivas, PROB_VECTOR é incrementado, as probilidades de cada plasmideo e cada transponsson sao atualizadas indivualmente, e a populaçao é reciclada
-#define PROB_VECTOR 0.5 // 0.65 //0.6 //0.5 // probabilidade de executar os plasmideos (1 - PROB_VECTOR é a probabiliade de executar os transponssons)
-#define PROB_FACTOR 0.11 //0.12//0.16 //0.1 // fator que incrementa a probilidade dos plasmideos e decrementa a probabilidade dos transpossons
+#define INI_GER_SET 6 //8 //6 //4 // a cada INI_GER_SET geraçoes consecutivas, PROB_VECTOR é incrementado, as probilidades de cada plasmideo e cada transponsson sao atualizadas indivualmente, e a populaçao é reciclada
+#define PROB_VECTOR 0.4 // 0.65 //0.6 //0.5 // probabilidade de executar os plasmideos (1 - PROB_VECTOR é a probabiliade de executar os transponssons)
+#define PROB_FACTOR 0.16 //0.12//0.16 //0.1 // fator que incrementa a probilidade dos plasmideos e decrementa a probabilidade dos transpossons
 //PROB_VECTOR + PROB_FACTOR
 
 

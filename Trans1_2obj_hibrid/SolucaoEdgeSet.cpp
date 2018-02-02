@@ -17,6 +17,8 @@ using namespace std;
 
 extern double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
 
+extern int amostralARESTAVECTOR[NUMEROVERTICES*(NUMEROVERTICES-1)/2][2];
+
 typedef struct {
 	int listaadj[NUMEROVERTICES][NUMEROVERTICES], graus[NUMEROVERTICES];
 	bool completo;
@@ -327,6 +329,7 @@ class SolucaoEdgeSet : public Solucao {
 		for (int k=0;k<NUMOBJETIVOS;k++) f[k] = 0.0; // (re)inicializa os objetivos
 		
 		int e = IRandom(0,iI);
+
 		for (int i=0;i<NUMEROVERTICES-1;i++){
 			if (i != e) {
 				edges[i][0] = soloriginal.edges[i][0];
@@ -337,7 +340,8 @@ class SolucaoEdgeSet : public Solucao {
 			}
 		}
 
-		int amostral[NUMEROVERTICES*NUMEROVERTICES][2];
+
+	
 		int conttAmotral = 0; 
 		// ATENCAO: GRAFO COMPLETO
 		double obj0 = f(0, soloriginal.edges[e][0], soloriginal.edges[e][1]);
@@ -346,19 +350,20 @@ class SolucaoEdgeSet : public Solucao {
 			for (int j=i+1;j<NUMEROVERTICES;j++) {
 				//if ((obj0<=f(0,i,j) && obj1<=f(1,i,j) && (obj0<f(0,i,j) || obj1<f(1,i,j)))==false){
 					if ((f(0,i,j)*lambda[0] + f(1,i,j)*lambda[1] < obj0*lambda[0] + obj1*lambda[1]) && uf.sameClass(i,j)==false){
-						amostral[conttAmotral][0] = i;
-						amostral[conttAmotral][1] = j;
+						amostralARESTAVECTOR[conttAmotral][0] = i;
+						amostralARESTAVECTOR[conttAmotral][1] = j;
 						conttAmotral++;
 					}
 				//}
 			}
 		}
-
-		//cout<<"conttAmotral = "<<conttAmotral<<endl;
+		//cout<<"OK"<<endl;
+		// cout<<"conttAmotral = "<<conttAmotral<<endl;
 		if (conttAmotral>0){
 			int index = IRandom(0, conttAmotral-1);
-			edges[e][0] = amostral[index][0];
-			edges[e][1] = amostral[index][1];
+
+			edges[e][0] = amostralARESTAVECTOR[index][0];
+			edges[e][1] = amostralARESTAVECTOR[index][1];
 		} else { // nao foi possivel encontrar um vizinho com os critérios pre-definidos
 			edges[e][0] = soloriginal.edges[e][0];
 			edges[e][1] = soloriginal.edges[e][1];

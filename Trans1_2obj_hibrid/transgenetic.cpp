@@ -41,6 +41,8 @@ int objetivoOrdenacao; // esta variavel é utilizada para designar qual objetivo
 
 struct tms tempoAntes, tempoDepois;
 
+int amostralARESTAVECTOR[NUMEROVERTICES*(NUMEROVERTICES-1)/2][2];
+
 // quantPlas1, quantPlas2 e quantPlas3 sao utilizados pelo procedimento criarPlasmideos 
 // e sao autilizados a cada INI_GER_SET geraçoes consecutivas
 int quantPlas1; // quantidade (probabilidade de escolha) do plasmideo 1
@@ -253,7 +255,7 @@ void transgenetic(){
 
 		conttt++;
 		if (conttt == INI_GER_SET){
-			// redefine as quantidade individuais de cada plasmideo e cada transponsson
+			// redefine as quantidades individuais de cada plasmideo e cada transponsson
 			// incrementa a probabilidade (PROB_VECTOR) de escolha do grupo de vetor que deve atacar
 			// recicla a populaçao
 			quantPlas1 = (int) round((float)contSucessoPlasm1/(contSucessoPlasm1 + contSucessoPlasm2 + contSucessoPlasm3)*NUMPLASMIDEOS);
