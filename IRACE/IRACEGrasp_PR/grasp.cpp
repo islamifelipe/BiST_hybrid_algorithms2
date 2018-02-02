@@ -30,6 +30,7 @@
 #include <math.h>       /* acos, cos */
 #include <climits>
 #include <list>
+#include <fstream>      // std::ifstream 
 
  
 // #include "rmcPrim.cpp"
@@ -47,9 +48,17 @@ double lambda;
 
 struct tms tempoAntes, tempoDepois;
 
-void input(){
-	int n; // esta leitura de n é somente para cumprir o formato da instância. O valore de fato está em param.h
-	cin>>n;
+int numvetores_graaspp; //NUMVETORES_GRASP
+int intervalo_prrr; //INTERVALO_PR
+int maax_lss; //MAX_LS
+int maxx_viz; //MAX_VIZ
+int maxprr; //maxPR
+
+void input(const char *instanceName){
+    std::ifstream inn;
+    inn.open(instanceName, std::ifstream::in);
+    int n;
+    inn>>n;
 	int org, dest;
 	for (int i=0;i<NUMEROVERTICES-1;i++) {
 		for (int j=i+1;j<NUMEROVERTICES;j++) {
@@ -61,14 +70,14 @@ void input(){
 	}
 	for (int i=0;i<NUMEROVERTICES-1;i++) {
 		for (int j=i+1;j<NUMEROVERTICES;j++) {
-			cin>>org;
-			cin>>dest;
+			inn>>org;
+			inn>>dest;
 			// org--;
 			// dest--;
 			if (org!=i) cout<<"ERRO Leitura 1"<<endl;
 			if (dest!=j) cout<<"ERRO Leitura 2"<<endl;
 			for (int ob = 0; ob<NUMOBJETIVOS; ob++){
-				cin>>custos[ob][i][j];
+				inn>>custos[ob][i][j];
 				custos[ob][j][i] = custos[ob][i][j];
 
 			}
@@ -105,10 +114,10 @@ bool buscaLocal(SolucaoEdgeSet *s){
 				ret = true;
 			} 
 
-		} while (r<MAX_LS && s_was_modified == false);
+		} while (r<maax_lss && s_was_modified == false);
 		
 		contIteracoes++;
-	}while (contIteracoes<MAX_VIZ && s_was_modified == true);
+	}while (contIteracoes<maxx_viz && s_was_modified == true);
 	// TODO: delete s_linha ou alocar fora 
 	return ret;
 }
@@ -125,9 +134,9 @@ void grasp(){
 	/*grasp : ordena as arestas (BI-OBJETIVO) de acordo com um lambda 
 	limita o LRC com tamanho max(1, alfa*listaArestas.size())  */
 	int conttt = 0;
-	for (int itera = 0; itera<NUMVETORES_GRASP; itera++){
+	for (int itera = 0; itera<numvetores_graaspp; itera++){
 		 conttt++;
-		lambda = (double) itera/(NUMVETORES_GRASP-1.0);
+		lambda = (double) itera/(numvetores_graaspp-1.0);
 		//cout<<lambda<<" "<<1.0-lambda<<endl;
 		//cout<<"Itaracao = "<<itera<<endl;
 		sort(listaArestas.begin(), listaArestas.end(), compara);
@@ -169,7 +178,7 @@ void grasp(){
 		buscaLocal(&novaSol); /// a buscaLocal ja adiciona ao arquivoLimitadoGlobal
 		pool->adicionarSol(&novaSol);
 
-		if (conttt == INTERVALO_PR){
+		if (conttt == intervalo_prrr){
 			conttt = 0;
 			//cout<<"pool->getSize() = "<<pool->getSize()<<endl;
 			//PR
@@ -196,35 +205,69 @@ void grasp(){
 /*semente, arquivo pareto, tempo, lixeira*/
 
  int main(int argc, char *argv[]){
-	int seemente = std::atoi(argv[1]);
-	init_genrand64(seemente);
-	cout<<"========= Estatisticas ========= "<<endl;
-	cout<<"Semente utilizada : "<<seemente<<endl;
-	FILE *samplefile = fopen(argv[2],"a");
-	FILE *tempofile = fopen(argv[3],"a");
-	//char *lixeira = argv[4];
-	input(); // ler instância
+
+ 	char *instanceName = NULL;
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "-NUMVETORES_GRASP") == 0) {
+                numvetores_graaspp = atoi(argv[i+1]);
+                i++;
+        }
+        if (strcmp(argv[i], "-INTERVALO_PR") == 0) {
+                intervalo_prrr = atoi(argv[i+1]);
+                i++;
+        }
+        if (strcmp(argv[i], "-MAX_LS") == 0) {
+                maax_lss = atoi(argv[i+1]);
+                i++;
+        }
+        if (strcmp(argv[i], "-MAX_VIZ") == 0) {
+                maxx_viz = atoi(argv[i+1]);
+                i++;
+        }
+        if (strcmp(argv[i], "-maxPR") == 0) {
+                maxprr = atoi(argv[i+1]);
+                i++;
+        }
+        
+        if (strcmp(argv[i], "-instance") == 0 || strcmp(argv[i], "-i") == 0) {
+                instanceName = argv[i+1];
+                i++;
+        }
+    }
+    int semente = time(NULL);
+	init_genrand64(semente );
+	
+	input(instanceName); // ler instância
 
 	arquivoLimitadoGlobal = new BoundedParetoSet();
 	pool = new BoundedParetoSet();
-	//arquivoLimitadoGlobal->setNomeGlobalf(lixeira);
-
-	times(&tempoAntes);
 	
 	grasp();
 
-	times(&tempoDepois);
+	// arquivoLimitadoGlobal->printSetPoints(stdout);
+	//cout<<"semente = "<<semente<<endl;
+	// arquivoLimitadoGlobal->printSetPoints(samplefile);
+	// cout<<"Size = "<<arquivoLimitadoGlobal->getSize()<<endl;
+	std::ofstream outt;
+	string namePareto  = "pareto"+std::to_string(semente)+"_"+std::to_string(NUMEROVERTICES)+".txt";
+    string nameHyp = "hyp"+std::to_string(semente)+"_"+std::to_string(NUMEROVERTICES)+".txt";
+    outt.open(namePareto, std::ofstream::out);
+	list<SolucaoEdgeSet *> lisd = arquivoLimitadoGlobal->getElementos();
+	list<SolucaoEdgeSet *>::iterator i = lisd.begin();
+	SolucaoEdgeSet *s;
+	while (i != lisd.end()) {
+		s = *i;
+		//fprintf(outt,"%.10lf %.10lf\n",s->getObj(0),s->getObj(1));
+		outt<<s->getObj(0)<<" "<<s->getObj(1)<<endl;
+		i++;
+	}
+	string cmd = "./hyp_ind hyp_ind_param_Fev.txt "+ namePareto +" refereceFiltredE3.out "+ nameHyp;
+	system(cmd.c_str());
+	std::ifstream innn;
+    innn.open(nameHyp, std::ifstream::in);
+    double hypervolume;
+	innn>>hypervolume; // hypervolume;
+	fprintf(stdout,"%.9e\n",hypervolume);
+	return 0;
 
-	fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
-	fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
-
-
-	arquivoLimitadoGlobal->printSetPoints(stdout);
-	arquivoLimitadoGlobal->printSetPoints(samplefile);
-	cout<<"Size = "<<arquivoLimitadoGlobal->getSize()<<endl;
-
-
-
-	fclose(samplefile);
-	fclose(tempofile);
 }
