@@ -14,8 +14,7 @@
 			==> A parte PR é baseada no trabalho de Goldbarg, Goldbarg e Farias (2007) (aplicou ao caixeiro)
 		Após INTERVALO_PR iteraçoes do grasp, monta-se um pool com INTERVALO_PR soluçoes
 		Em sequigda, aplica-se o PR truncado (Resende e Ribeiro (2005) e Laguna and Marti (1999)) no pool
-		Toma-se pares de soluçoes do pool que estao mais proximas
-		métrica para dizer se duas soluçoes do pool sao proximas: ??
+	
 	}
 
 */

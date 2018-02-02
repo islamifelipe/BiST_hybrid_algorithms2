@@ -286,10 +286,6 @@ int main(int argc, char *argv[]){
 	
 	//transgenetic();
 
-
-	alocaPopulacao(populacao);
-	gerarPopulacao1(populacao);
-
 	// Plasmideo pl;
 	// int index = IRandom(0,89);
 	// double lambda[2] = {0.765,0.235};
