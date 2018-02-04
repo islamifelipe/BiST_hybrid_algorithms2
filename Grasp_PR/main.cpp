@@ -7,9 +7,9 @@
 
 
 	==> INSPIRADO NO ARTIGO DE Martí el al (2014) (Multiobjective GRASP with Path Relinking)
-	calcula os vetores de escalarizacao
+	calcula os vetores de escalarizacao a cada iteraçao
 	Grasp{ (Baseado em parte no trabalho de Arroyo e Vianna)
-		Constroi solucao 
+		Constroi solucao (kruskal)
 		Busca local (Vizinhança: remove uma aresta "e" randômica e adiciona uma aresta "e'" randômica que tenha custo escalarizado menor que "e" .)
 			==> A parte PR é baseada no trabalho de Goldbarg, Goldbarg e Farias (2007) (aplicou ao caixeiro)
 		Após INTERVALO_PR iteraçoes do grasp, monta-se um pool com INTERVALO_PR soluçoes
@@ -141,7 +141,7 @@ void grasp(){
 		UnionFind uf;
 		SolucaoEdgeSet novaSol(NUMEROVERTICES-1);
 		int edgedAdded = 0;
-		while (edgedAdded<NUMEROVERTICES-1 && LRC.size()>0){
+		while (edgedAdded<NUMEROVERTICES-1 && LRC.size()>0){ // como o Kruskal
 			int index = IRandom(0, LRC.size()-1); // entre 0 e LRC.size()-1
 			auxEdgeStruct a = LRC[index];
 			if (uf.sameClass(a.origem,a.destino)==false){
