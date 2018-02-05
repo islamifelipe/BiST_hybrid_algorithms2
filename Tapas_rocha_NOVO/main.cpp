@@ -285,19 +285,19 @@ vector <pair<int*,  pair<float, float> > > vizinhos2(Grafo *g, pair<int*, pair<f
 				} 	
 				int newPeso1 = peso1base+g->getArestas(idEscolhidaEntra)->getPeso1();
 		 		int newPeso2 = peso2base+g->getArestas(idEscolhidaEntra)->getPeso2();
-				if ( (newPeso1 < sol.second.first &&  newPeso2 < sol.second.second)){ // TODO : m_grid?
+				//if ( (newPeso1 < sol.second.first &&  newPeso2 < sol.second.second)){ // TODO : m_grid?
+				if (newPeso1 <= sol.second.first && newPeso2 <= sol.second.second && (newPeso1 < sol.second.first || newPeso2 < sol.second.second)){
 					pair<int*,  pair<float, float> > fknrjgnj = make_pair(base, make_pair(newPeso1,newPeso2));
- 					global_arc.adicionarSol(clone(g,fknrjgnj));
  					if (distancia(fknrjgnj.second, target)<distanciaOriginal){ // retornar apenas vizinhos que dominanm extritamente 's' e que estao mais proximos do target, ou seja, que a distância euclidiana entre o vizinho e o target é menor que a distância entre 's' e o target
  						retorno.push_back(fknrjgnj); // adiciona no conjunto de retorno apenas se estiver em As
 					} else {
 						delete[] fknrjgnj.first;
 					}
-
-				} else {
-					pair<int*,  pair<float, float> > fknrjgnj = make_pair(base, make_pair(newPeso1,newPeso2));
-			 		bool lfgk = global_arc.adicionarSol(clone(g,fknrjgnj)); // sem copia				
 				}
+				// } else {
+				// 	pair<int*,  pair<float, float> > fknrjgnj = make_pair(base, make_pair(newPeso1,newPeso2));
+			 // 		bool lfgk = global_arc.adicionarSol(clone(g,fknrjgnj)); 			
+				// }
 			}
 		} //else fora
 	}
@@ -315,12 +315,11 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > start, pair<float,
 	int sizeee = global_arc.getSize();
 	int contttt=0;
 	do{
-		//cout<<"\t \t contMax = "<<contMax<<endl;
 		distanciaOriginal = distancia(startaux.second, target);
-		//cout<<"\t \t distanciaOriginal = "<<distanciaOriginal<<endl;
 		if (distanciaOriginal>0){
 			//vizinhos que dominam extritamente 'startaux' e que se aproximam do target
 			vector <pair<int*,  pair<float, float> > > vizi =  vizinhos2(g, startaux, distanciaOriginal, target);
+			cout<<"vizi.size() = "<<vizi.size()<<endl;
 			if (vizi.size()>0){
 
 				pair<int*, pair<float, float> > proximooo = vizi[rand()%vizi.size()]; // sortea o proximo a ser verificado
@@ -333,8 +332,9 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > start, pair<float,
 			}
 		}
 	} while (distanciaOriginal > 0 && contMax<maxPR);
+	global_arc.adicionarSol(clone(g,startaux));
 	delete[] startaux.first;
-
+	cout<<endl;
 
 }
 
@@ -397,9 +397,9 @@ int main(int argc, const char * argv[]) {
 	
 	times(&tempsInit);
 
-	my_grafo.excluiProibidas(); // primeiro, excluimos as proibidas
-	my_grafo.updateIndex(); // depois, atualizamos os idexes das arestas no map
-	obrigatorias = my_grafo.marcaObrigatorias(quantidadeObrigatorias); // determinanmos as obrigatorias
+	// my_grafo.excluiProibidas(); // primeiro, excluimos as proibidas
+	 my_grafo.updateIndex(); // depois, atualizamos os idexes das arestas no map
+	// obrigatorias = my_grafo.marcaObrigatorias(quantidadeObrigatorias); // determinanmos as obrigatorias
 	nA= my_grafo.getQuantArestas();
 	
 	memeticoRocha2006(&my_grafo);
@@ -423,6 +423,7 @@ int main(int argc, const char * argv[]) {
    	int i = 0;
    	cout<<"Resultado : "<<endl;
    	list<pair<int*, pair<float, float> > > solucess = global_arc.getSolucoes();
+   	solucess.sort(compare);
    	for (list<pair<int*, pair<float, float> > >::iterator it = solucess.begin(); it != solucess.end(); it++){
    		float cont1=0, cont2=0;
 		pair<int*, pair<float, float> > arvr = (*it);
