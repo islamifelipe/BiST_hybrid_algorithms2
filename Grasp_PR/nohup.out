@@ -1,0 +1,333 @@
+*******************************************************************************
+* irace: An implementation in R of Iterated Race
+* Version: 2.4.1844
+* Copyright (C) 2010-2017
+* Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+* Jeremie Dubois-Lacoste  
+* Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+*
+* This is free software, and you are welcome to redistribute it under certain
+* conditions.  See the GNU General Public License for details. There is NO
+* WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+*
+* irace builds upon previous code from the race package:
+*
+* race: Racing methods for the selection of the best
+* Copyright (C) 2003 Mauro Birattari
+*******************************************************************************
+# installed at: /home/islamefelipe/R/x86_64-pc-linux-gnu-library/3.0/irace
+# called with: 
+Warning: A default scenario file './scenario.txt' has been found and will be read
+# 2018-02-05 10:59:31 BRT: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 5
+# seed: 142276927
+# confidence level: 0.95
+# budget: 5000
+# mu: 5
+# deterministic: FALSE
+
+# 2018-02-05 10:59:31 BRT: Iteration 1 of 4
+# experimentsUsedSoFar: 0
+# remainingBudget: 5000
+# currentBudget: 1250
+# nbConfigurations: 208
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          1|        208|         12|   -9944235041.|        208|00:02:32|   NA|  NA|    NA|
+|x|          2|        208|         12|   -9939671432.|        416|00:14:12|+0.72|0.86|0.3008|
+|x|          3|        208|         12|   -9943435443.|        624|00:37:37|+0.66|0.77|0.3284|
+|x|          4|        208|         80|   -9939225686.|        832|01:26:08|+0.64|0.73|0.3567|
+|-|          5|         57|         80|   -9941483806.|       1040|00:15:23|-0.08|0.14|1.0383|
+|=|          6|         57|         80|   -9939954159.|       1097|00:02:30|-0.05|0.13|1.0061|
+|=|          7|         57|         12|   -9943166982.|       1154|00:02:38|-0.05|0.10|1.0245|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:          12    mean value:    -9943166982.
+Description of the best configuration:
+   .ID. NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR .PARENT.
+12   12              700           48     28      12     8       NA
+
+# 2018-02-05 13:40:34 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR
+12               700           48     28      12     8
+80               700           48     26      10     8
+208              700           43     30      12     6
+107              700           46     28      12     8
+# 2018-02-05 13:40:34 BRT: Iteration 2 of 4
+# experimentsUsedSoFar: 1154
+# remainingBudget: 3846
+# currentBudget: 1282
+# nbConfigurations: 163
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          8|        163|        244|   -9937709445.|        163|00:01:04|   NA|  NA|    NA|
+|x|          5|        163|        275|   -9944114215.|        322|00:13:10|+0.53|0.76|0.9976|
+|x|          1|        163|        275|   -9944154493.|        481|00:02:05|+0.57|0.71|0.8262|
+|x|          7|        163|        275|   -9948729041.|        640|00:06:21|+0.58|0.68|0.9013|
+|-|          2|         45|        275|   -9946004801.|        799|00:12:30|-0.05|0.16|1.0195|
+|=|          4|         45|        275|   -9942769235.|        840|00:20:20|-0.04|0.13|1.0063|
+|=|          6|         45|         12|   -9941273547.|        881|00:02:01|-0.04|0.11|1.0021|
+|=|          3|         45|         12|   -9942484787.|        922|00:09:22|-0.02|0.11|0.9986|
+|=|          9|         45|        275|   -9941440251.|        967|00:08:20|+0.01|0.12|0.9733|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         275    mean value:    -9941440251.
+Description of the best configuration:
+    .ID. NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR .PARENT.
+275  275              700           49     26      12     8       12
+
+# 2018-02-05 14:55:54 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR
+275              700           49     26      12     8
+12               700           48     28      12     8
+225              700           49     30      12     8
+208              700           43     30      12     6
+# 2018-02-05 14:55:54 BRT: Iteration 3 of 4
+# experimentsUsedSoFar: 2121
+# remainingBudget: 2879
+# currentBudget: 1439
+# nbConfigurations: 147
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         10|        147|        507|   -9963085536.|        147|00:03:05|   NA|  NA|    NA|
+|x|          1|        147|         12|   -9953660250.|        290|00:02:00|+0.54|0.77|0.3120|
+|x|          7|        147|         12|   -9956591211.|        433|00:06:16|+0.53|0.69|0.3235|
+|x|          8|        147|         12|   -9951870764.|        576|00:00:58|+0.55|0.67|0.3363|
+|-|          4|         49|        375|   -9946815965.|        719|01:05:35|-0.09|0.12|1.0734|
+|=|          3|         49|         12|   -9947505634.|        764|00:10:50|-0.05|0.13|1.0291|
+|=|          2|         49|         12|   -9945734518.|        809|00:04:23|-0.03|0.11|1.0116|
+|=|          9|         49|         12|   -9944151898.|        854|00:08:49|-0.02|0.10|0.9935|
+|=|          6|         49|         12|   -9942835678.|        899|00:02:09|-0.01|0.10|0.9788|
+|=|          5|         49|         12|   -9943603731.|        944|00:04:36|-0.01|0.09|0.9744|
+|=|         11|         49|         12|   -9944883293.|        993|00:06:59|-0.00|0.09|0.9698|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:          12    mean value:    -9944883293.
+Description of the best configuration:
+   .ID. NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR .PARENT.
+12   12              700           48     28      12     8       NA
+
+# 2018-02-05 16:51:41 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR
+12               700           48     28      12     8
+461              700           46     28      11     8
+208              700           43     30      12     6
+382              700           43     30      11     8
+# 2018-02-05 16:51:41 BRT: Iteration 4 of 4
+# experimentsUsedSoFar: 3114
+# remainingBudget: 1886
+# currentBudget: 1886
+# nbConfigurations: 160
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         12|        160|        537|   -9907312822.|        160|04:05:09|   NA|  NA|    NA|
+|x|          6|        160|        646|   -9919804470.|        316|00:06:44|+0.51|0.75|0.6926|
+|x|          7|        160|        646|   -9934020871.|        472|00:07:01|+0.46|0.64|0.7721|
+|x|          3|        160|        535|   -9938254652.|        628|00:32:23|+0.46|0.60|0.7132|
+|!|         10|         59|        535|   -9943220800.|        784|00:03:16|-0.09|0.12|1.0794|
+|=|          9|         59|        522|   -9941530080.|        839|00:10:24|-0.07|0.11|1.0480|
+|=|         11|         59|        582|   -9943836741.|        894|00:07:56|-0.04|0.11|1.0231|
+|=|          5|         59|        382|   -9944672355.|        949|00:05:21|-0.04|0.09|1.0233|
+|=|          4|         59|        382|   -9942664834.|       1004|00:27:39|-0.04|0.08|1.0154|
+|=|          8|         59|        535|   -9942167712.|       1059|00:00:23|-0.02|0.08|0.9976|
+|=|          2|         59|        382|   -9941527318.|       1114|00:05:12|-0.01|0.08|0.9861|
+|=|          1|         59|        637|   -9941751048.|       1169|00:00:50|-0.01|0.08|0.9838|
+|=|         13|         59|        637|   -9943343522.|       1228|00:02:57|-0.01|0.07|0.9846|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         637    mean value:    -9943343522.
+Description of the best configuration:
+    .ID. NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR .PARENT.
+637  637              700           49     30      10     7      461
+
+# 2018-02-05 22:47:05 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR
+637              700           49     30      10     7
+582              700           49     27      12     8
+12               700           48     28      12     8
+461              700           46     28      11     8
+# 2018-02-05 22:47:05 BRT: Iteration 5 of 5
+# experimentsUsedSoFar: 4342
+# remainingBudget: 658
+# currentBudget: 658
+# nbConfigurations: 50
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         14|         50|        695|   -9950519340.|         50|00:04:40|   NA|  NA|    NA|
+|x|          6|         50|        700|   -9941412392.|         96|00:01:58|+0.20|0.60|0.4376|
+|x|          2|         50|        711|   -9939310166.|        142|00:03:53|+0.32|0.55|0.3315|
+|x|          1|         50|         12|   -9940541292.|        188|00:00:38|+0.36|0.52|0.2988|
+|-|          5|         30|        704|   -9942536946.|        234|00:04:10|-0.06|0.15|1.0348|
+|=|          3|         30|         12|   -9943940807.|        260|00:05:47|-0.03|0.14|0.9917|
+|=|         12|         30|         12|   -9938704635.|        286|00:43:59|-0.00|0.14|0.9830|
+|=|          9|         30|        461|   -9938000134.|        312|00:04:45|-0.02|0.11|0.9798|
+|=|         11|         30|        680|   -9940189669.|        338|00:03:31|+0.00|0.11|0.9732|
+|=|          8|         30|        461|   -9939938935.|        364|00:00:11|+0.01|0.11|0.9579|
+|=|         13|         30|        582|   -9941986859.|        390|00:01:15|+0.02|0.11|0.9576|
+|=|          4|         30|        674|   -9940706147.|        416|00:12:10|+0.03|0.11|0.9522|
+|=|          7|         30|        582|   -9942376616.|        442|00:01:14|+0.03|0.11|0.9402|
+|=|         10|         30|        637|   -9943855787.|        468|00:00:33|+0.04|0.10|0.9362|
+|-|         15|         17|        637|   -9943881069.|        498|00:00:26|-0.03|0.04|0.9485|
+|=|         16|         17|         12|   -9944322983.|        515|00:03:47|-0.02|0.04|0.9479|
+|=|         17|         17|         12|   -9945426654.|        532|00:00:23|-0.02|0.04|0.9480|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:          12    mean value:    -9945426654.
+Description of the best configuration:
+   .ID. NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR .PARENT.
+12   12              700           48     28      12     8       NA
+
+# 2018-02-06 00:20:34 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR
+12               700           48     28      12     8
+582              700           49     27      12     8
+637              700           49     30      10     7
+461              700           46     28      11     8
+# 2018-02-06 00:20:34 BRT: Iteration 6 of 6
+# experimentsUsedSoFar: 4874
+# remainingBudget: 126
+# currentBudget: 126
+# nbConfigurations: 10
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         18|         10|        637|   -9926599275.|         10|00:04:51|   NA|  NA|    NA|
+|x|         11|         10|        637|   -9942139276.|         16|00:00:52|+0.03|0.52|0.8807|
+|x|         14|         10|        637|   -9944931265.|         22|00:00:32|+0.00|0.33|0.9043|
+|x|          6|         10|        582|   -9941773645.|         28|00:00:17|+0.05|0.29|0.7511|
+|=|         13|         10|        582|   -9945909641.|         34|00:00:16|+0.22|0.37|0.6108|
+|!|          9|          6|        582|   -9943771076.|         40|00:01:05|+0.01|0.17|0.7213|
+|=|          4|          6|        582|   -9941316214.|         42|00:00:55|+0.01|0.15|0.6978|
+|=|         10|          6|        637|   -9944038036.|         44|00:00:02|-0.01|0.11|0.7392|
+|=|          3|          6|        637|   -9944807193.|         46|00:00:28|+0.03|0.14|0.6981|
+|=|         12|          6|        637|   -9941055872.|         48|00:03:08|+0.05|0.15|0.6575|
+|=|          7|          6|        637|   -9943001079.|         50|00:00:06|+0.10|0.18|0.6340|
+|=|          2|          6|        637|   -9942343306.|         52|00:00:12|+0.08|0.16|0.6418|
+|=|          1|          6|        637|   -9942488819.|         54|00:00:01|+0.08|0.15|0.6371|
+|-|         15|          5|        582|   -9942613219.|         56|00:00:01|-0.00|0.07|0.7781|
+|=|          8|          5|        637|   -9942286607.|         57|00:00:00|+0.01|0.08|0.7608|
+|=|         16|          5|        637|   -9942828485.|         58|00:00:14|-0.01|0.05|0.7823|
+|=|          5|          5|        637|   -9943280704.|         59|00:00:06|-0.01|0.05|0.7888|
+|=|         17|          5|        637|   -9944380962.|         60|00:00:01|-0.00|0.05|0.7809|
+|=|         19|          5|        637|   -9942429299.|         65|00:08:39|-0.01|0.04|0.7950|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         637    mean value:    -9942429299.
+Description of the best configuration:
+    .ID. NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR .PARENT.
+637  637              700           49     30      10     7      461
+
+# 2018-02-06 00:42:30 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR
+637              700           49     30      10     7
+582              700           49     27      12     8
+12               700           48     28      12     8
+461              700           46     28      11     8
+# 2018-02-06 00:42:30 BRT: Iteration 7 of 7
+# experimentsUsedSoFar: 4939
+# remainingBudget: 61
+# currentBudget: 61
+# nbConfigurations: 6
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         20|          6|        582|   -9933077554.|          6|00:01:08|   NA|  NA|    NA|
+|x|         15|          6|        582|   -9938656332.|          8|00:00:01|+0.94|0.97|0.1375|
+|x|         13|          6|        582|   -9946588763.|         10|00:00:04|+0.31|0.54|0.5018|
+|x|          8|          6|        582|   -9944368928.|         12|00:00:00|+0.08|0.31|0.6797|
+|=|          3|          6|        582|   -9945687378.|         14|00:00:25|+0.09|0.27|0.6995|
+|=|         18|          6|        637|   -9942505807.|         16|00:00:46|+0.09|0.24|0.7366|
+|=|         16|          6|        582|   -9943712782.|         18|00:00:23|-0.03|0.12|0.8332|
+|=|          7|          6|        582|   -9946055374.|         20|00:00:06|+0.06|0.18|0.7600|
+|=|          1|          6|        582|   -9945853112.|         22|00:00:01|+0.04|0.15|0.7685|
+|=|          4|          6|        582|   -9943926505.|         24|00:00:50|-0.03|0.07|0.8386|
+|=|          5|          6|        582|   -9944525464.|         26|00:00:09|-0.05|0.04|0.8691|
+|=|         17|          6|        582|   -9946072125.|         28|00:00:02|-0.06|0.02|0.8794|
+|=|         19|          6|        637|   -9943090098.|         30|00:03:34|-0.06|0.02|0.8897|
+|=|         12|          6|        637|   -9940533233.|         32|00:03:24|-0.04|0.04|0.8751|
+|=|         11|          6|        637|   -9941676302.|         34|00:00:16|-0.01|0.05|0.8591|
+|=|          2|          6|        637|   -9941265771.|         36|00:00:08|-0.01|0.05|0.8552|
+|=|         14|          6|        637|   -9941809858.|         38|00:00:10|-0.00|0.06|0.8533|
+|=|          6|          6|        637|   -9941281860.|         40|00:00:05|+0.01|0.07|0.8374|
+|=|          9|          6|        582|   -9940847689.|         42|00:00:27|+0.00|0.05|0.8437|
+|=|         10|          6|        637|   -9941961707.|         44|00:00:02|+0.01|0.06|0.8404|
+|=|         21|          6|        637|   -9941635327.|         50|00:00:34|+0.03|0.07|0.8285|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         637    mean value:    -9941635327.
+Description of the best configuration:
+    .ID. NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR .PARENT.
+637  637              700           49     30      10     7      461
+
+# 2018-02-06 00:55:20 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR
+637              700           49     30      10     7
+582              700           49     27      12     8
+12               700           48     28      12     8
+461              700           46     28      11     8
+# 2018-02-06 00:55:20 BRT: Stopped because there is not enough budget left to race more than the minimum (4)
+# You may either increase the budget or set 'minNbSurvival' to a lower value
+# Iteration: 8
+# nbIterations: 8
+# experimentsUsedSoFar: 4989
+# timeUsed: 0
+# remainingBudget: 11
+# currentBudget: 11
+# number of elites: 4
+# nbConfigurations: 4
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    NUMVETORES_GRASP INTERVALO_PR MAX_LS MAX_VIZ maxPR
+637              700           49     30      10     7
+582              700           49     27      12     8
+12               700           48     28      12     8
+461              700           46     28      11     8
+# Best configurations as commandlines (first number is the configuration ID; same order as above):
+637  -NUMVETORES_GRASP 700 -INTERVALO_PR 49 -MAX_LS 30 -MAX_VIZ 10 -maxPR 7
+582  -NUMVETORES_GRASP 700 -INTERVALO_PR 49 -MAX_LS 27 -MAX_VIZ 12 -maxPR 8
+12   -NUMVETORES_GRASP 700 -INTERVALO_PR 48 -MAX_LS 28 -MAX_VIZ 12 -maxPR 8
+461  -NUMVETORES_GRASP 700 -INTERVALO_PR 46 -MAX_LS 28 -MAX_VIZ 11 -maxPR 8
