@@ -1,0 +1,5 @@
+Os experimentos do GRASP_PR com as instâncias do Knowles adotarm α = 0.01
+
+Os experimentos do GRASP_PR com as instâncis do arroyo, pra comparaçao com o original, deve adotar os valores de α abaixo:
+
+"Best results were achieved for α = 0.1, 0.08, 0.03 and 0.01 (0.03) for graphs with n = 10, 20, 30 and 50, respectively" ==> Executar o GRASP_PR e o Arroyo com tais valores de alfa

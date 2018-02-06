@@ -76,8 +76,8 @@ void input(){
 		for (int j=i+1;j<NUMEROVERTICES;j++) {
 			cin>>org;
 			cin>>dest;
-			// org--;
-			// dest--;
+			org--;
+			dest--;
 			if (org!=i) cout<<"ERRO Leitura 1"<<endl;
 			if (dest!=j) cout<<"ERRO Leitura 2"<<endl;
 			for (int ob = 0; ob<NUMOBJETIVOS; ob++){
@@ -257,7 +257,7 @@ void grasp(){
 	cout<<"Pareto aproximativo: "<<endl;
 	arquivoLimitadoGlobal->printSetPoints(stdout);
 	arquivoLimitadoGlobal->printSetPoints(samplefile);
-	
+	fprintf(samplefile,"\n");
 
 
 	fclose(samplefile);

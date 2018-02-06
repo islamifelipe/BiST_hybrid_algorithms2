@@ -21,7 +21,7 @@ extern int quantPR;
 #define EPS 1e-9 // quanquer coisa menor que esse valor, é considerado 0
 
 #define NUMOBJETIVOS 2 
-#define NUMEROVERTICES 100 // Varia
+#define NUMEROVERTICES 50 // Varia
 #define NUMEROARESTAS (NUMEROVERTICES-1)
 
 // Parâmetros do arquivo externo
@@ -41,3 +41,4 @@ extern int quantPR;
 #define maxPR 7
 
 #endif
+
