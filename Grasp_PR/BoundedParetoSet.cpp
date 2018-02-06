@@ -13,11 +13,13 @@ class BoundedParetoSet : public ParetoSet {
 	FILE *globalf; // globalf é o arquivo de lixo (ou seja, para onde uma soluçao vai quando é descartada do arquivo)
 	bool existeFileGlobal;
     string nomeglobalf;
+
 	
 	public:
-	/* Complexidade: O(n) */
+	int quantAvalicaoObjetivo; // a quantidade de vezes que a funçao objetivo é avaliada é igual a quantidade de vezes em que o arquivo global recebe soluçoes 
 	BoundedParetoSet () {
 		existeFileGlobal = false;
+		quantAvalicaoObjetivo = 0;
 	}
 	~BoundedParetoSet () {
 		if (existeFileGlobal) {
@@ -30,6 +32,7 @@ class BoundedParetoSet : public ParetoSet {
     }
 
 	bool adicionarSol(SolucaoEdgeSet *s) {
+		quantAvalicaoObjetivo++;
 		//ASS ( assert( confereGrid() ); )
 		list<SolucaoEdgeSet *>::iterator maisPopuloso = sol.begin();
 		int maiorPositionCount = -1;

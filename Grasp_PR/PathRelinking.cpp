@@ -89,7 +89,7 @@ std::vector<SolucaoEdgeSet *> getVizinho2(SolucaoEdgeSet *soloriginal, double di
 		novoV.edges[e][1] = amostral[i][1];
 		for (int k=0;k<NUMOBJETIVOS;k++)
 			novoV.incrementeF(k, f(k,novoV.edges[e][0],novoV.edges[e][1]));
-		arquivoLimitadoGlobal->adicionarSol(&novoV);
+		if (arquivoLimitadoGlobal->adicionarSol(&novoV)==true) countAcceptPR++;
 		//cout<<novoV.getObj(0)<<" "<<novoV.getObj(1)<<endl;
 		if (distancia(&novoV, target)<distan){
 			ret.push_back(new SolucaoEdgeSet(NUMEROVERTICES-1));
@@ -105,6 +105,7 @@ std::vector<SolucaoEdgeSet *> getVizinho2(SolucaoEdgeSet *soloriginal, double di
 //este procedimento nao retorna nada. 
 //As soluçoes no path entre start e target sao inseridas automaticamente arquivoLimitadoGlobal 
 void pathrelinking(SolucaoEdgeSet *start, SolucaoEdgeSet *target){
+	quantPR++;
 	float distanciaOriginal = 0; // distância entre duas soluçoes
 	int contMax = 0; // cont do laço global do PR
 	SolucaoEdgeSet *startaux = new SolucaoEdgeSet(NUMEROVERTICES-1); // copia

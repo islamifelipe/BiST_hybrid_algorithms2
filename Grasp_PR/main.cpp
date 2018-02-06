@@ -47,6 +47,19 @@ double lambda;
 
 struct tms tempoAntes, tempoDepois;
 
+int countAcceptConstrutivo; // quantidade de soluçoes do constutivo aceitas no arquivo externo 
+int countAcceptBL; // quantiade de soluçoes da BL aceitas no arquivo externo
+int countAcceptPR; // quantidade de soluçoes do PR aceitas no arquivo externo
+int quantConstrutivo; // quantidade de vezes em que o construtivo é executado (= NUMVETORES_GRASP)
+int quantBL; // quantidade de vezes em que a BL é executada
+int quantPR; // quantiade de vezes em que o PR é executado
+
+//obviamente, é possível que countAcceptBL > quantBL e countAcceptPR > quantPR
+
+// int quantAvalicaoObjetivo; // conta quantas vezes a funçao objetivo foi avaliada
+
+SolucaoEdgeSet *s_linha;
+
 void input(){
 	int n; // esta leitura de n é somente para cumprir o formato da instância. O valore de fato está em param.h
 	cin>>n;
@@ -86,11 +99,11 @@ bool m_grid(SolucaoEdgeSet *sl, SolucaoEdgeSet *s){
 
 /*a busca tabu edita a solucao 's' que foi passada como argumento*/
 bool buscaLocal(SolucaoEdgeSet *s){
+	quantBL++;
 	int contIteracoes = 0;
 	bool s_was_modified = false;
 	bool ret = false;
 	int r; // do pseudo-codigo
-	SolucaoEdgeSet *s_linha = new SolucaoEdgeSet(NUMEROVERTICES-1);
 	
 	do{ // repita até contIteracoes==MAX_LS or s nao seja modificado
 		r = 0;
@@ -99,8 +112,10 @@ bool buscaLocal(SolucaoEdgeSet *s){
 			s_linha->getVizinho1(NUMEROVERTICES-1-1,*s);
 			
 			//if(s_linha->getObj(0)*lambda + s_linha->getObj(1)*(1.0 - lambda) < s->getObj(0)*lambda + s->getObj(1)*(1.0 - lambda)){
+			
 			s_was_modified = arquivoLimitadoGlobal->adicionarSol(s_linha);
 			if (s_was_modified==true){ // critério de aceitaçao
+				countAcceptBL++;
 				*s = *s_linha;
 				ret = true;
 			} 
@@ -109,7 +124,6 @@ bool buscaLocal(SolucaoEdgeSet *s){
 		
 		contIteracoes++;
 	}while (contIteracoes<MAX_VIZ && s_was_modified == true);
-	// TODO: delete s_linha ou alocar fora 
 	return ret;
 }
 
@@ -164,10 +178,11 @@ void grasp(){
 		}
 
 		novaSol.calcularObjetivos();
-		arquivoLimitadoGlobal->adicionarSol(&novaSol);
+		quantConstrutivo++;
+		if (arquivoLimitadoGlobal->adicionarSol(&novaSol)==true) countAcceptConstrutivo++;
 		
 		buscaLocal(&novaSol); /// a buscaLocal ja adiciona ao arquivoLimitadoGlobal
-		pool->adicionarSol(&novaSol);
+		pool->adicionarSol(&novaSol); /// POOOOOOOOOOOL
 
 		if (conttt == INTERVALO_PR){
 			conttt = 0;
@@ -209,6 +224,15 @@ void grasp(){
 	pool = new BoundedParetoSet();
 	//arquivoLimitadoGlobal->setNomeGlobalf(lixeira);
 
+	s_linha = new SolucaoEdgeSet(NUMEROVERTICES-1);
+
+	countAcceptConstrutivo = 0;
+	countAcceptBL = 0;
+	countAcceptPR = 0;
+	quantConstrutivo = 0;
+	quantBL = 0;
+	quantPR = 0;
+
 	times(&tempoAntes);
 	
 	grasp();
@@ -217,12 +241,23 @@ void grasp(){
 
 	fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
 	fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	cout<<"Quantidade de soluçoes encontradas = "<<arquivoLimitadoGlobal->getSize()<<endl;
 
+	
+	cout<<"Quantidade de vezes em que o contrutivo foi executada: "<<quantConstrutivo<<endl;
+	cout<<"Quantidade de vezes em que a BL foi executada: "<<quantBL<<endl;
+	cout<<"Quantidade de vezes em que o PR foi executado: "<<quantPR<<endl;
 
+	cout<<"Quantidade de solucoes que o constutivo adicionou ao arquivo global: "<<countAcceptConstrutivo<<endl;
+	cout<<"Quantidade de solucoes que a BL adicionou ao arquivo global: "<<countAcceptBL<<endl;
+	cout<<"Quantidade de solucoes que o PR adicionou ao arquivo global: "<<countAcceptPR<<endl;
+	
+	cout<<"Quantidade de avaliacoes da funcao objetivo: "<<arquivoLimitadoGlobal->quantAvalicaoObjetivo<<endl;;
+
+	cout<<"Pareto aproximativo: "<<endl;
 	arquivoLimitadoGlobal->printSetPoints(stdout);
 	arquivoLimitadoGlobal->printSetPoints(samplefile);
-	cout<<"Size = "<<arquivoLimitadoGlobal->getSize()<<endl;
-
+	
 
 
 	fclose(samplefile);

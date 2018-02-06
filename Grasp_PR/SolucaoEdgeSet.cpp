@@ -16,9 +16,6 @@
 using namespace std;
 
 extern double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
-extern int contCrossovers; // quantidade de crossovers executados
-extern int contMutacoes; // quantidade de mutaçoes executadas
-extern int contQuantCalculouFitness; // guarda a quantidade de vezes em que a funçao calculaOwa foi invocada
 
 
 typedef struct {
