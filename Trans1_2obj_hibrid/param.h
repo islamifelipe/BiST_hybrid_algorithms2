@@ -31,3 +31,4 @@
 #define MAX_VIZINHOS 16 // 10 // 15 // numero maximo de vizinhos
 
 #endif
+

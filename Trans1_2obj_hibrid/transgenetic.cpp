@@ -377,14 +377,14 @@ int main(int argc, char *argv[]){
 
 	cout<<"Quantidade de avaliaçoes da funcao objetivo = "<<arc_global.contQuantAvaliacoes<<endl;;
 
-	list<SolucaoEdgeSet *> lisd = arc_global.getElementos();
-	list<SolucaoEdgeSet *>::iterator i = lisd.begin();
-		SolucaoEdgeSet *s;
-		while (i != lisd.end()) {
-			s = *i;
-			fprintf(stdout,"%.10lf %.10lf\n",s->getObj(0),s->getObj(1));
-			i++;
-		}
+	// list<SolucaoEdgeSet *> lisd = arc_global.getElementos();
+	// list<SolucaoEdgeSet *>::iterator i = lisd.begin();
+	// 	SolucaoEdgeSet *s;
+	// 	while (i != lisd.end()) {
+	// 		s = *i;
+	// 		fprintf(stdout,"%.10lf %.10lf\n",s->getObj(0),s->getObj(1));
+	// 		i++;
+	// 	}
 	
 	//arc_global.printSetPoints(stdout);
 	fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
@@ -392,6 +392,10 @@ int main(int argc, char *argv[]){
 
 	// cout<<(double) contSucessPrimTrans/contPrimTrans<<endl;;
 	// cout<<(double) contSucessBT/contBT<<endl;;
+
+	arc_global.printSetPoints(stdout);
+	arc_global.printSetPoints(samplefile);
+	fprintf(samplefile,"\n");
 
 	fclose(samplefile);
 	fclose(tempofile);
