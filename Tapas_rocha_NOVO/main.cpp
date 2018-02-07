@@ -286,8 +286,10 @@ vector <pair<int*,  pair<float, float> > > vizinhos2(Grafo *g, pair<int*, pair<f
 				int newPeso1 = peso1base+g->getArestas(idEscolhidaEntra)->getPeso1();
 		 		int newPeso2 = peso2base+g->getArestas(idEscolhidaEntra)->getPeso2();
 				//if ( (newPeso1 < sol.second.first &&  newPeso2 < sol.second.second)){ // TODO : m_grid?
-				if (newPeso1 <= sol.second.first && newPeso2 <= sol.second.second && (newPeso1 < sol.second.first || newPeso2 < sol.second.second)){
-					pair<int*,  pair<float, float> > fknrjgnj = make_pair(base, make_pair(newPeso1,newPeso2));
+				//if (newPeso1 <= sol.second.first && newPeso2 <= sol.second.second && (newPeso1 < sol.second.first || newPeso2 < sol.second.second)){
+				
+				pair<int*,  pair<float, float> > fknrjgnj = make_pair(base, make_pair(newPeso1,newPeso2));
+ 				if (m_grid(&global_arc, fknrjgnj, sol)==true){	
  					if (distancia(fknrjgnj.second, target)<distanciaOriginal){ // retornar apenas vizinhos que dominanm extritamente 's' e que estao mais proximos do target, ou seja, que a distância euclidiana entre o vizinho e o target é menor que a distância entre 's' e o target
  						retorno.push_back(fknrjgnj); // adiciona no conjunto de retorno apenas se estiver em As
 					} else {
@@ -397,9 +399,9 @@ int main(int argc, const char * argv[]) {
 	
 	times(&tempsInit);
 
-	// my_grafo.excluiProibidas(); // primeiro, excluimos as proibidas
-	 my_grafo.updateIndex(); // depois, atualizamos os idexes das arestas no map
-	// obrigatorias = my_grafo.marcaObrigatorias(quantidadeObrigatorias); // determinanmos as obrigatorias
+	my_grafo.excluiProibidas(); // primeiro, excluimos as proibidas
+	my_grafo.updateIndex(); // depois, atualizamos os idexes das arestas no map
+	obrigatorias = my_grafo.marcaObrigatorias(quantidadeObrigatorias); // determinanmos as obrigatorias
 	nA= my_grafo.getQuantArestas();
 	
 	memeticoRocha2006(&my_grafo);

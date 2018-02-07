@@ -21,7 +21,7 @@ extern int quantPR;
 #define EPS 1e-9 // quanquer coisa menor que esse valor, é considerado 0
 
 #define NUMOBJETIVOS 2 
-#define NUMEROVERTICES 50 // Varia
+#define NUMEROVERTICES 20 // Varia
 #define NUMEROARESTAS (NUMEROVERTICES-1)
 
 // Parâmetros do arquivo externo
@@ -30,7 +30,7 @@ extern int quantPR;
 
 
 // parâmetro do GRASP
-#define ALFA 0.01 // alfa para saber o tamanho da LRC
+#define ALFA 0.08 // alfa para saber o tamanho da LRC
 #define NUMVETORES_GRASP 700 //700 // numero de vetores de escalaizaçao para o grasp
 #define INTERVALO_PR 49
 

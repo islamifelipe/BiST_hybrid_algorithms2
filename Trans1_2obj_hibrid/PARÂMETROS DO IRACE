@@ -1,0 +1,397 @@
+*******************************************************************************
+* irace: An implementation in R of Iterated Race
+* Version: 2.4.1844
+* Copyright (C) 2010-2017
+* Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+* Jeremie Dubois-Lacoste  
+* Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+*
+* This is free software, and you are welcome to redistribute it under certain
+* conditions.  See the GNU General Public License for details. There is NO
+* WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+*
+* irace builds upon previous code from the race package:
+*
+* race: Racing methods for the selection of the best
+* Copyright (C) 2003 Mauro Birattari
+*******************************************************************************
+# installed at: /usr/local/lib/R/site-library/irace
+# called with: 
+Warning: A default scenario file './scenario.txt' has been found and will be read
+# 2018-02-05 10:41:12 BRT: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 5
+# minNbSurvival: 5
+# nbParameters: 8
+# seed: 1109102476
+# confidence level: 0.95
+# budget: 5000
+# mu: 5
+# deterministic: FALSE
+
+# 2018-02-05 10:41:12 BRT: Iteration 1 of 5
+# experimentsUsedSoFar: 0
+# remainingBudget: 5000
+# currentBudget: 1000
+# nbConfigurations: 166
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|          1|        166|        105|   -9914822876.|        166|00:46:58|   NA|  NA|    NA|
+|x|          2|        166|         76|   -9739496312.|        332|00:57:25|+0.43|0.72|0.5963|
+|x|          3|        166|         23|   -9798481824.|        498|00:55:47|+0.45|0.63|0.5643|
+|x|          4|        166|         31|   -9656573562.|        664|01:25:41|+0.48|0.61|0.5599|
+|-|          5|         44|         31|   -9535119349.|        830|01:25:18|+0.02|0.22|0.9623|
+|=|          6|         44|         31|   -9403032344.|        874|00:27:35|+0.07|0.23|0.9122|
+|-|          7|         26|         31|   -9469444392.|        918|00:10:46|-0.02|0.12|0.9696|
+|=|          8|         26|         31|   -9413894093.|        944|00:17:07|+0.03|0.15|0.9259|
+|=|          9|         26|         31|   -9401972476.|        970|00:10:47|+0.05|0.15|0.9155|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:          31    mean value:    -9401972476.
+Description of the best configuration:
+   .ID. numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss .PARENT.
+31   31          38             15            7          0.41          0.11        11           5            17       NA
+
+# 2018-02-05 17:18:42 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss
+31           38             15            7          0.41          0.11        11           5            17
+48           35             24            8          0.42          0.12        16           4            17
+105          35             18            7          0.45          0.10        16           5            11
+145          39             15            8          0.47          0.11        15           6            12
+76           36             21            7          0.44          0.11        15           5            10
+# 2018-02-05 17:18:42 BRT: Iteration 2 of 5
+# experimentsUsedSoFar: 970
+# remainingBudget: 4030
+# currentBudget: 1007
+# nbConfigurations: 105
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         10|        105|        248|   -9867445985.|        105|00:19:21|   NA|  NA|    NA|
+|x|          7|        105|        207|   -9867682880.|        205|00:25:01|+0.12|0.56|0.8588|
+|x|          2|        105|        207|   -9766729452.|        305|00:36:29|+0.20|0.47|0.7498|
+|x|          1|        105|        255|   -9803648334.|        405|00:31:36|+0.13|0.35|0.7906|
+|-|          9|         40|         48|   -9704358663.|        505|00:42:13|-0.07|0.15|1.0197|
+|=|          4|         40|         48|   -9625316492.|        540|00:20:50|-0.01|0.16|0.9747|
+|=|          6|         40|         48|   -9498722923.|        575|00:24:16|+0.00|0.15|0.9611|
+|=|          5|         40|        255|   -9442808080.|        610|00:19:23|+0.03|0.15|0.9336|
+|-|          8|         24|        255|   -9396154304.|        645|00:25:34|-0.04|0.07|0.9799|
+|=|          3|         24|        167|   -9448311358.|        664|00:07:41|-0.03|0.07|0.9711|
+|=|         11|         24|        167|   -9444885169.|        688|00:11:16|-0.02|0.07|0.9682|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         167    mean value:    -9444885169.
+Description of the best configuration:
+    .ID. numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss .PARENT.
+167  167          39             15            8          0.42          0.11        11           5            17       31
+
+# 2018-02-05 21:42:28 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss
+167          39             15            8          0.42          0.11        11           5            17
+255          40             24            7          0.43          0.11        13           6            16
+31           38             15            7          0.41          0.11        11           5            17
+216          39             24            8          0.41          0.12        11           5            15
+207          40             21            6          0.40          0.10        14           4            15
+# 2018-02-05 21:42:28 BRT: Iteration 3 of 5
+# experimentsUsedSoFar: 1658
+# remainingBudget: 3342
+# currentBudget: 1114
+# nbConfigurations: 97
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         12|         97|        167|   -9922760631.|         97|00:29:34|   NA|  NA|    NA|
+|x|         10|         97|        167|   -9895102980.|        189|00:19:26|-0.12|0.44|1.0062|
+|x|          3|         97|        167|   -9902454353.|        281|00:39:29|-0.01|0.33|0.9868|
+|x|          8|         97|        167|   -9682676688.|        373|01:12:03|+0.03|0.27|0.9514|
+|=|          7|         97|        167|   -9719724845.|        465|00:26:17|+0.01|0.21|0.9781|
+|-|          5|         55|        333|   -9608721223.|        557|00:54:16|-0.10|0.09|1.0465|
+|=|          2|         55|        333|   -9602328395.|        607|00:20:23|-0.06|0.09|1.0282|
+|=|          1|         55|        167|   -9640955637.|        657|00:17:53|-0.06|0.07|1.0287|
+|=|          6|         55|        333|   -9541468989.|        707|00:36:30|-0.04|0.08|1.0127|
+|=|          9|         55|        167|   -9517631770.|        757|00:23:21|-0.02|0.08|0.9939|
+|=|         11|         55|        344|   -9507912301.|        807|00:25:22|-0.02|0.07|0.9934|
+|=|          4|         55|        167|   -9484708124.|        857|00:31:18|-0.02|0.07|0.9951|
+|=|         13|         55|        344|   -9400278050.|        912|00:50:01|-0.01|0.07|0.9892|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         344    mean value:    -9400278050.
+Description of the best configuration:
+    .ID. numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss .PARENT.
+344  344          39             21            8          0.41           0.1        12           5            17      167
+
+# 2018-02-06 05:08:28 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss
+344          39             21            8          0.41          0.10        12           5            17
+301          40             15            8          0.42          0.12        12           5            15
+167          39             15            8          0.42          0.11        11           5            17
+311          40             15            7          0.41          0.12        12           5            16
+354          39             15            8          0.46          0.11        11           5            17
+# 2018-02-06 05:08:28 BRT: Iteration 4 of 5
+# experimentsUsedSoFar: 2570
+# remainingBudget: 2430
+# currentBudget: 1215
+# nbConfigurations: 91
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         14|         91|        442|   -9865773142.|         91|00:21:08|   NA|  NA|    NA|
+|x|          4|         91|        382|   -9548726568.|        177|00:50:51|+0.11|0.55|0.8704|
+|x|          8|         91|        382|   -9373655128.|        263|01:02:48|+0.21|0.47|0.7998|
+|x|          7|         91|        382|   -9497221189.|        349|00:23:21|+0.16|0.37|0.8172|
+|-|          1|         47|        385|   -9580308403.|        435|00:29:21|-0.09|0.13|1.0659|
+|=|          3|         47|        382|   -9636810344.|        477|00:17:52|-0.06|0.12|1.0268|
+|=|          5|         47|        385|   -9552920597.|        519|00:23:56|-0.02|0.13|0.9871|
+|=|         13|         47|        385|   -9407117935.|        561|00:38:25|+0.00|0.13|0.9678|
+|=|          6|         47|        385|   -9333362306.|        603|00:30:39|+0.03|0.14|0.9430|
+|!|         11|         20|        385|   -9341255081.|        645|00:20:47|-0.04|0.06|0.9771|
+|=|         10|         20|        385|   -9389090366.|        660|00:03:15|-0.05|0.05|0.9894|
+|=|          2|         20|        385|   -9403610510.|        675|00:06:15|-0.06|0.03|1.0020|
+|=|          9|         20|        385|   -9396145032.|        690|00:07:07|-0.05|0.03|0.9966|
+|=|         12|         20|        385|   -9433760142.|        705|00:04:34|-0.04|0.03|0.9947|
+|=|         15|         20|        385|   -9461496713.|        725|00:07:07|-0.03|0.03|0.9842|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         385    mean value:    -9461496713.
+Description of the best configuration:
+    .ID. numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss .PARENT.
+385  385          40             15            8          0.41          0.11        13           5            16      344
+
+# 2018-02-06 10:56:04 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss
+385          40             15            8          0.41          0.11        13           5            16
+344          39             21            8          0.41          0.10        12           5            17
+372          38             21            8          0.46          0.10        14           5            17
+311          40             15            7          0.41          0.12        12           5            16
+167          39             15            8          0.42          0.11        11           5            17
+# 2018-02-06 10:56:04 BRT: Iteration 5 of 5
+# experimentsUsedSoFar: 3295
+# remainingBudget: 1705
+# currentBudget: 1705
+# nbConfigurations: 111
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         16|        111|        372|   -9924376758.|        111|00:25:57|   NA|  NA|    NA|
+|x|         10|        111|        516|   -9895909957.|        217|00:21:04|+0.15|0.58|0.8545|
+|x|         13|        111|        516|   -9393525616.|        323|01:31:50|+0.20|0.47|0.7701|
+|x|          2|        111|        344|   -9436059784.|        429|00:41:07|+0.15|0.36|0.8229|
+|!|          4|         46|        516|   -9394945282.|        535|01:02:59|-0.13|0.09|1.1095|
+|=|          3|         46|        516|   -9481980314.|        576|00:16:46|-0.08|0.10|1.0553|
+|=|          9|         46|        516|   -9456851637.|        617|00:18:08|-0.05|0.10|1.0211|
+|=|          7|         46|        526|   -9508080421.|        658|00:11:21|-0.03|0.10|0.9964|
+|=|         14|         46|        516|   -9547961194.|        699|00:09:40|-0.04|0.08|1.0094|
+|=|          6|         46|        516|   -9467302671.|        740|00:28:41|-0.01|0.09|0.9908|
+|=|         11|         46|        344|   -9462251747.|        781|00:19:50|-0.01|0.09|0.9786|
+|=|         15|         46|        385|   -9494497738.|        822|00:14:09|-0.01|0.08|0.9780|
+|=|          8|         46|        385|   -9458269459.|        863|00:29:48|+0.00|0.08|0.9682|
+|=|         12|         46|        385|   -9491447110.|        904|00:11:51|+0.00|0.07|0.9696|
+|=|          1|         46|        385|   -9519671872.|        945|00:14:09|-0.00|0.07|0.9757|
+|=|          5|         46|        385|   -9490426486.|        986|00:22:34|+0.00|0.07|0.9691|
+|=|         17|         46|        385|   -9479616454.|       1032|00:20:33|+0.01|0.07|0.9607|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         385    mean value:    -9479616454.
+Description of the best configuration:
+    .ID. numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss .PARENT.
+385  385          40             15            8          0.41          0.11        13           5            16      344
+
+# 2018-02-06 18:36:38 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss
+385          40             15            8          0.41          0.11        13           5            16
+526          39             15            8          0.47          0.12        12           5            17
+344          39             21            8          0.41          0.10        12           5            17
+372          38             21            8          0.46          0.10        14           5            17
+464          38             21            8          0.45          0.10        13           6            16
+# 2018-02-06 18:36:38 BRT: Iteration 6 of 6
+# experimentsUsedSoFar: 4327
+# remainingBudget: 673
+# currentBudget: 673
+# nbConfigurations: 42
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         18|         42|        344|   -9924375678.|         42|00:09:39|   NA|  NA|    NA|
+|x|         10|         42|        344|   -9895910630.|         79|00:07:13|-0.00|0.50|0.9672|
+|x|         16|         42|        344|   -9905397989.|        116|00:08:20|+0.10|0.40|0.8285|
+|x|         11|         42|        344|   -9782131486.|        153|00:17:33|+0.12|0.34|0.8594|
+|!|          6|         20|        385|   -9574359736.|        190|00:25:07|-0.06|0.15|1.0129|
+|=|         13|         20|        385|   -9376382998.|        205|00:12:30|-0.01|0.16|0.9627|
+|=|          3|         20|        385|   -9453636349.|        220|00:06:01|-0.03|0.11|0.9686|
+|=|         17|         20|        385|   -9435263798.|        235|00:06:35|+0.00|0.13|0.9355|
+|=|          2|         20|        553|   -9449465489.|        250|00:05:37|+0.04|0.15|0.8969|
+|-|          5|         16|        385|   -9409718819.|        265|00:08:25|-0.01|0.09|0.9293|
+|=|          9|         16|        385|   -9400340680.|        276|00:04:44|+0.00|0.09|0.9257|
+|=|         12|         16|        385|   -9443875337.|        287|00:03:10|+0.01|0.09|0.9234|
+|=|          4|         16|        385|   -9427384975.|        298|00:06:28|+0.01|0.09|0.9225|
+|=|          7|         16|        372|   -9458871606.|        309|00:02:56|+0.03|0.10|0.9133|
+|=|          8|         16|        385|   -9429830419.|        320|00:07:49|+0.04|0.10|0.9041|
+|=|          1|         16|        385|   -9460142176.|        331|00:03:33|+0.03|0.09|0.9084|
+|=|         15|         16|        385|   -9483063738.|        342|00:03:39|+0.03|0.09|0.9058|
+|=|         14|         16|        385|   -9504325266.|        353|00:02:29|+0.02|0.08|0.9202|
+|=|         19|         16|        385|   -9523436677.|        369|00:03:07|+0.02|0.07|0.9210|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         385    mean value:    -9523436677.
+Description of the best configuration:
+    .ID. numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss .PARENT.
+385  385          40             15            8          0.41          0.11        13           5            16      344
+
+# 2018-02-06 21:01:45 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss
+385          40             15            8          0.41          0.11        13           5            16
+372          38             21            8          0.46          0.10        14           5            17
+577          38             24            8          0.48          0.11        15           6            17
+464          38             21            8          0.45          0.10        13           6            16
+344          39             21            8          0.41          0.10        12           5            17
+# 2018-02-06 21:01:45 BRT: Iteration 7 of 7
+# experimentsUsedSoFar: 4696
+# remainingBudget: 304
+# currentBudget: 304
+# nbConfigurations: 19
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         20|         19|        589|   -9230650510.|         19|00:11:07|   NA|  NA|    NA|
+|x|          2|         19|        589|   -9397373929.|         33|00:05:14|+0.12|0.56|0.7318|
+|x|         11|         19|        344|   -9401946162.|         47|00:06:38|+0.15|0.43|0.8184|
+|x|         10|         19|        344|   -9518321017.|         61|00:02:38|+0.12|0.34|0.8361|
+|=|         16|         19|        344|   -9599531355.|         75|00:03:10|+0.08|0.26|0.8578|
+|=|          6|         19|        344|   -9456523396.|         89|00:09:19|+0.07|0.23|0.8701|
+|=|          1|         19|        344|   -9521994412.|        103|00:04:39|+0.06|0.20|0.8820|
+|!|         17|         10|        344|   -9495009753.|        117|00:06:07|-0.02|0.11|0.8727|
+|=|          8|         10|        385|   -9442832136.|        122|00:03:26|-0.01|0.11|0.8716|
+|=|          4|         10|        385|   -9421498985.|        127|00:02:54|-0.01|0.09|0.8736|
+|=|         12|         10|        385|   -9467067856.|        132|00:01:23|-0.02|0.07|0.8944|
+|=|          3|         10|        385|   -9504575239.|        137|00:01:56|-0.03|0.06|0.9098|
+|=|         13|         10|        385|   -9418569398.|        142|00:04:17|-0.02|0.06|0.9016|
+|=|         19|         10|        577|   -9450299487.|        147|00:00:57|-0.01|0.06|0.9036|
+|=|         15|         10|        577|   -9476933543.|        152|00:01:41|-0.00|0.06|0.8934|
+|=|          9|         10|        577|   -9466265923.|        157|00:02:04|+0.01|0.07|0.8854|
+|=|         18|         10|        385|   -9493505138.|        162|00:01:07|+0.03|0.08|0.8708|
+|=|          5|         10|        385|   -9468962947.|        167|00:02:45|+0.04|0.10|0.8536|
+|-|          7|          5|        385|   -9489960765.|        172|00:01:19|-0.04|0.01|0.8253|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         385    mean value:    -9489960765.
+Description of the best configuration:
+    .ID. numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss .PARENT.
+385  385          40             15            8          0.41          0.11        13           5            16      344
+
+# 2018-02-06 22:14:35 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss
+385          40             15            8          0.41          0.11        13           5            16
+372          38             21            8          0.46          0.10        14           5            17
+344          39             21            8          0.41          0.10        12           5            17
+577          38             24            8          0.48          0.11        15           6            17
+464          38             21            8          0.45          0.10        13           6            16
+# 2018-02-06 22:14:35 BRT: Iteration 8 of 8
+# experimentsUsedSoFar: 4868
+# remainingBudget: 132
+# currentBudget: 132
+# nbConfigurations: 11
+  Markers:
+     x No test is performed.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+                                                                   
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|      Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+|x|         21|         11|        605|   -9867920255.|         11|00:03:04|   NA|  NA|    NA|
+|x|         20|         11|        605|   -9549750083.|         17|00:03:26|-0.10|0.45|0.8855|
+|x|          1|         11|        605|   -9671439571.|         23|00:02:06|-0.14|0.24|0.9939|
+|x|         10|         11|        605|   -9720440880.|         29|00:01:10|+0.08|0.31|0.7988|
+|=|          3|         11|        605|   -9759783066.|         35|00:02:27|+0.07|0.26|0.8206|
+|=|         12|         11|        464|   -9786347985.|         41|00:01:45|-0.02|0.15|0.8725|
+|=|          6|         11|        464|   -9637300045.|         47|00:04:06|-0.01|0.14|0.8689|
+|=|          7|         11|        464|   -9666127602.|         53|00:01:38|+0.04|0.16|0.8487|
+|=|         16|         11|        605|   -9694986829.|         59|00:01:23|+0.06|0.16|0.8407|
+|=|         14|         11|        385|   -9712120241.|         65|00:01:24|+0.05|0.15|0.8324|
+|=|         17|         11|        385|   -9675259851.|         71|00:02:44|+0.03|0.12|0.8584|
+|=|         19|         11|        372|   -9691295584.|         77|00:01:11|+0.05|0.13|0.8443|
+|=|          8|         11|        385|   -9639910043.|         83|00:04:29|+0.04|0.11|0.8554|
+|=|          2|         11|        385|   -9634440190.|         89|00:02:18|+0.03|0.10|0.8657|
+|-|          5|          7|        385|   -9595593891.|         95|00:03:14|-0.02|0.05|0.8572|
+|=|          4|          7|        385|   -9572713062.|         97|00:01:05|-0.02|0.04|0.8627|
+|=|         13|          7|        385|   -9502935782.|         99|00:01:42|-0.01|0.05|0.8586|
+|=|         18|          7|        372|   -9526288019.|        101|00:00:26|-0.02|0.04|0.8615|
+|=|          9|          7|        372|   -9514745165.|        103|00:00:51|-0.01|0.04|0.8546|
+|=|         15|          7|        385|   -9531532569.|        105|00:00:40|+0.00|0.05|0.8460|
+|=|         11|          7|        385|   -9525854354.|        107|00:00:53|+0.01|0.06|0.8394|
+|=|         22|          7|        385|   -9543895326.|        114|00:01:59|+0.02|0.06|0.8307|
++-+-----------+-----------+-----------+---------------+-----------+--------+-----+----+------+
+Best configuration:         385    mean value:    -9543895326.
+Description of the best configuration:
+    .ID. numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss .PARENT.
+385  385          40             15            8          0.41          0.11        13           5            16      344
+
+# 2018-02-06 22:58:46 BRT: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss
+385          40             15            8          0.41          0.11        13           5            16
+372          38             21            8          0.46          0.10        14           5            17
+464          38             21            8          0.45          0.10        13           6            16
+577          38             24            8          0.48          0.11        15           6            17
+344          39             21            8          0.41          0.10        12           5            17
+# 2018-02-06 22:58:46 BRT: Stopped because there is not enough budget left to race more than the minimum (5)
+# You may either increase the budget or set 'minNbSurvival' to a lower value
+# Iteration: 9
+# nbIterations: 9
+# experimentsUsedSoFar: 4982
+# timeUsed: 0
+# remainingBudget: 18
+# currentBudget: 18
+# number of elites: 5
+# nbConfigurations: 5
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    numgeracoes numplasmideos1 ini_ger_sett ppprob_vector ppprob_factor max_tabuu tabutenuree max_vizinhoss
+385          40             15            8          0.41          0.11        13           5            16
+372          38             21            8          0.46          0.10        14           5            17
+464          38             21            8          0.45          0.10        13           6            16
+577          38             24            8          0.48          0.11        15           6            17
+344          39             21            8          0.41          0.10        12           5            17
+# Best configurations as commandlines (first number is the configuration ID; same order as above):
+385  -numgeracoes 40 -numplasmideos1 15 -ini_ger_sett 8 -ppprob_vector 0.41 -ppprob_factor 0.11 -max_tabuu 13 -tabutenuree 5 -max_vizinhoss 16
+372  -numgeracoes 38 -numplasmideos1 21 -ini_ger_sett 8 -ppprob_vector 0.46 -ppprob_factor 0.1 -max_tabuu 14 -tabutenuree 5 -max_vizinhoss 17
+464  -numgeracoes 38 -numplasmideos1 21 -ini_ger_sett 8 -ppprob_vector 0.45 -ppprob_factor 0.1 -max_tabuu 13 -tabutenuree 6 -max_vizinhoss 16
+577  -numgeracoes 38 -numplasmideos1 24 -ini_ger_sett 8 -ppprob_vector 0.48 -ppprob_factor 0.11 -max_tabuu 15 -tabutenuree 6 -max_vizinhoss 17
+344  -numgeracoes 39 -numplasmideos1 21 -ini_ger_sett 8 -ppprob_vector 0.41 -ppprob_factor 0.1 -max_tabuu 12 -tabutenuree 5 -max_vizinhoss 17

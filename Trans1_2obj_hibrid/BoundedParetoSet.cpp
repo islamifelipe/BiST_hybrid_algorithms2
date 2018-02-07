@@ -19,10 +19,12 @@ class BoundedParetoSet : public ParetoSet {
     //string nomeglobalf;
 	
 	public:
+	int contQuantAvaliacoes;
 	list<SolucaoEdgeSet *> lixeira;
 
 	/* Complexidade: O(n) */
 	BoundedParetoSet () {
+		contQuantAvaliacoes = 0;
 		///existeFileGlobal = false;
 	}
 	~BoundedParetoSet () {
@@ -36,6 +38,7 @@ class BoundedParetoSet : public ParetoSet {
     // }
 
 	bool adicionarSol(SolucaoEdgeSet *s) {
+		contQuantAvaliacoes++;
 		//ASS ( assert( confereGrid() ); )
 		list<SolucaoEdgeSet *>::iterator maisPopuloso = sol.begin();
 		int maiorPositionCount = -1;

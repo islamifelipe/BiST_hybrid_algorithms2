@@ -51,19 +51,37 @@ int quantPlas3; // quantidade (probabilidade de escolha) do plasmideo 3
 
 int contPlasm1 = 0; // conta quantas vezes o plasmideo rmc-prim tenta atacar
 int contSucessoPlasm1 = 0; // conta quantos sucessos o plasm1 teve em atacar
-float sumMelhoriaPlasm1 = 0; // conta o quanto o plasm1 melhora
+float sumMelhoriaPlasm1_obj1 = 0; // conta o quanto o plasm1 melhora o primeiro objetivo
+float sumMelhoriaPlasm1_obj2 = 0; // conta o quanto o plasm1 melhora o segundo objetivo
+
 int contPlasm2 = 0; // conta quantas vezes o plasmideo "de uma soluçao" tenta atacar
 int contSucessoPlasm2= 0; // conta quantos sucessos o plasm2 teve em atacar
-float sumMelhoriaPlasm2= 0; // conta o quanto o plasm2 melhora
+float sumMelhoriaPlasm2_obj1 = 0; // conta o quanto o plasm2 melhora o primeiro objetivo
+float sumMelhoriaPlasm2_obj2 = 0; // conta o quanto o plasm2 melhora o segundo objetivo
+
+
 int contPlasm3= 0; // conta quantas vezes o plasmideo "de duas soluçoes" tenta atacar
 int contSucessoPlasm3= 0; // conta quantos sucessos o plasm3 teve em atacar
-float sumMelhoriaPlasm3= 0; // conta o quanto o plasm3 melhora
+float sumMelhoriaPlasm3_obj1 = 0; // conta o quanto o plasm3 melhora o primeiro objetivo
+float sumMelhoriaPlasm3_obj2 = 0; // conta o quanto o plasm3 melhora o segundo objetivo
+
+
 int contPrimTrans= 0; // conta a quantidade e vezes em que o primTrans tenta atacar
 int contSucessPrimTrans= 0; // conta a quantidade de sucesso que o primTrans obteve
-float sumMelhoriaPrimTrans= 0; // conta o quanto o PrimTrans melhora
-int contBT = 0;
-int contSucessBT = 0;
-float sumMelhoriaBT = 0;
+float sumMelhoriaPrimTrans_obj1 = 0; // conta o quanto o PrimTrans melhora o primeiro objetivo 
+float sumMelhoriaPrimTrans_obj2 = 0; // conta o quanto o PrimTrans melhora o segundo objetivo
+
+
+int contBT = 0; // conta quantas vezes a BT foi invocada
+int contSucessBT = 0; // conta quantos sucessos a BT teve
+float sumMelhoriaBT_obj1 = 0; // conta o quanto a BT melhora o primeiro objetivo
+float sumMelhoriaBT_obj2 = 0; // conta o quanto a BT melhora o segundo objetivo
+
+int contRenovacoes = 0; // conta quantas vezes a populaçao foi renovada
+
+int quantPlas1_evolucao[10]; // memoriza a quantidade de plasmideo 1 construido a cada renovaçao 
+int quantPlas2_evolucao[10]; // momoriza a quantidade de plasmideo 2 construido a cada renovaçao
+int quantPlas3_evolucao[10]; // momoriza a quantidade de plasmideo 3 construido a cada renovaçao
 
 void input(){
 	int n; // esta leitura de "n" é somente para cumprir o formato da instância. Os valores de fato estao em param.h
@@ -141,13 +159,20 @@ void computeContPlas(int numPlas){ // computa quantas vezes cada plasmideo ataco
 	}
 }
 
-void computeContSucss(int numPlas){ // computa quantos ataques foram bem sucedidos para cada palsmideo
+void computeContSucss(int numPlas, SolucaoEdgeSet *antes, SolucaoEdgeSet *depois){ // computa quantos ataques foram bem sucedidos para cada palsmideo
 	if (numPlas == 1){
 		contSucessoPlasm1++;
+		sumMelhoriaPlasm1_obj1 += depois->getObj(0) < antes->getObj(0) ? antes->getObj(0) - depois->getObj(0) : 0;
+		sumMelhoriaPlasm1_obj2 += depois->getObj(1) < antes->getObj(1) ? antes->getObj(1) - depois->getObj(1) : 0;
 	} else if (numPlas == 2){
 		contSucessoPlasm2++;
+		sumMelhoriaPlasm2_obj1 += depois->getObj(0) < antes->getObj(0) ? antes->getObj(0) - depois->getObj(0) : 0;
+		sumMelhoriaPlasm2_obj2 += depois->getObj(1) < antes->getObj(1) ? antes->getObj(1) - depois->getObj(1) : 0;
 	} else if (numPlas == 3){ // 
 		contSucessoPlasm3++;
+		sumMelhoriaPlasm3_obj1 += depois->getObj(0) < antes->getObj(0) ? antes->getObj(0) - depois->getObj(0) : 0;
+		sumMelhoriaPlasm3_obj2 += depois->getObj(1) < antes->getObj(1) ? antes->getObj(1) - depois->getObj(1) : 0;
+
 	}
 }
 
@@ -156,7 +181,7 @@ void crowndDistance(){ // by Felipe
 		ParetoSet nds;
 		list<SolucaoEdgeSet *> lixeira1 = arc_global.lixeira;
 		list<SolucaoEdgeSet *>::iterator it = lixeira1.begin();
-		cout<<"Tamanho da lixeira ANTES = "<<lixeira1.size()<<endl;
+		//cout<<"Tamanho da lixeira ANTES = "<<lixeira1.size()<<endl;
 		while (it!=lixeira1.end()){
 			nds.adicionarSol((*it));
 			it++;
@@ -167,12 +192,20 @@ void crowndDistance(){ // by Felipe
 		double randd = genrand64_real3();
 		double lambda[2] = {randd, 1.0 - randd};
 		int l = lixeira.size();
-		cout<<"Tamanho da lixeira = "<<l<<endl;
+		// cout<<"Tamanho da lixeira = "<<l<<endl;
 		it = lixeira.begin();
 		while (it!=lixeira.end()){
 			if (genrand64_real3() < 0.5) {
 				contBT++;
-				if (buscaTabu((*it), lambda)) contSucessBT++;
+				float oobj1_antes = (*it)->getObj(0);
+				float oobj2_antes = (*it)->getObj(1);
+				if (buscaTabu((*it), lambda)) {
+					contSucessBT++;
+					float oobj1_depois = (*it)->getObj(0);
+					float oobj2_depois = (*it)->getObj(1);
+					sumMelhoriaBT_obj1 += (oobj1_depois < oobj1_antes)? oobj1_antes - oobj1_depois : 0;
+					sumMelhoriaBT_obj2 += (oobj2_depois < oobj2_antes)? oobj2_antes - oobj2_depois : 0;
+				}
 				 // experimentos preliminares comprovaram que aqui é melhor
 				/*Justificativa da probabilidade de 50% : com esta probabiliade, é possível mesclar 
 				soluçoes intensificadas (melhores) e soluçoes nao-intensificadas*/
@@ -219,12 +252,15 @@ void transgenetic(){
 	quantPlas1 = round(NUMPLASMIDEOS/3); // valor inicial
 	quantPlas2 = round(NUMPLASMIDEOS/3); // valor inicial
 	quantPlas3 = round(NUMPLASMIDEOS/3); // valor inicial
+	quantPlas1_evolucao[contRenovacoes] = quantPlas1;
+	quantPlas2_evolucao[contRenovacoes] = quantPlas2;
+	quantPlas3_evolucao[contRenovacoes] = quantPlas3;
 	PrimTransposon ptrans;
 	int conttt = 0;
 	for (int i=0; i<QUANTGERACOES; i++){  // para cada geraçao
 		Plasmideo pls[NUMPLASMIDEOS];
 		criaPlasmideos(pls); /// cria plasmideos
-		cout<<"Geracao "<<i+1<<endl;
+		//cout<<"Geracao "<<i+1<<endl;
 		for (int pppt = 0; pppt < TAMANHOPOPULACAO; pppt++){ // cada individuo sofre um ataque de plasmideo ou de transpon
 
 			if(genrand64_real3() < prob_vectorr){ // um plasmideo ataca
@@ -236,8 +272,10 @@ void transgenetic(){
 				pls[indexPlas].atacaSolucao(*copia);
 				bool resul = arc_global.adicionarSol(copia);
 				if (*copia >> *populacao[pppt] || resul == true){ // critério de aceitaçao
+					//populacao[pppt] --> antes
+					//copia --> depois
+					computeContSucss(pls[indexPlas].tipo, populacao[pppt], copia); // computa aqui contSucessoPlasm1, contSucessoPlasm2 e contSucessoPlasm3
 					*populacao[pppt] = *copia;
-					computeContSucss(pls[indexPlas].tipo); // computa aqui contSucessoPlasm1, contSucessoPlasm2 e contSucessoPlasm3
 				}
 			} else { // um transponsson ataca
 				// escolhe-se um transponsson
@@ -249,14 +287,21 @@ void transgenetic(){
 				contPrimTrans++;
 				bool resul = arc_global.adicionarSol(copia);
 				if (*copia >> *populacao[pppt] || resul == true){
+					//populacao[pppt] --> antes
+					//copia --> depois
+					sumMelhoriaPrimTrans_obj1 += copia->getObj(0) < populacao[pppt]->getObj(0) ? populacao[pppt]->getObj(0) -  copia->getObj(0): 0;
+					sumMelhoriaPrimTrans_obj2 += copia->getObj(1) < populacao[pppt]->getObj(1) ? populacao[pppt]->getObj(1) -  copia->getObj(1): 0;
+					
 					*populacao[pppt] = *copia;
 					contSucessPrimTrans++;
+
 				} 
 			}
 		}
 
 		conttt++;
 		if (conttt == INI_GER_SET){
+			contRenovacoes++;
 			// redefine as quantidades individuais de cada plasmideo e cada transponsson
 			// incrementa a probabilidade (PROB_VECTOR) de escolha do grupo de vetor que deve atacar
 			// recicla a populaçao
@@ -264,10 +309,11 @@ void transgenetic(){
 			quantPlas2 = (int) round((float)contSucessoPlasm2/(contSucessoPlasm1 + contSucessoPlasm2 + contSucessoPlasm3)*NUMPLASMIDEOS);
 			quantPlas3 = NUMPLASMIDEOS - quantPlas1 - quantPlas2;
 			
-			cout<<"quantPlas1 = "<<quantPlas1<<" quantPlas2 = "<<quantPlas2<<" quantPlas3 = "<<quantPlas3<<endl;
-			cout<<"contSucessoPlasm1 = "<<contSucessoPlasm1<<" contSucessoPlasm2 = "<<contSucessoPlasm2<<" contSucessoPlasm3 = "<<contSucessoPlasm3<<endl;
-			// contSucessoPlasm1 = 0; contSucessoPlasm2 = 0; contSucessoPlasm3 =0
-			// // quantPlas1, quantPlas2, quantPlas3 serao utilizados em criarPlasmideos
+			// cout<<"quantPlas1 = "<<quantPlas1<<" quantPlas2 = "<<quantPlas2<<" quantPlas3 = "<<quantPlas3<<endl;
+			// cout<<"contSucessoPlasm1 = "<<contSucessoPlasm1<<" contSucessoPlasm2 = "<<contSucessoPlasm2<<" contSucessoPlasm3 = "<<contSucessoPlasm3<<endl;
+			quantPlas1_evolucao[contRenovacoes] = quantPlas1;
+			quantPlas2_evolucao[contRenovacoes] = quantPlas2;
+			quantPlas3_evolucao[contRenovacoes] = quantPlas3;
 			prob_vectorr += PROB_FACTOR;
 			crowndDistance();
 			conttt = 0;
@@ -287,66 +333,49 @@ int main(int argc, char *argv[]){
 	cout<<"Instância lida..."<<endl;
 
 	times(&tempoAntes);
-	
-	//transgenetic();
-
-	// Plasmideo pl;
-	// int index = IRandom(0,89);
-	// double lambda[2] = {0.765,0.235};
-	// populacao[index]->isTree();
-	// PrimTransposon ptrans;
-	// SolucaoEdgeSet copia = *populacao[index];
-	// ptrans.atacaSolucao(copia,lambda);
-	// // int tamanho = IRandom(2,(int)(0.5*(NUMEROVERTICES-1)));
-	// // pl.geraPlasTwoSolutions(*populacao[30], *populacao[80], tamanho);
-	// cout<<populacao[index]->getObj(0)<<" "<<populacao[index]->getObj(1)<<endl;
-	// // SolucaoEdgeSet copia = *populacao[index];//*populacao[index];
-	// // pl.atacaSolucao(copia);
-	// copia.isTree();
-	// cout<<copia.getObj(0)<<" "<<copia.getObj(1)<<endl;
-	// cout<<"Popualaçao: "<<endl;
-	// for (int i=0; i<TAMANHOPOPULACAO; i++){
-	// 	cout<<populacao[i]->getObj(0)<<" "<<populacao[i]->getObj(1)<<endl;
-	// }
-
-	// cout<<"\nArquivo: "<<endl;
-	// for (int i=0; i<arc_global.getSize(); i++){
-	// 	SolucaoEdgeSet *sol = arc_global.getSolucao(i);
-	// 	cout<<sol->getObj(0)<<" "<<sol->getObj(1)<<endl;
-	// }
-	//PrimTransposon ptrans;
-	// for (int index=0; index<TAMANHOPOPULACAO; index++){
-	// 	// cout<<"\n\n"<<endl;
-	// 	//int index = IRandom(0,89);
-	// 	// cout<<populacao[index]->getObj(0)<<" "<<populacao[index]->getObj(1)<<endl;
-	// 	//SolucaoEdgeSet *copia = new SolucaoEdgeSet(NUMEROVERTICES-1);
-	// 	//*copia = *populacao[index];
-	// 	// //double randd = genrand64_real3();
-	// 	// //double lambda[2] = {randd, 1.0 - randd};
-	// 	// //ptrans.atacaSolucao(*copia,lambda);
-	// 	bool resul = buscaTabu(populacao[index]);
-	// 	//copia->getVizinho1(IRandom(0,NUMEROVERTICES-1-1),*populacao[index]);
-	// 	//copia->isTree();
-	// 	if (resul == true){
-	// 		cout<<"1"<<endl;
-	// 		//*populacao[index] = *copia;
-	// 	}
-	// 	// cout<<populacao[index]->getObj(0)<<" "<<populacao[index]->getObj(1)<<endl;
-	// 	// cout<<"\n\n"<<endl;
-	// }
-
-	// cout<<"\nArquivo: "<<endl;
-	// for (int i=0; i<arc_global.getSize(); i++){
-	// 	SolucaoEdgeSet *sol = arc_global.getSolucao(i);
-	// 	cout<<sol->getObj(0)<<" "<<sol->getObj(1)<<endl;
-	// }
-
-	// cout<<"\nLixeira: "<<endl;
-	// crowndDistance();
 		
 	transgenetic();
 
 	times(&tempoDepois);
+
+
+	cout<<"Quantidade de renovacoes = "<<contRenovacoes<<endl;
+	cout<<"Quantidade de plasm1 definido a cada renovacao = ";
+	for (int i=0; i<contRenovacoes+1; i++) cout<<quantPlas1_evolucao[i]<<",";
+	cout<<endl;
+	cout<<"Quantidade de plasm2 definido a cada renovacao = ";
+	for (int i=0; i<contRenovacoes+1; i++) cout<<quantPlas2_evolucao[i]<<",";
+	cout<<endl;
+	cout<<"Quantidade de plasm3 definido a cada renovacao = ";
+	for (int i=0; i<contRenovacoes+1; i++) cout<<quantPlas3_evolucao[i]<<",";
+	cout<<endl;
+	cout<<"Quantidade total de ataque dos plasm1 = "<<contPlasm1<<endl;
+	cout<<"Quantidade total de sucesso do plasm1 = "<<contSucessoPlasm1<<endl;
+	cout<<"Média de melhoria do plasm1 para o obj1 = "<<(contPlasm1==0?0:(float)sumMelhoriaPlasm1_obj1/contPlasm1)<<endl;;
+	cout<<"Média de melhoria do plasm1 para o obj2 = "<<(contPlasm1==0?0:(float)sumMelhoriaPlasm1_obj2/contPlasm1)<<endl;;
+
+	cout<<"Quantidade total de ataque dos plasm2 = "<<contPlasm2<<endl;
+	cout<<"Quantidade total de sucesso do plasm2 = "<<contSucessoPlasm2<<endl;
+	cout<<"Média de melhoria do plasm2 para o obj1 = "<<(contPlasm2==0?0:(float)sumMelhoriaPlasm2_obj1/contPlasm2)<<endl;;
+	cout<<"Média de melhoria do plasm2 para o obj2 = "<<(contPlasm2==0?0:(float)sumMelhoriaPlasm2_obj2/contPlasm2)<<endl;;
+
+	cout<<"Quantidade total de ataque dos plasm3 = "<<contPlasm3<<endl;
+	cout<<"Quantidade total de sucesso do plasm3 = "<<contSucessoPlasm3<<endl;
+	cout<<"Média de melhoria do plasm3 para o obj1 = "<<(contPlasm3==0?0:(float)sumMelhoriaPlasm3_obj1/contPlasm3)<<endl;;
+	cout<<"Média de melhoria do plasm3 para o obj2 = "<<(contPlasm3==0?0:(float)sumMelhoriaPlasm3_obj2/contPlasm3)<<endl;;
+
+
+	cout<<"Quantidade total de ataque dos primTrans = "<<contPrimTrans<<endl;
+	cout<<"Quantidade total de sucesso do primTrans = "<<contSucessPrimTrans<<endl;
+	cout<<"Média de melhoria do primTrans para o obj1 = "<<(contPrimTrans==0?0:(float)sumMelhoriaPrimTrans_obj1/contPrimTrans)<<endl;;
+	cout<<"Média de melhoria do primTrans para o obj2 = "<<(contPrimTrans==0?0:(float)sumMelhoriaPrimTrans_obj2/contPrimTrans)<<endl;;
+
+	cout<<"Quantidade total de invocacao da BT = "<<contBT<<endl;
+	cout<<"Quantidade total de sucesso da BT = "<<contSucessBT<<endl;
+	cout<<"Média de melhoria da BT para o obj1 = "<<(contBT==0?0:(float)sumMelhoriaBT_obj1/contBT)<<endl;;
+	cout<<"Média de melhoria da BT para o obj2 = "<<(contBT==0?0:(float)sumMelhoriaBT_obj2/contBT)<<endl;;
+
+	cout<<"Quantidade de avaliaçoes da funcao objetivo = "<<arc_global.contQuantAvaliacoes<<endl;;
 
 	list<SolucaoEdgeSet *> lisd = arc_global.getElementos();
 	list<SolucaoEdgeSet *>::iterator i = lisd.begin();
@@ -361,8 +390,8 @@ int main(int argc, char *argv[]){
 	fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
 	fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
 
-	cout<<(double) contSucessPrimTrans/contPrimTrans<<endl;;
-	cout<<(double) contSucessBT/contBT<<endl;;
+	// cout<<(double) contSucessPrimTrans/contPrimTrans<<endl;;
+	// cout<<(double) contSucessBT/contBT<<endl;;
 
 	fclose(samplefile);
 	fclose(tempofile);

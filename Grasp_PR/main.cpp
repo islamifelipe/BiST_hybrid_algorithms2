@@ -140,6 +140,7 @@ void grasp(){
 	limita o LRC com tamanho max(1, alfa*listaArestas.size())  */
 	int conttt = 0;
 	for (int itera = 0; itera<NUMVETORES_GRASP; itera++){
+		cout<<"itera = "<<itera<<endl;
 		 conttt++;
 		lambda = (double) itera/(NUMVETORES_GRASP-1.0);
 		//cout<<lambda<<" "<<1.0-lambda<<endl;
