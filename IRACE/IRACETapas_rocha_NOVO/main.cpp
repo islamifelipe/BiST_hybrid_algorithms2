@@ -15,7 +15,6 @@
 #include <stack>   
 #include <utility>      // std::pair
 #include <queue>          // std::queue
-#include <stdlib.h>     /* srand, rand */
 #include "Grafo.h"
 #include "Conjunto.h"
 #include "margeSort.h"
@@ -25,7 +24,18 @@
 #include "PopulacaoInicial.h"
 #include "Arquivo.h"
 #include "Tabu.h"
-#include <stdio.h> 
+#include <fstream>      // std::ifstream 
+
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
+#include <ctime>
+#include <sys/times.h>
+#include <sys/types.h>
+#include <iostream>
+#include <climits>
+#include <fstream>      // std::ifstream 
+
 
 using namespace std;
 
@@ -34,6 +44,15 @@ struct tms tempsInit, tempsFinal1,tempsFinal2 ; // para medir o tempo
 Arquivo global_arc;
 int quantidadeObrigatorias = 0;
 pair<int*, pair<float, float> > obrigatorias;
+
+int max_gen;// 20 - 25 // Quantidade maxima de geracoes 
+int max_offsp; // 5 - 10 quantidade maxima de tentativas para gerar algum descendente valido por geracao
+float alfaMutacao; //0.03 - 0.1 probabilidade de mutacao no individuo
+int max_neighbors; //5-9 // numero maximo de vizinhos
+int max_tabu; //15-30 // quantidade maxima de iteracoes da busca tabu
+int tabutenure; //3-5 // quantidade de iteracoes em que uma aresta permanece como Tabu
+int maxPR; //7 - 15 // quantidade maxima de iteracoes do PR
+int maxVizinhos;// 60 - 100
 
 void diversify2(Grafo *g, pair<int*, pair<float, float> > &sol){
 	vector <int> amostral;
@@ -369,59 +388,87 @@ void tapas(Grafo *g){
 	argv[1] arquivo em que será guardado a fronteira de pareto
 	argv[2] arquivo em que será guardado tempo
 */
-int main(int argc, const char * argv[]) {
+int main(int argc, char * argv[]) {
 
-	// verifica numero de parametros
-    if (argc != 3) {
-        cout << "Parameter error. Usage: " << argv[0] << " (parato front file) (time file) " << endl;
-        exit (1);
+	char *instanceName = NULL;
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "-max_gen") == 0) {
+            max_gen = atoi(argv[i+1]);
+            i++;
+        }
+
+        if (strcmp(argv[i], "-max_offsp") == 0) {
+            max_offsp = atoi(argv[i+1]);
+            i++;
+        }
+
+        if (strcmp(argv[i], "-alfaMutacao") == 0) {
+            alfaMutacao = atof(argv[i+1]);
+            i++;
+        }
+
+        if (strcmp(argv[i], "-max_neighbors") == 0) {
+            max_neighbors = atoi(argv[i+1]);
+            i++;
+        }
+
+        if (strcmp(argv[i], "-max_tabu") == 0) {
+            max_tabu = atoi(argv[i+1]);
+            i++;
+        }
+
+        if (strcmp(argv[i], "-tabutenure") == 0) {
+            tabutenure = atoi(argv[i+1]);
+            i++;
+        }
+
+        if (strcmp(argv[i], "-maxPR") == 0) {
+            maxPR = atoi(argv[i+1]);
+            i++;
+        }
+        if (strcmp(argv[i], "-maxVizinhos") == 0) {
+            maxVizinhos = atoi(argv[i+1]);
+            i++;
+        }
+        if (strcmp(argv[i], "-instance") == 0 || strcmp(argv[i], "-i") == 0) {
+            instanceName = argv[i+1];
+            i++;
+        }
     }
+
+    std::ifstream inn;
+    inn.open(instanceName, std::ifstream::in);
 
 	srand (time(NULL));
 	int n;
 	float peso1, peso2;
 	int origem, destino; // vértices para cada aresta;
 	int id = 0; // id das arestas que leremos do arquivo para criar o grafo
-	cin>>n; // quantidade de vértices do grafo;
+	inn>>n; // quantidade de vértices do grafo;
 	Grafo my_grafo(n);
 	// contruir o grafo
 	for (int i=0; i<n; i++){ // PADRAO : vértices numerados de 0 à n-1
 		my_grafo.addVertice(i);
 	}
-	while (cin>>origem){
-		cin>>destino;
-		cin>>peso1;
-		cin>>peso2;
+	while (inn>>origem){
+		inn>>destino;
+		inn>>peso1;
+		inn>>peso2;
 		my_grafo.addAresta(id, origem, destino, peso1, peso2);
 		id++;
 	}
 	int nA = id; // quantidade de arestas do grafo	
 	
-	times(&tempsInit);
-
+	
 	my_grafo.excluiProibidas(); // primeiro, excluimos as proibidas
 	my_grafo.updateIndex(); // depois, atualizamos os idexes das arestas no map
 	obrigatorias = my_grafo.marcaObrigatorias(quantidadeObrigatorias); // determinanmos as obrigatorias
 	nA= my_grafo.getQuantArestas();
 	
 	memeticoRocha2006(&my_grafo);
-	cout<<"Fim da primeira fase. Size = "<<global_arc.getSize()<<endl;
-   	tapas(&my_grafo);
-   	cout<<"Fim da segunda fase. Size = "<<global_arc.getSize()<<endl;
-   	
-	//vector< pair<int*, pair<float, float> > > populacao = getPopulacaoInicial(&my_grafo,global_arc);
-	
-	times(&tempsFinal1);   /* current time */ // clock final
-	clock_t user_time1 = (tempsFinal1.tms_utime - tempsInit.tms_utime);
-	cout<<(float) user_time1 / (float) sysconf(_SC_CLK_TCK)<<" segundos"<<endl;//"Tempo do usuario por segundo : "
-   	
+	tapas(&my_grafo);
+  
 
-   	FILE *paretoFront = fopen(argv[1],"a");
-   	FILE *tempofile = fopen(argv[2],"a");
-   
-
-   	fprintf(tempofile,"%.10lf\n", (float) user_time1 / (float) sysconf(_SC_CLK_TCK));
-   	
    	int i = 0;
    	cout<<"Resultado : "<<endl;
    	list<pair<int*, pair<float, float> > > solucess = global_arc.getSolucoes();
@@ -433,10 +480,6 @@ int main(int argc, const char * argv[]) {
 		Conjunto conjjj(n);
    		for (int a = 0; a<n-1; a++){ // cada aresta da arvore
 			int iddd = (arvr.first)[a];
-				// cout<<my_grafo.getArestas(iddd)->getOrigem() << " ";
-    // 			cout<<my_grafo.getArestas(iddd)->getDestino() << " ";
-    // 			cout<<my_grafo.getArestas(iddd)->getPeso1() << " ";
-    // 			cout<<my_grafo.getArestas(iddd)->getPeso2() << endl;
 				if (conjjj.compare(my_grafo.getArestas(iddd)->getOrigem(), my_grafo.getArestas(iddd)->getDestino())==false){
 					
 					cont1+=my_grafo.getArestas(iddd)->getPeso1();
@@ -450,17 +493,12 @@ int main(int argc, const char * argv[]) {
    		}
     	i++;
     	cout<<arvr.second.first<<" "<<arvr.second.second<<endl;
-    	fprintf(paretoFront,"%.10lf %.10lf\n", arvr.second.first, arvr.second.second);
-   	
+    	
     	if (cont1 != arvr.second.first || cont2 != arvr.second.second) {
     		cout<<"ERROROFKROKFORKFORKF 3"<<endl;
     	}
 	
    	}
-
-   	fprintf(paretoFront,"\n");
-   	fclose(paretoFront);
-   	fclose(tempofile);
 
 
 	return 0;

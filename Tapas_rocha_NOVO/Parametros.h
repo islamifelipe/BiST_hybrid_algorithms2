@@ -13,10 +13,10 @@
 #define max_neighbors 5 //6 // numero maximo de vizinhos
 #define max_tabu 30//15 // 14? 20 // quantidade maxima de iteracoes da busca tabu
 #define tabutenure 5//3 // quantidade de iteracoes em que uma aresta permanece como Tabu
-#define maxPR 15 // quantidade maxima de iteracoes do PR
+#define maxPR 7//15 // quantidade maxima de iteracoes do PR
 // #define maxSolucoes 3000 // 3000 ?? 10000 // quantidade maxima de solucoes que serao armazenadas no arquivo externo (max_sol)
 // #define maxParetoAproximativo 300 // 400 ou 300? 500 // quantidade maxima de pontos do pareto aproximativo submetidos ao path relinking (max_apr)
-#define maxVizinhos 70
+#define maxVizinhos 400//100
 //#define max_it 3
 
 
