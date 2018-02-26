@@ -1,0 +1,51 @@
+========= Estatisticas ========= 
+Semente utilizada : 7777649
+Instância lida...
+Quantidade de renovacoes = 5
+Quantidade de plasm1 definido a cada renovacao = 5,1,1,1,1,1,
+Quantidade de plasm2 definido a cada renovacao = 5,10,12,12,12,12,
+Quantidade de plasm3 definido a cada renovacao = 5,4,2,2,2,2,
+Quantidade total de ataque dos plasm1 = 280
+Quantidade total de sucesso do plasm1 = 5
+Média de melhoria do plasm1 para o obj1 = 4.68929
+Média de melhoria do plasm1 para o obj2 = 4.90714
+Quantidade total de ataque dos plasm2 = 1768
+Quantidade total de sucesso do plasm2 = 75
+Média de melhoria do plasm2 para o obj1 = 9.64423
+Média de melhoria do plasm2 para o obj2 = 10.1753
+Quantidade total de ataque dos plasm3 = 454
+Quantidade total de sucesso do plasm3 = 12
+Média de melhoria do plasm3 para o obj1 = 10.6057
+Média de melhoria do plasm3 para o obj2 = 6.31938
+Quantidade total de ataque dos primTrans = 1498
+Quantidade total de sucesso do primTrans = 142
+Média de melhoria do primTrans para o obj1 = 115.286
+Média de melhoria do primTrans para o obj2 = 108.65
+Quantidade total de invocacao da BT = 39
+Quantidade total de sucesso da BT = 0
+Média de melhoria da BT para o obj1 = 0
+Média de melhoria da BT para o obj2 = 0
+Quantidade de avaliaçoes da funcao objetivo = 4128
+Tempo(s) Final = 0.49
+2980.0000000000 1985.0000000000
+2979.0000000000 1986.0000000000
+2981.0000000000 1984.0000000000
+2978.0000000000 1987.0000000000
+2977.0000000000 1988.0000000000
+2976.0000000000 1989.0000000000
+1985.0000000000 2980.0000000000
+2975.0000000000 1990.0000000000
+1983.0000000000 2982.0000000000
+1984.0000000000 2981.0000000000
+1987.0000000000 2978.0000000000
+1986.0000000000 2979.0000000000
+1990.0000000000 2975.0000000000
+1989.0000000000 2976.0000000000
+1988.0000000000 2977.0000000000
+2983.0000000000 1982.0000000000
+2982.0000000000 1983.0000000000
+1982.0000000000 2983.0000000000
+2984.0000000000 1981.0000000000
+1981.0000000000 2984.0000000000
+1980.0000000000 2985.0000000000
+2985.0000000000 1980.0000000000

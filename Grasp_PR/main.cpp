@@ -120,10 +120,10 @@ bool buscaLocal(SolucaoEdgeSet *s){
 				ret = true;
 			} 
 
-		} while (r<MAX_LS && s_was_modified == false);
+		} while (r<MAX_VIZ  && s_was_modified == false);
 		
 		contIteracoes++;
-	}while (contIteracoes<MAX_VIZ && s_was_modified == true);
+	}while (contIteracoes<MAX_LS && s_was_modified == true);
 	return ret;
 }
 

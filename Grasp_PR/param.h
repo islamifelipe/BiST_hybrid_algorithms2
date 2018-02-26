@@ -26,19 +26,19 @@ extern int quantPR;
 
 // Parâmetros do arquivo externo
 #define PROFUNDIDADEGRID 5 // profundidade da grid
-#define MAXARCSIZE 300 // limite do arquivo externo
+#define MAXARCSIZE 300 // limite do arquivo externo //#max_sol
 
 
 // parâmetro do GRASP
-#define ALFA 0.08 // alfa para saber o tamanho da LRC
-#define NUMVETORES_GRASP 700 //700 // numero de vetores de escalaizaçao para o grasp
-#define INTERVALO_PR 49
+#define ALFA 0.08 // alfa para saber o tamanho da LRC //parâmetro BETA
+#define NUMVETORES_GRASP 700 //#numVetores // numero de vetores de escalaizaçao para o grasp
+#define INTERVALO_PR 49 // #intervaloPR
 
 //parâmetros da busca local
-#define MAX_LS 30 // quantidade de iteraçoes da busca local
-#define MAX_VIZ 10	// quantidade de vizinhos da busca local
+#define MAX_LS 10 // quantidade de iteraçoes da busca local \\ #max_bl
+#define MAX_VIZ 30	// quantidade de vizinhos da busca local \\ #maxViz
 
-#define maxPR 7
+#define maxPR 7 // #max_pr
 
 #endif
 
