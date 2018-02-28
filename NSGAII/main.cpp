@@ -31,6 +31,7 @@ using namespace std;
 
 double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
 SolucaoEdgeSet *populacao[TAMANHOPOPULACAO];
+SolucaoEdgeSet *uniao[TAMANHOPOPULACAO*2];
 BoundedParetoSet arc_global;
 int objetivoOrdenacao; // esta variavel é utilizada para designar qual objetivo será utilizado para ordenar as soluçoes
 
@@ -167,6 +168,86 @@ void crownding_distance_assigment(list<SolucaoEdgeSet *> I){
 	#undef INF
 }
 
+// atualiza a populaçao (global)
+void atualizaPopulacaoNSGAII(SolucaoEdgeSet *novaPop[TAMANHOPOPULACAO]){
+	for (int i=0; i<TAMANHOPOPULACAO*2; i++){
+		if (i<TAMANHOPOPULACAO){
+			*uniao[i] = *populacao[i];
+		} else {
+			*uniao[i] = *novaPop[i-TAMANHOPOPULACAO];
+		}
+	}
+	int sizeFront = 0;
+	list<SolucaoEdgeSet *> F[TAMANHOPOPULACAO*2];
+	fast_non_dominanted_sort(uniao, F, sizeFront);
+	int cont = 0;
+	int i = 0;
+	while (cont + F[i].size() < TAMANHOPOPULACAO && i<sizeFront){
+		for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end(); p++){
+			*populacao[cont++] = **p;
+		}
+		i++;
+	}
+	crownding_distance_assigment(F[i]);
+	F[i].sort(compare2); // ordena por CD
+	for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end() && cont<TAMANHOPOPULACAO; p++){
+		*populacao[cont++] = **p;
+	}
+}
+
+void NSGAII(){
+	SolucaoEdgeSet * filho = new SolucaoEdgeSet(NUMEROVERTICES-1); //poderia ser global, pra otimizar;
+	alocaPopulacao(populacao);
+	gerarPopulacao1(populacao);
+	int p1,p2,p3,p4;
+	int pai, mae;	
+	SolucaoEdgeSet *novaPop[TAMANHOPOPULACAO]; // cria-se uma populaçao de descentes
+	alocaPopulacao(novaPop); 
+	for (int i=0; i<TAMANHOPOPULACAO; i++){
+		 arc_global.adicionarSol(populacao[i]);
+	}
+	for (int i=0; i<QUANTGERACOES; i++){ // para cada geraçao...
+		cout<<"geracao "<<i+1<<endl;
+		for (int j=0; j<TAMANHOPOPULACAO; j++){ // deve-se criar TAMANHOPOPULACAO novos individuos
+
+			/*SORTEIA 4 individuos*/
+			/*Faz-se o torneio binario entre eles*/
+			p1 = IRandom(0, TAMANHOPOPULACAO-1);
+			p2 = IRandom(0, TAMANHOPOPULACAO-1);
+			p3 = IRandom(0, TAMANHOPOPULACAO-1);
+			p4 = IRandom(0, TAMANHOPOPULACAO-1);
+
+			if(populacao[p1]->getObj(0)<populacao[p2]->getObj(0)){ // compete com o primeiro objetivo
+				pai = p1;;
+			} else {
+				pai = p2;
+			}
+			if (populacao[p3]->getObj(1)<populacao[p4]->getObj(1)){ // compete com o primeiro objetivo
+				mae = p3;
+			} else {
+				mae = p4;
+			}
+			double p = genrand64_real3();;//rg.Random();
+			if (p<TAXADECRUZAMENTO){
+				filho->crossover(*populacao[pai], *populacao[mae]);
+			} else {
+				filho->doRandomWalk();
+			}
+			arc_global.adicionarSol(filho);
+			// filho foi definido; Agora aplica-se mutaçao
+			p = genrand64_real3();;//rg.Random();
+			if (p<TAXADEMUTACAO){
+				novaPop[j]->mutacao(*filho);
+				arc_global.adicionarSol(novaPop[j]);
+			} else{
+				*novaPop[j] = *filho;
+				// NAO PRECISA INSERIR AQUI
+			}
+		}
+		atualizaPopulacaoNSGAII(novaPop);
+	}
+}
+
 int main(int argc, char *argv[]){
 	int seemente = std::atoi(argv[1]);
 	init_genrand64(seemente);
@@ -176,75 +257,94 @@ int main(int argc, char *argv[]){
 	FILE *tempofile = fopen(argv[3],"a");
 	input(); // ler instância
 	cout<<"Instância lida..."<<endl;
-
-	SolucaoEdgeSet *populacao2[TAMANHOPOPULACAO];// excluir
-	SolucaoEdgeSet *uniao[TAMANHOPOPULACAO*2];// excluir
-	alocaPopulacao(populacao);
-	gerarPopulacao1(populacao);
-
-	alocaPopulacao(populacao2); // excluir
-	gerarPopulacao1(populacao2); // excluir
-	cout<<"Popualcao Antes : "<<endl;
-	for (int i=0; i<TAMANHOPOPULACAO; i++){
-		cout<<populacao[i]->getObj(0)<<" "<<populacao[i]->getObj(1)<<endl;
-	}
-	cout<<endl;
 	for (int i=0; i<TAMANHOPOPULACAO*2; i++){
-		uniao[i] = new SolucaoEdgeSet(NUMEROVERTICES-1);
-		if (i<TAMANHOPOPULACAO){
-			uniao[i] = populacao[i];
-		} else {
-			uniao[i] = populacao2[i-TAMANHOPOPULACAO];
-		}
+		uniao[i] = new SolucaoEdgeSet(NUMEROVERTICES-1); // permanente
 	}
 
-	// int ns1 = 0;
-	// int ns2 = 1;
-	// SolucaoEdgeSet * s1 = populacao[ns1];
-	// SolucaoEdgeSet * s2 = populacao[ns2];
-	// SolucaoEdgeSet * novo = new SolucaoEdgeSet(NUMEROVERTICES-1);
-	// novo->crossover(*s1,*s2);
-	// SolucaoEdgeSet * novo2 = new SolucaoEdgeSet(NUMEROVERTICES-1);
-	// novo2->mutacao(*novo);
-	// s1->isTree();
-	// s2->isTree();
-	// novo->isTree();
-	// novo2->isTree();
+	times(&tempoAntes);
 
-	// cout<<s1->getObj(0)<<" "<<s1->getObj(1)<<endl;
-	// cout<<s2->getObj(0)<<" "<<s2->getObj(1)<<endl;
-	// cout<<novo->getObj(0)<<" "<<novo->getObj(1)<<endl;
-	// cout<<novo2->getObj(0)<<" "<<novo2->getObj(1)<<endl;
+	NSGAII();
 
-	int sizeFront = 0;
-	list<SolucaoEdgeSet *> F[TAMANHOPOPULACAO*2];
-	fast_non_dominanted_sort(uniao, F, sizeFront);
-	// for (int i=0; i<sizeFront; i++){
-	// 	cout<<"Front "<<i+1<<":"<<endl;
-	// 	for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end(); p++){
-	// 		cout<<"\t";
-	// 		cout<<(*p)->getObj(0)<<" "<<(*p)->getObj(1)<<endl;
-	// 	}
-	// 	cout<<endl;
+	times(&tempoDepois);
+
+
+	fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+
+	arc_global.printSetPoints(stdout);
+	arc_global.printSetPoints(samplefile);
+
+	fclose(samplefile);
+	fclose(tempofile);
+	// SolucaoEdgeSet *populacao2[TAMANHOPOPULACAO];// excluir
+	// SolucaoEdgeSet *uniao[TAMANHOPOPULACAO*2];// excluir
+	// alocaPopulacao(populacao);
+	// gerarPopulacao1(populacao);
+
+	// alocaPopulacao(populacao2); // excluir
+	// gerarPopulacao1(populacao2); // excluir
+	// cout<<"Popualcao Antes : "<<endl;
+	// for (int i=0; i<TAMANHOPOPULACAO; i++){
+	// 	cout<<populacao[i]->getObj(0)<<" "<<populacao[i]->getObj(1)<<endl;
 	// }
-	cout<<"verificador = "<<verificador(F, sizeFront)<<endl;
-	cout<<endl;
-	int cont = 0;
-	int i = 0;
-	while (cont + F[i].size() < TAMANHOPOPULACAO && i<sizeFront){
-		for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end(); p++){
-			*populacao[cont++] = **p;
-		}
-		i++;
-	}
-	F[i].sort(compare2); // ordena por CD
-	for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end() && cont<TAMANHOPOPULACAO; p++){
-		*populacao[cont++] = **p;
-	}
+	// cout<<endl;
+	// for (int i=0; i<TAMANHOPOPULACAO*2; i++){
+	// 	uniao[i] = new SolucaoEdgeSet(NUMEROVERTICES-1);
+	// 	if (i<TAMANHOPOPULACAO){
+	// 		*uniao[i] = *populacao[i];
+	// 	} else {
+	// 		*uniao[i] = *populacao2[i-TAMANHOPOPULACAO];
+	// 	}
+	// }
 
-	cout<<"Popualcao depois : "<<endl;
-	for (int i=0; i<TAMANHOPOPULACAO; i++){
-		cout<<populacao[i]->getObj(0)<<" "<<populacao[i]->getObj(1)<<endl;
-	}
+	// // int ns1 = 0;
+	// // int ns2 = 1;
+	// // SolucaoEdgeSet * s1 = populacao[ns1];
+	// // SolucaoEdgeSet * s2 = populacao[ns2];
+	// // SolucaoEdgeSet * novo = new SolucaoEdgeSet(NUMEROVERTICES-1);
+	// // novo->crossover(*s1,*s2);
+	// // SolucaoEdgeSet * novo2 = new SolucaoEdgeSet(NUMEROVERTICES-1);
+	// // novo2->mutacao(*novo);
+	// // s1->isTree();
+	// // s2->isTree();
+	// // novo->isTree();
+	// // novo2->isTree();
+
+	// // cout<<s1->getObj(0)<<" "<<s1->getObj(1)<<endl;
+	// // cout<<s2->getObj(0)<<" "<<s2->getObj(1)<<endl;
+	// // cout<<novo->getObj(0)<<" "<<novo->getObj(1)<<endl;
+	// // cout<<novo2->getObj(0)<<" "<<novo2->getObj(1)<<endl;
+
+	// int sizeFront = 0;
+	// list<SolucaoEdgeSet *> F[TAMANHOPOPULACAO*2];
+	// fast_non_dominanted_sort(uniao, F, sizeFront);
+	// // for (int i=0; i<sizeFront; i++){
+	// // 	cout<<"Front "<<i+1<<":"<<endl;
+	// // 	for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end(); p++){
+	// // 		cout<<"\t";
+	// // 		cout<<(*p)->getObj(0)<<" "<<(*p)->getObj(1)<<endl;
+	// // 	}
+	// // 	cout<<endl;
+	// // }
+	// cout<<"verificador = "<<verificador(F, sizeFront)<<endl;
+	// cout<<endl;
+	// int cont = 0;
+	// int i = 0;
+	// while (cont + F[i].size() < TAMANHOPOPULACAO && i<sizeFront){
+	// 	for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end(); p++){
+	// 		*populacao[cont++] = **p;
+	// 	}
+	// 	i++;
+	// }
+	// crownding_distance_assigment(F[i]);
+	// F[i].sort(compare2); // ordena por CD
+	// for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end() && cont<TAMANHOPOPULACAO; p++){
+	// 	*populacao[cont++] = **p;
+	// }
+
+	// cout<<"Popualcao depois : "<<endl;
+	// for (int i=0; i<TAMANHOPOPULACAO; i++){
+	// 	cout<<populacao[i]->getObj(0)<<" "<<populacao[i]->getObj(1)<<endl;
+	// }
 
 }
