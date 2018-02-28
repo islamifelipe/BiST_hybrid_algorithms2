@@ -55,6 +55,7 @@ void input(){
 	}
 }
 
+// OK
 // deb et al (2002)
 // P[TAMANHOPOPULACAO*2] = populacao corrente unido com a populaçao criada
 // tem que ser EXATAMENTE TAMANHOPOPULACAO*2
@@ -129,6 +130,43 @@ bool verificador(list<SolucaoEdgeSet *> F[TAMANHOPOPULACAO*2], int sizeFront){
 	return true;
 }
 
+bool compare1(SolucaoEdgeSet *s1, SolucaoEdgeSet *s2){
+	return s1->getObj(objetivoOrdenacao) < s2->getObj(objetivoOrdenacao);
+}
+
+bool compare2(SolucaoEdgeSet *s1, SolucaoEdgeSet *s2){
+	return s1->distance > s2->distance; // maior distância
+}
+
+void crownding_distance_assigment(list<SolucaoEdgeSet *> I){
+	#define INF 1e9
+	int l = I.size();
+	list<SolucaoEdgeSet *>::iterator it = I.begin();
+	while (it!=I.end()){
+		(*it)->distance = 0;
+		it++;
+	}
+	for (int m=0; m<NUMOBJETIVOS; m++){ // para cada objetivo m
+		objetivoOrdenacao = m;
+		I.sort(compare1);
+		(*I.begin())->distance = INF;
+		(I.back())->distance = INF; // É ISSO MESMO: back() NAO retorna um ponteiro interator!!! 
+		it = I.begin();
+		it++; // começa do 1 
+		for (int i = 1; i<(l-1); i++){
+			it++; // pos
+			double objPos = (*it)->getObj(m);
+			it--; // volta para o original
+			it--; //previous
+			double objPrev = (*it)->getObj(m);
+			it++; // volta para o original
+			(*it)->distance = (*it)->distance + (objPos - objPrev);
+			it++; // avança
+		}
+	}
+	#undef INF
+}
+
 int main(int argc, char *argv[]){
 	int seemente = std::atoi(argv[1]);
 	init_genrand64(seemente);
@@ -146,7 +184,11 @@ int main(int argc, char *argv[]){
 
 	alocaPopulacao(populacao2); // excluir
 	gerarPopulacao1(populacao2); // excluir
-
+	cout<<"Popualcao Antes : "<<endl;
+	for (int i=0; i<TAMANHOPOPULACAO; i++){
+		cout<<populacao[i]->getObj(0)<<" "<<populacao[i]->getObj(1)<<endl;
+	}
+	cout<<endl;
 	for (int i=0; i<TAMANHOPOPULACAO*2; i++){
 		uniao[i] = new SolucaoEdgeSet(NUMEROVERTICES-1);
 		if (i<TAMANHOPOPULACAO){
@@ -177,15 +219,32 @@ int main(int argc, char *argv[]){
 	int sizeFront = 0;
 	list<SolucaoEdgeSet *> F[TAMANHOPOPULACAO*2];
 	fast_non_dominanted_sort(uniao, F, sizeFront);
-	for (int i=0; i<sizeFront; i++){
-		cout<<"Front "<<i+1<<":"<<endl;
-		for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end(); p++){
-			cout<<"\t";
-			cout<<(*p)->getObj(0)<<" "<<(*p)->getObj(1)<<endl;
-		}
-		cout<<endl;
-	}
+	// for (int i=0; i<sizeFront; i++){
+	// 	cout<<"Front "<<i+1<<":"<<endl;
+	// 	for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end(); p++){
+	// 		cout<<"\t";
+	// 		cout<<(*p)->getObj(0)<<" "<<(*p)->getObj(1)<<endl;
+	// 	}
+	// 	cout<<endl;
+	// }
 	cout<<"verificador = "<<verificador(F, sizeFront)<<endl;
+	cout<<endl;
+	int cont = 0;
+	int i = 0;
+	while (cont + F[i].size() < TAMANHOPOPULACAO && i<sizeFront){
+		for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end(); p++){
+			*populacao[cont++] = **p;
+		}
+		i++;
+	}
+	F[i].sort(compare2); // ordena por CD
+	for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end() && cont<TAMANHOPOPULACAO; p++){
+		*populacao[cont++] = **p;
+	}
 
+	cout<<"Popualcao depois : "<<endl;
+	for (int i=0; i<TAMANHOPOPULACAO; i++){
+		cout<<populacao[i]->getObj(0)<<" "<<populacao[i]->getObj(1)<<endl;
+	}
 
 }

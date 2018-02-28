@@ -32,7 +32,8 @@ class SolucaoEdgeSet : public Solucao {
 	grafo *g;
 	double distance; // crownd distance // utilizada no NSGA-II e na reciclagem do Hudson
 	double antigof[NUMOBJETIVOS];
-	int posicaoListaNSGAII; // guarda o index onde a soluçao é guardada na popupacao NUMPOPULACAO*2
+	int posicaoListaNSGAII; // guarda o index onde a soluçao é guardada na popupacao NUMPOPULACAO*2 do NSGA-II
+
 	SolucaoEdgeSet(int n) {
 		nEdges = n;
 		f[0] = f[1] = 0.0;
