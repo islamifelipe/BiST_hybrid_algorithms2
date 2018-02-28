@@ -183,8 +183,8 @@ void crowndDistance(){ // by Felipe
 		list<SolucaoEdgeSet *>::iterator it = lixeira1.begin();
 		//cout<<"Tamanho da lixeira ANTES = "<<lixeira1.size()<<endl;
 		while (it!=lixeira1.end()){
-			nds.adicionarSol((*it));
-			it++;
+			nds.adicionarSol((*it)); // Hudson pega somente incomparáveis
+			it++; 
 		}
 		//list<SolucaoEdgeSet *> arqq  = arc_global.getElementos();
 		//lixeira.splice(lixeira.end(), arqq); // une a lixeira ao arquivo externo,

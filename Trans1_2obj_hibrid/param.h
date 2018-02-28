@@ -14,7 +14,7 @@
 #define NUMEROVERTICES 600 // Varia
 #define NUMEROARESTAS (NUMEROVERTICES-1)
 
-#define TAMANHOPOPULACAO 100  // tamanho da populaçao
+#define TAMANHOPOPULACAO 100  // tamanho da populaçao #popSize
 #define QUANTGERACOES 40  //quantidade de iteracoes do TANSGENETICO (IRACE)
 #define NUMPLASMIDEOS 15 //18 //15 // QUANTIDADE DE PLASMIDEOS (IRACE)
 /*Há 3 tipos de plasmideos. A quantidade de plasmideos criada para cada tipo depende da taxa de eficiência do mesmo.
@@ -32,3 +32,14 @@
 
 #endif
 
+
+/**
+	#popSize
+	#max\_gen
+	#numPlasTotal = #plas1 + #plas2 + #plas3
+	#intGerSet
+	#probPlasm
+	#probFator
+	#maxTabu
+	#tabutenure
+**/
