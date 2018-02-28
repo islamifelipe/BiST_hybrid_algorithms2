@@ -71,6 +71,8 @@ class SolucaoEdgeSet : public Solucao {
 		// cout<<f[0]<<" "<<f[1]<<endl;
 	}
 
+
+
 	/* gera uma arvore aleatoria
 	 * Complexidade n */
     void doRandomWalk() {
@@ -106,6 +108,61 @@ class SolucaoEdgeSet : public Solucao {
        // assert (confereArestas());
     }
 
+    // para grafos completos e incompletos 
+    void RandomWalk(bool unionGraph[NUMEROVERTICES][NUMEROVERTICES]){
+    	uf.clear();
+    	std::vector<pair<int, int> > amostral;
+    	for (int i=0; i<NUMEROVERTICES; i++){
+    		for (int j=i+1; j<NUMEROVERTICES; j++){
+    			if(unionGraph[i][j]==true) {
+    				amostral.push_back(make_pair(i,j));
+    			}
+    		}
+    	}
+    	int cont=0;
+    	while (cont<NUMEROVERTICES-1 && amostral.size()>0){
+			int are = IRandom(0,amostral.size()-1);
+
+			if (uf.sameClass(amostral[are].first,amostral[are].second)==false){
+				uf.unionClass(amostral[are].first,amostral[are].second);
+				if (amostral[are].first<amostral[are].second){
+					edges[cont][0] = amostral[are].first;
+					edges[cont][1] = amostral[are].second;
+				} else {
+					edges[cont][0] = amostral[are].second;
+					edges[cont][1] = amostral[are].first;
+				}
+				cont++;
+			}
+			amostral.erase(amostral.begin()+are);
+		}
+		if (cont<NUMEROVERTICES-1) cout<<"ERROR RandomWalk cont = "<<cont<<" amostral.size() = "<<amostral.size()<<endl;
+    }
+
+    /* Faz o crossover entre dois individuos.
+    BAseado no crossover sugerido por Raidl and Julstrom (2003)*/
+	void crossover(const SolucaoEdgeSet &pai, const SolucaoEdgeSet &mae) {
+		// contCrossovers++; // estatistica
+		bool unionGraph[NUMEROVERTICES][NUMEROVERTICES];
+		//memset(unionGraph,false,sizeof(unionGraph));
+		for (int i=0; i<NUMEROVERTICES; i++){
+			for (int j=0; j<NUMEROVERTICES; j++){
+				unionGraph[i][j] = false;
+			}
+		}
+		for (int i=0;i<NUMEROVERTICES-1;i++) {
+			if (!unionGraph[pai.edges[i][0]][pai.edges[i][1]]) {
+				unionGraph[pai.edges[i][0]][pai.edges[i][1]] = unionGraph[pai.edges[i][1]][pai.edges[i][0]] = true;
+			}
+		}
+		for (int i=0;i<NUMEROVERTICES-1;i++) {
+			if (!unionGraph[mae.edges[i][0]][mae.edges[i][1]]) {
+				unionGraph[mae.edges[i][0]][mae.edges[i][1]] = unionGraph[mae.edges[i][1]][mae.edges[i][0]] = true;
+			}
+		}
+		RandomWalk(unionGraph);
+		calcularFitness();
+	}
 
 
 	/* Gera um individuo aleatorio
@@ -121,13 +178,16 @@ class SolucaoEdgeSet : public Solucao {
 	}
 
 	
+
 	/* Faz a troca das arestas ai e aj, religando no formato 2-OPT
 	 * Complexidade O(1) */
-	void trocaArestas(int ai, int aj, char tipo) {
-		int a = edges[ai][0];
-		int b = edges[ai][1];
-		int c = edges[aj][0];
-		int d = edges[aj][1];
+	void trocaArestas(int ai, int aj, char tipo, SolucaoEdgeSet &soloriginal) {
+		int a = soloriginal.edges[ai][0];
+		int b = soloriginal.edges[ai][1];
+		int c = soloriginal.edges[aj][0];
+		int d = soloriginal.edges[aj][1];
+
+		//inicialmente temos a-b e c-d
 
 		int novaA[2]={0,0}, novaB[2]={0,0};
 		novaA[0] = a;
@@ -143,30 +203,41 @@ class SolucaoEdgeSet : public Solucao {
 			novaA[1] = d;
 			novaB[1] = c;
 		}
-		edges[ai][0] = novaA[0];
-		edges[ai][1] = novaA[1];
-		edges[aj][0] = novaB[0];
-		edges[aj][1] = novaB[1];
+		if (novaA[0]<novaA[1]){
+			edges[ai][0] = novaA[0];
+			edges[ai][1] = novaA[1];
+		} else {
+			edges[ai][0] = novaA[1];
+			edges[ai][1] = novaA[0];
+		}
+		if (novaB[0]<novaB[1]){
+			edges[aj][0] = novaB[0];
+			edges[aj][1] = novaB[1];
+		} else {
+			edges[aj][0] = novaB[1];
+			edges[aj][1] = novaB[0];
+		}
 	}
 
-	char calcularTrocaArestas(int ai, int aj) {
+	char calcularTrocaArestas(int ai, int aj, SolucaoEdgeSet &soloriginal) {
 		// Calcula a possivel troca das arestas "ai" com "aj"
 		// Complexidade O(n)
 		// uniao busca
 		uf.clear();
-		antigof[0] = getObj(0);
-		antigof[1] = getObj(1);
-		f[0] = f[1] = 0.0;
+		for (int k=0;k<NUMOBJETIVOS;k++) f[k] = 0.0; // (re)inicializa os objetivos
+		
 		for (int i=0;i<NUMEROVERTICES-1;i++)
 			if (i != ai && i != aj) {
+				edges[i][0] = soloriginal.edges[i][0];
+				edges[i][1] = soloriginal.edges[i][1];
 				uf.unionClass(edges[i][0],edges[i][1]);
 				for (int k=0;k<NUMOBJETIVOS;k++)
 					f[k] +=  f(k,edges[i][0],edges[i][1]);
 			}
-		int a = edges[ai][0];
-		int b = edges[ai][1];
-		int c = edges[aj][0];
-		int d = edges[aj][1];
+		int a = soloriginal.edges[ai][0];
+		int b = soloriginal.edges[ai][1];
+		int c = soloriginal.edges[aj][0];
+		int d = soloriginal.edges[aj][1];
 
 		char tipoTroca;
 		// junta a-c e b-d
@@ -248,10 +319,17 @@ class SolucaoEdgeSet : public Solucao {
 	}
 
 
-	void mutacao() {
+	// void mutacao() {
+	// 	int a1 = IRandom(0,NUMEROVERTICES-1-1), a2;
+	// 	while ((a2 = IRandom(0,NUMEROVERTICES-1-1)) == a1);
+	// 	trocaArestas(a1,a2,calcularTrocaArestas(a1,a2));
+	// }
+
+	void mutacao(SolucaoEdgeSet &sol){
+		// contMutacoes++; // estatistica
 		int a1 = IRandom(0,NUMEROVERTICES-1-1), a2;
 		while ((a2 = IRandom(0,NUMEROVERTICES-1-1)) == a1);
-		trocaArestas(a1,a2,calcularTrocaArestas(a1,a2));
+		trocaArestas(a1,a2,calcularTrocaArestas(a1,a2,sol),sol);
 	}
 
 	void operator=(SolucaoEdgeSet &s) {

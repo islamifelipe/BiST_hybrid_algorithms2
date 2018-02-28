@@ -3,7 +3,7 @@
 
 Copyright Islame Felipe da COSTA FERNANDES (2018)
 	
-This code implements a new transgenetic algorithmic for Bi-objective spanning tree 
+This code implements a NSGAII algorithm for Bi-objective spanning tree 
 The data structure and some functions were kindly provided by Monteiro (2010)
 
 
@@ -64,4 +64,25 @@ int main(int argc, char *argv[]){
 	FILE *tempofile = fopen(argv[3],"a");
 	input(); // ler instância
 	cout<<"Instância lida..."<<endl;
+
+	alocaPopulacao(populacao);
+	gerarPopulacao1(populacao);
+
+	int ns1 = 0;
+	int ns2 = 1;
+	SolucaoEdgeSet * s1 = populacao[ns1];
+	SolucaoEdgeSet * s2 = populacao[ns2];
+	SolucaoEdgeSet * novo = new SolucaoEdgeSet(NUMEROVERTICES-1);
+	novo->crossover(*s1,*s2);
+	SolucaoEdgeSet * novo2 = new SolucaoEdgeSet(NUMEROVERTICES-1);
+	novo2->mutacao(*novo);
+	s1->isTree();
+	s2->isTree();
+	novo->isTree();
+	novo2->isTree();
+
+	cout<<s1->getObj(0)<<" "<<s1->getObj(1)<<endl;
+	cout<<s2->getObj(0)<<" "<<s2->getObj(1)<<endl;
+	cout<<novo->getObj(0)<<" "<<novo->getObj(1)<<endl;
+	cout<<novo2->getObj(0)<<" "<<novo2->getObj(1)<<endl;
 }
