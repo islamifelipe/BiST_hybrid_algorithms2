@@ -10,7 +10,7 @@
 #define PROFUNDIDADEGRID 5 
 
 #define NUMOBJETIVOS 2 // FIXO
-#define NUMEROVERTICES 300 // Varia
+#define NUMEROVERTICES 800 // Varia
 #define NUMEROARESTAS (NUMEROVERTICES-1)
 
 #define TAMANHOPOPULACAO 100  // tamanho da populaçao
