@@ -3,7 +3,8 @@
 
 Copyright Islame Felipe da COSTA FERNANDES (2018)
 	
-This code implements a NSGAII algorithm for Bi-objective spanning tree 
+This code implements a NSGAII+PLS algorithm for Bi-objective spanning tree 
+beased on Párraga-Álava, Dorn e Inostroza-Ponta (2017)
 The data structure and some functions were kindly provided by Monteiro (2010)
 
 
@@ -23,7 +24,7 @@ The data structure and some functions were kindly provided by Monteiro (2010)
 
 #include "BoundedParetoSet.cpp"
 #include "SolucaoEdgeSet.cpp"
-#include "rmcPrim.cpp"
+// #include "rmcPrim.cpp"
 #include "popInicial.cpp"
 
 
@@ -203,46 +204,46 @@ void NSGAII(){
 	int pai, mae;	
 	SolucaoEdgeSet *novaPop[TAMANHOPOPULACAO]; // cria-se uma populaçao de descentes
 	alocaPopulacao(novaPop); 
-	// for (int i=0; i<TAMANHOPOPULACAO; i++){
-	// 	 arc_global.adicionarSol(populacao[i]);
-	// } // ja está na sub-rotina gerarPopulacao1
+	for (int i=0; i<TAMANHOPOPULACAO; i++){
+		 arc_global.adicionarSol(populacao[i]);
+	}
 	for (int i=0; i<QUANTGERACOES; i++){ // para cada geraçao...
 		cout<<"geracao "<<i+1<<endl;
 		for (int j=0; j<TAMANHOPOPULACAO; j++){ // deve-se criar TAMANHOPOPULACAO novos individuos
 
 			/*SORTEIA 4 individuos*/
 			/*Faz-se o torneio binario entre eles*/
-			p1 = IRandom(0, TAMANHOPOPULACAO-1);
-			p2 = IRandom(0, TAMANHOPOPULACAO-1);
-			p3 = IRandom(0, TAMANHOPOPULACAO-1);
-			p4 = IRandom(0, TAMANHOPOPULACAO-1);
+			// p1 = IRandom(0, TAMANHOPOPULACAO-1);
+			// p2 = IRandom(0, TAMANHOPOPULACAO-1);
+			// p3 = IRandom(0, TAMANHOPOPULACAO-1);
+			// p4 = IRandom(0, TAMANHOPOPULACAO-1);
 
-			if(populacao[p1]->getObj(0)<populacao[p2]->getObj(0)){ // compete com o primeiro objetivo
-				pai = p1;;
-			} else {
-				pai = p2;
-			}
-			if (populacao[p3]->getObj(1)<populacao[p4]->getObj(1)){ // compete com o primeiro objetivo
-				mae = p3;
-			} else {
-				mae = p4;
-			}
-			double p = genrand64_real3();;//rg.Random();
-			if (p<TAXADECRUZAMENTO){
-				filho->crossover(*populacao[pai], *populacao[mae]);
-			} else {
-				filho->doRandomWalk();
-			}
-			arc_global.adicionarSol(filho);
-			// filho foi definido; Agora aplica-se mutaçao
-			p = genrand64_real3();;//rg.Random();
-			if (p<TAXADEMUTACAO){
-				novaPop[j]->mutacao(*filho);
-				arc_global.adicionarSol(novaPop[j]);
-			} else{
-				*novaPop[j] = *filho;
-				// NAO PRECISA INSERIR AQUI
-			}
+			// if(populacao[p1]->getObj(0)<populacao[p2]->getObj(0)){ // compete com o primeiro objetivo
+			// 	pai = p1;;
+			// } else {
+			// 	pai = p2;
+			// }
+			// if (populacao[p3]->getObj(1)<populacao[p4]->getObj(1)){ // compete com o primeiro objetivo
+			// 	mae = p3;
+			// } else {
+			// 	mae = p4;
+			// }
+			// double p = genrand64_real3();;//rg.Random();
+			// if (p<TAXADECRUZAMENTO){
+			// 	filho->crossover(*populacao[pai], *populacao[mae]);
+			// } else {
+			// 	filho->doRandomWalk();
+			// }
+			// arc_global.adicionarSol(filho);
+			// // filho foi definido; Agora aplica-se mutaçao
+			// p = genrand64_real3();;//rg.Random();
+			// if (p<TAXADEMUTACAO){
+			// 	novaPop[j]->mutacao(*filho);
+			// 	arc_global.adicionarSol(novaPop[j]);
+			// } else{
+			// 	*novaPop[j] = *filho;
+			// 	// NAO PRECISA INSERIR AQUI
+			// }
 		}
 		atualizaPopulacaoNSGAII(novaPop);
 	}
@@ -261,21 +262,25 @@ int main(int argc, char *argv[]){
 		uniao[i] = new SolucaoEdgeSet(NUMEROVERTICES-1); // permanente
 	}
 
-	times(&tempoAntes);
 
-	NSGAII();
+	// times(&tempoAntes);
 
-	times(&tempoDepois);
+	// NSGAII();
+
+	// times(&tempoDepois);
 
 
-	fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
-	fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	// fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	// fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
 
-	arc_global.printSetPoints(stdout);
-	arc_global.printSetPoints(samplefile);
+	// arc_global.printSetPoints(stdout);
+	// arc_global.printSetPoints(samplefile);
 
-	fclose(samplefile);
-	fclose(tempofile);
+	// fclose(samplefile);
+	// fclose(tempofile);
+
+
+
 	// SolucaoEdgeSet *populacao2[TAMANHOPOPULACAO];// excluir
 	// SolucaoEdgeSet *uniao[TAMANHOPOPULACAO*2];// excluir
 	// alocaPopulacao(populacao);
