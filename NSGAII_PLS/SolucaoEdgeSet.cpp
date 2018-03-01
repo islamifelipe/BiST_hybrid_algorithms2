@@ -12,6 +12,7 @@
 #include "auxEdgeStruct.h"
 #include <algorithm>
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -34,7 +35,7 @@ class SolucaoEdgeSet : public Solucao {
 	double distance; // crownd distance // utilizada no NSGA-II e na reciclagem do Hudson
 	double antigof[NUMOBJETIVOS];
 	int posicaoListaNSGAII; // guarda o index onde a soluçao é guardada na popupacao NUMPOPULACAO*2 do NSGA-II
-
+	int prank; // diz em que front a solucao está
 	SolucaoEdgeSet(int n) {
 		nEdges = n;
 		f[0] = f[1] = 0.0;
@@ -122,9 +123,25 @@ class SolucaoEdgeSet : public Solucao {
 		contArestasArvore++;
 	}
 
-    /* Faz o crossover entre dois individuos.*/
+    /* Faz o crossover entre dois individuos.
+    Gera so um filho, mas poderia gerar dois */
 	void crossover(const SolucaoEdgeSet &pai, const SolucaoEdgeSet &mae) {
-		
+		int n =  IRandom(1,NUMEROVERTICES-2); // n pontos 
+		// cout<<"n = "<<n<<endl;
+		int troca = round((NUMEROVERTICES-2)/n);
+		// cout<<"troca = "<<troca<<endl;
+		bool b = true; ///true=pai, true=mae
+		for (int i=0, cont=0; i<NUMEROVERTICES-2; i++){
+			if(b==true)
+				pruffer[i] = pai.pruffer[i];
+			else 
+				pruffer[i] = mae.pruffer[i];
+			cont++;
+			if (cont==troca){
+				cont = 0;
+				b = !b;
+			}
+		}
 		convertToTree();
 	}
 
@@ -133,7 +150,12 @@ class SolucaoEdgeSet : public Solucao {
 	
 
 	void mutacao(SolucaoEdgeSet &sol){
-
+		for (int i=0; i<NUMEROVERTICES-2; i++){
+			pruffer[i] = sol.pruffer[i];
+		}
+		int n =  IRandom(0,NUMEROVERTICES-3); // um alelo
+		int v = IRandom(0,NUMEROVERTICES); 
+		pruffer[n] = v;
 		convertToTree();
 	}
 

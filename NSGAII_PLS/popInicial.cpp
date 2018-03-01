@@ -8,7 +8,6 @@
 using namespace std;
 
 
-extern BoundedParetoSet arc_global;
 
 // aloca memoria para os individuos da populaçao
 void alocaPopulacao(SolucaoEdgeSet *populacao[TAMANHOPOPULACAO]){

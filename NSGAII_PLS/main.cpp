@@ -33,10 +33,15 @@ using namespace std;
 double custos[NUMOBJETIVOS][NUMEROVERTICES][NUMEROVERTICES];
 SolucaoEdgeSet *populacao[TAMANHOPOPULACAO];
 SolucaoEdgeSet *uniao[TAMANHOPOPULACAO*2];
-BoundedParetoSet arc_global;
+
 int objetivoOrdenacao; // esta variavel é utilizada para designar qual objetivo será utilizado para ordenar as soluçoes
 
 struct tms tempoAntes, tempoDepois;
+
+/*
+	ATENCAO: os autores nao deixam claro se algum tipo de arquivo externo é utilizado.
+	Na verdade, parece, segundo alguns relatos vagos do artigo, que o pareto retornado refere-se à propria populaçao do NSGAII
+*/
 
 void input(){
 	int n; // esta leitura de "n" é somente para cumprir o formato da instância. Os valores de fato estao em param.h
@@ -82,7 +87,7 @@ void fast_non_dominanted_sort(SolucaoEdgeSet *P[TAMANHOPOPULACAO*2], list<Soluca
 		}
 
 		if (N[p] == 0){
-			// prank[p] = 0; // primeiro rank. RANK COMEÇA DO 0 
+			P[p]->prank = 0; // primeiro rank. RANK COMEÇA DO 0 
 			F[0].push_back(P[p]); // primeiro rank. RANK COMEÇA DO 0
 		}
 	}
@@ -94,6 +99,7 @@ void fast_non_dominanted_sort(SolucaoEdgeSet *P[TAMANHOPOPULACAO*2], list<Soluca
 				int qq = (*q)->posicaoListaNSGAII;
 				N[qq] = N[qq] - 1;
 				if (N[qq] == 0){ //q vai pro próximo rank
+					(*q)->prank = i+1;
 					F[i+1].push_back((*q));
 				}
 			}
@@ -111,7 +117,6 @@ bool verificador(list<SolucaoEdgeSet *> F[TAMANHOPOPULACAO*2], int sizeFront){
 			for (list< SolucaoEdgeSet* >::iterator pp = F[i].begin(); pp!=F[i].end(); pp++){
 				if (p!=pp){
 					if (**p>>**pp || **pp>>**p) {
-						cout<<"RROOO 1"<<endl;
 						return false;
 					}
 				}
@@ -123,10 +128,16 @@ bool verificador(list<SolucaoEdgeSet *> F[TAMANHOPOPULACAO*2], int sizeFront){
 				}
 			}	
 			if (i!=0 && encontrou==false){
-				cout<<"RROOO 2 "<<endl;//i = "<<i<<" ==> "<<(*p)->getObj(0)<<" "<<(*p)->getObj(1)<<endl;
 				return false;
 			} 
 
+		}
+	}
+	for (int i=0; i<sizeFront; i++){
+		for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end(); p++){
+			if ((*p)->prank!=i) {
+				return false;
+			}
 		}
 	}
 	return true;
@@ -194,6 +205,8 @@ void atualizaPopulacaoNSGAII(SolucaoEdgeSet *novaPop[TAMANHOPOPULACAO]){
 	for (list< SolucaoEdgeSet* >::iterator p = F[i].begin(); p!=F[i].end() && cont<TAMANHOPOPULACAO; p++){
 		*populacao[cont++] = **p;
 	}
+
+	cout<<"verificador = "<<verificador(F,sizeFront)<<endl;;
 }
 
 void NSGAII(){
@@ -204,46 +217,45 @@ void NSGAII(){
 	int pai, mae;	
 	SolucaoEdgeSet *novaPop[TAMANHOPOPULACAO]; // cria-se uma populaçao de descentes
 	alocaPopulacao(novaPop); 
-	for (int i=0; i<TAMANHOPOPULACAO; i++){
-		 arc_global.adicionarSol(populacao[i]);
-	}
+	gerarPopulacao1(novaPop);
+	atualizaPopulacaoNSGAII(novaPop); // ok
+
 	for (int i=0; i<QUANTGERACOES; i++){ // para cada geraçao...
 		cout<<"geracao "<<i+1<<endl;
 		for (int j=0; j<TAMANHOPOPULACAO; j++){ // deve-se criar TAMANHOPOPULACAO novos individuos
 
 			/*SORTEIA 4 individuos*/
 			/*Faz-se o torneio binario entre eles*/
-			// p1 = IRandom(0, TAMANHOPOPULACAO-1);
-			// p2 = IRandom(0, TAMANHOPOPULACAO-1);
-			// p3 = IRandom(0, TAMANHOPOPULACAO-1);
-			// p4 = IRandom(0, TAMANHOPOPULACAO-1);
-
-			// if(populacao[p1]->getObj(0)<populacao[p2]->getObj(0)){ // compete com o primeiro objetivo
-			// 	pai = p1;;
-			// } else {
-			// 	pai = p2;
-			// }
-			// if (populacao[p3]->getObj(1)<populacao[p4]->getObj(1)){ // compete com o primeiro objetivo
-			// 	mae = p3;
-			// } else {
-			// 	mae = p4;
-			// }
-			// double p = genrand64_real3();;//rg.Random();
-			// if (p<TAXADECRUZAMENTO){
-			// 	filho->crossover(*populacao[pai], *populacao[mae]);
-			// } else {
-			// 	filho->doRandomWalk();
-			// }
-			// arc_global.adicionarSol(filho);
+			p1 = IRandom(0, TAMANHOPOPULACAO-1);
+			p2 = IRandom(0, TAMANHOPOPULACAO-1);
+			p3 = IRandom(0, TAMANHOPOPULACAO-1);
+			p4 = IRandom(0, TAMANHOPOPULACAO-1);
+			// escolhe-se a de menor rank, ou, se ambas tiverem o mesmo rank, escolhe-se a de MAIOR distância de aglomeraçao
+			if((populacao[p1]->prank<populacao[p2]->prank) || (populacao[p1]->prank==populacao[p2]->prank && populacao[p1]->distance>populacao[p2]->distance)){ // compete com o primeiro objetivo
+				pai = p1;;
+			} else {
+				pai = p2;
+			}
+			if((populacao[p3]->prank<populacao[p4]->prank) || (populacao[p3]->prank==populacao[p4]->prank && populacao[p3]->distance>populacao[p4]->distance)){ // compete com o primeiro objetivo
+				mae = p3;
+			} else {
+				mae = p4;
+			}
+			double p = genrand64_real3();
+			if (p<TAXADECRUZAMENTO){
+				filho->crossover(*populacao[pai], *populacao[mae]);
+			} else {
+				int sor = IRandom(0,1);
+				if (sor==0) *filho = *populacao[pai];
+				else *filho = *populacao[mae];
+			}
 			// // filho foi definido; Agora aplica-se mutaçao
-			// p = genrand64_real3();;//rg.Random();
-			// if (p<TAXADEMUTACAO){
-			// 	novaPop[j]->mutacao(*filho);
-			// 	arc_global.adicionarSol(novaPop[j]);
-			// } else{
-			// 	*novaPop[j] = *filho;
-			// 	// NAO PRECISA INSERIR AQUI
-			// }
+			p = genrand64_real3();;//rg.Random();
+			if (p<TAXADEMUTACAO){
+				novaPop[j]->mutacao(*filho);
+			} else{
+				*novaPop[j] = *filho;
+			}
 		}
 		atualizaPopulacaoNSGAII(novaPop);
 	}
@@ -263,22 +275,32 @@ int main(int argc, char *argv[]){
 	}
 
 
-	// times(&tempoAntes);
+	times(&tempoAntes);
 
-	// NSGAII();
+	NSGAII();
 
-	// times(&tempoDepois);
+	times(&tempoDepois);
 
 
-	// fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
-	// fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
 
+	for (int i=0; i<TAMANHOPOPULACAO; i++){
+		fprintf(stdout,"%.10lf %.10lf\n",populacao[i]->getObj(0),populacao[i]->getObj(1));
+	}
+	for (int i=0; i<TAMANHOPOPULACAO; i++){
+		fprintf(samplefile,"%.10lf %.10lf\n",populacao[i]->getObj(0),populacao[i]->getObj(1));
+	}
 	// arc_global.printSetPoints(stdout);
 	// arc_global.printSetPoints(samplefile);
 
-	// fclose(samplefile);
-	// fclose(tempofile);
+	fclose(samplefile);
+	fclose(tempofile);
 
+
+
+	// alocaPopulacao(populacao);
+	// gerarPopulacao1(populacao);
 
 
 	// SolucaoEdgeSet *populacao2[TAMANHOPOPULACAO];// excluir
