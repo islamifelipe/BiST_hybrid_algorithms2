@@ -36,6 +36,7 @@ class SolucaoEdgeSet : public Solucao {
 	double antigof[NUMOBJETIVOS];
 	int posicaoListaNSGAII; // guarda o index onde a soluçao é guardada na popupacao NUMPOPULACAO*2 do NSGA-II
 	int prank; // diz em que front a solucao está
+	bool isVisitada; // flag para o 
 	SolucaoEdgeSet(int n) {
 		nEdges = n;
 		f[0] = f[1] = 0.0;
@@ -169,6 +170,10 @@ class SolucaoEdgeSet : public Solucao {
 		}
 		antigof[0] = s.antigof[0];
 		antigof[1] = s.antigof[1];
+		posicaoListaNSGAII = s.posicaoListaNSGAII; // guarda o index onde a soluçao é guardada na popupacao NUMPOPULACAO*2 do NSGA-II
+		prank = s.prank; // diz em que front a solucao está
+		isVisitada = s.isVisitada; // flag para o 
+		distance = s.distance;
 	}
 
 	void printSolucao(FILE *f) {
@@ -211,6 +216,23 @@ class SolucaoEdgeSet : public Solucao {
 		return true;
 	}
 
+
+	std::vector<SolucaoEdgeSet*> getVizinhos(){ // NUMEROVERTICES vizinhos retornados
+		std::vector<SolucaoEdgeSet*> ret;
+		int n =  IRandom(0,NUMEROVERTICES-3); // um alelo
+		for (int i=0; i<NUMEROVERTICES; i++){
+			if (pruffer[n]!=i){
+				SolucaoEdgeSet* novo = new SolucaoEdgeSet(NUMEROVERTICES-1);
+				for (int j=0; j<NUMEROVERTICES-2; j++){
+					novo->pruffer[j] = pruffer[j];
+				}
+				novo->pruffer[n] = i;
+				novo->convertToTree();;
+				ret.push_back(novo);
+			}
+		}
+		return ret;
+	}
 
 	bool isTree(){ // verificador
 		//cout<<"Teste  = ";

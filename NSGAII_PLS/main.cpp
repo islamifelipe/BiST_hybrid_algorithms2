@@ -209,6 +209,106 @@ void atualizaPopulacaoNSGAII(SolucaoEdgeSet *novaPop[TAMANHOPOPULACAO]){
 	cout<<"verificador = "<<verificador(F,sizeFront)<<endl;;
 }
 
+
+
+
+// recebe e retorna vetor "populacao" que é global
+// pareto local search
+void PLS(){
+	BoundedParetoSet A0;
+	for (int i=0; i<TAMANHOPOPULACAO; i++){
+		A0.adicionarSol(populacao[i]);
+	}
+	list<SolucaoEdgeSet *> A;
+	cout<<"A0.size() = "<<A0.sol.size()<<endl;
+	for (list<SolucaoEdgeSet *>::iterator it = A0.sol.begin(); it!=A0.sol.end(); it++){
+		(*it)->isVisitada = false;
+		A.push_back((*it)); // "A" guarda ponteiros para soluçoes em A0
+	}
+	bool bbb = false;
+	 while(A.size()<TAMANHOPOPULACAO || bbb==false){ bbb=true;
+		SolucaoEdgeSet * s = A0.getSolucao(IRandom(0,A0.sol.size()-1)); //IRandom(0,A0.size()-1)];
+		std::vector<SolucaoEdgeSet* > v = s->getVizinhos();
+		list<SolucaoEdgeSet *> vizinhos;// = A0.getElementos();
+		// cout<<"Escolhida = "<<s->getObj(0)<<" "<<s->getObj(1)<<endl;
+		vizinhos.push_back(s);
+		for (int i=0; i<v.size(); i++){
+			vizinhos.push_back(v[i]);
+		}
+		crownding_distance_assigment(vizinhos);
+		for (int i=0; i<v.size(); i++){ // para cada vizinho
+	// 		//v[i] ===> s'
+			if((*s >> *v[i])==false && v[i]->distance > s->distance){ // s nao domina s'
+			 	bool equal = false;
+				// cout<<"vizinho = "<<v[i]->getObj(0)<<" "<<v[i]->getObj(1)<<endl;
+				list< list<SolucaoEdgeSet *>::iterator > remover;
+				list<SolucaoEdgeSet *>::iterator it = A.begin();
+				while (it!=A.end() && equal==false){
+					if (*v[i] >> **it){
+						remover.push_back(it);
+					}
+					if (**it==*v[i]){
+						equal = true;
+					}
+					it++;
+				}
+				if (equal==false){
+					v[i]->isVisitada = false;
+					A.push_back(v[i]); // adiciona somente o PONTEIRO
+					list< list<SolucaoEdgeSet *>::iterator >::iterator j = remover.begin();
+					while (j != remover.end()) {
+						if ((***j==*s)==false) delete  **j ;
+						A.erase( *j );
+						j++;
+					}
+				} else {
+					delete v[i];
+				}
+
+			} else {
+				delete v[i];
+			}
+		}
+
+		s->isVisitada = true;
+		A0.clear();
+		for (list<SolucaoEdgeSet *>::iterator it = A.begin(); it!=A.end(); it++){
+			if (((**it)==*s)==false)
+				A0.adicionarSol((*it));
+			///else cout<<" ==================================== Vizitada"<<endl;
+		} 
+		// cout<<"A : "<<endl;
+		// for (list<SolucaoEdgeSet *>::iterator it = A.begin(); it!=A.end(); it++){
+		// 	cout<<"ponto: "<<(*it)->getObj(0)<<" "<<(*it)->getObj(1)<<" isVisitada = "<<(*it)->isVisitada<<endl;
+		// }
+
+		// cout<<"A0 : "<<endl;
+		// for (list<SolucaoEdgeSet *>::iterator it = A0.sol.begin(); it!=A0.sol.end(); it++){
+		// 	cout<<"ponto: "<<(*it)->getObj(0)<<" "<<(*it)->getObj(1)<<" isVisitada = "<<(*it)->isVisitada<<endl;
+		// }
+		// cout<<"A0.size() = "<<A0.sol.size()<<endl;
+		// cout<<"A.size() = "<<A.size()<<endl;
+	}
+
+	// cout<<"A ("<<A.size()<<") apos PLS:"<<endl;
+	int conttt =0;
+	for (list<SolucaoEdgeSet *>::iterator it = A.begin(), j; it!=A.end() && conttt<TAMANHOPOPULACAO; ){
+		// cout<<"ponto: "<<(*it)->getObj(0)<<" "<<(*it)->getObj(1)<<" isVisitada = "<<(*it)->isVisitada<<endl;
+		j = it;
+		it++;
+		*populacao[conttt++] = **j;
+		delete *j;
+	}
+	for (list<SolucaoEdgeSet *>::iterator it = A0.sol.begin(), j; it!=A0.sol.end(); ){
+		j = it;
+		it++;
+		delete *j;
+	}
+
+}
+
+
+
 void NSGAII(){
 	SolucaoEdgeSet * filho = new SolucaoEdgeSet(NUMEROVERTICES-1); //poderia ser global, pra otimizar;
 	alocaPopulacao(populacao);
@@ -258,8 +358,12 @@ void NSGAII(){
 			}
 		}
 		atualizaPopulacaoNSGAII(novaPop);
+		PLS();
+		std::list<SolucaoEdgeSet* > myList(populacao, populacao+TAMANHOPOPULACAO);
+		crownding_distance_assigment(myList);
 	}
 }
+
 
 int main(int argc, char *argv[]){
 	int seemente = std::atoi(argv[1]);
@@ -279,20 +383,20 @@ int main(int argc, char *argv[]){
 
 	NSGAII();
 
-	times(&tempoDepois);
 
+
+	
+	times(&tempoDepois);
 
 	fprintf(stdout,"Tempo(s) Final = %.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
 	fprintf(tempofile,"%.2lf\n", (double) (tempoDepois.tms_utime - tempoAntes.tms_utime) / 100.0 );
+	BoundedParetoSet A0;
+	for (int i=0; i<TAMANHOPOPULACAO; i++){
+		A0.adicionarSol(populacao[i]);
+	}
 
-	for (int i=0; i<TAMANHOPOPULACAO; i++){
-		fprintf(stdout,"%.10lf %.10lf\n",populacao[i]->getObj(0),populacao[i]->getObj(1));
-	}
-	for (int i=0; i<TAMANHOPOPULACAO; i++){
-		fprintf(samplefile,"%.10lf %.10lf\n",populacao[i]->getObj(0),populacao[i]->getObj(1));
-	}
-	// arc_global.printSetPoints(stdout);
-	// arc_global.printSetPoints(samplefile);
+	A0.printSetPoints(stdout);
+	A0.printSetPoints(samplefile);
 
 	fclose(samplefile);
 	fclose(tempofile);

@@ -13,13 +13,13 @@ using namespace std;
 
 class BoundedParetoSet : public ParetoSet {
 	private:
-	const static int MAXARCSIZE = 300;
+	const static int MAXARCSIZE = 50;
  	//FILE *globalf;
 	//bool existeFileGlobal;
     //string nomeglobalf;
 	
 	public:
-	list<SolucaoEdgeSet *> lixeira;
+	list<SolucaoEdgeSet *> lixeira; // NAO É UTILIZADA AQUI 
 
 	/* Complexidade: O(n) */
 	BoundedParetoSet () {
@@ -94,7 +94,7 @@ class BoundedParetoSet : public ParetoSet {
 			g.removeGrid( calcularGridPos(***j) );
 			// remove a frequencia das arestas
 			removerFrequencia( **j );
-			//delete( **j ); // ?????
+			delete( **j ); // ?????
 			// remove do conjunto pareto
 			sol.erase( *j );
 			// insere na lixeira // by felipe

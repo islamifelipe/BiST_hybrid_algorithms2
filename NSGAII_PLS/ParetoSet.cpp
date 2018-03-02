@@ -17,7 +17,7 @@ typedef struct {
 } range;
 
 class ParetoSet {
-	protected:
+	public:
 	list<SolucaoEdgeSet *> sol;
 	range rangeNovo[2], rangeAtual[2];
 	int frequencia[NUMEROVERTICES][NUMEROVERTICES];
@@ -230,12 +230,12 @@ class ParetoSet {
 	}
 
 	void clear() {
-		list<SolucaoEdgeSet *>::iterator i = sol.begin(), j;
-		while (i != sol.end()) {
-			j = i;
-			i++;
-			delete (*j);
-		}
+		// list<SolucaoEdgeSet *>::iterator i = sol.begin(), j;
+		// while (i != sol.end()) {
+		// 	j = i;
+		// 	i++;
+		// 	// delete (*j);
+		// }
 		sol.clear();
 		g.clearGrid();
 	}
