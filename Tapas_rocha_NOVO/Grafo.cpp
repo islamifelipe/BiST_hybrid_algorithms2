@@ -159,7 +159,7 @@ void Grafo::excluiProibidas(){
       }
     }
     delete[] verticesVisitados;
-    cout<<removidas<<" arestas removidas"<<endl;
+    cout<<"Quantidade de arestas removidas: "<<removidas<<endl;
 
 }
 
@@ -209,7 +209,7 @@ pair<int*, pair<float, float> > Grafo::marcaObrigatorias(int &obrigatorias2){
       }
     }
     delete[] verticesVisitados;
-    cout<<obrigatorias<<" obrigatorias"<<endl;
+    cout<<"Quantidade de arestas obrigatorias = "<<obrigatorias<<endl;
     obrigatorias2 = obrigatorias; //IMPORTANTE
     return ret;
 

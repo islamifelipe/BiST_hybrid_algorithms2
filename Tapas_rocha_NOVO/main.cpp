@@ -35,6 +35,8 @@ Arquivo global_arc;
 int quantidadeObrigatorias = 0;
 pair<int*, pair<float, float> > obrigatorias;
 
+int contAddGlobalPR = 0;
+
 void diversify2(Grafo *g, pair<int*, pair<float, float> > &sol){
 	vector <int> amostral;
 	Conjunto conjunto(g->getQuantVertices());
@@ -334,7 +336,9 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > start, pair<float,
 			}
 		}
 	} while (distanciaOriginal > 0 && contMax<maxPR);
-	global_arc.adicionarSol(clone(g,startaux));
+	if (global_arc.adicionarSol(clone(g,startaux))==true){
+		contAddGlobalPR++;
+	}
 	delete[] startaux.first;
 	// cout<<endl;
 
@@ -366,18 +370,22 @@ void tapas(Grafo *g){
 }
 
 /*	 Deve receber dois arquivos como parâmetro. 
-	argv[1] arquivo em que será guardado a fronteira de pareto
-	argv[2] arquivo em que será guardado tempo
+	argv[2] arquivo em que será guardado a fronteira de pareto
+	argv[3] arquivo em que será guardado tempo
 */
 int main(int argc, const char * argv[]) {
-
+	int semente;
 	// verifica numero de parametros
-    if (argc != 3) {
-        cout << "Parameter error. Usage: " << argv[0] << " (parato front file) (time file) " << endl;
+    if (argc != 4) {
+        cout << "Parameter error. Usage: " << argv[0] << " (seed) (parato front file) (time file) " << endl;
         exit (1);
     }
 
-	srand (time(NULL));
+	// srand (time(NULL));
+	semente = std::atoi(argv[1]);
+	cout<<"========= Estatisticas ========= "<<endl;
+	cout<<"Semente utilizada : "<<semente<<endl;
+	srand(semente);
 	int n;
 	float peso1, peso2;
 	int origem, destino; // vértices para cada aresta;
@@ -426,18 +434,18 @@ int main(int argc, const char * argv[]) {
    	times(&tempsFinal3); 
 	user_time1 = (tempsFinal3.tms_utime - tempsInit.tms_utime);
    	double tempoPhase2 = (double) user_time1 / (double) sysconf(_SC_CLK_TCK);
+   	cout<<"Quantidade de solucoes na segunda fase = "<<global_arc.getSize()<<endl;
    	cout<<"Tempo SegundaFase(s) = "<<tempoPhase2<<endl;
-	cout<<"Quantidade de solucoes na primeira fase = "<<global_arc.getSize()<<endl;
-   	
+	
 	//vector< pair<int*, pair<float, float> > > populacao = getPopulacaoInicial(&my_grafo,global_arc);
 	
-	 
-	
+	cout<<"Quantidade de solucoes não dominadas que o PR encontrou = "<<contAddGlobalPR<<endl;
+	cout<<"Quantiade de avalicoes da funcao objetivo = "<<global_arc.contQuantAvaliacoes<<endl;;
 	cout<<"Tempo FINAL(s) =  "<<tempo_preprocessamento+tempoPhase1+tempoPhase2<<endl;//"Tempo do usuario por segundo : "
    	
 
-   	FILE *paretoFront = fopen(argv[1],"a");
-   	FILE *tempofile = fopen(argv[2],"a");
+   	FILE *paretoFront = fopen(argv[2],"a");
+   	FILE *tempofile = fopen(argv[3],"a");
    
 
    	fprintf(tempofile,"%.10lf\n", (float) user_time1 / (float) sysconf(_SC_CLK_TCK));

@@ -26,6 +26,7 @@ class Arquivo {
 		void reiniciarRanges();
 
 	public:
+		int contQuantAvaliacoes;
 		Arquivo();
 		~Arquivo();
 

@@ -7,6 +7,7 @@
 
 /*this function calculates the position of the grid where the solution will be inserted into*/
 int Arquivo::calcularGridPos(pair<int*, pair<float, float> > s) {
+	contQuantAvaliacoes++;
 	int bit = 0;
 	int gridPos = 0;
 	for (int obj=0;obj<2;obj++) {
@@ -59,6 +60,7 @@ void Arquivo::reiniciarRanges() {
 }
 
 Arquivo::Arquivo(){
+	contQuantAvaliacoes = 0;
 	reiniciarRanges();
 }
 

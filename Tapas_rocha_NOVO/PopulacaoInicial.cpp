@@ -185,7 +185,7 @@ bool thereis(vector< pair<int*, pair<float, float> > > &vetor, pair<int*, pair<f
 vector< pair<int*, pair<float, float> > > getPopulacaoInicial(Grafo *g, Arquivo &global_arc, int quantObrigatorias){
 	vector< pair<int*, pair<float, float> > > ret;
 	suportadas(g, ret, global_arc);
-	cout<<ret.size()<<" solucoes suportadas"<<endl;
+	cout<<"Quantidade de solucoes suportadas = "<<ret.size()<<endl;
 	int quantKruskal = (size_pop*por_max_rmckrus)/100;
 	//float passo = 1.0/quantKruskal;
 
@@ -203,7 +203,7 @@ vector< pair<int*, pair<float, float> > > getPopulacaoInicial(Grafo *g, Arquivo 
 			global_arc.adicionarSol(clone(g, tree));
 		//} //else i-=passo;
 	}
-	cout<<ret.size()<<" individuos OBTIDOS APOS rmcKruskal"<<endl;
+	cout<<"Quantidade de individuos OBTIDOS APOS rmcKruskal = "<<ret.size()<<endl;
 	int sizee =  ret.size();
 	for (int i=0; i<(size_pop - sizee);i++){
 		pair<int*, pair<float, float> > tree = RandomWalk(g, quantObrigatorias);
@@ -212,8 +212,8 @@ vector< pair<int*, pair<float, float> > > getPopulacaoInicial(Grafo *g, Arquivo 
 			global_arc.adicionarSol(clone(g, tree));
 		//}// else i--;
 	}
-	cout<<ret.size()<<" individuos na populacao inicial"<<endl;
-	cout<<global_arc.getSize()<<" solucoes no arquivo inicial"<<endl;
+	cout<<"Quantidade de individuos na populacao inicial =  "<<ret.size()<<endl;
+	cout<<"Quantidade de solucoes no arquivo inicial =  "<<global_arc.getSize()<<endl;
 	
 	return ret;
 }
