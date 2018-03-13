@@ -30,7 +30,7 @@
 using namespace std;
 
 //Aresta ** arestasPtr;
-struct tms tempsInit, tempsFinal1,tempsFinal2 ; // para medir o tempo
+struct tms tempsInit, tempsFinal1,tempsFinal2, tempsFinal3 ; // para medir o tempo
 Arquivo global_arc;
 int quantidadeObrigatorias = 0;
 pair<int*, pair<float, float> > obrigatorias;
@@ -289,7 +289,7 @@ vector <pair<int*,  pair<float, float> > > vizinhos2(Grafo *g, pair<int*, pair<f
 				//if (newPeso1 <= sol.second.first && newPeso2 <= sol.second.second && (newPeso1 < sol.second.first || newPeso2 < sol.second.second)){
 				
 				pair<int*,  pair<float, float> > fknrjgnj = make_pair(base, make_pair(newPeso1,newPeso2));
- 				if (m_grid(&global_arc, fknrjgnj, sol)==true){	
+ 				if (m_grid(&global_arc, fknrjgnj, sol)==true){ // esta condiçao foi inspirada em Rocha e exprimentos premilinares provaram que é melhor que inserir tudo em global_arc	
  					if (distancia(fknrjgnj.second, target)<distanciaOriginal){ // retornar apenas vizinhos que estao mais proximos do target, ou seja, que a distância euclidiana entre o vizinho e o target é menor que a distância entre 's' e o target
  						retorno.push_back(fknrjgnj); 
 					} else {
@@ -336,7 +336,7 @@ void path_relinking(Grafo *g, pair<int*, pair<float, float> > start, pair<float,
 	} while (distanciaOriginal > 0 && contMax<maxPR);
 	global_arc.adicionarSol(clone(g,startaux));
 	delete[] startaux.first;
-	cout<<endl;
+	// cout<<endl;
 
 }
 
@@ -397,23 +397,43 @@ int main(int argc, const char * argv[]) {
 	}
 	int nA = id; // quantidade de arestas do grafo	
 	
-	times(&tempsInit);
+	times(&tempsInit); // TEMPO DO PREPROCESSAMENTO
 
 	my_grafo.excluiProibidas(); // primeiro, excluimos as proibidas
 	my_grafo.updateIndex(); // depois, atualizamos os idexes das arestas no map
 	obrigatorias = my_grafo.marcaObrigatorias(quantidadeObrigatorias); // determinanmos as obrigatorias
 	nA= my_grafo.getQuantArestas();
-	
+
+	times(&tempsFinal1); 
+	clock_t user_time1 = (tempsFinal1.tms_utime - tempsInit.tms_utime);
+   	double tempo_preprocessamento = (double) user_time1 / (double) sysconf(_SC_CLK_TCK);
+   	cout<<"Tempo PreProcessamento (s) = "<<tempo_preprocessamento<<endl;
+
+
+	times(&tempsInit); // TEMPO DA PRIMEIRA FASE FASE
 	memeticoRocha2006(&my_grafo);
-	cout<<"Fim da primeira fase. Size = "<<global_arc.getSize()<<endl;
+	cout<<"Quantidade de solucoes na primeira fase = "<<global_arc.getSize()<<endl;
+   	
+   	times(&tempsFinal2); 
+	user_time1 = (tempsFinal2.tms_utime - tempsInit.tms_utime);
+   	double tempoPhase1 = (double) user_time1 / (double) sysconf(_SC_CLK_TCK);
+   	cout<<"Tempo PrimeiraFase(s) = "<<tempoPhase1<<endl;
+
+
+   	times(&tempsInit); // TEMPO DA SEGUNDA FASE
    	tapas(&my_grafo);
-   	cout<<"Fim da segunda fase. Size = "<<global_arc.getSize()<<endl;
+   	
+   	times(&tempsFinal3); 
+	user_time1 = (tempsFinal3.tms_utime - tempsInit.tms_utime);
+   	double tempoPhase2 = (double) user_time1 / (double) sysconf(_SC_CLK_TCK);
+   	cout<<"Tempo SegundaFase(s) = "<<tempoPhase2<<endl;
+	cout<<"Quantidade de solucoes na primeira fase = "<<global_arc.getSize()<<endl;
    	
 	//vector< pair<int*, pair<float, float> > > populacao = getPopulacaoInicial(&my_grafo,global_arc);
 	
-	times(&tempsFinal1);   /* current time */ // clock final
-	clock_t user_time1 = (tempsFinal1.tms_utime - tempsInit.tms_utime);
-	cout<<(float) user_time1 / (float) sysconf(_SC_CLK_TCK)<<" segundos"<<endl;//"Tempo do usuario por segundo : "
+	 
+	
+	cout<<"Tempo FINAL(s) =  "<<tempo_preprocessamento+tempoPhase1+tempoPhase2<<endl;//"Tempo do usuario por segundo : "
    	
 
    	FILE *paretoFront = fopen(argv[1],"a");

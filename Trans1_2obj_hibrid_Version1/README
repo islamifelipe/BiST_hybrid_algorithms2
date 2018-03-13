@@ -1,5 +1,6 @@
 T-BT
 
+TBT_VERSAO 1: a reciclagem substitui toda a populaçao
 
 Esta pasta contém o codigo referente ao Transgenético com patamares, Nincho e reciclagem baseada em crownd distance para 2 objetivos
 
@@ -23,11 +24,13 @@ Patamares
 	++ Conforme o processo evolucionario avança, #probPlasm é incrementado por um #probFator
 	++ Dentro de cada grupo (plasmideos ou transponssons) seleciona-se, para cada cromossomo, um vetor para atacar. O vetor é selecionado com prababiliade diretamente proporcional à sua eficiência (quantos ataques bem sucedidos).
 
-	TODO VERSAO 2: se for o caso, podemos dividir em três niveis de probabilidade (plasmideo, transponsson1, transponsson2)
+	TBT_VERSAO 2: unir a populaçao corrente à lixeira e proceder como antes
 
-	TODO VERSAO 3: experimentar outros plasmideos
+	TODO VERSAO 3: se for o caso, podemos dividir em três niveis de probabilidade (plasmideo, transponsson1, transponsson2)
 
-	TODO VERSAO 4: retirar a hibridização
+	TODO VERSAO 4: experimentar outros plasmideos
+
+	TODO VERSAO 5: retirar a hibridização
 
 	
 
