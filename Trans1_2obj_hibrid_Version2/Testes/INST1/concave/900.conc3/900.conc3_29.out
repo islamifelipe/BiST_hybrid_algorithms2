@@ -1,0 +1,32 @@
+========= Estatisticas ========= 
+Semente utilizada : 5319411
+Instância lida...
+Quantidade de renovacoes = 5
+Quantidade de plasm1 definido a cada renovacao = 5,4,4,4,4,4,
+Quantidade de plasm2 definido a cada renovacao = 5,8,8,8,8,8,
+Quantidade de plasm3 definido a cada renovacao = 5,3,3,3,3,3,
+Quantidade total de ataque dos plasm1 = 665
+Quantidade total de sucesso do plasm1 = 12
+Média de melhoria do plasm1 para o obj1 = 10.0992
+Média de melhoria do plasm1 para o obj2 = 10.5624
+Quantidade total de ataque dos plasm2 = 1311
+Quantidade total de sucesso do plasm2 = 24
+Média de melhoria do plasm2 para o obj1 = 9.30359
+Média de melhoria do plasm2 para o obj2 = 6.91915
+Quantidade total de ataque dos plasm3 = 548
+Quantidade total de sucesso do plasm3 = 9
+Média de melhoria do plasm3 para o obj1 = 21.073
+Média de melhoria do plasm3 para o obj2 = 21.0365
+Quantidade total de ataque dos primTrans = 1476
+Quantidade total de sucesso do primTrans = 136
+Média de melhoria do primTrans para o obj1 = 181.306
+Média de melhoria do primTrans para o obj2 = 180.93
+Quantidade total de invocacao da BT = 7
+Quantidade total de sucesso da BT = 0
+Média de melhoria da BT para o obj1 = 0
+Média de melhoria da BT para o obj2 = 0
+Quantidade de avaliaçoes da funcao objetivo = 4126
+Tempo(s) Final = 5.32
+3788.0000000000 3788.0000000000
+3790.0000000000 2792.0000000000
+2792.0000000000 3790.0000000000

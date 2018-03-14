@@ -1,0 +1,51 @@
+========= Estatisticas ========= 
+Semente utilizada : 3645067
+Instância lida...
+Quantidade de renovacoes = 5
+Quantidade de plasm1 definido a cada renovacao = 5,3,2,2,2,2,
+Quantidade de plasm2 definido a cada renovacao = 5,10,11,11,11,11,
+Quantidade de plasm3 definido a cada renovacao = 5,2,2,2,2,2,
+Quantidade total de ataque dos plasm1 = 428
+Quantidade total de sucesso do plasm1 = 8
+Média de melhoria do plasm1 para o obj1 = 15.6098
+Média de melhoria do plasm1 para o obj2 = 16
+Quantidade total de ataque dos plasm2 = 1711
+Quantidade total de sucesso do plasm2 = 40
+Média de melhoria do plasm2 para o obj1 = 3.95324
+Média de melhoria do plasm2 para o obj2 = 4.62478
+Quantidade total de ataque dos plasm3 = 397
+Quantidade total de sucesso do plasm3 = 7
+Média de melhoria do plasm3 para o obj1 = 2.9597
+Média de melhoria do plasm3 para o obj2 = 5.53401
+Quantidade total de ataque dos primTrans = 1464
+Quantidade total de sucesso do primTrans = 141
+Média de melhoria do primTrans para o obj1 = 90.2719
+Média de melhoria do primTrans para o obj2 = 90.388
+Quantidade total de invocacao da BT = 50
+Quantidade total de sucesso da BT = 2
+Média de melhoria da BT para o obj1 = 0
+Média de melhoria da BT para o obj2 = 39.8
+Quantidade de avaliaçoes da funcao objetivo = 4124
+Tempo(s) Final = 0.50
+2975.0000000000 1990.0000000000
+2977.0000000000 1988.0000000000
+2978.0000000000 1987.0000000000
+2979.0000000000 1986.0000000000
+1986.0000000000 2979.0000000000
+2980.0000000000 1985.0000000000
+1984.0000000000 2981.0000000000
+1985.0000000000 2980.0000000000
+1989.0000000000 2976.0000000000
+2976.0000000000 1989.0000000000
+2982.0000000000 1983.0000000000
+1982.0000000000 2983.0000000000
+2983.0000000000 1982.0000000000
+2981.0000000000 1984.0000000000
+1981.0000000000 2984.0000000000
+1987.0000000000 2978.0000000000
+1988.0000000000 2977.0000000000
+2984.0000000000 1981.0000000000
+1990.0000000000 2975.0000000000
+1983.0000000000 2982.0000000000
+2985.0000000000 1980.0000000000
+1980.0000000000 2985.0000000000

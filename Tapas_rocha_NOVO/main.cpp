@@ -448,7 +448,7 @@ int main(int argc, const char * argv[]) {
    	FILE *tempofile = fopen(argv[3],"a");
    
 
-   	fprintf(tempofile,"%.10lf\n", (float) user_time1 / (float) sysconf(_SC_CLK_TCK));
+   	fprintf(tempofile,"%.2lf\n", tempo_preprocessamento+tempoPhase1+tempoPhase2);
    	
    	int i = 0;
    	cout<<"Resultado : "<<endl;

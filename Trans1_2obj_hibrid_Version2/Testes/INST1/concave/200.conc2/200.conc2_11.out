@@ -1,0 +1,51 @@
+========= Estatisticas ========= 
+Semente utilizada : 5542660
+Instância lida...
+Quantidade de renovacoes = 5
+Quantidade de plasm1 definido a cada renovacao = 5,2,2,2,2,2,
+Quantidade de plasm2 definido a cada renovacao = 5,9,10,10,10,10,
+Quantidade de plasm3 definido a cada renovacao = 5,4,3,3,3,3,
+Quantidade total de ataque dos plasm1 = 408
+Quantidade total de sucesso do plasm1 = 9
+Média de melhoria do plasm1 para o obj1 = 32.0294
+Média de melhoria do plasm1 para o obj2 = 31.5858
+Quantidade total de ataque dos plasm2 = 1517
+Quantidade total de sucesso do plasm2 = 50
+Média de melhoria do plasm2 para o obj1 = 8.59394
+Média de melhoria do plasm2 para o obj2 = 8.03626
+Quantidade total de ataque dos plasm3 = 521
+Quantidade total de sucesso do plasm3 = 13
+Média de melhoria do plasm3 para o obj1 = 6.39731
+Média de melhoria do plasm3 para o obj2 = 8.39539
+Quantidade total de ataque dos primTrans = 1554
+Quantidade total de sucesso do primTrans = 134
+Média de melhoria do primTrans para o obj1 = 79.0245
+Média de melhoria do primTrans para o obj2 = 81.9414
+Quantidade total de invocacao da BT = 50
+Quantidade total de sucesso da BT = 0
+Média de melhoria da BT para o obj1 = 0
+Média de melhoria da BT para o obj2 = 0
+Quantidade de avaliaçoes da funcao objetivo = 4123
+Tempo(s) Final = 0.54
+1985.0000000000 2980.0000000000
+1986.0000000000 2979.0000000000
+2978.0000000000 1987.0000000000
+1983.0000000000 2982.0000000000
+1982.0000000000 2983.0000000000
+1984.0000000000 2981.0000000000
+1990.0000000000 2975.0000000000
+2980.0000000000 1985.0000000000
+2976.0000000000 1989.0000000000
+2979.0000000000 1986.0000000000
+1987.0000000000 2978.0000000000
+2981.0000000000 1984.0000000000
+2983.0000000000 1982.0000000000
+2977.0000000000 1988.0000000000
+2982.0000000000 1983.0000000000
+1989.0000000000 2976.0000000000
+1988.0000000000 2977.0000000000
+2984.0000000000 1981.0000000000
+2985.0000000000 1980.0000000000
+2975.0000000000 1990.0000000000
+1981.0000000000 2984.0000000000
+1980.0000000000 2985.0000000000
