@@ -1,0 +1,143 @@
+========= Estatisticas ========= 
+Semente utilizada : 5535502
+Quantidade de arestas removidas: 1111
+Quantidade de arestas obrigatorias = 12
+Tempo PreProcessamento (s) = 0
+Quantidade de solucoes suportadas = 30
+Quantidade de individuos OBTIDOS APOS rmcKruskal = 134
+Quantidade de individuos na populacao inicial =  150
+Quantidade de solucoes no arquivo inicial =  73
+Quantidade de solucoes na primeira fase = 123
+Tempo PrimeiraFase(s) = 1.9
+Quantidade de solucoes na segunda fase = 126
+Tempo SegundaFase(s) = 0.19
+Quantidade de solucoes não dominadas que o PR encontrou = 3
+Quantiade de avalicoes da funcao objetivo = 153760
+Tempo FINAL(s) =  2.09
+Resultado : 
+102 1274
+103 1254
+104 1234
+106 1198
+108 1163
+109 1146
+110 1142
+112 1107
+114 1086
+116 1068
+117 1056
+118 1050
+119 1038
+121 1036
+122 1014
+124 998
+127 989
+128 976
+129 966
+130 953
+132 939
+133 933
+134 926
+137 912
+138 904
+140 901
+142 888
+144 876
+146 867
+147 864
+149 858
+151 846
+153 845
+155 835
+156 826
+158 824
+159 818
+161 812
+163 804
+165 793
+166 791
+167 784
+168 780
+169 778
+171 771
+173 763
+174 760
+175 754
+177 746
+178 745
+179 744
+180 743
+181 731
+184 726
+185 717
+187 711
+190 707
+191 697
+193 691
+195 688
+196 685
+197 684
+199 671
+201 665
+203 662
+205 658
+207 647
+210 645
+211 638
+213 637
+215 631
+217 628
+220 624
+221 621
+223 619
+224 617
+225 615
+227 612
+229 609
+231 606
+233 605
+236 601
+237 599
+241 597
+242 594
+245 593
+247 592
+248 590
+249 588
+250 586
+254 583
+255 581
+258 580
+260 579
+261 577
+264 576
+265 572
+267 570
+270 569
+272 568
+273 566
+274 565
+277 562
+279 560
+283 558
+292 557
+293 555
+294 552
+302 551
+303 548
+312 544
+319 541
+321 539
+325 538
+326 536
+331 534
+337 531
+342 529
+351 527
+355 525
+361 524
+365 523
+375 522
+388 521
+403 520
+424 519

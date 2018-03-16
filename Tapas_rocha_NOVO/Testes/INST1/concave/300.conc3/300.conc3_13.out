@@ -1,0 +1,23 @@
+========= Estatisticas ========= 
+Semente utilizada : 9825374
+Quantidade de arestas removidas: 44549
+Quantidade de arestas obrigatorias = 296
+Tempo PreProcessamento (s) = 0.56
+Quantidade de solucoes suportadas = 2
+Quantidade de individuos OBTIDOS APOS rmcKruskal = 106
+Quantidade de individuos na populacao inicial =  150
+Quantidade de solucoes no arquivo inicial =  6
+Quantidade de solucoes na primeira fase = 6
+Tempo PrimeiraFase(s) = 1.18
+Quantidade de solucoes na segunda fase = 6
+Tempo SegundaFase(s) = 0
+Quantidade de solucoes não dominadas que o PR encontrou = 0
+Quantiade de avalicoes da funcao objetivo = 3402
+Tempo FINAL(s) =  1.74
+Resultado : 
+1888 2886
+1889 2885
+2882 2883
+2883 2882
+2885 1889
+2886 1888

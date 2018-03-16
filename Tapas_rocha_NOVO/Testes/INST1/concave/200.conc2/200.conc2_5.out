@@ -1,0 +1,38 @@
+========= Estatisticas ========= 
+Semente utilizada : 2426030
+Quantidade de arestas removidas: 19690
+Quantidade de arestas obrigatorias = 187
+Tempo PreProcessamento (s) = 0.17
+Quantidade de solucoes suportadas = 2
+Quantidade de individuos OBTIDOS APOS rmcKruskal = 106
+Quantidade de individuos na populacao inicial =  150
+Quantidade de solucoes no arquivo inicial =  19
+Quantidade de solucoes na primeira fase = 21
+Tempo PrimeiraFase(s) = 1.3
+Quantidade de solucoes na segunda fase = 21
+Tempo SegundaFase(s) = 0.01
+Quantidade de solucoes não dominadas que o PR encontrou = 0
+Quantiade de avalicoes da funcao objetivo = 14567
+Tempo FINAL(s) =  1.48
+Resultado : 
+1980 2985
+1981 2984
+1982 2983
+1983 2982
+1984 2981
+1985 2980
+1986 2979
+1987 2978
+1988 2977
+1989 2976
+2975 1990
+2976 1989
+2977 1988
+2978 1987
+2979 1986
+2980 1985
+2981 1984
+2982 1983
+2983 1982
+2984 1981
+2985 1980
