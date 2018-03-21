@@ -1,0 +1,3 @@
+Esta pasta guarda os resultados dos testes estatisicos Kruskal-Wallis comparando os três algoritmos de uma vez (TAPAS_NOVO, TBT e GRPR).  Se há diferença entre os resultados, aplica-se o Kruskal-Wallis pareado. 
+
+Para comparaçao com os da literatura, foi usado o Mann-Whitney

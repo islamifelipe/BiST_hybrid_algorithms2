@@ -1,0 +1,18 @@
+========= Estatisticas ========= 
+Semente utilizada : 3424872
+Tempo(s) Final = 5.13
+Quantidade de soluçoes encontradas = 6
+Quantidade de vezes em que o contrutivo foi executada: 700
+Quantidade de vezes em que a BL foi executada: 700
+Quantidade de vezes em que o PR foi executado: 8
+Quantidade de solucoes que o constutivo adicionou ao arquivo global: 3
+Quantidade de solucoes que a BL adicionou ao arquivo global: 16
+Quantidade de solucoes que o PR adicionou ao arquivo global: 0
+Quantidade de avaliacoes da funcao objetivo: 22966
+Pareto aproximativo: 
+2882.0000000000 2883.0000000000
+1888.0000000000 2886.0000000000
+2885.0000000000 1889.0000000000
+1889.0000000000 2885.0000000000
+2883.0000000000 2882.0000000000
+2886.0000000000 1888.0000000000
