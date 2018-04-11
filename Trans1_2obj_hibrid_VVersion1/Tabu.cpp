@@ -94,6 +94,8 @@ bool buscaTabu(SolucaoEdgeSet *s, double lambda[NUMOBJETIVOS]){
 
 				*s = *s_linha;
 				s_was_modified = true;
+			} else {
+				arc_global.contQuantAvaliacoes++;
 			}
 			//s_linha->isTree();
 			//cout<<s_linha->getObj(0)<<" "<<s_linha->getObj(1)<<endl;

@@ -5,7 +5,7 @@ jpeg('epsilon_300.conc1.jpg')
 grasp_eps <- read.table(file="eps/concave/300.conc1/resultadoeps_GRASP.out",header=FALSE,sep=",")
 tapas_eps <- read.table(file="eps/concave/300.conc1/resultadoeps_Tapas.out",header=FALSE,sep=",")
 tbt_eps <- read.table(file="eps/concave/300.conc1/resultadoeps_TBT.out",header=FALSE,sep=",")
-boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "eps", names = c("GRPR","TAPAS", "T-BT"))
+boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "épsilon", names = c("GRPR","TAPAS", "T-BT"))
 dev.off()
 
 
@@ -14,7 +14,7 @@ jpeg('epsilon_300.conc3.jpg')
 grasp_eps <- read.table(file="eps/concave/300.conc3/resultadoeps_GRASP.out",header=FALSE,sep=",")
 tapas_eps <- read.table(file="eps/concave/300.conc3/resultadoeps_Tapas.out",header=FALSE,sep=",")
 tbt_eps <- read.table(file="eps/concave/300.conc3/resultadoeps_TBT.out",header=FALSE,sep=",")
-boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "eps", names = c("GRPR","TAPAS", "T-BT"))
+boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "épsilon", names = c("GRPR","TAPAS", "T-BT"))
 dev.off()
 
 
@@ -23,14 +23,14 @@ jpeg('epsilon_400.conc1.jpg')
 grasp_eps <- read.table(file="eps/concave/400.conc1/resultadoeps_GRASP.out",header=FALSE,sep=",")
 tapas_eps <- read.table(file="eps/concave/400.conc1/resultadoeps_Tapas.out",header=FALSE,sep=",")
 tbt_eps <- read.table(file="eps/concave/400.conc1/resultadoeps_TBT.out",header=FALSE,sep=",")
-boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "eps", names = c("GRPR","TAPAS", "T-BT"))
+boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "épsilon", names = c("GRPR","TAPAS", "T-BT"))
 dev.off()
 
 jpeg('epsilon_600.conc3.jpg')
 grasp_eps <- read.table(file="eps/concave/600.conc3/resultadoeps_GRASP.out",header=FALSE,sep=",")
 tapas_eps <- read.table(file="eps/concave/600.conc3/resultadoeps_Tapas.out",header=FALSE,sep=",")
 tbt_eps <- read.table(file="eps/concave/600.conc3/resultadoeps_TBT.out",header=FALSE,sep=",")
-boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "eps", names = c("GRPR","TAPAS", "T-BT"))
+boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "épsilon", names = c("GRPR","TAPAS", "T-BT"))
 dev.off()
 
 
@@ -38,7 +38,7 @@ jpeg('epsilon_700.conc2.jpg')
 grasp_eps <- read.table(file="eps/concave/700.conc2/resultadoeps_GRASP.out",header=FALSE,sep=",")
 tapas_eps <- read.table(file="eps/concave/700.conc2/resultadoeps_Tapas.out",header=FALSE,sep=",")
 tbt_eps <- read.table(file="eps/concave/700.conc2/resultadoeps_TBT.out",header=FALSE,sep=",")
-boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "eps", names = c("GRPR","TAPAS", "T-BT"))
+boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "épsilon", names = c("GRPR","TAPAS", "T-BT"))
 dev.off()
 
 
@@ -46,7 +46,7 @@ jpeg('epsilon_900.conc1.jpg')
 grasp_eps <- read.table(file="eps/concave/900.conc1/resultadoeps_GRASP.out",header=FALSE,sep=",")
 tapas_eps <- read.table(file="eps/concave/900.conc1/resultadoeps_Tapas.out",header=FALSE,sep=",")
 tbt_eps <- read.table(file="eps/concave/900.conc1/resultadoeps_TBT.out",header=FALSE,sep=",")
-boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "eps", names = c("GRPR","TAPAS", "T-BT"))
+boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "épsilon", names = c("GRPR","TAPAS", "T-BT"))
 dev.off()
 
 
@@ -54,7 +54,7 @@ jpeg('epsilon_900.conc2.jpg')
 grasp_eps <- read.table(file="eps/concave/900.conc2/resultadoeps_GRASP.out",header=FALSE,sep=",")
 tapas_eps <- read.table(file="eps/concave/900.conc2/resultadoeps_Tapas.out",header=FALSE,sep=",")
 tbt_eps <- read.table(file="eps/concave/900.conc2/resultadoeps_TBT.out",header=FALSE,sep=",")
-boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "eps", names = c("GRPR","TAPAS", "T-BT"))
+boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "épsilon", names = c("GRPR","TAPAS", "T-BT"))
 dev.off()
 
 
@@ -62,7 +62,7 @@ jpeg('epsilon_900.conc3.jpg')
 grasp_eps <- read.table(file="eps/concave/900.conc3/resultadoeps_GRASP.out",header=FALSE,sep=",")
 tapas_eps <- read.table(file="eps/concave/900.conc3/resultadoeps_Tapas.out",header=FALSE,sep=",")
 tbt_eps <- read.table(file="eps/concave/900.conc3/resultadoeps_TBT.out",header=FALSE,sep=",")
-boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "eps", names = c("GRPR","TAPAS", "T-BT"))
+boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "épsilon", names = c("GRPR","TAPAS", "T-BT"))
 dev.off()
 
 
@@ -70,7 +70,7 @@ jpeg('epsilon_400.anticorr3.jpg')
 grasp_eps <- read.table(file="eps/anticorrelated/400.anticorr3/resultadoeps_GRASP.out",header=FALSE,sep=",")
 tapas_eps <- read.table(file="eps/anticorrelated/400.anticorr3/resultadoeps_Tapas.out",header=FALSE,sep=",")
 tbt_eps <- read.table(file="eps/anticorrelated/400.anticorr3/resultadoeps_TBT.out",header=FALSE,sep=",")
-boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "eps", names = c("GRPR","TAPAS", "T-BT"))
+boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "épsilon", names = c("GRPR","TAPAS", "T-BT"))
 dev.off()
 
 
@@ -91,7 +91,7 @@ jpeg('r2_300.conc1.jpg')
 grasp_eps <- read.table(file="R2/concave/300.conc1/resultador_GRASP.out",header=FALSE,sep=",")
 tapas_eps <- read.table(file="R2/concave/300.conc1/resultador_Tapas.out",header=FALSE,sep=",")
 tbt_eps <- read.table(file="R2/concave/300.conc1/resultador_TBT.out",header=FALSE,sep=",")
-boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "R2", names = c("GRPR","TAPAS", "T-BT"))
+boxplot(grasp_eps[,c("V1")],tapas_eps[,c("V1")], tbt_eps[,c("V1")], ylab = "R2", ylim = c(0, 1), names = c("GRPR","TAPAS", "T-BT"))
 dev.off()
 
 
