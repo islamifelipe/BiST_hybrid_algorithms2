@@ -1,6 +1,6 @@
 #!/bin/bash
 cd Testes/INST1/
-for k in 100 200 300 400 50
+for k in 400 
 do
 	for i in 1 2 3 
 	do
