@@ -1,6 +1,6 @@
 #!/bin/bash
 cd Testes/INST1/
-for k in 400 
+for k in 100 200 300 400 
 do
 	for i in 1 2 3 
 	do
@@ -8,7 +8,7 @@ do
 	        while [ $c -le 30 ]; 
 	        do
 				ran=$(( $RANDOM % 9384983948 ));
-				./trans_"$k" $ran 800000 anticorrelated/"$k".anticorr"$i"/pareto_"$k".anticorr$"i".out anticorrelated/"$k".anticorr"$i"/tempo_"$k".anticorr$"i".out < ../../../InstanciasMestrado/INST1/anticorrelated/"$k".anticorr"$i".in > anticorrelated/"$k".anticorr"$i"/"$k".anticorr"$i"_"$c".out  
+				./trans_"$k" $ran 270000 correlated/"$k".corr"$i"/pareto_"$k".corr$"i".out correlated/"$k".corr"$i"/tempo_"$k".corr$"i".out < ../../../InstanciasMestrado/INST1/correlated/"$k".corr"$i".in > correlated/"$k".corr"$i"/"$k".corr"$i"_"$c".out  
 				c=$((c+1))
 			done
 	done
