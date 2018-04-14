@@ -25,7 +25,7 @@
 # 	mkdir "$k.conc3"
 # 	cd ..
 	
-for k in  100 200 300 400
+for k in  500 600 700 800 900 1000
 do
 	echo "#define NUMEROVERTICES $k" >> param.h
 	g++  transgenetic.cpp  -Wall -O3 -o trans_"$k"
