@@ -10,11 +10,11 @@
 #define PROFUNDIDADEGRID 5 
 
 #define NUMOBJETIVOS 2 // FIXO
-#define NUMEROVERTICES 800 // Varia
+#define NUMEROVERTICES 1000 // Varia
 #define NUMEROARESTAS (NUMEROVERTICES-1)
 
 #define TAMANHOPOPULACAO 50  // tamanho da populaçao
-#define QUANTGERACOES 100 //quantidade de iteracoes do nsgaii (IRACE)
+#define QUANTGERACOES 100 //quantidade de iteracoes do nsgaii
 
 #define TAXADECRUZAMENTO 0.80
 #define TAXADEMUTACAO 0.05

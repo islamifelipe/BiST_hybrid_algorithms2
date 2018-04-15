@@ -206,7 +206,7 @@ void atualizaPopulacaoNSGAII(SolucaoEdgeSet *novaPop[TAMANHOPOPULACAO]){
 		*populacao[cont++] = **p;
 	}
 
-	cout<<"verificador = "<<verificador(F,sizeFront)<<endl;;
+	// cout<<"verificador = "<<verificador(F,sizeFront)<<endl;;
 }
 
 
