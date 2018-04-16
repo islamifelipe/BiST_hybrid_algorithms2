@@ -1,0 +1,50 @@
+========= Estatisticas ========= 
+Semente utilizada : 9629601
+Instância lida...
+Quantidade de geracoes = 2217
+Quantidade de renovacoes = 277
+
+Quantidade total de ataque dos plasm1 = 44096
+Quantidade total de sucesso do plasm1 = 9
+Média de melhoria do plasm1 para o obj1 = 0.167453
+Média de melhoria do plasm1 para o obj2 = 0.175277
+Quantidade total de ataque dos plasm2 = 161271
+Quantidade total de sucesso do plasm2 = 40
+Média de melhoria do plasm2 para o obj1 = 0.0823707
+Média de melhoria do plasm2 para o obj2 = 0.0519064
+Quantidade total de ataque dos plasm3 = 14803
+Quantidade total de sucesso do plasm3 = 5
+Média de melhoria do plasm3 para o obj1 = 0.0673512
+Média de melhoria do plasm3 para o obj2 = 0.13504
+Quantidade total de ataque dos primTrans = 1530
+Quantidade total de sucesso do primTrans = 142
+Média de melhoria do primTrans para o obj1 = 124.304
+Média de melhoria do primTrans para o obj2 = 121.245
+Quantidade total de invocacao da BT = 3014
+Quantidade total de sucesso da BT = 1
+Média de melhoria da BT para o obj1 = 0.000331785
+Média de melhoria da BT para o obj2 = 0
+Quantidade de avaliaçoes da funcao objetivo = 270083
+Tempo(s) Final = 5.55
+1987.0000000000 2978.0000000000
+2982.0000000000 1983.0000000000
+2980.0000000000 1985.0000000000
+2975.0000000000 1990.0000000000
+1985.0000000000 2980.0000000000
+1986.0000000000 2979.0000000000
+2979.0000000000 1986.0000000000
+2978.0000000000 1987.0000000000
+1984.0000000000 2981.0000000000
+2977.0000000000 1988.0000000000
+1983.0000000000 2982.0000000000
+1989.0000000000 2976.0000000000
+2983.0000000000 1982.0000000000
+1981.0000000000 2984.0000000000
+1990.0000000000 2975.0000000000
+1982.0000000000 2983.0000000000
+2981.0000000000 1984.0000000000
+1988.0000000000 2977.0000000000
+2984.0000000000 1981.0000000000
+2976.0000000000 1989.0000000000
+1980.0000000000 2985.0000000000
+2985.0000000000 1980.0000000000
