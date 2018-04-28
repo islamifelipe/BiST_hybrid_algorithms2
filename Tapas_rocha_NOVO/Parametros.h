@@ -10,14 +10,30 @@
 #define max_offsp 10 // quantidade maxima de tentativas para gerar algum descendente valido por geracao
 //#define max_it 5 // quantidade de geraçoes consecutivas que o Global_Arc fica sem mudar 
 #define alfaMutacao 0.03 // probabilidade de mutacao no individuo
+	// definidos pelo ROCHA et al (2006)
 #define max_neighbors 5 //6 // numero maximo de vizinhos
 #define max_tabu 30//15 // 14? 20 // quantidade maxima de iteracoes da busca tabu
 #define tabutenure 5//3 // quantidade de iteracoes em que uma aresta permanece como Tabu
 #define maxPR 7//15 // quantidade maxima de iteracoes do PR
 // #define maxSolucoes 3000 // 3000 ?? 10000 // quantidade maxima de solucoes que serao armazenadas no arquivo externo (max_sol)
 // #define maxParetoAproximativo 300 // 400 ou 300? 500 // quantidade maxima de pontos do pareto aproximativo submetidos ao path relinking (max_apr)
-#define maxVizinhos 400//100
+	#define maxVizinhos 400//100
 //#define max_it 3
+
+
+/*
+
+\#max\_sup 20
+\#max\_rmckrus 70
+\#size\_pop 150
+\#max\_gen 20
+\#max\_offsp 10
+\#tax\_mut 0,03
+\#max\_pr 7
+\#max\_tabu 30
+tabutenure 5
+
+*/
 
 
 #endif

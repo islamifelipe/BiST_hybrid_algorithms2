@@ -36,12 +36,13 @@
 /**
 	#popSize
 	#max\_gen
-	#numPlasTotal = #plas1 + #plas2 + #plas3
+	#numPlas = #plas1 + #plas2 + #plas3
 	#intGerSet
 	#probPlasm
 	#probFator
 	#maxTabu
 	#tabutenure
+	#max_vizinhos
 **/
 #define NUMEROVERTICES 50
 #define NUMEROVERTICES 1000

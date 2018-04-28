@@ -5,23 +5,23 @@ do
 	do
 		../../lerPvalores  eps/correlated/"$p".corr"$i"/mann_whit.out 
 		# ","
-		../../lerPvalores  eps/anticorrelated/"$p".anticorr"$i"/mann_whit.out 
-		# ","
-		../../lerPvalores  eps/concave/"$p".conc"$i"/mann_whit.out 
-		# ","
-
-
 		../../lerPvalores  hypervolume/correlated/"$p".corr"$i"/mann_whit.out 
 		#","
-		../../lerPvalores  hypervolume/anticorrelated/"$p".anticorr"$i"/mann_whit.out 
-		#","
-		../../lerPvalores  hypervolume/concave/"$p".conc"$i"/mann_whit.out 
-		#","
-
-
 		../../lerPvalores  R2/correlated/"$p".corr"$i"/mann_whit.out 
 		#","
+
+
+		../../lerPvalores  eps/anticorrelated/"$p".anticorr"$i"/mann_whit.out 
+		# ","
+		../../lerPvalores  hypervolume/anticorrelated/"$p".anticorr"$i"/mann_whit.out 
+		#","
 		../../lerPvalores  R2/anticorrelated/"$p".anticorr"$i"/mann_whit.out 
+		#","
+
+
+		../../lerPvalores  eps/concave/"$p".conc"$i"/mann_whit.out 
+		# ","
+		../../lerPvalores  hypervolume/concave/"$p".conc"$i"/mann_whit.out 
 		#","
 		../../lerPvalores  R2/concave/"$p".conc"$i"/mann_whit.out 
 		
