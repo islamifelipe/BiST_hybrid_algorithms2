@@ -1,10 +1,10 @@
 
-mkdir Testes
-mkdir Testes/INST1
-mkdir Testes/INST1/correlated
-mkdir Testes/INST1/anticorrelated
-mkdir Testes/INST1/concave
-cd Testes/INST1/
+mkdir TestesSuplementares
+mkdir TestesSuplementares/INST1
+mkdir TestesSuplementares/INST1/correlated
+mkdir TestesSuplementares/INST1/anticorrelated
+mkdir TestesSuplementares/INST1/concave
+cd TestesSuplementares/INST1/
 for k in 50 100 200 300 400 500 600 700 800 900 1000
 do
 

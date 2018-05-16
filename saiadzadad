@@ -1,0 +1,3 @@
+../../../../memetic 8062684 pareto1_50.corr1.out pareto2_50.corr1.out tempo_50.corr1.out < ../../../../../InstanciasMestrado/INST1/correlated/50.corr1.in > 50.corr1_1.out
+../../../../memetic 8062684 pareto1_50.corr1.out pareto2_50.corr1.out tempo_50.corr1.out < ../../../../../InstanciasMestrado/INST1/correlated/50.corr1.in > 50.corr1_1.out
+../../memetic 8062684 correlated/50.corr1/pareto1_50.corr1.out correlated/50.corr1/pareto2_50.corr1.out correlated/50.corr1/tempo_50.corr1.out < ../../../InstanciasMestrado/INST1/correlated/50.corr1.in > correlated/50.corr1/50.corr1_1.out
